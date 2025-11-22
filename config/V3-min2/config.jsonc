@@ -207,7 +207,7 @@
   },
   "cava": {
     // "cava_config": "/home/yourusername/.config/cava/config",
-    "framerate": 60,
+    "framerate": 30,
     "autosens": 0,
     "sensitivity": 10,
     "bars": 24,
@@ -224,7 +224,7 @@
     "monstercat": false,
     "waves": false,
     "noise_reduction": 0.25,
-    "input_delay": 4,
+    "input_delay": 2,
     "format-icons": [
       "▁",
       "▂",
