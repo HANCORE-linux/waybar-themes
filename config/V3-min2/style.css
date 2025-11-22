@@ -117,6 +117,7 @@ opacity: 0.95;
 #custom-weather, #memory, #mpris, #window,
 #hyprland-window,
 #tray,
+#cava,
 #cpu,
 #battery,
 #network,
@@ -168,6 +169,13 @@ tooltip {
 #tray > .needs-attention {
     -gtk-icon-effect: highlight;
     background-color: @transparent;
+}
+
+#cava {
+  padding: 0 5px;
+  background-color: @background;
+  margin: 2px 4px 4px 4px;
+  color: @foreground;
 }
 
 

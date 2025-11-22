@@ -8,7 +8,8 @@
   "width": 250,
   "modules-left": [
     "custom/omarchy",
-    "hyprland/workspaces"
+    "hyprland/workspaces",
+    "cava"
     //"mpris",
     //"hyprland/window"
   ],
@@ -194,24 +195,48 @@
     "on-click": "omarchy-launch-or-focus-tui wiremix",
     "on-click-right": "pamixer -t",
     "tooltip-format": "Playing at {volume}%",
-    "format-bluetooth": "{volume}% {icon} {format_source}",
-    "format-bluetooth-muted": " {icon} {format_source}",
     "scroll-step": 5,
-    "format-muted": " {format_source}",
-    "format-source": "{volume}% ",
-    "format-source-muted": "",
+    "format-muted": "",
     "format-icons": {
-      "headphone": "",
-      "hands-free": "",
-      "headset": "",
-      "phone": "",
-      "portable": "",
-      "car": "",
       "default": [
         "",
         "",
         ""
       ]
+    }
+  },
+  "cava": {
+    // "cava_config": "/home/yourusername/.config/cava/config",
+    "framerate": 60,
+    "autosens": 0,
+    "sensitivity": 10,
+    "bars": 24,
+    "lower_cutoff_freq": 50,
+    "higher_cutoff_freq": 10000,
+    "sleep_timer": 2,
+    "hide_on_silence": true,
+    "format_silent": "quiet",
+    "method": "pipewire",
+    "source": "auto",
+    "stereo": true,
+    "reverse": false,
+    "bar_delimiter": 0,
+    "monstercat": false,
+    "waves": false,
+    "noise_reduction": 0.25,
+    "input_delay": 2,
+    "format-icons": [
+      "▁",
+      "▂",
+      "▃",
+      "▄",
+      "▅",
+      "▆",
+      "▇",
+      "█"
+    ],
+    "actions": {
+      "on-click-right": "mode"
     }
   },
   "mpris": {
@@ -271,6 +296,7 @@
   },
   "tray": {
     "icon-size": 12,
-    "spacing": 4
+    "spacing": 4,
+    "show-passive-items": true
   }
 }
