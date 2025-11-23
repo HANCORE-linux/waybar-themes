@@ -17,7 +17,9 @@ config_file="/tmp/polybar_cava_config"
 echo "
 [general]
 bars = 24
-sleep_timer = 0
+framerate = 60
+sensitivity = 100
+autosens = 1
 
 [output]
 method = raw
