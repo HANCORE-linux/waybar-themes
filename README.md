@@ -58,6 +58,16 @@ git clone https://github.com/HANCORE-linux/waybar-themes.git /tmp/repo && cp -rf
 ```
 <img width="1307" height="209" alt="screenshot-2025-11-07_11-41-49" src="https://github.com/user-attachments/assets/1b804243-5249-4181-bcc1-558be83d8e18" />
 
+## Screenshots V3 (border)
+- this Theme is recommended for darker Themes
+- all shadow & border with minimal concept
+##### V3-border Install-command (copy and paste in your terminal): <br>
+```bash
+git clone https://github.com/HANCORE-linux/waybar-themes.git /tmp/repo && cp -rf /tmp/repo/config/V3-border/. ~/.config/waybar && rm -rf /tmp/repo && omarchy-restart-waybar
+```
+<img width="2560" height="701" alt="screenshot-2025-11-24_20-29-33" src="https://github.com/user-attachments/assets/eb9bde48-a917-41b6-a415-20075b1fe2b3" />
+
+
 ## Screenshots V3 (trans)
 - transparant and all shadow , waybar and tooltip
 ##### V3-trans Install-command (copy and paste in your terminal): <br>
