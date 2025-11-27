@@ -62,7 +62,8 @@ git clone https://github.com/HANCORE-linux/waybar-themes.git /tmp/repo && cp -rf
 ```bash
 omarchy-restart-waybar
 ```
-<img width="2560" height="748" alt="screenshot-2025-11-27_11-47-06" src="https://github.com/user-attachments/assets/2b0362dc-d522-4024-927f-d2d5f277f613" />
+<img width="1920" height="573" alt="screenshot-2025-11-27_21-48-47" src="https://github.com/user-attachments/assets/ba55cb90-6b96-4bd5-a76e-25d65b8aa94c" />
+
 
 ## Screenshots V3
 - new waybar Style (without red accents)
