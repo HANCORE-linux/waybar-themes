@@ -210,6 +210,9 @@ padding: 1px 0 1px;
 #clock {
   padding-left: 0px;
 }
+#pulseaudio {
+  margin-right: 3px;
+}
 
 /* Specific Module */
 
