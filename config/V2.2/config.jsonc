@@ -223,7 +223,7 @@
         "format": "{}°",
         "tooltip": true,
         "interval": 1800,
-        "exec": "wttrbar --nerd --location Hildesheim",
+        "exec": "wttrbar --nerd --location yourlocation",
         "return-type": "json"
   },
   "pulseaudio": {
