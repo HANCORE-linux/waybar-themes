@@ -227,21 +227,14 @@
         "return-type": "json"
   },
   "pulseaudio": {
-    "format": "{volume}% {icon}",
-    "on-click": "alacritty --class=Wiremix -e wiremix",
-    "on-click-right": "omarchy-launch-or-focus-tui wiremix",
+    "format": "{icon}",
+    "on-click": "omarchy-launch-or-focus-tui wiremix",
+    "on-click-right": "pamixer -t",
     "tooltip-format": "Playing at {volume}%",
     "scroll-step": 5,
-    "format-muted": "󰝟",
+    "format-muted": "",
     "format-icons": {
-      "headphones": "",
-      "phone": "",
-      "portable": "",
-      "car": "",
-      "default": [
-        "",
-        ""
-      ]
+      "default": ["", "", ""]
     }
   },
  "group/tray-expander": {
