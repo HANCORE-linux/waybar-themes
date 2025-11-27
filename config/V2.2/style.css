@@ -140,7 +140,7 @@ tooltip {
   margin: 2px;
   padding: 1px 0 1px;
   color: @foreground;
-  opacity: 0.9;
+  opacity: 1;
 }
 
 #custom-omarchy {
