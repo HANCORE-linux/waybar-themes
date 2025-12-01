@@ -1,4 +1,4 @@
-## Waybar Themes for linux
+## Waybar Themes for opinionated Linux/Omarchy
 
  A collection of my Waybar themes – have fun exploring and customizing them!
 
