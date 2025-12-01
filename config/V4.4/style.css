@@ -163,7 +163,7 @@ tooltip {
 
 #custom-update, #idle_inhibitor, #custom-update, #custom-screenrecording-indicator, #custom-updatespacman {
   color: @background;
-  background-color: alpha(@foreground, 0.4);
+  background-color: alpha(@foreground, 0.9);
   border-radius: 24px;
   opacity: 1.0;
   transition: all 0.3s ease-in-out;
