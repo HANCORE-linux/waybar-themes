@@ -5,7 +5,7 @@
   "mod": "dock",
   "height": 6,
   "margin-top": 1,
-  "width": 950,
+  "width": 900,
   "margin-bottom": 0,
   "modules-left": [
     "custom/omarchy",
