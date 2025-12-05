@@ -117,6 +117,7 @@ text-shadow: 0px 0px 2px alpha(@foreground, 0.4);
 #mpris,
 #battery,
 #network,
+#memory,
 #bluetooth,
 #wlr-taskbar,
 #backlight,
@@ -126,8 +127,8 @@ text-shadow: 0px 0px 2px alpha(@foreground, 0.4);
 #custom-updatespacman,
 #custom-screenrecording-indicator,
 #custom-update {
-  min-width: 14px;
-  margin: 0 8.5px;
+  min-width: 12px;
+  margin: 0 7.25px;
 }
 
 #custom-update {
