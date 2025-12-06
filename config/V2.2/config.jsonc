@@ -4,7 +4,7 @@
   "position": "top",
   "mod": "dock",
   "margin-top": 2,
-  "height": 10,
+  "height": 27,
   "margin-left": 5,
   "margin-right": 5,
   "margin-bottom": 0,
@@ -36,6 +36,7 @@
     "bluetooth",
     "pulseaudio",
     "network",
+    "memory",
     "cpu",
     "battery",
     "custom/weather",
@@ -78,15 +79,15 @@
     "signal": 7,
     "interval": 21600
   },
-  "custom/updatespacman": {
-    "format": "{icon}",
+   "custom/updatespacman": {
+    "format": "{}{icon}",
     "return-type": "json",
     "format-icons": {
-      "has-updates": "󰏖",
-      "updated": "󰂪"
+      "has-updates": " 󰏖",
+      "updated": ""
     },
     "exec-if": "which waybar-module-pacman-updates",
-    "exec": "waybar-module-pacman-updates --interval-seconds 5 --network-interval-seconds 300"
+    "exec": "waybar-module-pacman-updates --no-zero-output"
   },
    "hyprland/window": {
     "format": "{title} - {class}",
@@ -112,14 +113,19 @@
       "(.*) - com.obsproject.Studio": "  $1 "
     }
   },
-  "cpu": {
-    "interval": 5,
-    "format": "{usage}% 󰍛",
+ "cpu": {
+    "interval": 2,
+    "format": "󰍛 {usage}%",
+    "on-click": "omarchy-launch-or-focus-tui btop"
+  },
+  "memory": {
+    "interval": 2,
+    "format": "{percentage}%  ",
     "on-click": "omarchy-launch-or-focus-tui btop"
   },
   "clock": {
-    "format": "  {:%H:%M %a}",
-    "format-alt": "  {:%d/%m/%Y  %H:%M:%S}",
+    "format": " {:%H:%M %a}",
+    "format-alt": " {:%d/%m/%Y  %H:%M:%S}",
     "tooltip-format": "<span>{calendar}</span>",
     "calendar": {
       "mode": "month",
@@ -134,7 +140,7 @@
     },
     "on-click-right": "~/.local/share/omarchy/bin/omarchy-cmd-tzupdate"
   },
-    "idle_inhibitor": {
+  "idle_inhibitor": {
     "format": "{icon}",
     "format-icons": {
       "activated": "",

@@ -71,8 +71,7 @@ tooltip {
 
 .modules-center {
   color: @foreground;
-  margin: 0px;
-  padding: 0px 6px;
+  padding: 0px 1px;
   border-radius: 4px;
   opacity: 0.95;
   border: 2px solid alpha(@foreground, 0.8);
@@ -81,8 +80,7 @@ tooltip {
 
 .modules-right {
   color: @foreground;
-  margin: 0px;
-  padding: 0px 6px;
+  padding: 0px 1px;
   border-radius: 4px;
   opacity: 0.95;
   border: 2px solid alpha(@foreground, 0.8);
@@ -145,7 +143,8 @@ tooltip {
 
 #custom-omarchy {
   padding: 1px 0 1px;
-  margin-right: 6px;
+  margin-right: 0px;
+  margin-left: 0px;
 }
 
 /* --- General Modules --- */
@@ -157,6 +156,7 @@ tooltip {
 #clock,
 #battery,
 #network,
+#memory,
 #backlight,
 #bluetooth,
 #pulseaudio,
@@ -165,7 +165,8 @@ tooltip {
 #idle_inhibitor,
 #custom-screenrecording-indicator,
 #custom-updatespacman {
-  min-width: 14px;
+  min-width: 12px;
+  margin: 0 7.5px;
 }
 
 /* --- Hover right module  --- */
@@ -173,9 +174,11 @@ tooltip {
 #tray:hover,
 #custom-expand-icon:hover,
 #cpu:hover,
+#memory:hover,
 #temperature:hover,
 #battery:hover,
 #bluetooth:hover,
+#backlight:hover,
 #custom-omarchy:hover,
 #custom-weather:hover,
 #custom-update:hover,
@@ -191,28 +194,7 @@ tooltip {
 }
 
 
-/* #LEFT1 Specific Module */
- #idle_inhibitor, #custom-updatespacman, #custom-update, #custom-screenrecording-indicator {
-margin: 0 6px;
-padding: 1px 0 1px;
-}
 
-
-/* Right Specific Module */
-#backlight, #bluetooth, #battery, #network, #pulseaudio, #cpu, #custom-weather, #clock {
-  margin: 0 0 0 10px;
-  padding: 1px 0 1px;
-}
-
-#cpu {
-  margin-right: 3px;
-}
-#clock {
-  padding-left: 0px;
-}
-#pulseaudio {
-  margin-right: 3px;
-}
 
 /* Specific Module */
 
@@ -317,11 +299,9 @@ animation: repeat;
   animation-iteration-count: infinite;
   animation-direction: alternate;
   color: @foreground;
-   margin-left: 0px;
  }
 
 #idle_inhibitor.activated {
-  margin-right: 4px;
   color: #178b76;
   animation-name: blink-inhibitor;
   animation-duration: 1s;
