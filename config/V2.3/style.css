@@ -105,7 +105,7 @@ tooltip {
   border-radius: 24px;
   background-color: alpha(@foreground, 0.5);
   color: @background; 
-  transition: all 0.3s ease-in-out;
+  transition: all 0.15s ease-in-out;
   opacity: 0.95;
 }
 
@@ -115,7 +115,7 @@ tooltip {
   background-color: alpha(@foreground, 0.9);
   border-radius: 24px;
   opacity: 1.0;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.15s ease-in-out;
 }
 
 #workspaces button.empty {
@@ -123,7 +123,7 @@ tooltip {
   color: @foreground;
   opacity: 0.45;
   border-radius: 24px;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.15s ease-in-out;
 }
 
 #workspaces button:hover {
