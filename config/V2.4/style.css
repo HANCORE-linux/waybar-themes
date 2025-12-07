@@ -137,7 +137,7 @@ tooltip {
   color: @foreground;
   border-radius: 24px;
   opacity: 0.9;
-  background: linear-gradient(180deg, @background 75%, @foreground);
+  background: linear-gradient(180deg, @background 5%, @foreground);
 }
 
 
