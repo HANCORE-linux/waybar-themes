@@ -72,6 +72,15 @@ git clone https://github.com/HANCORE-linux/waybar-themes.git /tmp/repo && cp -rf
 ```
 <img width="1920" height="407" alt="screenshot-2025-12-06_23-47-22" src="https://github.com/user-attachments/assets/7106e061-0f91-4235-890c-f7912090b7f9" />
 
+## Screenshots V2.4
+- base config V2.3 - with full shadow "box" waybar background <br>
+##### V2.4 Install-command (copy and paste in your terminal): <br>
+```bash
+git clone https://github.com/HANCORE-linux/waybar-themes.git /tmp/repo && cp -rf /tmp/repo/config/V2.4/. ~/.config/waybar && rm -rf /tmp/repo && omarchy-restart-waybar
+```
+<img width="1920" height="405" alt="screenshot-2025-12-07_08-18-00" src="https://github.com/user-attachments/assets/d36b5b2e-3f39-46ca-8d64-90f22da6cea7" />
+
+
 ## Screenshots V3
 - new waybar Style (without red accents)
 - base config is from https://github.com/CobyPowers/omarchy/tree/master/config/waybar (Credits goes to https://github.com/CobyPowers ) , i added some functions according to my needs and changed the high <br>
