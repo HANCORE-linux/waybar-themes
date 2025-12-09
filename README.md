@@ -192,7 +192,12 @@ git clone https://github.com/HANCORE-linux/waybar-themes.git /tmp/repo && cp -rf
 
 
 ## Screenshots V4.2
-- soon
+- base config V4
+##### V4.2 Install-command (copy and paste in your terminal): <br>
+```bash
+git clone https://github.com/HANCORE-linux/waybar-themes.git /tmp/repo && cp -rf /tmp/repo/config/V4.2/. ~/.config/waybar && rm -rf /tmp/repo && omarchy-restart-waybar
+```
+<img width="1437" height="488" alt="screenshot-2025-12-09_17-08-11" src="https://github.com/user-attachments/assets/f6c52dad-debe-4516-8382-f4b579605b74" />
 
 ## Screenshot V4.3
 - Enhancement release (Minimal build, mpris animation, wttrbar and gradient bottom color) <br>
