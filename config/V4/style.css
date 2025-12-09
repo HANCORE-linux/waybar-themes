@@ -60,10 +60,9 @@ window#waybar.empty #window{
 }
 
 #custom-omarchy {
-  padding: 2px;
   padding-left: 2px;
   padding-right: 2px;
-  font-size: 15px;
+  font-size: 16px;
 }
 
 #window {
