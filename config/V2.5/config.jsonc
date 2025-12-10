@@ -152,8 +152,8 @@
       ]
     },
     "format-full": "󰂅",
-    "tooltip-format-discharging": "{timeTo} / {health}",
-    "tooltip-format-charging": "{timeTo} / {health}",
+    "tooltip-format-discharging": "{timeTo}",
+    "tooltip-format-charging": "{timeTo}",
     "interval": 5,
     "on-click": "omarchy-menu power",
     "states": {
