@@ -96,16 +96,21 @@
     "format": "{usage}% 󰍛",
     "on-click": "omarchy-launch-or-focus-tui btop"
   },
+  "backlight": {
+    "device": "intel_backlight",
+    "format": "{percent}% {icon}",
+    "format-icons": [
+      "🌑",
+      "🌘",
+      "🌗",
+      "🌖",
+      "🌕"
+    ]
+  },
   "memory": {
     "interval": 2,
     "format": "{percentage}% ",
     "on-click": "omarchy-launch-or-focus-tui btop"
-  },
-  "temperature": {
-    "interval": 2,
-    "critical-threshold": 85,
-    "format": "{temperatureC}°C ",
-    "format-critical": " {temperatureC}°C"
   },
   "clock": {
     "format": "{:L%A: %H:%M}",
