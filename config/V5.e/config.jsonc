@@ -1,6 +1,5 @@
 {
   "reload_style_on_change": true,
-  "layer": "top",
   "position": "top",
   "spacing": 0,
   "height": 15,
@@ -12,7 +11,6 @@
   "modules-left": [
     "custom/omarchy",
     "clock",
-    //  "idle_inhibitor",
     "custom/update",
     "custom/screenrecording-indicator",
     "hyprland/window"
@@ -24,8 +22,8 @@
     "bluetooth",
     "network",
     "pulseaudio",
+    "memory",  
     "cpu",
-    "memory",
     "battery"
   ],
   "hyprland/workspaces": {
@@ -72,8 +70,7 @@
       "(.*) - org.gnome.Nautilus": " 󰣆 $1 ",
       "(.*) - fish": "  [$1] ",
       "(.*Steam)...(.*)": "  $1",
-      // "OBS *. - (.*) - com.obsproject.Studio": "  $1", // not yet functional
-      // "nvim (.*) - com.mitchellh.ghostty": "  $1", // not being captured
+      "(.*) - com.obsproject.Studio": "  $1 "
     }
   },
   "custom/omarchy": {
@@ -83,7 +80,7 @@
     "tooltip-format": "Omarchy Menu\n\nSuper + Alt + Space"
   },
   "custom/update": {
-    "format": "<span weight='bold' >\ue900</span>",
+    "format": "",
     "exec": "omarchy-update-available",
     "on-click": "omarchy-launch-floating-terminal-with-presentation omarchy-update",
     "tooltip-format": "Omarchy update available",
@@ -113,12 +110,12 @@
   },
   "cpu": {
     "interval": 2,
-    "format": "󰍛 {usage}%",
+    "format": "{usage}% 󰍛",
     "on-click": "omarchy-launch-or-focus-tui btop"
   },
   "memory": {
     "interval": 2,
-    "format": "  {percentage}%",
+    "format": "{percentage}% ",
     "on-click": "omarchy-launch-or-focus-tui btop"
   },
   "clock": {
@@ -195,8 +192,8 @@
       ]
     },
     "format-full": "󰂅",
-    "tooltip-format-discharging": "{power:>1.0f}W↓ {capacity}%",
-    "tooltip-format-charging": "{power:>1.0f}W↑ {capacity}%",
+    "tooltip-format-discharging": "{timeTo}",
+    "tooltip-format-charging": "{timeTo}",
     "interval": 5,
     "on-click": "omarchy-menu power",
     "states": {

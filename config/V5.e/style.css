@@ -27,12 +27,21 @@ window#waybar {
   border-radius: 4px;
 }
 
-window#waybar.empty #window{
+
+window#waybar.empty #window.label {
   background: transparent;
-  color: transparent;
+  background-color: transparent;
   border: none;
+  border-radius: 0;
+  color: transparent;
   padding: 0;
   margin: 0;
+ }
+
+#window {
+  margin: 0px;
+  padding: 0;
+  color: @foreground;
 }
 
 .modules-left {
@@ -84,11 +93,6 @@ window#waybar.empty #window{
   padding: 0 4px;
 }
 
-#window {
-  opacity: 0.95;
-  margin-right: 2px;
-}
-
 #workspaces {
     margin: 0;
     padding: 1px 2px 1px;
@@ -131,7 +135,6 @@ window#waybar.empty #window{
   opacity: 0.2;
 }
 
-#hyprland-window,
 #tray,
 #cpu,
 #memory,
@@ -141,6 +144,7 @@ window#waybar.empty #window{
 #pulseaudio,
 #custom-omarchy,
 #backlight,
+#clock,
 #custom-updatespacman,
 #custom-screenrecording-indicator,
 #custom-update {
@@ -149,7 +153,7 @@ window#waybar.empty #window{
 }
 
 #custom-expand-icon {
-  margin-right: 1px;
+  margin-right: 0px;
 }
 
 tooltip {
@@ -158,17 +162,7 @@ tooltip {
 
 #custom-update {
   font-size: 10px;
-  margin: 2px;
 }
-
-#clock, #idle_inhibitor, #custom-update, #custom-omarchy {
-  margin: 0 2px;
-}
-
-#clock {
-  margin-left: 0px;
-}
-
 
 .hidden {
   opacity: 0;
@@ -179,24 +173,30 @@ tooltip {
 }
 
 #custom-screenrecording-indicator {
-  min-width: 12px;
-  margin-left: 8.75px;
-  font-size: 10px;
+    font-size: 12px;
+    min-width: 16px;
+    margin-left: 0px;
+    padding: 0px;
+    margin: 0px;
+}
+
+#custom-screenrecording-indicator {
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  color: transparent;
 }
 
 #custom-screenrecording-indicator.active {
-  color: #a55555;
+  color: #eb7087;
+  animation-name: blink-recording;
+  animation-duration: 0.5s;
 }
 
-/*
-#window {
-  margin: 8.75px;
-}*/
-
-/* Adso add! */
-
-#idle_inhibitor {
-  margin-right: 5px;
+@keyframes blink-recording {
+    to {
+        color: @background;
+    }
 }
 
 #tray-expander {
@@ -209,7 +209,7 @@ tooltip {
     background: @background;
     font-size: 12px;
     border: 2px solid alpha(@foreground, 0.64);
-    box-shadow: 1px 1px 3px 1px alpha(@foreground, 0.3);
+    box-shadow: 1px 1px 3px 1px alpha(@foreground, 0.1);
     border-radius: 8px;
 }
 tooltip label {
