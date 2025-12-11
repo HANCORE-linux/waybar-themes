@@ -114,6 +114,10 @@ tooltip {
   background: linear-gradient(180deg, @background 75%, @foreground);
 }
 
+#workspaces button.empty.active {
+  background-color: @foreground;
+  color: @background;
+}
 
 #custom-omarchy {
   padding: 1px 0 1px;
