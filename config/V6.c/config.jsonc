@@ -160,7 +160,7 @@
         "󰁹"
       ]
     },
-    "format-full": "󰂅 {capacity}%",
+    "format-full": " 󰂅 {capacity}%",
     "tooltip-format-discharging": "{timeTo}",
     "tooltip-format-charging": "{timeTo}",
     "interval": 5,
