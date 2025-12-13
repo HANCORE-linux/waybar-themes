@@ -1,0 +1,183 @@
+@import "../omarchy/current/theme/waybar.css";
+
+* {
+  /* background-color: @background; */
+  /* color: @foreground; */
+
+  border: none;
+  padding: 0px;
+  min-height: 0;
+  font-family: 'JetBrainsMono Nerd Font';
+  font-weight: normal;
+}
+#waybar > .horizontal {
+    padding-top: 3px;
+}
+
+window#waybar  {
+  background: linear-gradient(180deg, @background 88%, @foreground);
+  color: @foreground;
+  transition-property: background-color;
+  transition-duration: .5s;
+}
+
+#custom-omarchy {
+font-size: 12px;
+margin-right: 5px;
+margin-left: 7.5px;
+}
+
+#workspaces {
+  padding: 0 5px;
+  margin: 0;
+}
+
+#workspaces button {
+  all: initial;
+  padding: 0 2px;
+  margin: 0 0 0 8px;
+  opacity: 0.75;
+  color: @foreground;
+  font-size: 13px;
+}
+
+#workspaces button.active {
+    color: @foreground;
+    opacity: 1.0;
+    padding: 0 2px;
+    font-size: 15px;
+}
+
+#workspaces button.empty {
+  opacity: 0.3;
+  font-size: 13px;
+}
+
+#workspaces button.empty.active {
+ font-size: 15px;
+ color: @foreground;
+ opacity: 1.0;
+}
+
+#tray,
+#mpris,
+#cpu,
+#memory,
+#battery,
+#backlight,
+#network,
+#bluetooth,
+#pulseaudio {
+  font-size: 12px;
+  min-width: 12px;
+  margin: 0 7.5px;
+  padding: 0 2px;
+}
+
+tooltip {
+  padding: 2px;
+}
+
+#idle_inhibitor, #custom-updatespacman, #custom-update, #custom-screenrecording-indicator, #clock {
+  margin: 0 5px;
+  padding: 0 2px;
+  font-size: 12px;
+}
+
+#tray {
+    background-color: @transparent;
+    margin: 0px;
+}
+
+#tray > .passive {
+    -gtk-icon-effect: dim;
+}
+
+#tray > .needs-attention {
+    -gtk-icon-effect: highlight;
+    background-color: @transparent;
+}
+
+.hidden {
+  opacity: 0;
+}
+
+tooltip {
+ padding: 4px;
+ background: @background;
+ font-size: 10px;
+ border: 1px solid alpha(@foreground, 0.8);
+ border-radius: 8px;
+}
+tooltip label {
+    color: @foreground;
+    font-weight: normal;
+}
+
+/* Specific animation Module */
+
+#custom-screenrecording-indicator {
+    font-size: 12px;
+    padding: 0 2px;
+    margin: 2px;
+}
+
+#custom-screenrecording-indicator {
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  color: transparent;
+}
+
+#custom-screenrecording-indicator.active {
+  color: #eb7087;
+  animation-name: blink-recording;
+  animation-duration: 0.5s;
+}
+
+@keyframes blink-recording {
+    to {
+        color: @background;
+    }
+}
+
+@keyframes blink-inhibitor {
+    to {
+        color: @background;
+    }
+}
+
+#idle_inhibitor {
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  color: @foreground;
+  margin-right: 0px;
+ }
+
+#idle_inhibitor.activated {
+  color: #178b76;
+  margin-right: 0px;
+  animation-name: blink-inhibitor;
+  animation-duration: 1s;
+}
+
+#mpris {
+color: @foreground;
+margin-left: 0px;
+padding-top: 0px;
+padding-bottom: 1px;
+animation: repeat;
+	animation-name: blink;
+	animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes blink {
+    to {
+        color: #4a4a4a;
+        
+    }
+}
