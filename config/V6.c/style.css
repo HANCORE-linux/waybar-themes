@@ -22,10 +22,10 @@ window#waybar  {
 }
 
 #custom-omarchy {
-font-size: 13px;
+font-size: 12px;
 margin-right: 2px;
 margin-left: 7.5px;
-padding-bottom: 0px;
+padding-bottom: 1px;
 }
 
 #workspaces {
@@ -63,7 +63,6 @@ padding-bottom: 0px;
 
 
 #tray,
-#mpris,
 #cpu,
 #memory,
 #battery,
@@ -73,7 +72,7 @@ padding-bottom: 0px;
 #pulseaudio {
   font-size: 12px;
   min-width: 12px;
-  margin: 0 7.5px;
+  margin: 0 5.5px;
   padding: 0 2px;
 }
 
@@ -81,15 +80,11 @@ tooltip {
   padding: 2px;
 }
 
-#idle_inhibitor, #custom-updatespacman, #custom-update, #custom-screenrecording-indicator, #clock {
-  margin: 0 7.5px;
+#idle_inhibitor, #custom-updatespacman, #custom-update, #custom-screenrecording-indicator, #clock, #mpris {
+  margin: 0 5.5px;
   padding: 0 3px;
   font-size: 12px;
   min-width: 12px;
-}
-
-#clock {
-  margin: 0 1px;
 }
 
 #network, #battery {
@@ -97,12 +92,12 @@ tooltip {
 }
 
 #pulseaudio {
-  margin: 0 5px;
+  margin: 0 5.5px;
 }
 
 #tray {
     background-color: @transparent;
-    margin: 0 1px;
+    margin: 0 5.5px;
 }
 
 #tray > .passive {
@@ -180,7 +175,6 @@ tooltip label {
 
 #mpris {
 color: @foreground;
-margin-left: 3px;
 padding-top: 0px;
 padding-bottom: 1px;
 animation: repeat;
