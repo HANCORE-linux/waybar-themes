@@ -39,6 +39,8 @@ window#waybar.empty #window{
 
 #workspaces {
   margin: 5px;
+  padding-top: 0px;
+  padding-bottom: 3px;
   background-color: #27272a;
   margin-left: 0px;
 }
@@ -115,6 +117,30 @@ background-color: #27272a;
   background-color: #27272a;
   color: #e6d8ba;
 }
+
+#battery.charging,
+#battery.plugged {
+  color: #e6d8ba;
+  background-color: #27272a;
+}
+
+@keyframes blink {
+  to {
+    background-color: #e6d8ba;
+    color: #000000;
+  }
+}
+
+#battery.critical:not(.charging) {
+  background-color: #f53c3c;
+  color: #e6d8ba;
+  animation-name: blink;
+  animation-duration: 0.5s;
+  animation-timing-function: steps(12);
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
 
 #backlight {
   background-color: #27272a;
