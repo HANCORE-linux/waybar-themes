@@ -9,7 +9,7 @@
   "margin-right": 0,
   "maring-left": 0,
   "modules-left": ["custom/omarchy", "hyprland/workspaces", "hyprland/window", "cava", "mpris"],
-  "modules-center": ["clock", "custom/weather", "custom/update", "custom/updatespacman"],
+  "modules-center": ["clock", "custom/weather", "custom/screenrecording-indicator", "custom/update", "custom/updatespacman"],
   "modules-right": [
     "group/tray-expander",
     "temperature",
@@ -241,5 +241,11 @@
           ""  // Icon: temperature-full
   ],
     "tooltip": true
+  },
+    "custom/screenrecording-indicator": {
+    "on-click": "omarchy-cmd-screenrecord",
+    "exec": "$OMARCHY_PATH/default/waybar/indicators/screen-recording.sh",
+    "signal": 8,
+    "return-type": "json"
   },
 }

@@ -129,6 +129,7 @@ window#waybar.empty #window {
 #pulseaudio,
 #custom-weather,
 #custom-update,
+#custom-screenrecording-indicator,
 #clock {
   min-width: 12px;
   padding: 0 5px;
@@ -194,4 +195,29 @@ tooltip label {
 
 .hidden {
   opacity: 0;
+}
+
+#custom-screenrecording-indicator {
+    font-size: 12px;
+    padding: 0 2px;
+    margin: 2px;
+}
+
+#custom-screenrecording-indicator {
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  color: transparent;
+}
+
+#custom-screenrecording-indicator.active {
+  color: #eb7087;
+  animation-name: blink-recording;
+  animation-duration: 0.5s;
+}
+
+@keyframes blink-recording {
+    to {
+        color: @background;
+    }
 }
