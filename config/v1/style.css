@@ -11,21 +11,9 @@
   font-family: 'JetBrainsMono Nerd Font Propo';
   font-size: 12px;
   font-weight: bold;
+  min-height: 0;
   }
 
-/* --- Tooltip --- */
-tooltip label {
-  color: @fg;
-  text-shadow: none;
-  }
-
-
-tooltip {
-  background-color: @bg;
-  border-radius: 5px;
-  border: 1px solid @bg;
-  opacity: 0.9;
- }
 
 /* --- Waybar ---*/
 window#waybar {
@@ -46,36 +34,39 @@ window#waybar.empty #window {
 
 /* --- Modules --- */
 .modules-left {
-  margin: 2px 0 0 0;
+  margin-left: 5px;
 }
 
 .modules-center {
   background: @bg;
-  margin: 4px 4px 4px 4px;
-  box-shadow: 1px 1px 3px 1px @ia1;
-  border-radius: 1px;
+  box-shadow: 1px 1px 3px 0px @ia1;
+  margin: 1px 8px 2px 0px;
+  border-radius: 2px;
+  padding: 0px;
  }
 
 .modules-right {
-  margin: 4px 4px 4px 4px; 
+  margin-right: 5px;
   background: @bg;
-  box-shadow: 1px 1px 3px 1px @ia1;
-  border-radius: 1px;
+  box-shadow: 1px 1px 3px 0px @ia1;
+  border-radius: 2px;
+  margin: 1px 8px 2px 0px;
+  padding: 0px;
 }
 
 /* --- Workspaces --- */
 #workspaces {
   background-color: @bg;
-  box-shadow: 1px 1px 3px 1px @ia1;
-  margin: 2px 4px 4px 4px;
-  
+  box-shadow: 1px 1px 3px 0px @ia1;
+  margin: 1px 8px 2px 0px;
+  border-radius: 2px;
 }
 
 #workspaces button {
   color: @fg;
   background-color: transparent;
-  margin: 1px;
-  padding: 0 6px;
+  margin: 2px;
+  padding: 0 5px;
   border-radius: 0;
 }
 
@@ -109,17 +100,18 @@ window#waybar.empty #window {
 /* --- Custom Color+Shdow Omarchy --- */
 #custom-omarchy{
   padding: 0 5px;
+  border-radius: 2px;
   background-color: @bg;
-  box-shadow: 1px 1px 3px 1px @ia1;
-  margin: 2px 4px 4px 4px;
+  box-shadow: 1px 1px 3px 0px @ia1;
   color: @rd1;
+  margin: 1px 8px 2px 0px;
 }
 
 /* --- General Modules --- */
 
 #tray,
 #cava,
-#mpris,
+#memory,
 #cpu,
 #battery,
 #network,
@@ -129,12 +121,17 @@ window#waybar.empty #window {
 #custom-weather,
 #custom-update,
 #clock {
-  padding: 0 5px;
+  min-width: 12px;
+  padding: 0 8px;
+  margin: 0 0px;
+  
 }
 
 
 /* --- Right module Hover color --- */
 #cpu:hover,
+#memory:hover,
+#battery:hover,
 #temperature:hover,
 #bluetooth:hover,
 #network:hover,
@@ -145,22 +142,37 @@ window#waybar.empty #window {
 #cava {
   padding: 0 5px;
   background-color: @background;
-  box-shadow: 1px 1px 3px 1px @ia1;
-  margin: 2px 4px 4px 4px;
+  border-radius: 2px;
+  box-shadow: 1px 1px 3px 0px @ia1;
+  margin: 1px 8px 2px 0px;
   border-radius: 0;
   color: #ff9b71;
 }
 
+tooltip {
+  padding: 2px;
+}
 
 #mpris {
   padding: 0 5px;
   background-color: @bg;
-  box-shadow: 1px 1px 3px 1px @ia1;
-  margin: 2px 4px 4px 4px;
+  border-radius: 2px;
+  box-shadow: 1px 1px 3px 0px @ia1;
+  margin: 1px 8px 2px 0px;
   color: @fg;
 }
 
-
+tooltip {
+ padding: 4px;
+ background: @bg;
+ font-size: 10px;
+ border: 1px solid alpha(@foreground, 0.8);
+ border-radius: 8px;
+}
+tooltip label {
+    color: @fg;
+    font-weight: normal;
+}
 
 
 /* Specific Module */
