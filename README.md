@@ -7,8 +7,6 @@
 My Waybar configurations from V1 to V2.1 used additional packages such as wttrbar and waybar-cava.
 However, I no longer use these modules. If someone still wants to use them, they can simply install the missing packages.
 
-For basic functionality, it is enough to copy only the config.jsonc and style.css files.
-
 Everything else is optional add-ons, such as the waybar-pacman module to display incoming updates<br>
 
 ```bash
