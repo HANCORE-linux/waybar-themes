@@ -24,16 +24,7 @@ git clone https://github.com/HANCORE-linux/waybar-themes.git /tmp/repo && cp -rf
 <img width="2560" height="1440" alt="screenshot-2025-09-07_18-38-28" src="https://github.com/user-attachments/assets/16c8b398-d1b3-4519-bcbe-e15ad920c7ff" />
 
 ## Screenshots V2
-- added pacman/arch update module & added hyprland/window module <br>
-##### V2 Install-command (copy and paste in your terminal): <br>
-```bash
-git clone https://github.com/HANCORE-linux/waybar-themes.git /tmp/repo && cp -rf /tmp/repo/config/v2/. ~/.config/waybar && rm -rf /tmp/repo && omarchy-restart-waybar
-```
-<img width="2560" height="1440" alt="screenshot-2025-09-08_00-34-55" src="https://github.com/user-attachments/assets/5cdbb695-83fa-47ec-9271-95dbe4691ffe" />
-
-## Screenshots V2.1
-- all functions and modules were implemented in V2 <br>
-- a new Version of V2.1 will come soon <br>
+- I have now merged V1, V2, and V2.1 into V1, as creating additional unnecessary versions does not make sense due to the two-module function and would only result in increased maintenance effort. New designs will be created by me for the discontinued versions V2 and V2.1. <br>
 
 ## Screenshots V2.2
 - new version of V1 to V2 series configs with some extras <br>
