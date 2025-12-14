@@ -32,13 +32,8 @@ git clone https://github.com/HANCORE-linux/waybar-themes.git /tmp/repo && cp -rf
 <img width="2560" height="1440" alt="screenshot-2025-09-08_00-34-55" src="https://github.com/user-attachments/assets/5cdbb695-83fa-47ec-9271-95dbe4691ffe" />
 
 ## Screenshots V2.1
-- added screenrecord button stop with new Omarchy Update 3.0.1 to waybar config & style <br>
-- removed hyprland/window module <br>
-##### V2.1 Install-command (copy and paste in your terminal): <br>
-```bash
-git clone https://github.com/HANCORE-linux/waybar-themes.git /tmp/repo && cp -rf /tmp/repo/config/v2.1/. ~/.config/waybar && rm -rf /tmp/repo && omarchy-restart-waybar
-```
-<img width="300" height="54" alt="screenshot-2025-09-18_22-45-54" src="https://github.com/user-attachments/assets/aa13ae41-6d40-407e-bbe8-cc04c5ff2124" />
+- all functions and modules were implemented in V2 <br>
+- a new Version of V2.1 will come soon <br>
 
 ## Screenshots V2.2
 - new version of V1 to V2 series configs with some extras <br>
