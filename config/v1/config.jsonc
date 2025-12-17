@@ -216,7 +216,7 @@
   },
 
 "cava": {
-    "framerate": 120,
+    "framerate": 60,
     "autosens": 1,
     "bars": 12,
     "method": "pipewire",
