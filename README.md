@@ -42,6 +42,8 @@ git clone https://github.com/HANCORE-linux/waybar-themes.git /tmp/repo && cp -rf
 ```
 <img width="2560" height="459" alt="screenshot-2025-12-18_15-37-41" src="https://github.com/user-attachments/assets/e89e6cb5-1158-4dab-b07b-f590d7e052e2" />
 
+## Screenshots V2.1 soon
+- New V2.1 soon
 
 ## Screenshots V2.2
 - new version of V1 to V2 series configs with some extras <br>
