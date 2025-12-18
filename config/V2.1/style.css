@@ -1,0 +1,245 @@
+@import "./rose-pine.css";
+
+/* --- Global-Settings ---*/
+
+* {
+  font-family: 'JetBrainsMono Nerd Font';
+  font-size: 12px;
+  font-weight: bold;
+  min-height: 0px;
+  }
+
+  /* --- Waybar ---*/
+  window#waybar {
+  background-color: transparent;
+  transition-property: background-color;
+  transition-duration: .5s;
+}
+
+/* --- Single Module Config's ---*/
+
+#left1{
+  background-color: @base;
+  border-radius: 8px;
+  border: 1px solid alpha(@text, 0.15);
+  margin-right: 8px;
+}
+
+#left2{
+  margin-right: 8px;
+}
+
+#left3{
+  background-color: @base;
+  border-radius: 8px;
+  border: 1px solid alpha(@text, 0.15);
+  color: @subtle;
+  margin-right: 8px;
+}
+
+#left4{
+}
+.modules-center {
+  background-color: transparent;
+  color: @foam;
+}
+
+#right1{
+  background-color: @base;
+  border-radius: 8px;
+  border: 1px solid alpha(@text, 0.15);
+}
+
+#right2{
+  margin-left: 8px;
+  background-color: @base;
+  border-radius: 8px;
+  border: 1px solid alpha(@text, 0.15);
+}
+
+window#waybar.empty #window {
+  background: transparent;
+  background-color: transparent;
+  border: none;
+  border-radius: 0;
+  color: transparent;
+  padding: 0;
+  margin: 0;
+}
+#waybar.empty .modules-center {
+  opacity: 0;
+}
+
+#mpris {
+    background-color: @base;
+  border-radius: 8px;
+  border: 1px solid alpha(@text, 0.15);
+  color: @love;
+}
+
+
+/* --- Tooltip ---*/
+tooltip {
+  opacity: 1;
+
+ }
+
+/* --- Workspaces --- */
+#workspaces {
+  background-color: @base;
+  border-radius: 8px;
+  border: 1px solid alpha(@text, 0.15);
+}
+
+#workspaces button {
+  padding: 3px;
+  border-radius: 2px;
+  background-color: transparent;
+  color: @text;
+  opacity: 1;
+}
+
+#workspaces button.active {
+    color: @love;
+    opacity: 1;
+}
+
+#workspaces button.empty {
+  color: alpha(@text, 0.4);
+  opacity: 0.45;
+  transition: all 0.15s ease-in-out;
+}
+
+#workspaces button.empty.active {
+  color: @love;
+}
+
+
+/* --- General Modules --- */
+
+#tray,
+#window,
+#mpris,
+#cpu,
+#clock,
+#battery,
+#network,
+#memory,
+#backlight,
+#bluetooth,
+#pulseaudio,
+#custom-weather,
+#custom-update,
+#idle_inhibitor,
+#custom-omarchy,
+#custom-screenrecording-indicator,
+#custom-updatespacman {
+  min-width: 16px;
+  margin: 1px 3px 1px 3px;
+  padding-left: 6px;
+  padding-right: 6px;
+}
+
+
+/* --- Module-Group-Colors --- */
+
+#custom-omarchy {
+  border-radius: 0;
+  border-right: 1px solid alpha(@text, 0.15);
+  color: @gold;
+  font-size: 14px;
+}
+
+#clock {
+  border-radius: 0;
+  border-right: 1px solid alpha(@text, 0.15);
+  color: @gold;
+}
+
+#bluetooth {
+  border-radius: 0;
+  border-right: 1px solid alpha(@text, 0.15);
+  color: @foam;
+}
+
+#memory {
+  border-radius: 0;
+  border-left: 1px solid alpha(@text, 0.15);
+}
+
+#cpu {
+  color: @rose;
+}
+
+#battery {
+  color: @iris;
+}
+
+#backlight {
+  color: @foam;
+}
+
+#memory {
+  color: @gold;
+}
+
+#network {
+  color: @rose;
+}
+
+#pulseaudio {
+  color: @love;
+}
+
+
+#tray {
+  color: @muted;
+}
+
+/* Specific Module */
+
+#tray > .needs-attention {
+    -gtk-icon-effect: highlight;
+    background-color: @transparent;
+}
+
+.hidden {
+  opacity: 0;
+}
+
+tooltip {
+ padding: 4px;
+ background-color: @base;
+ border: 1px solid alpha(@text, 0.15);
+ border-radius: 8px;
+ font-size: 12px;
+ 
+}
+tooltip label {
+    color: @subtle;
+    font-weight: normal;
+}
+
+
+/* Specific animation Module */
+
+#custom-screenrecording-indicator {
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  color: transparent;
+}
+
+#custom-screenrecording-indicator.active {
+  color: @rose;
+  animation-name: blink-recording;
+  animation-duration: 0.5s;
+}
+
+@keyframes blink-recording {
+    to {
+        color: @background;
+    }
+}
+
+
