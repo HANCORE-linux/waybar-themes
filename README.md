@@ -43,7 +43,7 @@ git clone https://github.com/HANCORE-linux/waybar-themes.git /tmp/repo && cp -rf
 <img width="2560" height="459" alt="screenshot-2025-12-18_15-37-41" src="https://github.com/user-attachments/assets/e89e6cb5-1158-4dab-b07b-f590d7e052e2" />
 
 ## Screenshots V2.1
-- New V2.1 version with static Rose Pine Dark color scheme - rose-pine .css color scheme [RosePine](https://github.com/rose-pine/waybar?tab=readme-ov-file)
+- New V2.1 version with static Rose Pine Dark color scheme - rose-pine .css color scheme from this source: [RosePine](https://github.com/rose-pine/waybar?tab=readme-ov-file)
 - recreated Waybar like in Galary "Rosé Pine" and added my own modules/functions to it
 ##### V2.1 Install-command (copy and paste in your terminal): <br>
 ```bash
