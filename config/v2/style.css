@@ -168,8 +168,13 @@ tooltip {
     color: #282828;
 }
 
-#bluetooth {
+#backlight {
     background-color: #d3869b;
+    color: #282828;
+}
+
+#bluetooth {
+       background-color: #d65d0e;
     color: #282828;
 }
 
