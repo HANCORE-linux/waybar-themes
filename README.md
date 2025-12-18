@@ -53,25 +53,9 @@ git clone https://github.com/HANCORE-linux/waybar-themes.git /tmp/repo && cp -rf
 
 ## Screenshots V2.2
 - multiple groups creations <br>
-###### STEP1
-- install wttrbar for weather module
-```bash
-yay -S wttrbar
-```
-###### STEP2
 ##### V2.2 Install-command (copy and paste in your terminal): <br>
 ```bash
 git clone https://github.com/HANCORE-linux/waybar-themes.git /tmp/repo && cp -rf /tmp/repo/config/V2.2/. ~/.config/waybar && rm -rf /tmp/repo && omarchy-restart-waybar
-```
-###### STEP3
-- after installing wttrbar, set your City location in config.json file and restart waybar  ,
-```bash
- "custom/weather": {
- ....
-    "exec": "wttrbar --nerd --location yourlocation,
-```
-```bash
-omarchy-restart-waybar
 ```
 <img width="1920" height="573" alt="screenshot-2025-11-27_21-48-47" src="https://github.com/user-attachments/assets/ba55cb90-6b96-4bd5-a76e-25d65b8aa94c" />
 
