@@ -67,7 +67,7 @@ window#waybar.empty #window{
     background-color: alpha(@foreground, 0.75);
     color: @foreground;
     transition: all 0.3s ease-in-out;
-    opacity: 0.6;
+    opacity: 0.75;
     font-size: 8px;
 }
 
@@ -83,8 +83,8 @@ window#waybar.empty #window{
 #workspaces button.empty.active {
  color: @foreground;
  opacity: 1.0;
-   border-radius: 2px;
-    min-width: 30px;
+ border-radius: 2px;
+ min-width: 30px;
 }
 
 
@@ -118,10 +118,10 @@ window#waybar.empty #window{
 #custom-updatespacman,
 #custom-screenrecording-indicator,
 #custom-update {
-  min-width: 16px;
+  min-width: 12px;
   margin: 1px 3px 1px 3px;
-  padding-left: 3px;
-  padding-right: 3px;
+  padding-left: 4px;
+  padding-right: 4px;
 }
 
 #custom-expand-icon {
