@@ -6,8 +6,10 @@
   "width": 1440,
   "margin": "0",
   "modules-left": [
-     "group/left1",
-     "group/left2"
+    "group/left3", 
+    "group/left1",
+    "group/left2"
+     
   ],
   "modules-center": [
    "group/center1"
@@ -43,7 +45,6 @@
       "group/left1": {
     "orientation": "inherit",
     "modules": [
-      "custom/omarchy",
     "hyprland/workspaces"
   ]
   },
@@ -51,6 +52,12 @@
     "orientation": "inherit",
     "modules": [
    "hyprland/window"
+  ]
+  },
+     "group/left3": {
+    "orientation": "inherit",
+    "modules": [
+   "custom/omarchy"
   ]
   },
   "hyprland/workspaces": {

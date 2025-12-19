@@ -76,9 +76,20 @@ window#waybar.empty #window{
   margin: 2px 1px;
 }
 
+#left3 {
+  margin: 1px 2px;
+  padding: 0 0px; 
+  background-color: alpha(@foreground, 0.3);
+  border: 2px solid alpha(@foreground, 0.3);
+  border-radius: 2px;
+}
 
 #custom-omarchy {
-  font-size: 15px;
+  font-size: 13px;
+  background-color: @background;
+  border-radius: 2px;
+  padding: 0 0px;
+  margin: 0px 1px;
 }
 
 #workspaces {
