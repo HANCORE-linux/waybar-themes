@@ -1,6 +1,5 @@
 {
   "reload_style_on_change": true,
-  "layer": "top",
   "position": "top",
   "spacing": 0,
   "height": 15,
@@ -12,6 +11,7 @@
     "hyprland/window"
   ],
   "modules-center": [
+    "mpris",
     "clock",
     "idle_inhibitor",
     "custom/update",
@@ -24,8 +24,8 @@
     "bluetooth",
     "network",
     "pulseaudio",
-    "cpu",
     "memory",
+    "cpu",
     "battery"
   ],
   "hyprland/workspaces": {
@@ -72,8 +72,7 @@
       "(.*) - org.gnome.Nautilus": " 󰣆 $1 ",
       "(.*) - fish": "  [$1] ",
       "(.*Steam)...(.*)": "  $1",
-      // "OBS *. - (.*) - com.obsproject.Studio": "  $1", // not yet functional
-      // "nvim (.*) - com.mitchellh.ghostty": "  $1", // not being captured
+      "(.*) - com.obsproject.Studio": "  $1 "
     }
   },
   "custom/omarchy": {
@@ -81,6 +80,19 @@
     "on-click": "omarchy-menu",
     "on-click-right": "xdg-terminal-exec",
     "tooltip-format": "Omarchy Menu\n\nSuper + Alt + Space"
+  },
+  "mpris": {
+    "format": "󰋎",
+    "format-paused": "<span color='grey'>{status_icon}</span>",
+    "max-length": 20,
+    "player-icons": {
+      "default": "⏸",
+      "mpv": "🎵"
+    },
+    "status-icons": {
+      "paused": "▶"
+    }
+    // "ignored-players": ["firefox"]
   },
   "custom/update": {
     "format": "<span weight='bold' >\ue900</span>",
@@ -90,9 +102,10 @@
     "signal": 7,
     "interval": 3600
   },
-  "backlight": {
+   "backlight": {
     "device": "intel_backlight",
-    "format": "{percent}% {icon}",
+    "format": "{icon}",
+    "tooltip-format": "{percent}%",
     "format-icons": [
       "🌑",
       "🌘",
@@ -102,28 +115,28 @@
     ]
   },
   "custom/updatespacman": {
-    "format": "{icon}",
+    "format": "{}{icon}",
     "return-type": "json",
     "format-icons": {
-      "has-updates": "󰏖 ",
-      "updated": "󰂪"
+      "has-updates": " 󰏖 ",
+      "updated": ""
     },
     "exec-if": "which waybar-module-pacman-updates",
-    "exec": "waybar-module-pacman-updates --interval-seconds 5 --network-interval-seconds 300"
+    "exec": "waybar-module-pacman-updates --no-zero-output"
   },
-  "cpu": {
+   "cpu": {
     "interval": 2,
-    "format": "󰍛 {usage}%",
+    "format": " {usage}%",
     "on-click": "omarchy-launch-or-focus-tui btop"
   },
-  "memory": {
+    "memory": {
     "interval": 2,
-    "format": "  {percentage}%",
+    "format": " {percentage}%",
     "on-click": "omarchy-launch-or-focus-tui btop"
   },
   "clock": {
-    "format": "{:L%A %H:%M}",
-    "format-alt": "{:%A %d/%m/%Y}",
+    "format": "{:%H:%M}",
+    "format-alt": "{:%A, %d %B %Y - %H:%M}",
     "tooltip-format": "<span>{calendar}</span>",
     "calendar": {
       "mode": "mouth",
@@ -132,10 +145,10 @@
       "format": {
         "mouth": "<span color='#ffead3'><b>{}</b></span>",
         "weekdays": "<span color='#ffcc66'><b>{}</b></span>",
-        "today": "<span color='#ff6699'><b>{}</b></span>"
-      }
+        "today": "<span color='#ff6699'><b>{}</b></span>",
+      },
     },
-    "on-click-right": "~/.local/share/omarchy/bin/omarchy-cmd-tzupdate"
+    "on-click-right": "omarchy-launch-floating-terminal-with-presentation omarchy-tz-select"
   },
   "idle_inhibitor": {
     "format": "{icon}",
@@ -154,7 +167,7 @@
     ],
     "format": "{icon}",
     "format-wifi": "{icon}",
-    "format-ethernet": "󰀂",
+    "format-ethernet": "󰈀",
     "format-disconnected": "󰤮",
     "tooltip-format-wifi": "{essid} ({frequency} GHz)\n⇣{bandwidthDownBytes}  ⇡{bandwidthUpBytes}",
     "tooltip-format-ethernet": "⇣{bandwidthDownBytes}  ⇡{bandwidthUpBytes}",
@@ -164,10 +177,10 @@
     "on-click": "omarchy-launch-wifi"
   },
   "battery": {
-    "format": "{icon} {capacity}%",
-    "format-discharging": "{icon} {capacity}%",
-    "format-charging": "{icon} {capacity}%",
-    "format-plugged": "",
+    "format": "{capacity}% {icon}",
+    "format-discharging": "{capacity}% {icon}",
+    "format-charging": "{capacity}% {icon}",
+    "format-plugged": " {capacity}%",
     "format-icons": {
       "charging": [
         "󰢜",
@@ -194,9 +207,9 @@
         "󰁹"
       ]
     },
-    "format-full": "󰂅",
-    "tooltip-format-discharging": "{power:>1.0f}W↓ {capacity}%",
-    "tooltip-format-charging": "{power:>1.0f}W↑ {capacity}%",
+    "format-full": "󰂅 {capacity}%",
+    "tooltip-format-discharging": "{power:>1.0f}W↓ {timeTo}",
+    "tooltip-format-charging": "{power:>1.0f}W↑ {timeTo}",
     "interval": 5,
     "on-click": "omarchy-menu power",
     "states": {
