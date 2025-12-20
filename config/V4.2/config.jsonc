@@ -221,8 +221,8 @@
       ]
     },
     "format-full": "󰂅",
-    "tooltip-format-discharging": "{power:>1.0f}W↓ {capacity}%",
-    "tooltip-format-charging": "{power:>1.0f}W↑ {capacity}%",
+    "tooltip-format-discharging": "{power:>1.0f}W↓ {timeTo}",
+    "tooltip-format-charging": "{power:>1.0f}W↑ {timeTo}",
     "interval": 5,
     "on-click": "omarchy-menu power",
     "states": {
