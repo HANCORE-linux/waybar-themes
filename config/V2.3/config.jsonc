@@ -1,6 +1,5 @@
 {
   "reload_style_on_change": true,
-  "layer": "top",
   "position": "top",
   "mod": "dock",
   "margin-top": 2,
@@ -125,7 +124,7 @@
   },
   "clock": {
     "format": " {:%H:%M %a}",
-    "format-alt": " {:%d/%m/%Y  %H:%M:%S}",
+    "format-alt": " {0:%H:%M} {0:%F}",
     "tooltip-format": "<span>{calendar}</span>",
     "calendar": {
       "mode": "month",
