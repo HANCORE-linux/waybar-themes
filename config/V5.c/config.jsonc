@@ -182,7 +182,7 @@
     "format-alt": "{:%A, %d %B %Y - %H:%M}",
     "tooltip-format": "<span>{calendar}</span>",
     "calendar": {
-      "mode": "mouth",
+      "mode": "month",
       "mode-mon-col": 3,
       "on-click-right": "mode",
       "format": {
