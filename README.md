@@ -254,15 +254,13 @@ git clone https://github.com/HANCORE-linux/waybar-themes.git /tmp/repo && cp -rf
 
 
 ## Screenshot V5.d
-- added border waybar, added border workspace, exchanged center and left modules <br>
-- excluded idle_inhibtor (you can re-activate it by removing the comment // in config.jsonc)
-- added opacity to hyprland/window and right module
+- centered workspaces
 ##### V5.d Install-command (copy and paste in your terminal): <br>
 ```bash
 git clone https://github.com/HANCORE-linux/waybar-themes.git /tmp/repo && cp -rf /tmp/repo/config/V5.d/. ~/.config/waybar && rm -rf /tmp/repo && omarchy-restart-waybar
 ```
-<img width="1546" height="93" alt="screenshot-2025-11-17_15-12-26" src="https://github.com/user-attachments/assets/8ba9bab9-8157-4136-9d0c-3a3812809b6f" />
-<img width="1633" height="103" alt="screenshot-2025-11-17_15-12-15" src="https://github.com/user-attachments/assets/e579625d-f21b-4ee7-b31a-6f2d91b660be" />
+<img width="1512" height="404" alt="screenshot-2025-12-20_14-42-24" src="https://github.com/user-attachments/assets/b351efef-e8e3-4ce1-ae72-908eb336d606" />
+
 
 ## Screenshot V5.e
 - added borders to all modules to fit the style of the workspaces
