@@ -38,40 +38,21 @@ window#waybar.empty #window{
 
 
 .modules-left {
-  margin-left: 2px;
    font-size: 12px;
 }
 
 .modules-right {
-  margin-right: 8px;
-  margin: 2px;
-  padding: 0px;
   font-size: 12px;
 }
 
 .modules-center {
-  margin: 2px;
-  padding: 2px;
   font-size: 12px;
 }
 
 #custom-omarchy {
-  padding-top: 2px;
-  padding-left: 2px;
-  padding-right: 2px;
-  font-size: 16px;
+  font-size: 15px;
 }
 
-#window {
-  margin: 2px;
-  padding: 2px;
-}
-
-#workspaces {
-  padding: 0 2px;
-  margin: 0;
-  padding-top: 2px;
-}
 
 #workspaces button {
   all: initial;
@@ -82,7 +63,6 @@ window#waybar.empty #window{
   margin: 0 0 0 1px;
   opacity: 0.75;
   color: @foreground;
-  border-bottom: 2pt solid transparent;
 }
 
 #workspaces button.active {
@@ -90,10 +70,17 @@ window#waybar.empty #window{
     opacity: 1.0;
     padding: 0;
     margin: 0 0 0 1px;
-    border-bottom: 2pt solid @foreground;
     font-size: 18px;
     transition: all 0.15s ease-in-out;
 }
+
+#workspaces button.empty.active {
+    color: @foreground;
+    opacity: 1.0;
+    font-size: 18px;
+    transition: all 0.15s ease-in-out;
+}
+
 
 #workspaces button.empty {
   opacity: 0.3;
@@ -105,9 +92,11 @@ window#waybar.empty #window{
 #power-profiles-daemon.balanced,
 #power-profiles-daemon.power-saver,
 #hyprland-window,
+#window,
 #tray,
 #group-tray-expander,
 #cpu,
+#clock,
 #mpris,
 #battery,
 #network,
@@ -118,25 +107,13 @@ window#waybar.empty #window{
 #custom-updatespacman,
 #custom-screenrecording-indicator,
 #custom-update {
-  min-width: 14px;
-  margin: 0 5.5px;
+  min-width: 12px;
+  margin: 1px 3px 1px 3px;
+  padding: 0 4px;
 }
 
 tooltip {
   padding: 0.5px;
-}
-
-#custom-update {
-  font-size: 10px;
-  margin: 2px;
-}
-
-#idle_inhibitor, #custom-update #custom-screenrecording-indicator {
-margin: 0 5px;
-}
-
-#clock, #idle_inhibitor {
-  margin-left: 8.75px;
 }
 
 .hidden {
@@ -162,12 +139,6 @@ tooltip label {
 }
 
 /* Specific animation Module */
-
-#custom-screenrecording-indicator {
-    font-size: 12px;
-    padding: 0px;
-    margin: 2px;
-}
 
 #custom-screenrecording-indicator {
   animation-timing-function: linear;
@@ -217,12 +188,36 @@ tooltip label {
 #mpris {
 color: @foreground;
 font-size: 12px;
-padding-top: 0px;
-margin-right: 0px;
 animation: repeat;
 	animation-name: blink;
 	animation-duration: 3s;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
     animation-direction: alternate;
+}
+
+#battery.charging,
+#battery.plugged {
+  color: #178b76;
+}
+
+#battery.warning {
+  color: #c95d0f;
+}
+
+@keyframes blink2 {
+  to {
+    background-color: transparent;
+    color: #f53c3c;
+  }
+}
+
+#battery.critical:not(.charging) {
+  background-color: transparent;
+  color: #e6d8ba;
+  animation-name: blink2;
+  animation-duration: 0.5s;
+  animation-timing-function: steps(12);
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
 }

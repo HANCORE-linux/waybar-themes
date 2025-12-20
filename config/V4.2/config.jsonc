@@ -20,8 +20,9 @@
   ],
   "modules-right": [
     "group/tray-expander",
-    "backlight",
     "custom/updatespacman",
+    "bluetooth",
+    "backlight",
     "network",
     "pulseaudio",
     "power-profiles-daemon",
@@ -151,7 +152,7 @@
     "format-alt": "{:L%d %B W%V %Y}",
     "tooltip-format": "<span>{calendar}</span>",
     "calendar": {
-      "mode": "mouth",
+      "mode": "month",
       "mode-mon-col": 3,
       "on-click-right": "mode",
       "format": {
@@ -160,7 +161,7 @@
         "today": "<span color='#ff6699'><b>{}</b></span>",
       },
     },
-    "on-click-right": "~/.local/share/omarchy/bin/omarchy-cmd-tzupdate"
+    "on-click-right": "omarchy-launch-floating-terminal-with-presentation omarchy-tz-select"
   },
   "idle_inhibitor": {
     "format": "{icon}",
@@ -178,7 +179,7 @@
       "󰤨"
     ],
     "format": "{icon}",
-    "format-wifi": "{signalStrength}% {icon}",
+    "format-wifi": "{icon}",
     "format-ethernet": " {bandwidthDownBytes}  {bandwidthUpBytes} 󰀂",
     "format-disconnected": "󰤮",
     "tooltip-format-wifi": "{essid} ({frequency} GHz)\n⇣{bandwidthDownBytes}  ⇡{bandwidthUpBytes}",
@@ -259,7 +260,6 @@
     },
     "modules": [
       "custom/expand-icon",
-      "bluetooth",
       "tray"
     ]
   },
