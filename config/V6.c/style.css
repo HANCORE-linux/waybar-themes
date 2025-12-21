@@ -54,10 +54,11 @@ window#waybar  {
   transition: all 0.3s ease-in-out;
   opacity: 1;
 }
-
+#workspaces button:hover.empty,
 #workspaces button:hover {
     background-color: @foreground;
     color: @background;
+    opacity: 1;
 }
 
 #workspaces button.empty.active {
