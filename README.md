@@ -60,12 +60,13 @@ git clone https://github.com/HANCORE-linux/waybar-themes.git /tmp/repo && cp -rf
 <img width="1920" height="573" alt="screenshot-2025-11-27_21-48-47" src="https://github.com/user-attachments/assets/ba55cb90-6b96-4bd5-a76e-25d65b8aa94c" />
 
 ## Screenshots V2.3
-- base config v2.2 - all rounded <br>
+- base config v2.2 - all rounded and shadow boxed <br>
 ##### V2.3 Install-command (copy and paste in your terminal): <br>
 ```bash
 git clone https://github.com/HANCORE-linux/waybar-themes.git /tmp/repo && cp -rf /tmp/repo/config/V2.3/. ~/.config/waybar && rm -rf /tmp/repo && omarchy-restart-waybar
 ```
-<img width="1920" height="407" alt="screenshot-2025-12-06_23-47-22" src="https://github.com/user-attachments/assets/7106e061-0f91-4235-890c-f7912090b7f9" />
+<img width="1920" height="412" alt="screenshot-2025-12-21_08-37-39" src="https://github.com/user-attachments/assets/07c38e17-63d9-4cd4-b2cb-bc1f8449bec4" />
+
 
 ## Screenshots V2.4
 - base config V2.3 - with full shadow "box" waybar background <br>
@@ -83,15 +84,6 @@ git clone https://github.com/HANCORE-linux/waybar-themes.git /tmp/repo && cp -rf
 git clone https://github.com/HANCORE-linux/waybar-themes.git /tmp/repo && cp -rf /tmp/repo/config/V2.5/. ~/.config/waybar && rm -rf /tmp/repo && omarchy-restart-waybar
 ```
 <img width="2560" height="390" alt="screenshot-2025-12-10_23-40-32" src="https://github.com/user-attachments/assets/a12ab1d9-0119-4766-ab27-6289937ad2da" />
-
-## Screenshots V2.6
-- shadowbox version of V2.3 
-##### V2.6 Install-command (copy and paste in your terminal): <br>
-```bash
-git clone https://github.com/HANCORE-linux/waybar-themes.git /tmp/repo && cp -rf /tmp/repo/config/V2.6/. ~/.config/waybar && rm -rf /tmp/repo && omarchy-restart-waybar
-```
-<img width="1920" height="412" alt="screenshot-2025-12-21_08-37-39" src="https://github.com/user-attachments/assets/9b9a002d-2eb5-4812-89fa-7727a61ec089" />
-
 
 
 ## Screenshots V3
