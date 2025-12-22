@@ -22,6 +22,7 @@ window#waybar > box {
     0 0 0 1px alpha(@foreground, 0.15),
     0 8px 20px alpha(#000000, 0.25);
   border-radius: 24px;
+  padding: 1px;
 }
 
 

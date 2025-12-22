@@ -2,10 +2,10 @@
   "reload_style_on_change": true,
   "position": "top",
   "mod": "dock",
-  "margin-top": 0,
-  "height": 15,
-  "margin-left": 5,
-  "margin-right": 5,
+  "margin-top": 3,
+  "height": 10,
+  "margin-left": 10,
+  "margin-right": 10,
   "margin-bottom": 2,
 
 
