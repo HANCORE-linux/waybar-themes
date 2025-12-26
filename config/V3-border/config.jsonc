@@ -245,7 +245,7 @@
     }
   },
   "mpris": {
-    "format": "{player_icon} {dynamic}",
+    "format": "{player_icon} {artist}-{title}",
     "format-paused": "<span color='grey'>{status_icon} {dynamic}</span>",
     "max-length": 50,
     "player-icons": {
