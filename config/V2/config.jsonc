@@ -61,7 +61,7 @@
   },
    "hyprland/window": {
     "format": "{title} - {class}",
-    "max-length": 85,
+    "max-length": 65,
     "rewrite": {
       " - ": "", // if no window is focused, a single dash is displayed, this removes it
       "(.*?) - Chromium - chromium": "   $1 ",
