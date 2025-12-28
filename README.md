@@ -4,10 +4,7 @@
 
 ## Instructions
 
-My Waybar configurations from V1 to V2.1 used additional packages such as wttrbar and waybar-cava.
-However, I no longer use these modules. If someone still wants to use them, they can simply install the missing packages.
-
-Everything else is optional add-ons, such as the waybar-pacman module to display incoming updates and wttrbar for weather module <br>
+My Waybar configurations use additional packages such as wttrbar (weahter module) and waybar-cava-module-update-git (pacman AUR updates).
 
 ```bash
 yay -S waybar-module-pacman-updates-git
