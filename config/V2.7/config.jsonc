@@ -3,11 +3,11 @@
   "layer": "top",
   "position": "top",
   "mod": "dock",
-  "margin-top": 0,
-  "height": 24,
+  "margin-top": 1,
+  "height": 10,
   "margin-left": 5,
   "margin-right": 5,
-  "margin-bottom": 0,
+  "margin-bottom": 2,
   "modules-left": [
       "custom/omarchy",  
       "clock",
@@ -55,7 +55,7 @@
     "format": "{}{icon}",
     "return-type": "json",
     "format-icons": {
-      "has-updates": " 󰏖",
+      "has-updates": " 󰏖 ",
       "updated": ""
     },
     "exec-if": "which waybar-module-pacman-updates",
@@ -92,7 +92,7 @@
   },
   "memory": {
     "interval": 2,
-    "format": "{percentage}%  ",
+    "format": "{percentage}%  ",
     "on-click": "omarchy-launch-or-focus-tui btop"
   },
  "clock": {
@@ -141,7 +141,7 @@
     "format": "{capacity}% {icon}",
     "format-discharging": "{capacity}% {icon}",
     "format-charging": "{capacity}% {icon}",
-    "format-plugged": "{power}",
+    "format-plugged": "",
     "format-icons": {
       "charging": [
         "󰢜",
@@ -217,7 +217,7 @@
   },
   "pulseaudio#input": {
     "format-source": "",
-    "format-source-muted": " ",
+    "format-source-muted": "",
     "format": "{format_source}",
     "tooltip-format": "{format_source} {source_volume}%",
     "scroll-step": 1,
@@ -242,8 +242,8 @@
     "on-click-right": "pamixer -t"
 },
   "tray": {
-   "icon-size": 12,
-    "spacing": 10
+   "icon-size": 11,
+    "spacing": 5
   },
   "mpris": {
     "format": "{player_icon} {artist}-{title}",

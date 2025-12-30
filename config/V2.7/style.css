@@ -38,7 +38,7 @@ tooltip {
 /* --- Workspaces --- */
 #workspaces {
   border-radius: 2px;
-  margin: 6px 3px;
+  margin: 2px 3px;
 }
 
 #workspaces button {
@@ -87,7 +87,7 @@ tooltip {
 #custom-screenrecording-indicator,
 #custom-updatespacman {
   min-width: 18px;
-  margin: 6px 2px 6px 2px;
+  margin: 2px 2px 2px 2px;
   padding: 0px 6px;
   border-radius: 2px;
   box-shadow: 0 2px 2px rgba(10, 10, 10, 1);
@@ -101,6 +101,16 @@ tooltip {
 #power-profiles-daemon.balanced,
 #power-profiles-daemon.power-saver {
 font-size: 15px;
+padding-left: 3px;
+}
+
+#network,
+#pulseaudio {
+  padding-left: 3px;
+}
+
+#memory {
+  padding-right: 3px;
 }
 
 /* --- Hover right module  --- */
