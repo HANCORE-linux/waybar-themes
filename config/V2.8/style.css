@@ -122,17 +122,6 @@ tooltip {
 
 /* Specific Module */
 
-#group-tray-expander {
-  border-radius: 24px;
-  background-color: transparent;
-  color: @foreground;
-}
-
-#tray {
-    background-color: transparent;
-    border-radius: 24px;
-}
-
 #tray > .passive {
     -gtk-icon-effect: dim;
 }
@@ -166,7 +155,7 @@ tooltip label {
 #power-profiles-daemon.performance,
 #power-profiles-daemon.balanced,
 #power-profiles-daemon.power-saver {
-font-size: 14px;
+font-size: 13px;
 margin-top: 0px;
 }
 
