@@ -113,9 +113,17 @@ font-size: 15px;
 padding-left: 3px;
 }
 
-#network,
-#pulseaudio {
+#network{
   padding-left: 3px;
+}
+
+#pulseaudio.input {
+  padding-left: 3px;
+  padding-right: 3px;
+}
+
+#pulseaudio.output {
+  padding-right: 8px;
 }
 
 #memory {
@@ -128,6 +136,10 @@ padding-left: 3px;
 
 #backlight {
   font-size: 11px;
+}
+
+#custom-omarchy {
+  padding-top: 1px;
 }
 
 /* --- Hover right module  --- */
@@ -183,16 +195,6 @@ tooltip label {
     font-weight: normal;
 }
 
-
-/* --- Warnings --- */
-#cpu.critical,
-#memory.critical,
-#battery.warning,
-#battery.critical,
-#battery.urgent {
-    background-color: transparent;
-    color: #fe8019;
-}
 
 /* Specific animation Module */
 
