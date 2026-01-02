@@ -242,7 +242,7 @@ tooltip label {
 
 #mpris {
     background-color: #d65d0e;
-    color: #282828;
+    color: #101010;
 animation: repeat;
 	animation-name: blink;
 	animation-duration: 3s;
@@ -253,7 +253,7 @@ animation: repeat;
 
 @keyframes blink {
     to {
-        color: #665c54;
+        color: #504945;
         
     }
 }
