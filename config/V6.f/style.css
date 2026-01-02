@@ -35,7 +35,7 @@ window#waybar > box {
 
 #left1 {
   background-color: @background;
-  border-radius: 4px;
+  border-radius: 2px;
   margin: 2px 1px;
   padding: 0px 2px 0px;
   box-shadow: 1px 1px 2px 0px #101010;
@@ -44,15 +44,15 @@ window#waybar > box {
 
 #left2 {
   background-color: @background;
-  border-radius: 4px;
-  padding: 0px 2px 0px;
+  border-radius: 2px;
+  padding: 0px 4px 0px;
   margin: 2px 2px;
   box-shadow: 1px 1px 2px 0px #101010;
 }
 
 #left3 {
   background-color: @background;
-  border-radius: 4px;
+  border-radius: 2px;
   margin: 2px 2px;
   padding: 0px 2px 0px;
   box-shadow: 1px 1px 2px 0px #101010;
@@ -62,12 +62,12 @@ window#waybar > box {
   margin: 2px 2px;
   padding: 0px 2px 0px; 
   background-color: alpha(@foreground, 0.3);
-  border-radius: 6px;
+  border-radius: 4px;
 }
 
 #right1 {
   background-color: @background;
-  border-radius: 4px;
+  border-radius: 2px;
   margin: 2px 1px;
   padding: 0px 2px 0px;
   box-shadow: 1px 1px 2px 0px #101010;
@@ -87,7 +87,7 @@ window#waybar > box {
   padding: 0px 10px;
   margin: 2px 2px;
   box-shadow: 1px 1px 2px 0px #101010;
-  border-radius: 4px;
+  border-radius: 3px;
   background-color: alpha(@background, 1);
   color: @foreground; 
   transition: all 0.15s ease-in-out;
@@ -100,7 +100,7 @@ window#waybar > box {
   margin: 2px 2px;
   box-shadow: 1px 1px 2px 0px #101010;
   background-color: alpha(@foreground, 0.9);
-  border-radius: 4px;
+  border-radius: 3px;
   opacity: 1.0;
   animation: gradient_f 20s ease-in infinite;
   transition: all 0.3s cubic-bezier(.55,-0.68,.48,1.682);
@@ -111,7 +111,7 @@ window#waybar > box {
   box-shadow: 1px 1px 2px 0px #101010;
   color: @foreground;
   opacity: 0.45;
-  border-radius: 4px;
+  border-radius: 3px;
   transition: all 0.15s ease-in-out;
   padding: 0px 10px;
   margin: 2px 2px;
@@ -120,7 +120,7 @@ window#waybar > box {
 #workspaces button.empty.active {
   background-color: alpha(@foreground, 0.9);
   box-shadow: 1px 1px 2px 0px #101010;
-  border-radius: 4px;
+  border-radius: 3px;
   color: @background;
   opacity: 1;
    padding: 0px 10px;
@@ -171,6 +171,7 @@ tooltip {
 #power-profiles-daemon.power-saver {
 font-size: 13.5px;
 margin-top: 0px;
+padding-right: 8px;
 }
 
 #custom-theme-switcher {
