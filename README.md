@@ -353,6 +353,15 @@ git clone https://github.com/HANCORE-linux/waybar-themes.git /tmp/repo && cp -rf
 ```
 <img width="1541" height="447" alt="screenshot-2025-12-18_10-41-31" src="https://github.com/user-attachments/assets/e7bf64a5-6c98-4885-a2b5-94415fd10fda" />
 
+## Screenshot V6.f
+- Cycles through all installed themes & Displays the currently active theme & Click to return to a favorite theme
+- Display of the currently running window (app/title) per workspace (active one)
+##### V6.f Install-command (copy and paste in your terminal): <br>
+```bash
+git clone https://github.com/HANCORE-linux/waybar-themes.git /tmp/repo && cp -rf /tmp/repo/config/V6.f/. ~/.config/waybar && rm -rf /tmp/repo && omarchy-restart-waybar
+```
+<img width="1480" height="425" alt="screenshot-2026-01-02_15-20-42" src="https://github.com/user-attachments/assets/316aae7e-75d7-4c63-929e-0b986cf4d57c" />
+
 
 
 
