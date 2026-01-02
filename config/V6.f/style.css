@@ -8,7 +8,7 @@
   min-height: 0;
   font-family: 'JetBrainsMono Nerd Font';
   font-weight: normal;
-   font-size: 11px;
+   font-size: 10px;
 }
 
 window#waybar {
@@ -19,7 +19,7 @@ window#waybar > box {
   border: 1px solid alpha(@foreground, 0.5);
   margin: 0px 8px 2px 8px;
   background-color: @background;
-  box-shadow: 1px 1px 3px 1px #101010;
+  box-shadow: 0px 1px 2px 1px #101010;
   transition-property: background-color;
   transition-duration: .5s;
 }
@@ -35,27 +35,27 @@ window#waybar > box {
 
 #left1 {
   background-color: @background;
-  border-radius: 2px;
+  border-radius: 4px;
   margin: 2px 1px;
   padding: 0px 2px 0px;
-  box-shadow: 1px 1px 2px 0px #101010;
+  box-shadow: 1px 1px 1px 0px #101010;
   
 }
 
 #left2 {
   background-color: @background;
-  border-radius: 2px;
+  border-radius: 4px;
   padding: 0px 4px 0px;
   margin: 2px 2px;
-  box-shadow: 1px 1px 2px 0px #101010;
+  box-shadow: 1px 1px 1px 0px #101010;
 }
 
 #left3 {
   background-color: @background;
-  border-radius: 2px;
+  border-radius: 4px;
   margin: 2px 2px;
   padding: 0px 2px 0px;
-  box-shadow: 1px 1px 2px 0px #101010;
+  box-shadow: 1px 1px 1px 0px #101010;
 }
 
 .modules-right {
@@ -67,10 +67,10 @@ window#waybar > box {
 
 #right1 {
   background-color: @background;
-  border-radius: 2px;
+  border-radius: 4px;
   margin: 2px 1px;
   padding: 0px 2px 0px;
-  box-shadow: 1px 1px 2px 0px #101010;
+  box-shadow: 1px 1px 1px 0px #101010;
 }
 
 
@@ -86,8 +86,8 @@ window#waybar > box {
 #workspaces button {
   padding: 0px 10px;
   margin: 2px 2px;
-  box-shadow: 1px 1px 2px 0px #101010;
-  border-radius: 3px;
+  box-shadow: 0px 1px 1px 0px #101010;
+  border-radius: 4px;
   background-color: alpha(@background, 1);
   color: @foreground; 
   transition: all 0.15s ease-in-out;
@@ -98,9 +98,9 @@ window#waybar > box {
   color: @background;
   padding: 0 10px;
   margin: 2px 2px;
-  box-shadow: 1px 1px 2px 0px #101010;
+  box-shadow: 0px 1px 1px 0px #101010;
   background-color: alpha(@foreground, 0.9);
-  border-radius: 3px;
+  border-radius: 4px;
   opacity: 1.0;
   animation: gradient_f 20s ease-in infinite;
   transition: all 0.3s cubic-bezier(.55,-0.68,.48,1.682);
@@ -108,10 +108,10 @@ window#waybar > box {
 
 #workspaces button.empty {
   background-color: alpha(@background, 1);
-  box-shadow: 1px 1px 2px 0px #101010;
+  box-shadow: 0px 1px 1px 0px #101010;
   color: @foreground;
   opacity: 0.45;
-  border-radius: 3px;
+  border-radius: 4px;
   transition: all 0.15s ease-in-out;
   padding: 0px 10px;
   margin: 2px 2px;
@@ -119,8 +119,8 @@ window#waybar > box {
 
 #workspaces button.empty.active {
   background-color: alpha(@foreground, 0.9);
-  box-shadow: 1px 1px 2px 0px #101010;
-  border-radius: 3px;
+  box-shadow: 0px 1px 2px 0px #101010;
+  border-radius: 4px;
   color: @background;
   opacity: 1;
    padding: 0px 10px;
@@ -226,7 +226,7 @@ tooltip label {
 
 
 #mpris {
-box-shadow: 1px 1px 2px 0px #101010;
+box-shadow: 1px 1px 1px 0px #101010;
 background-color: @background;
 border-radius: 4px;
 margin: 2px 2px;
