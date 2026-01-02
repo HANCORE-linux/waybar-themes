@@ -364,7 +364,7 @@ git clone https://github.com/HANCORE-linux/waybar-themes.git /tmp/repo && cp -rf
 
 ## Screenshot V6.fa
 - Changed from the previous version V6.f without shadows to a long bar version, providing a "cleaner" and more consistent visual style.
-##### V6.f Install-command (copy and paste in your terminal): <br>
+##### V6.fa Install-command (copy and paste in your terminal): <br>
 ```bash
 git clone https://github.com/HANCORE-linux/waybar-themes.git /tmp/repo && cp -rf /tmp/repo/config/V6.fa/. ~/.config/waybar && rm -rf /tmp/repo && omarchy-restart-waybar
 ```
