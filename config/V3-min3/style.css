@@ -7,7 +7,8 @@
   border: none;
   min-height: 0;
   font-family: 'CaskaydiaMono Nerd Font Propo';
-  font-weight: normal;
+  font-weight: bold;
+  font-size: 11px;
 }
 
 
@@ -17,23 +18,15 @@ window#waybar  {
 }
 
 #waybar > box {
-  border-radius: 5px;
-  border: 0px solid rgba(255, 255, 255, 0.0);
-  margin: 0px 8px 3px 8px;
+  margin: 2px 8px 2px 8px;
+  border-radius: 8px;
   background-color: @background;
-  box-shadow: 1px 1px 3px 1px #101010;
+  box-shadow: 0px 1px 2px 1px rgba(0, 0, 0, 0.5);
   transition-property: background-color;
   transition-duration: .5s;
 }
 
-#custom-omarchy {
-margin: 0;
-padding-top: 1px;
-font-size: 16px;
-}
-
 #left1 {
-border: 2px solid alpha (@foreground, 0.75);
 background: alpha(@background, 0.2);
 border-radius: 6px;
 opacity: 0.95;
@@ -41,54 +34,60 @@ text-shadow: 0px 0px 2px alpha(@foreground, 0.4);
 }
 
 #right1 {
-  margin-right: 8px;
+  border-radius: 26;
+  background-color: alpha(@foreground, 0.45);
+  color: @background;
+  padding: 0px 1px 0px;
+  margin: 3px 0px;
+  margin-right: 6px;
 }
 
-.modules-left {
- font-size: 12px;
+#right2 {
 }
+
+#right3 {
+  border-radius: 26;
+  background-color: alpha(@foreground, 0.45);
+  color: @background;
+  padding: 0px 1px 0px;
+  margin: 3px 0px;
+  margin-right: 6px;
+}
+
 
 .modules-center {
-  border-radius: 0;
-  text-shadow: 0px 0px 2px alpha(@foreground, 0.25);
-  font-size: 12px;
-  padding: 0px;
+  border-radius: 26;
+  background-color: alpha(@foreground, 0.45);
+  color: @background;
+  padding: 0px 0px 0px;
+  margin: 3px 0px;
 }
 
-.modules-right {
-  border-radius: 6;
-  text-shadow: 0px 0px 2px alpha(@foreground, 0.25);
-  font-size: 12px;
-}
 
 #workspaces {
-    padding: 1px 0px 1px;
-    margin: 1px;
+    padding: 0px 0px 0px;
+    margin: 2px 0px;
     border-radius: 4px;
     opacity: 0.95;
 }
 
 #workspaces button {
-    min-width: 25px;
-    min-height: 8px;
-    padding: 1px;
-    margin: 1px 1px;
-    border-radius: 2px;
+    padding: 0px 10px;
+    margin: 2px 2px;
+    border-radius: 26px;
     background-color: alpha(@foreground, 0.45);
     opacity: 0.95;
     color: @background;
-    font-size: 12px;
     transition: all 0.15s ease-in-out;
 }
 
 #workspaces button.active {
     background-color: alpha(@foreground, 0.9);
-    border-radius: 2px;
+    border-radius: 26px;
     color: @background;
-    font-size: 8px;
-    min-width: 25px;
     opacity: 1.0;
-    font-size: 12px;
+    padding: 0px 10px;
+    margin: 2px 2px;
     transition: all 0.15s ease-in-out;
 }
 #workspaces button.empty.active {
@@ -98,27 +97,23 @@ text-shadow: 0px 0px 2px alpha(@foreground, 0.4);
 
 }
 
+#workspaces button:hover.empty,
 #workspaces button:hover {
-    color: @foreground;
-    border-radius: 2px;
-    opacity: 0.9;
-    background: linear-gradient(180deg, @background 75%, @foreground);
+    background-color: @foreground;
+    color: @background;
+    opacity: 1;
+    border-radius: 26px;
 }
 
 #workspaces button.empty {
     opacity: 0.25;
-}
-
-#workspaces button.urgent {
-    background-color: transparent;
-    color: #ff0000;
-    border-radius: 10px;
+    border-radius: 26px;
+    padding: 0px 0px;
+    margin: 2px 2px;
 }
 
 
 #custom-weather,
-#hyprland-window,
-#window,
 #clock,
 #tray,
 #cpu,
@@ -127,18 +122,19 @@ text-shadow: 0px 0px 2px alpha(@foreground, 0.4);
 #network,
 #memory,
 #bluetooth,
-#wlr-taskbar,
 #backlight,
 #pulseaudio,
+#custom-omarchy-theme-set,
+#power-profiles-daemon,
 #custom-omarchy,
 #idle_inhibitor,
 #custom-updatespacman,
 #custom-screenrecording-indicator,
 #custom-update {
   min-width: 14px;
-  margin: 1px 4px 1px 4px;
-  padding-left: 3px;
-  padding-right: 3px;
+  margin: 1px 2px 1px 2px;
+  padding-left: 2px;
+  padding-right: 2px;
 }
 
 #custom-update {
@@ -150,45 +146,9 @@ text-shadow: 0px 0px 2px alpha(@foreground, 0.4);
   opacity: 0;
 }
 
-#taskbar {
- border-radius: 0px 4px 4px 0;
-    padding: 0px;
-    margin: 0px;
-    background: alpha(@background, 0.2);
-}
-#taskbar button {
-    padding: 0 1px;
-    margin: 2px 1;
-}
-#taskbar button.active {
-   border-radius: 2px;
-   background: linear-gradient(180deg, @background 85%, @foreground);
-}
-
-#custom-expand-icon {
-  margin-right: 8px;
-}
-
-#tray {
-    background-color: @transparent;
-}
-
-#tray > .passive {
-    -gtk-icon-effect: dim;
-}
-
-#tray > .needs-attention {
-    -gtk-icon-effect: highlight;
-    background-color: @transparent;
-}
-
-
-/* EXTRA FIX! */
-
-
 tooltip {
     background-color: alpha(@background, 1);
-    border: 2px solid alpha(@foreground, 0.5);
+    border: 1px solid alpha(@foreground, 0.5);
     border-radius: 8px;
     box-shadow: 1px 1px 1px alpha(@background, 0.3);
     padding: 4px;
@@ -199,6 +159,32 @@ tooltip label {
     color: @foreground;
 }
 
+/* --- Hover right module  --- */
+#idle_inhibitor:hover,
+#custom-updatespacman:hover,
+#custom-update:hover,
+#custom-weather:hover,
+#custom-screenrecording-indicator:hover,
+#clock:hover,
+#mpris:hover
+#tray:hover,
+#cpu:hover,
+#memory:hover,
+#battery:hover,
+#backlight:hover,
+#network:hover,
+#power-profiles-daemon:hover,
+#mpris:hover,
+#bluetooth:hover,
+#pulseaudio:hover {
+  border-radius: 26px;
+  opacity: 0.9;
+  background-color: @foreground;
+  color: @background;
+}
+
+/* Specific animation Module */
+
 #custom-screenrecording-indicator {
   animation-timing-function: linear;
   animation-iteration-count: infinite;
@@ -208,19 +194,25 @@ tooltip label {
 
 #custom-screenrecording-indicator.active {
   color: #eb7087;
+  border-radius: 26;
   animation-name: blink-recording;
   animation-duration: 0.5s;
 }
 
 @keyframes blink-recording {
     to {
-        color: @background;
+        color: transparent;
     }
 }
 
 #mpris{
-color: alpha(@foreground, 0.95);
-animation: repeat;
+  border-radius: 26;
+  background-color: alpha(@foreground, 0.45);
+  color: alpha(@background, 0.45);
+  padding: 0px 10px 0px;
+  margin: 3px 0px;
+  margin-right: 6px;
+  animation: repeat;
 	animation-name: blink;
 	animation-duration: 3s;
     animation-timing-function: linear;
@@ -228,8 +220,16 @@ animation: repeat;
     animation-direction: alternate;
 }
 
+@keyframes blink {
+    to {
+        color: @background;
+        
+    }
+}
+
 #battery.warning {
   color: #c95d0f;
+  background-color: alpha(@foreground, 0.45);
 }
 
 @keyframes blink2 {
@@ -240,7 +240,7 @@ animation: repeat;
 }
 
 #battery.critical:not(.charging) {
-  background-color: transparent;
+  background-color: alpha(@foreground, 0.45);
   color: #e6d8ba;
   animation-name: blink2;
   animation-duration: 0.5s;
