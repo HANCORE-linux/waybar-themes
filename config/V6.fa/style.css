@@ -7,7 +7,7 @@
   border-radius: 0px;
   min-height: 0;
   font-family: 'JetBrainsMono Nerd Font';
-  font-weight: normal;
+  font-weight: bold;
    font-size: 11px;
 }
 
@@ -81,10 +81,10 @@ window#waybar > box {
   padding: 0px 10px;
   margin: 1px 2px;
   border-radius: 2px;
-  background-color: alpha(@foreground, 0.05);
-  color: @foreground; 
+  background-color: alpha(@foreground, 0.55);
+  color: @background; 
   transition: all 0.15s ease-in-out;
-  opacity: 0.95;
+  opacity: 1;
 }
 
 #workspaces button.active {
@@ -260,7 +260,7 @@ animation: repeat;
 
 @keyframes blink {
     to {
-        color: #4a4a4a;
+        color: @foreground;
         
     }
 }
