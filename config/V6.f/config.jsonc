@@ -82,6 +82,12 @@
 	"window-rewrite-default": "",
 	"window-rewrite": {		
         "class<.*imv*.>": "",
+        "class<.*bambustudio*.>": "󰐫",
+        "class<.*bitwarden*.>": "",
+        "class<.*handbrake*.>": "󰈫",
+        "class<.*stremio*.>": "󱖏",
+        "title<.*waydroid*.>": "",
+        "class<.*grayjay*.>": "󱗆",
 		"title<.*amazon.*>": "",
 		"class<firefox|org.mozilla.firefox|librewolf|floorp|mercury-browser|[Cc]achy-browser>": "",
 		"class<zen>": "󰰷",
