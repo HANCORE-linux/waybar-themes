@@ -75,15 +75,8 @@
 },
 
 "hyprland/workspaces": {
-	"disable-scroll": true,
-	"all-outputs": false,
-	"warp-on-scroll": false,
-	"sort-by-number": true,
-	"show-special": false,
-  "persistent-workspaces": {"*": [ 1,2,3,4,5,6 ]},
+	"persistent-workspaces": {"*": [ 1,2,3,4,5,6 ]},
 	"on-click": "activate",
-	"on-scroll-up": "hyprctl dispatch workspace e+1",
-	"on-scroll-down": "hyprctl dispatch workspace e-1",
 	"format": "{icon} {windows}",
 	"format-window-separator": " ",
 	"window-rewrite-default": "",
