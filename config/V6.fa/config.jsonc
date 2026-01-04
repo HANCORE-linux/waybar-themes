@@ -81,7 +81,7 @@
 	"format-window-separator": " ",
 	"window-rewrite-default": "",
 	"window-rewrite": {		
-        "class<.*imv*.>": " ",
+        "class<.*imv*.>": "",
 		"title<.*amazon.*>": "",
 		"class<firefox|org.mozilla.firefox|librewolf|floorp|mercury-browser|[Cc]achy-browser>": "",
 		"class<zen>": "󰰷",
