@@ -321,8 +321,8 @@
     },
     "status-icons": {
       "paused": "󰋐"  
-    }
-    // "ignored-players": ["firefox"]
+    },
+    "ignored-players": ["firefox", "chromium", "brave"]
   },
   "idle_inhibitor": {
     "format": "{icon}",
