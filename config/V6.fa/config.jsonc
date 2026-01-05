@@ -101,7 +101,7 @@
 		"class<kitty-dropterm>": "",
 		"class<com.mitchellh.ghostty>": "",
 		"class<org.wezfurlong.wezterm>": "",
-        "class<org.omarchy.terminal>": "<span font="omarchy" style="font-size: 10px;">\ue900</span>",
+        "class<org.omarchy.terminal>": "󰏖",
 		"class<[Tt]hunderbird|[Tt]hunderbird-esr>": "",
 		"class<eu.betterbird.Betterbird>": "",
 		"title<.*gmail.*>": "󰊫",
