@@ -28,7 +28,7 @@ window#waybar  {
 
 #right1 {
   border-radius: 26;
-  background-color: alpha(@foreground, 0.9);
+  background-color: alpha(@foreground, 0.65);
   color: @background;
   padding: 0px 1px 0px;
   margin: 3px 0px;
@@ -40,7 +40,7 @@ window#waybar  {
 
 #right3 {
   border-radius: 26;
-  background-color: alpha(@foreground, 0.9);
+  background-color: alpha(@foreground, 0.65);
   color: @background;
   padding: 0px 1px 0px;
   margin: 3px 0px;
@@ -50,7 +50,7 @@ window#waybar  {
 
 .modules-center {
   border-radius: 26;
-  background-color: alpha(@foreground, 0.9);
+  background-color: alpha(@foreground, 0.65);
   color: @background;
   padding: 0px 0px 0px;
   margin: 3px 0px;
@@ -159,7 +159,6 @@ tooltip label {
 #custom-weather:hover,
 #custom-screenrecording-indicator:hover,
 #clock:hover,
-#mpris:hover
 #tray:hover,
 #cpu:hover,
 #memory:hover,
@@ -200,7 +199,7 @@ tooltip label {
 
 #mpris{
   border-radius: 26;
-  background-color: alpha(@foreground, 0.45);
+  background-color: alpha(@foreground, 0.65);
   color: alpha(@background, 0.45);
   padding: 0px 10px 0px;
   margin: 3px 0px;
@@ -222,7 +221,7 @@ tooltip label {
 
 #battery.warning {
   color: #c95d0f;
-  background-color: alpha(@foreground, 0.45);
+  background-color: alpha(@foreground, 0.65);
 }
 
 @keyframes blink2 {
@@ -233,7 +232,7 @@ tooltip label {
 }
 
 #battery.critical:not(.charging) {
-  background-color: alpha(@foreground, 0.45);
+  background-color: alpha(@foreground, 0.65);
   color: #e6d8ba;
   animation-name: blink2;
   animation-duration: 0.5s;
