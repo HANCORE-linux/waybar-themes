@@ -85,8 +85,7 @@ chmod +x ~/.config/waybar/window_pill.py
 ```bash
 omarchy-restart-waybar
 ```
-<img width="2560" height="529" alt="screenshot-2026-01-08_21-03-10" src="https://github.com/user-attachments/assets/c885c449-4286-4f2e-a895-8b9370d5c371" />
-
+<img width="2560" height="521" alt="screenshot-2026-01-08_21-51-52" src="https://github.com/user-attachments/assets/f717fef3-b9e9-40dc-94a7-77bbb4884b64" />
 
 ## Screenshots V2.2
 - multiple groups creations <br>
