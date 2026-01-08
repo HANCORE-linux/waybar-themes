@@ -149,7 +149,8 @@ tooltip {
 }
 
 #custom-update {
-  padding-left: 6px;
+  padding: 0 4px;
+  margin: 0 0 0 7.5px;
 }
 
 #custom-windowpill {
