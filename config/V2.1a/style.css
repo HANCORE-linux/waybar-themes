@@ -102,7 +102,6 @@
 #group-tray-expander,
 #custom-windowpill,
 #custom-expand-icon,
-#custom-update,
 #custom-omarchy,
 #custom-omarchy-theme-set,
 #custom-colorpicker,
@@ -155,6 +154,10 @@ tooltip {
   padding-right: 5px;
 }
 
+#custom-update {
+  padding: 0 4px;
+  margin: 0 0 0 7.5px;
+}
 
 tooltip {
  padding: 4px;
