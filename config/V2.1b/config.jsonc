@@ -15,7 +15,6 @@
     "custom/voxtype",
     "custom/screenrecording-indicator",
     "custom/update",
-    "tray",
     "custom/updatespacman",
     "mpris"
   ],
@@ -23,7 +22,7 @@
     "custom/windowpill"
   ],
   "modules-right": [
-    
+    "group/tray-expander",
     "backlight",
     "network",
     "bluetooth",
@@ -308,6 +307,21 @@
     "exec": "$OMARCHY_PATH/default/waybar/indicators/screen-recording.sh",
     "signal": 8,
     "return-type": "json"
+  },
+  "group/tray-expander": {
+    "orientation": "inherit",
+    "drawer": {
+      "transition-duration": 600,
+      "children-class": "tray-group-item"
+    },
+    "modules": [
+      "custom/expand-icon",
+      "tray"
+    ]
+  },
+  "custom/expand-icon": {
+    "format": "  ",
+    "tooltip": false
   },
   "tray": {
     "icon-size": 11,

@@ -3,7 +3,7 @@
 @define-color bg #161616;
 @define-color fg #f2f4f8;
 @define-color border-active #8A8A8D;
-@define-color border-inactive #363636;
+@define-color border-inactive #525252;
 
 * {
   /* background-color: @background; */
@@ -149,6 +149,11 @@ tooltip {
   min-width: 150px;
   padding-left: 10px;
   padding-right: 5px;
+}
+
+#custom-expand-icon {
+padding: 0px;
+color: @border-inactive;
 }
 
 
