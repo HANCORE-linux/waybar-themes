@@ -169,7 +169,7 @@ git clone https://github.com/HANCORE-linux/waybar-themes.git /tmp/repo && cp -rf
 
 ## Screenshots V3.1
 - all shadow , waybar and tooltip
-##### V3-shadow Install-command (copy and paste in your terminal): <br>
+##### V3.1 Install-command (copy and paste in your terminal): <br>
 ```bash
 git clone https://github.com/HANCORE-linux/waybar-themes.git /tmp/repo && cp -rf /tmp/repo/config/V3.1/. ~/.config/waybar && rm -rf /tmp/repo && omarchy-restart-waybar
 ```
@@ -178,7 +178,7 @@ git clone https://github.com/HANCORE-linux/waybar-themes.git /tmp/repo && cp -rf
 ## Screenshots V3.2
 - this Theme is recommended for darker Themes
 - all shadow & border with minimal concept
-##### V3-border Install-command (copy and paste in your terminal): <br>
+##### V3.2 Install-command (copy and paste in your terminal): <br>
 ```bash
 git clone https://github.com/HANCORE-linux/waybar-themes.git /tmp/repo && cp -rf /tmp/repo/config/V3.2/. ~/.config/waybar && rm -rf /tmp/repo && omarchy-restart-waybar
 ```
@@ -187,7 +187,7 @@ git clone https://github.com/HANCORE-linux/waybar-themes.git /tmp/repo && cp -rf
 
 ## Screenshots V3.3
 - shadow bar with minimal concept (wttbar, mpris, pacmanupdates, hyprland/window)
-##### V3-border2 Install-command (copy and paste in your terminal): <br>
+##### V3.3 Install-command (copy and paste in your terminal): <br>
 ```bash
 git clone https://github.com/HANCORE-linux/waybar-themes.git /tmp/repo && cp -rf /tmp/repo/config/V3.3/. ~/.config/waybar && rm -rf /tmp/repo && omarchy-restart-waybar
 ```
@@ -197,7 +197,7 @@ git clone https://github.com/HANCORE-linux/waybar-themes.git /tmp/repo && cp -rf
 
 ## Screenshots V3.4
 - transparant and all shadow , waybar and tooltip
-##### V3-trans Install-command (copy and paste in your terminal): <br>
+##### V3.4 Install-command (copy and paste in your terminal): <br>
 ```bash
 git clone https://github.com/HANCORE-linux/waybar-themes.git /tmp/repo && cp -rf /tmp/repo/config/V3.4/. ~/.config/waybar && rm -rf /tmp/repo && omarchy-restart-waybar
 ```
@@ -205,14 +205,15 @@ git clone https://github.com/HANCORE-linux/waybar-themes.git /tmp/repo && cp -rf
 
 
 
-## Screenshots V3 (min)
+## Screenshots V3.5
 - minimal setup (cpu, memory, tempature, hyprland/window are excluded)
 - mpris support , bluetooth inside of tray icon
 ##### V3-min Install-command (copy and paste in your terminal): <br>
 ```bash
-git clone https://github.com/HANCORE-linux/waybar-themes.git /tmp/repo && cp -rf /tmp/repo/config/V3-min/. ~/.config/waybar && rm -rf /tmp/repo && omarchy-restart-waybar
+git clone https://github.com/HANCORE-linux/waybar-themes.git /tmp/repo && cp -rf /tmp/repo/config/V3.5/. ~/.config/waybar && rm -rf /tmp/repo && omarchy-restart-waybar
 ```
-<img width="934" height="424" alt="screenshot-2025-11-19_22-44-49" src="https://github.com/user-attachments/assets/825c4a07-6861-425f-97b7-62a7ecc58802" />
+<img width="1391" height="511" alt="V35" src="https://github.com/user-attachments/assets/39df64f4-3a35-405f-a2bd-1a194a052f9d" />
+
 
 ## Screenshots V3 (min2)
 - minimal setup (memory, tempature, hyprland/window are excluded)
