@@ -1,0 +1,369 @@
+{
+  "exclusive": true,
+  "reload_style_on_change": true,
+  "position": "top",
+  "spacing": 0,
+  "height": 24,
+  "width": 1440,
+  "modules-left": [
+    "group/left1"
+  ],
+  "modules-center": [
+    "clock",
+    "custom/voxtype",
+    "custom/weather",
+    "custom/screenrecording-indicator"
+
+  ],
+  "modules-right": [
+    "group/right2",
+    "group/right1",
+    "group/right3"
+  ],
+  
+  "group/left1": {
+    "orientation": "inherit",
+    "modules": [
+    "custom/omarchy",
+    "custom/omarchy-theme-set",
+    "hyprland/workspaces"
+  ]
+  },
+    "group/right3": {
+    "orientation": "inherit",
+    "modules": [
+    "idle_inhibitor",
+    "custom/updatespacman",
+    "custom/update",
+    "bluetooth",
+    "backlight",
+    "network",
+    "power-profiles-daemon",
+    "pulseaudio#output",
+    "pulseaudio#input",
+    "memory",
+    "cpu",
+    "battery"
+  ]
+  },
+    "group/right2": {
+    "orientation": "inherit",
+    "modules": ["mpris"]
+  },
+    "group/right1": {
+    "orientation": "inherit",
+    "modules": ["tray"]
+  },
+  
+  "custom/omarchy-theme-set": {
+  "on-click": "omarchy-theme-set Harbordark",
+  "tooltip-format": "Back to your setted Theme",
+  "interval": 5,
+  "format": "󰔎"
+},
+
+  "hyprland/workspaces": {
+  "persistent-workspaces": {"*": [ 1,2,3,4,5,6 ]},
+	"on-click": "activate",
+	"format": "{windows}",
+	"format-window-separator": " ",
+	"window-rewrite-default": "",
+	"window-rewrite": {		
+        "class<.*imv*.>": "",
+        "class<.*bambustudio*.>": "󰐫",
+        "class<.*bitwarden*.>": "",
+        "class<.*handbrake*.>": "󰈫",
+        "class<.*stremio*.>": "󱖏",
+        "title<.*waydroid*.>": "",
+        "class<.*grayjay*.>": "󱗆",
+		"title<.*amazon.*>": "",
+		"class<firefox|org.mozilla.firefox|librewolf|floorp|mercury-browser|[Cc]achy-browser>": "",
+		"class<zen>": "󰰷",
+		"class<waterfox|waterfox-bin>": "",
+		"class<microsoft-edge>": "",
+		"class<Chromium|Thorium|[Cc]hrome>": "",
+		"class<brave-browser>": "🦁",
+		"class<tor browser>": "",
+		"class<firefox-developer-edition>": "🦊",
+		"class<kitty|konsole>": "",
+		"class<kitty-dropterm>": "",
+		"class<com.mitchellh.ghostty>": "",
+		"class<org.wezfurlong.wezterm>": "",
+        "class<org.omarchy.terminal>": "󰏖",
+		"class<[Tt]hunderbird|[Tt]hunderbird-esr>": "",
+		"class<eu.betterbird.Betterbird>": "",
+		"title<.*gmail.*>": "󰊫",
+		"class<[Tt]elegram-desktop|org.telegram.desktop|io.github.tdesktop_x64.TDesktop>": "",
+		"class<discord|[Ww]ebcord|Vesktop>": "",
+		"title<.*whatsapp.*>": "",
+    "title<.*zapzap.*>": "",
+		"title<.*messenger.*>": "",
+		"title<.*facebook.*>": " ",
+		"title<.*reddit.*>": "",
+		"title<.*ChatGPT.*>": "󰚩",
+    "class<.*ChatGPT.*>": "󰚩",
+		"title<.*deepseek.*>": "󰚩",
+		"title<.*qwen.*>": "󰚩",
+		"class<subl>": "󰅳",
+		"class<slack>": "",
+		"class<mpv>": "",
+		"class<celluloid|Zoom>": "",
+		"class<Cider>": "󰎆 ",
+		"title<.*Picture-in-Picture.*>": "",
+		"title<.*youtube.*>": "",
+		"class<vlc>": "󰕼",
+		"title<.*cmus.*>": "",
+		"class<[Ss]potify>": "",
+		"class<virt-macodeger>": "",
+		"class<.virt-manager-wrapped>": "",
+		"class<virtualbox manager>": "💽",
+		"title<virtualbox>": "💽",
+		"class<remmina>": "🖥️",
+		"class<VSCode|code-url-handler|code-oss|codium|codium-url-handler|VSCodium>": "󰨞",
+    "class<dev.zed.Zed>": "󰵁",
+		"class<codeblocks>": "󰅩",
+		"title<.*github.*>": "",
+		"class<mousepad>": "",
+		"class<libreoffice-writer>": "",
+		"class<libreoffice-startcenter>": " 󰏆",
+		"class<libreoffice-calc>": "",
+		"title<.*nvim ~.*>": "",
+    "class<org.gnome.Nautilus>": "󰣆",
+		"title<.*vim.*>": "",
+		"title<.*figma.*>": "",
+		"title<.*jira.*>": "",
+		"class<jetbrains-idea>": "",
+    "title<*.VSCode.*>": "󰨞",
+    "class<.*code.*>": "󰨞",
+		"class<obs|com.obsproject.Studio>": "",
+		"class<polkit-gnome-authentication-agent-1>": "󰒃",
+		"class<nwg-look>": "",
+		"class<[Pp]avucontrol|org.pulseaudio.pavucontrol>": "󱡫",
+		"class<steam>": "",
+		"class<thunar|nemo>": "󰝰",	
+    "class<Gparted>":"",
+		"class<gimp>": "",
+		"class<emulator>": "📱",
+		"class<android-studio>": "",
+   	"class<org.pipewire.Helvum>": "󰓃",
+    "class<localsend>":"",
+    "class<PrusaSlicer|UltiMaker-Cura|OrcaSlicer>": "󰹛"
+		}
+	},
+   "custom/voxtype": {
+    "exec": "omarchy-voxtype-status",
+    "return-type": "json",
+    "format": "{icon}",
+    "format-icons": {
+      "idle": "",
+      "recording": "󰍬",
+      "transcribing": "󰔟"
+    },
+    "tooltip": true,
+    "on-click-right": "omarchy-voxtype-config",
+    "on-click": "omarchy-voxtype-model"
+  },
+  "custom/weather": {
+    "format": "{}°",
+    "tooltip": true,
+    "interval": 1800,
+    "exec": "wttrbar --nerd --location yourlocation",
+    "return-type": "json"
+  },
+  "custom/omarchy": {
+    "format": "",
+    "on-click": "omarchy-menu",
+    "on-click-right": "xdg-terminal-exec",
+    "tooltip-format": "Omarchy Menu\n\nSuper + Alt + Space"
+  },
+  "custom/update": {
+    "format": "",
+    "exec": "omarchy-update-available",
+    "on-click": "omarchy-launch-floating-terminal-with-presentation omarchy-update",
+    "tooltip-format": "Omarchy update available",
+    "signal": 7,
+    "interval": 21600
+  },
+  "power-profiles-daemon": {
+    "format": "{icon}",
+    "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
+    "tooltip": true,
+    "format-icons": {
+      "default": "",
+      "performance": "",
+      "balanced": "",
+      "power-saver": ""
+    }
+  },
+ "cpu": {
+    "interval": 2,
+    "format": " {usage}%",
+    "on-click": "omarchy-launch-or-focus-tui btop"
+  },
+    "memory": {
+    "interval": 2,
+    "format": " {percentage}%",
+    "on-click": "omarchy-launch-or-focus-tui btop"
+  },
+  "backlight": {
+    "device": "intel_backlight",
+    "format": "{icon}",
+    "tooltip-format": "{percent}%",
+    "format-icons": [
+      "🌑",
+      "🌘",
+      "🌗",
+      "🌖",
+      "🌕"
+    ]
+  },
+  "clock": {
+    "format": " {:%H:%M %a}",
+    "format-alt": " {:%d/%m/%Y %H:%M}",
+    "tooltip-format": "<span>{calendar}</span>",
+    "calendar": {
+      "mode": "month",
+      "mode-mon-col": 3,
+      "on-click-right": "mode",
+      "format": {
+        "mouth": "<span color='#ffead3'><b>{}</b></span>",
+        "weekdays": "<span color='#ffcc66'><b>{}</b></span>",
+        "today": "<span color='#ff6699'><b>{}</b></span>"
+      }
+    },
+     "on-click-right": "omarchy-launch-floating-terminal-with-presentation omarchy-tz-select"
+  },
+   "network": {
+    "format-icons": [
+      "󰤯",
+      "󰤟",
+      "󰤢",
+      "󰤥",
+      "󰤨"
+    ],
+    "format": "{icon}",
+    "format-wifi": "{icon}",
+    "format-ethernet": "󰈀",
+    "format-disconnected": "󰤮",
+    "tooltip-format-wifi": "{essid} ({frequency} GHz)\n⇣{bandwidthDownBytes}  ⇡{bandwidthUpBytes}",
+    "tooltip-format-ethernet": "⇣{bandwidthDownBytes}  ⇡{bandwidthUpBytes}",
+    "tooltip-format-disconnected": "Disconnected",
+    "interval": 3,
+    "spacing": 1,
+    "on-click": "omarchy-launch-wifi"
+  },
+  "battery": {
+    "format": "{capacity}% {icon}",
+    "format-discharging": "{capacity}% {icon}",
+    "format-charging": "{capacity}% {icon}",
+     "format-plugged": "",
+    "format-icons": {
+      "charging": [
+        "󰢜",
+        "󰂆",
+        "󰂇",
+        "󰂈",
+        "󰢝",
+        "󰂉",
+        "󰢞",
+        "󰂊",
+        "󰂋",
+        "󰂅"
+      ],
+      "default": [
+        "󰁺",
+        "󰁻",
+        "󰁼",
+        "󰁽",
+        "󰁾",
+        "󰁿",
+        "󰂀",
+        "󰂁",
+        "󰂂",
+        "󰁹"
+      ]
+    },
+    "format-full": "󰂅",
+    "tooltip-format-discharging": "{power:>1.0f}W↓\n {timeTo}",
+    "tooltip-format-charging": "{power:>1.0f}W↑\n {timeTo}",
+    "interval": 5,
+    "states": {
+      "warning": 20,
+      "critical": 10
+    }
+  },
+  "bluetooth": {
+    "format": "",
+    "format-disabled": "󰂲",
+    "format-connected": "󰂱",
+    "tooltip-format": "Devices connected: {num_connections}",
+    "on-click": "omarchy-launch-bluetooth"
+  },
+   "pulseaudio#input": {
+    "format-source": "",
+    "format-source-muted": " ",
+    "format": "{format_source}",
+    "tooltip-format": "{format_source} {source_volume}%",
+    "scroll-step": 1,
+    "smooth-scrolling-threshold": 1,
+    "max-volume": 100,
+    "on-click": "omarchy-launch-or-focus-tui wiremix",
+    "on-click-right": "pamixer -t",
+    "on-scroll-up": "pactl set-source-volume @DEFAULT_SOURCE@ +1%",
+    "on-scroll-down": "pactl set-source-volume @DEFAULT_SOURCE@ -1%"
+},
+"pulseaudio#output": {
+    "format": "{icon}",
+    "tooltip-format": "{icon}  {volume}%",
+    "format-muted": " off",
+    "format-icons": {
+        "default": [""]
+    },
+    "max-volume": 100,
+    "scroll-step": 2,
+    "smooth-scrolling-threshold": 1,
+    "on-click": "omarchy-launch-or-focus-tui wiremix",
+    "on-click-right": "pamixer -t"
+},
+  "mpris": {
+    "format": "󰋎 {artist}-{title}",
+    "format-paused": "<i><span color='black'>{status_icon} {artist}</span></i>",
+    "max-length": 30,
+    "player-icons": {
+      "default": "⏸",
+      "mpv": "🎵"
+    },
+    "status-icons": {
+      "paused": "󰋐"  
+    },
+    "ignored-players": ["firefox", "chromium", "brave"]
+  },
+  "idle_inhibitor": {
+    "format": "{icon}",
+    "format-icons": {
+      "activated": "󰛊",
+      "deactivated": "󰾪"
+    }
+  },
+    "custom/updatespacman": {
+    "format": "{}{icon}",
+    "return-type": "json",
+    "format-icons": {
+      "has-updates": " 󰏖",
+      "updated": ""
+    },
+    "exec-if": "which waybar-module-pacman-updates",
+    "exec": "waybar-module-pacman-updates --no-zero-output"
+  },
+  "custom/screenrecording-indicator": {
+    "on-click": "omarchy-cmd-screenrecord",
+    "exec": "$OMARCHY_PATH/default/waybar/indicators/screen-recording.sh",
+    "signal": 8,
+    "return-type": "json"
+  },
+  "tray": {
+    "icon-size": 12,
+    "spacing": 4,
+    "show-passive-items": true
+  }
+}
