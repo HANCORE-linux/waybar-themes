@@ -215,14 +215,15 @@ git clone https://github.com/HANCORE-linux/waybar-themes.git /tmp/repo && cp -rf
 <img width="1391" height="511" alt="V35" src="https://github.com/user-attachments/assets/39df64f4-3a35-405f-a2bd-1a194a052f9d" />
 
 
-## Screenshots V3 (min2)
+## Screenshots V3.6
 - minimal setup (memory, tempature, hyprland/window are excluded)
 - mpris support , bluetooth and gtk icons out of tray box
-##### V3-min2 Install-command (copy and paste in your terminal): <br>
+##### V3.6 Install-command (copy and paste in your terminal): <br>
 ```bash
-git clone https://github.com/HANCORE-linux/waybar-themes.git /tmp/repo && cp -rf /tmp/repo/config/V3-min2/. ~/.config/waybar && rm -rf /tmp/repo && omarchy-restart-waybar
+git clone https://github.com/HANCORE-linux/waybar-themes.git /tmp/repo && cp -rf /tmp/repo/config/V3.6/. ~/.config/waybar && rm -rf /tmp/repo && omarchy-restart-waybar
 ```
-<img width="856" height="427" alt="screenshot-2025-12-05_06-55-45" src="https://github.com/user-attachments/assets/b76b2c89-92dc-4307-b525-ff84779ea74e" />
+<img width="1114" height="471" alt="V36" src="https://github.com/user-attachments/assets/4d2fb623-ffb5-4024-8300-d657672d2b1d" />
+
 
 ## Screenshots V3 (min2-cava)
 - minimal setup (memory, tempature, hyprland/window are excluded)
