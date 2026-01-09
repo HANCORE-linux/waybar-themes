@@ -1,0 +1,204 @@
+@import "../omarchy/current/theme/waybar.css";
+
+
+* {
+  /* background-color: @background; */
+  color: @foreground;
+
+  border: none;
+  border-radius:0 0 8px 8px;
+  font-family: 'CaskaydiaMono Nerd Font Propo';
+  min-height: 0px;
+}
+
+window#waybar {
+  background-color: transparent;
+}
+
+#waybar > box {
+  border-radius: 3px;
+  border: 3px solid rgba(255, 255, 255, 0.0);
+  margin: 0px 8px 3px 8px;
+  background-color: @background;
+  box-shadow: 1px 1px 3px 1px #101010;
+  transition-property: background-color;
+  transition-duration: .5s;
+}
+
+.modules-left {
+  margin-left: 0px;
+}
+
+.modules-right {
+  margin-right: 0px;
+  font-size: 12px;
+}
+
+.modules-center {
+  font-size: 12px;
+}
+
+#workspaces {
+  padding: 0;
+  margin: 0;
+  padding-top: 2px;
+
+}
+
+
+#workspaces button {
+  all: initial;
+  font-size: 16px;
+  min-width: 0;
+  min-height: 0;
+  padding: 0;
+  margin: 0;
+  opacity: 0.65;
+
+}
+
+#workspaces button.active {
+    color: @background;
+    opacity: 1.0;
+    padding: 0;
+    margin: 0;
+    background: linear-gradient(180deg, @background 75%, @foreground);
+    font-size: 16px;
+    transition: all 0.15s ease-in-out;
+}
+
+#workspaces button.empty {
+  opacity: 0.3;
+}
+
+
+#custom-omarchy {
+padding-top: 1px;
+font-size: 14px;
+}
+
+#mpris,
+#tray,
+#cpu,
+#battery,
+#network,
+#bluetooth,
+#pulseaudio,
+#custom-omarchy,
+#idle_inhibitor,
+#backlight,
+#custom-weather,
+#clock,
+#custom-updatespacman,
+#custom-screenrecording-indicator,
+#custom-update {
+  min-width: 10px;
+  font-size: 12px;
+  margin: 0 5px;
+}
+
+#custom-expand-icon {
+  margin-right: 2px;
+}
+
+
+tooltip {
+  padding: 0.5px;
+}
+
+
+#custom-update {
+  font-size: 10px;
+}
+
+#clock{
+  margin-left: 0px;
+}
+
+
+.hidden {
+  opacity: 0;
+}
+
+#custom-voxtype {
+  min-width: 12px;
+  margin: 0 0 0 2.5px;
+}
+
+#custom-voxtype.recording {
+  color: #a55555;
+}
+
+#custom-screenrecording-indicator {
+    font-size: 12px;
+    padding: 0px;
+    margin: 2px;
+}
+
+#custom-screenrecording-indicator {
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  color: transparent;
+}
+
+#custom-screenrecording-indicator.active {
+  color: #eb7087;
+  animation-name: blink-recording;
+  animation-duration: 0.5s;
+}
+
+@keyframes blink-recording {
+    to {
+        color: @background;
+    }
+}
+
+tooltip {
+ padding: 4px;
+ background: @background;
+ border: 1px solid alpha(@foreground, 0.3);
+ border-radius: 8px;
+ box-shadow: 1px 1px 3px 1px #131313;
+ font-size: 12px;
+}
+tooltip label {
+    color: @foreground;
+}
+
+#mpris{
+padding-top: 2px;
+margin-left: 8px;
+color: alpha(@foreground, 0.95);
+animation: repeat;
+	animation-name: blink;
+	animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes blink {
+    to {
+        color: #4a4a4a;
+    }
+}
+
+@keyframes blink-inhibitor {
+    to {
+        color: @background;
+    }
+}
+
+#idle_inhibitor {
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  color: @foreground;
+}
+
+#idle_inhibitor.activated {
+  color: #178b76;
+  animation-name: blink-inhibitor;
+  animation-duration: 1s;
+}
