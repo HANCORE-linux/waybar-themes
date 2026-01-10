@@ -9,6 +9,7 @@
   "modules-left": [
     "custom/omarchy",
     "clock",
+    "custom/voxtype",
     "custom/screenrecording-indicator",
     "idle_inhibitor",
     "custom/updatespacman",
@@ -61,7 +62,20 @@
     "on-click": "omarchy-launch-floating-terminal-with-presentation omarchy-update",
     "tooltip-format": "Omarchy update available",
     "signal": 7,
-    "interval": 3600
+    "interval": 21600
+  },
+  "custom/voxtype": {
+    "exec": "omarchy-voxtype-status",
+    "return-type": "json",
+    "format": "{icon}",
+    "format-icons": {
+      "idle": "",
+      "recording": "󰍬",
+      "transcribing": "󰔟"
+    },
+    "tooltip": true,
+    "on-click-right": "omarchy-voxtype-config",
+    "on-click": "omarchy-voxtype-model"
   },
   "idle_inhibitor": {
     "format": "{icon}",

@@ -81,6 +81,9 @@ margin: 0 5.5px;
 #power-profiles-daemon,
 #clock,
 #mpris,
+#custom-voxtype,
+#custom-voxtype.recording,
+#custom-voxtype.transcribing,
 #idle_inhibitor,
 #custom-updatespacman,
 #custom-update,
@@ -125,6 +128,14 @@ font-size: 16px;
 margin-right: 10px;
 }
 
+#custom-voxtype {
+  min-width: 12px;
+  margin: 0 0 0 2.5px;
+}
+
+#custom-voxtype.recording {
+  color: #a55555;
+}
 
 
 tooltip {
