@@ -16,6 +16,7 @@ window#waybar  {
   color: @foreground;
   transition-property: background-color;
   transition-duration: .5s;
+  border-bottom: 2.5px solid rgba(255, 255, 255, 0.1);
 }
 
 .modules-left {
@@ -94,6 +95,9 @@ window#waybar  {
 #battery,
 #backlight,
 #network,
+#custom-voxtype,
+#custom-voxtype.transcribing,
+#custom-voxtype.recording,
 #power-profiles-daemon,
 #mpris,
 #bluetooth,
@@ -106,6 +110,15 @@ window#waybar  {
 
 tooltip {
   padding: 2px;
+}
+
+#custom-voxtype {
+  min-width: 12px;
+  margin: 0 0 0 7.5px;
+}
+
+#custom-voxtype.recording {
+  color: #a55555;
 }
 
 #power-profiles-daemon,
