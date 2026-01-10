@@ -148,6 +148,10 @@ tooltip {
 }
 
 /* Specific Module */
+#custom-update {
+  padding-left: 0px;
+  padding-right: 4px;
+}
 
 #idle_inhibitor {
   margin-left: 0px;
