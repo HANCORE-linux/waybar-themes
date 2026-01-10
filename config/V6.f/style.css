@@ -145,6 +145,9 @@ window#waybar > box {
 #custom-omarchy-theme,
 #custom-omarchy-theme-set,
 #custom-theme-switcher,
+#custom-voxtype,
+#custom-voxtype.recording,
+#custom-voxtype.transcribing,
 #mpris
 #tray,
 #cpu,
@@ -186,7 +189,14 @@ padding-right: 8px;
     -gtk-icon-effect: highlight;
     background-color: @transparent;
 }
+#custom-voxtype {
+  min-width: 12px;
+  margin: 0 0 0 2.5px;
+}
 
+#custom-voxtype.recording {
+  color: #a55555;
+}
 .hidden {
   opacity: 0;
 }
