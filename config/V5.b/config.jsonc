@@ -13,6 +13,7 @@
   "modules-center": [
     "mpris",
     "clock",
+    "custom/voxtype",
     "idle_inhibitor",
     "custom/update",
     "custom/screenrecording-indicator"
@@ -92,8 +93,8 @@
     },
     "status-icons": {
       "paused": "▶"
-    }
-    // "ignored-players": ["firefox"]
+    },
+    "ignored-players": ["firefox", "chromium", "brave"]
   },
   "custom/update": {
     "format": "<span weight='bold' >\ue900</span>",
@@ -101,7 +102,20 @@
     "on-click": "omarchy-launch-floating-terminal-with-presentation omarchy-update",
     "tooltip-format": "Omarchy update available",
     "signal": 7,
-    "interval": 3600
+    "interval": 21600
+  },
+      "custom/voxtype": {
+    "exec": "omarchy-voxtype-status",
+    "return-type": "json",
+    "format": "{icon}",
+    "format-icons": {
+      "idle": "",
+      "recording": "󰍬",
+      "transcribing": "󰔟"
+    },
+    "tooltip": true,
+    "on-click-right": "omarchy-voxtype-config",
+    "on-click": "omarchy-voxtype-model"
   },
    "backlight": {
     "device": "intel_backlight",
@@ -143,7 +157,7 @@
   },
     "memory": {
     "interval": 2,
-    "format": " {percentage}%",
+    "format": " {used:0.1f}G",
     "on-click": "omarchy-launch-or-focus-tui btop"
   },
   "clock": {
