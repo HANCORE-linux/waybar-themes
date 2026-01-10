@@ -348,8 +348,8 @@
     },
     "status-icons": {
       "paused": "󰋐"  
-    }
-    // "ignored-players": ["firefox"]
+    },
+    "ignored-players": ["firefox", "chromium", "brave"]
   },
   "custom/updatespacman": {
     "format": "{}{icon}",
