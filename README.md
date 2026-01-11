@@ -87,6 +87,17 @@ omarchy-restart-waybar
 ```
 <img width="2560" height="521" alt="screenshot-2026-01-08_21-51-52" src="https://github.com/user-attachments/assets/f717fef3-b9e9-40dc-94a7-77bbb4884b64" />
 
+## Screenshots V2.1c
+- monochrome waybar - static colors <br>
+- inspired by OldJobobo monochrome-theme <br>
+##### V2.1c Install-command (copy and paste in your terminal): <br>
+```bash
+git clone https://github.com/HANCORE-linux/waybar-themes.git /tmp/repo && cp -rf /tmp/repo/config/V2.1c/. ~/.config/waybar && rm -rf /tmp/repo && omarchy-restart-waybar
+```
+<img width="2560" height="505" alt="screenshot-2026-01-11_02-53-25" src="https://github.com/user-attachments/assets/3b62c2b6-1b49-49b3-93f7-b82e091b0605" />
+
+
+
 ## Screenshots V2.2
 - multiple groups creations <br>
 ##### V2.2 Install-command (copy and paste in your terminal): <br>
