@@ -392,7 +392,7 @@ git clone https://github.com/HANCORE-linux/waybar-themes.git /tmp/repo && cp -rf
 <img width="2560" height="545" alt="V6ca" src="https://github.com/user-attachments/assets/c8fb4388-efa6-4f10-8590-71af7dbe10a2" />
 
 ## Screenshot V6.cb 
-- bottom waybar - with alot of workspaces<br>
+- bottom waybar - with alot of workspaces - Thanks to Astraeya for his window-script!<br>
 ##### V6.cb Install-command (copy and paste in your terminal): <br>
 ```bash
 git clone https://github.com/HANCORE-linux/waybar-themes.git /tmp/repo && cp -rf /tmp/repo/config/V6.cb/. ~/.config/waybar && rm -rf /tmp/repo && omarchy-restart-waybar
