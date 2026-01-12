@@ -48,7 +48,7 @@
 #right-group {
   margin-left: 100px;
   margin-right: 0px;
-  min-width: 180px;
+  min-width: 250px;
 }
 
 #right-top {
@@ -58,11 +58,11 @@
 #right2 {
   min-width: 250px;
   margin-right: 0px;
-  margin-left: 50px;
+  padding-left: 155px;
 }
 
 #clock-group {
-  margin-left: 328px;
+  margin-left: 370px;
 }
 
 
@@ -138,16 +138,6 @@ tooltip {
 
 #cpu,
 #memory {
-  min-width: 40px;
-}
-
-#battery,
-#network {
-  padding: 0 22px;
-}
-
-#bluetooth,
-#backlight {
   min-width: 40px;
 }
 
