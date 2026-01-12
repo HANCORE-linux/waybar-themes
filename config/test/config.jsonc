@@ -3,6 +3,7 @@
   "reload_style_on_change": true,
   "position": "bottom",
   "spacing": 2,
+  "width": 1440,
   "margin-top": 1,
   "modules-left": [
     "custom/separator",
