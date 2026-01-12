@@ -223,28 +223,7 @@
     "on-click": "omarchy-launch-audio",
     "on-click-right": "pamixer -t"
   },
-  "mpris": {
-    "format": "󰋎  {artist} - {title}",
-    "format-paused": "<i><span color='grey'>{status_icon} {artist}</span></i>",
-    "tooltip-format": "{album}",
-    "max-length": 35,
-    "on-click": "playerctl play-pause",
-    "on-scroll-up": "playerctl previous",
-    "on-scroll-down": "playerctl next",
-    "player-icons": {
-      "default": "⏸",
-      "mpv": "🎵"
-    },
-    "status-icons": {
-      "paused": "󰋐 "
-    },
-    "ignored-players": [
-      "firefox",
-      "chromium",
-      "brave"
-    ]
-  },
-  "custom/updatespacman": {
+ "custom/updatespacman": {
     "format": "{}{icon}",
     "return-type": "json",
     "format-icons": {
