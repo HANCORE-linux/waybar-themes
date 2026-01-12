@@ -20,10 +20,10 @@
 #waybar > box {
   color: @foreground;
   background-color: @background;
-  margin: 2px 0px 0px 0px;
+  margin: 2px 6px 2px 6px;
   padding: 0px;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 1);
-  border-radius: 1px;
+  border-radius: 4px;
   font-weight: 700;
   font-size: 12px;
   transition-property: background-color;
@@ -47,8 +47,9 @@
 
 #clock {
   min-width: 15px;
-  padding-left: 100px;
-  
+  padding-left: 10px;
+  padding-right: 0px;
+  margin-right: 0;
 }
 
 
