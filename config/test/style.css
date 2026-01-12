@@ -52,11 +52,11 @@
 }
 
 #right-top {
- min-width: 300px;
+ min-width: 200px;
 }
 
 #clock-group {
-  min-width: 150px;
+  margin-left: 165px;
 }
 
 
