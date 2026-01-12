@@ -21,25 +21,13 @@
    "custom/windowpill"
   ],
   "modules-right": [
-   "group/right-group"
+  "group/right-group"
   ],
 "group/right-group": {
   "orientation": "vertical",
   "modules": [
-    "group/right-top",
+    "clock",
     "group/right2"
-  ]
-},
-"group/right-top": {
-  "orientation": "horizontal",
-  "modules": [
-    "group/clock-group"
-  ]
-},
-"group/clock-group": {
-  "orientation": "horizontal",
-  "modules": [
-    "clock"
   ]
 },
 "group/right2": {

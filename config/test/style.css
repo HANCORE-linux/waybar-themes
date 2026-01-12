@@ -40,29 +40,13 @@
 }
 
 #right2 {
-  min-width: 100px;
+  min-width: 250px;
   margin-right: 0px;
   margin-left: 0px;
 }
 
-#right-group {
-  margin-left: 100px;
-  margin-right: 0px;
-  min-width: 250px;
-}
-
 #right-top {
- min-width: 300px;
-}
-
-#right2 {
-  min-width: 250px;
-  margin-right: 0px;
-  padding-left: 155px;
-}
-
-#clock-group {
-  margin-left: 370px;
+ min-width: 200px;
 }
 
 
