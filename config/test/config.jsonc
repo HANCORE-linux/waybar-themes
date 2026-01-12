@@ -71,19 +71,19 @@
 },
 "group/right2":{
   "orientation": "horizontal",
-  "modules": ["backlight", "bluetooth"]
+  "modules": ["custom/separator","backlight", "bluetooth"]
 },
 "group/right3":{
   "orientation": "horizontal",
-  "modules": ["pulseaudio#output","pulseaudio#input"]
+  "modules": ["custom/separator", "pulseaudio#output","pulseaudio#input"]
 },
 "group/right4":{
   "orientation": "horizontal",
-  "modules": ["power-profiles-daemon","idle_inhibitor", "battery"]
+  "modules": ["custom/separator", "power-profiles-daemon","idle_inhibitor", "battery", "custom/separator"]
 },
 "group/right5":{
   "orientation": "horizontal",
-  "modules": ["memory","cpu", "network"]
+  "modules": ["custom/separator", "memory","cpu", "network", "custom/separator"]
 },
 "group/right6": {
     "orientation": "horizontal",
