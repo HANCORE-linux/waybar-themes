@@ -53,7 +53,10 @@
 
 #right-top {
  min-width: 60px;
- margin-left: 165px;
+}
+
+#clock-group {
+  margin-left: 165px;
 }
 
 #workspaces {
