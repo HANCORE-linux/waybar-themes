@@ -25,6 +25,8 @@
   ],
 "group/right-group": {
   "orientation": "vertical",
+  "align": "right",
+  "justify": "right",
   "modules": [
     "clock",
     "group/right2"
@@ -156,7 +158,7 @@
   },
   "clock": {
     "justify": "right",
-    "format": "{:%H:%M - %d/%m/%Y}",
+    "format": "                                                                         {:%H:%M - %d/%m/%Y}",
     "format-alt": "{:%H:%M - %d/%m/%Y}",
     "tooltip-format": "<span>{calendar}</span>",
     "calendar": {

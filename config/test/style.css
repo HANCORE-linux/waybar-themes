@@ -45,10 +45,11 @@
   margin-left: 0px;
 }
 
-#right-top {
- min-width: 200px;
+#clock {
+  min-width: 15px;
+  padding-left: 100px;
+  
 }
-
 
 
 #workspaces {
