@@ -397,7 +397,8 @@ git clone https://github.com/HANCORE-linux/waybar-themes.git /tmp/repo && cp -rf
 ```bash
 git clone https://github.com/HANCORE-linux/waybar-themes.git /tmp/repo && cp -rf /tmp/repo/config/V6.cb/. ~/.config/waybar && rm -rf /tmp/repo && omarchy-restart-waybar
 ```
-<img width="2560" height="785" alt="V6 cb" src="https://github.com/user-attachments/assets/93151ed3-90a7-463a-94d3-5bed62540504" />
+<img width="1920" height="921" alt="screenshot-2026-01-13_01-21-24" src="https://github.com/user-attachments/assets/50c82679-c2b0-4b3f-80eb-02eaec4aa553" />
+
 
 ## Screenshot V6.d 
 - base config V6.c - tried to have less informations for "minimal" look / Style <br>
