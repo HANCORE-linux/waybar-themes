@@ -39,18 +39,6 @@
   margin-right: 4px;
 }
 
-#right2 {
-min-width: 250px;
-margin: 0px 0px 0px 0px;
-}
-
-#right1 {
-min-width: 150px;
-margin: 0px 0px 0px 0px;
-
-}
-
-
 #workspaces {
   padding: 0 0px;
   margin-top: 2px;
@@ -87,7 +75,6 @@ margin: 0px 0px 0px 0px;
 
 
 #tray,
-#clock,
 #cpu,
 #memory,
 #battery,
@@ -96,8 +83,6 @@ margin: 0px 0px 0px 0px;
 #bluetooth,
 #pulseaudio,
 #power-profiles-daemon,
-#mpris,
-#temperature,
 #idle_inhibitor,
 #custom-windowpill,
 #group-tray-expander,
@@ -114,15 +99,17 @@ margin: 0px 0px 0px 0px;
   padding-right: 6px;
   margin: 1px 1px 1px 1px;
   padding-top: 0px;
+  padding-bottom: 0px;
 }
+
+#clock{
+  padding-top: 4px;
+}
+
+
 
 tooltip {
   padding: 2px;
-}
-
-#cpu,
-#memory {
-  min-width: 40px;
 }
 
 #custom-omarchy {
@@ -153,19 +140,20 @@ tooltip {
     margin: 0 6px 0px 0px;
 }
 
-#group-tray-expander {
-  background-color: @background;
-  color: @foreground;
-}
-
 #custom-updatespacman {
   opacity: 0.55;
 }
 
 #custom-separator {
   opacity: 0.25;
-  padding-left: 4px;
+  padding-left: 2px;
   padding-right: 4px;
+}
+
+#custom-separator3 {
+  opacity: 0.25;
+  padding-left: 2px;
+  padding-right: 6px;
 }
 
 tooltip {
@@ -230,21 +218,4 @@ tooltip label {
   animation-timing-function: steps(12);
   animation-iteration-count: infinite;
   animation-direction: alternate;
-}
-
-#mpris {
-color: @foreground;
-animation: repeat;
-	animation-name: blink;
-	animation-duration: 3s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
-}
-
-@keyframes blink {
-    to {
-        color: #4a4a4a;
-        
-    }
 }

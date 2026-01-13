@@ -22,43 +22,72 @@
    "custom/windowpill"
   ],
   "modules-right": [
-  "group/right-group"
+  "group/right-group2",
+  "group/right-group3",
+
+  "group/right-group1"
   ],
-"group/right-group": {
+
+"group/right-group1": {
   "orientation": "vertical",
   "justify": "left",
   "align": "left",
   "modules": [
-   "group/right1",
-   "group/right2"
+   "group/right1"
+  ]
+},
+
+"group/right-group2": {
+  "orientation": "vertical",
+  "justify": "left",
+  "align": "left",
+  "modules": [
+  "group/right2",
+  "group/right3"
+  ]
+},
+"group/right-group3": {
+  "orientation": "vertical",
+  "justify": "left",
+  "align": "left",
+  "modules": [
+   "group/right4",
+   "group/right5"
+  ]
+},
+"group/right-group4": {
+  "orientation": "vertical",
+  "justify": "left",
+  "align": "left",
+  "modules": [
+   "group/right6"
   ]
 },
 
 
 "group/right1":{
   "orientation": "horizontal",
-  "modules": ["clock", "mpris"]
+  "modules": ["clock"]
 },
-"group/right2": {
+"group/right2":{
+  "orientation": "horizontal",
+  "modules": ["custom/separator","backlight", "bluetooth"]
+},
+"group/right3":{
+  "orientation": "horizontal",
+  "modules": ["custom/separator", "pulseaudio#output","pulseaudio#input"]
+},
+"group/right4":{
+  "orientation": "horizontal",
+  "modules": ["custom/separator", "power-profiles-daemon","idle_inhibitor", "battery"]
+},
+"group/right5":{
+  "orientation": "horizontal",
+  "modules": ["custom/separator", "memory","cpu", "network", "custom/separator3"]
+},
+"group/right6": {
     "orientation": "horizontal",
-    "modules": [
-    "idle_inhibitor",
-    "custom/separator",
-    "backlight",
-    "bluetooth",
-    "custom/separator",
-    "pulseaudio#output",
-    "pulseaudio#input",
-    "custom/separator",
-    "power-profiles-daemon",
-    "custom/separator",
-    "memory",
-    "cpu",
-    "custom/separator",
-    "network",
-    "battery",
-    "custom/separator"
-    ]
+    "modules": ["mpris"]
   },
   "hyprland/workspaces": {
     "on-click": "activate",
@@ -79,27 +108,14 @@
     "format": "|", 
     "tooltip": false
 },
-"mpris": {
-    "format": "󰋎  {artist} - {title}",
-    "format-paused": "<i><span color='grey'>{status_icon} {artist}</span></i>",
-    "tooltip-format": "{album}",
-    "max-length": 28,
-    "on-click": "playerctl play-pause",
-    "on-scroll-up": "playerctl previous",
-    "on-scroll-down": "playerctl next",
-    "player-icons": {
-      "default": "⏸",
-      "mpv": "🎵"
-    },
-    "status-icons": {
-      "paused": "󰋐 "
-    },
-    "ignored-players": [
-      "firefox",
-      "chromium",
-      "brave"
-    ]
-  },
+"custom/separator2": {
+    "format": "|", 
+    "tooltip": false
+},
+"custom/separator3": {
+    "format": "|", 
+    "tooltip": false
+},
   "custom/omarchy": {
     "format": "<span font='omarchy'>\ue900</span>",
     "on-click": "omarchy-menu",
@@ -185,7 +201,8 @@
     ]
   },
   "clock": {
-    "format": "{:%H:%M - %d/%m/%Y}",
+    "justify": "right",
+    "format": "{:%H:%M\n%d/%m/%Y}",
     "format-alt": "{:%H:%M - %d/%m/%Y}",
     "tooltip-format": "<span>{calendar}</span>",
     "calendar": {
