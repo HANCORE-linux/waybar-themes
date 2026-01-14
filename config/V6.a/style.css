@@ -151,6 +151,9 @@ button:hover {
   font-size: 16px;
 }
 
+#custom-update {
+font-size: 9px;
+}
 
 tooltip {
   padding: 2px;
