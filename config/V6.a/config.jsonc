@@ -10,10 +10,10 @@
     "custom/omarchy",
     "clock",
     "custom/voxtype",
-    "custom/update",
     "custom/screenrecording-indicator",
     "custom/separator",
     "tray",
+    "custom/update",
     "custom/updatespacman",
     "group/tray-expander",
     "custom/separator"

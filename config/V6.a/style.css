@@ -152,7 +152,9 @@ button:hover {
 }
 
 #custom-update {
-font-size: 9px;
+font-size: 10px;
+padding-left: 2px;
+padding-right: 2px;
 }
 
 tooltip {
