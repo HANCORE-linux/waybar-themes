@@ -393,7 +393,7 @@ git clone https://github.com/HANCORE-linux/waybar-themes.git /tmp/repo && cp -rf
 <img width="1312" height="715" alt="screenshot-2026-01-14_21-24-34" src="https://github.com/user-attachments/assets/96d7730f-8829-49c4-a480-dde98d9f7e25" />
 
 ## Screenshot V6.ac
-- min bar - **_dynamic colors_**  
+- top-min bar with **_dynamic colors_** 
 ##### V6.ac Install-command (copy and paste in your terminal): <br>
 ```bash
 git clone https://github.com/HANCORE-linux/waybar-themes.git /tmp/repo && cp -rf /tmp/repo/config/V6.ac/. ~/.config/waybar && rm -rf /tmp/repo && omarchy-restart-waybar
