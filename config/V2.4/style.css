@@ -152,7 +152,7 @@ tooltip {
 #power-profiles-daemon,
 #custom-screenrecording-indicator,
 #custom-updatespacman {
-  min-width: 12px;
+  min-width: 16px;
   margin: 0px 2px 0px 2px;
   padding-left: 3px;
   padding-right: 3px;
@@ -163,6 +163,15 @@ tooltip {
 #custom-update {
   padding-left: 0px;
   padding-right: 4px;
+}
+
+#backlight {
+  padding-top: 1px;
+}
+
+#memory,
+#cpu {
+  min-width: 30px;
 }
 
 #group-tray-expander {
