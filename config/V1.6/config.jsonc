@@ -9,7 +9,6 @@
   "margin-right": 5,
   "margin-bottom": 0,
   "modules-left": [
-    "custom/separator",
     "custom/omarchy",
     "custom/separator",
     "hyprland/workspaces",
@@ -36,8 +35,7 @@
     "power-profiles-daemon",
     "pulseaudio#output",
     "pulseaudio#input",
-    "battery",
-    "custom/separator"
+    "battery"
   ],
   "hyprland/workspaces": {
     "disable-scroll": true,
