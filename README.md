@@ -27,7 +27,7 @@ git clone https://github.com/HANCORE-linux/waybar-themes.git /tmp/repo && cp -rf
 <img width="2560" height="1440" alt="screenshot-2025-09-07_18-38-28" src="https://github.com/user-attachments/assets/16c8b398-d1b3-4519-bcbe-e15ad920c7ff" />
 
 ## Screenshots V1.1
-- island version of V1.6 <br>
+- island version of V1.6 with VOL dynamic circle status <br>
 ##### V1.1 Install-command (copy and paste in your terminal): <br>
 ```bash
 git clone https://github.com/HANCORE-linux/waybar-themes.git /tmp/repo && cp -rf /tmp/repo/config/V1.1/. ~/.config/waybar && rm -rf /tmp/repo && omarchy-restart-waybar
