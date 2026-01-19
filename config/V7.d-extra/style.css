@@ -1,0 +1,261 @@
+@import "../omarchy/current/theme/waybar.css";
+
+* {
+    background-color: transparent;
+    color: #d9d9d9;
+    border: none;
+    font-family: "CaskaydiaMono Nerd Font";
+    font-size: 12px;
+}
+
+.modules-left {
+    margin-left: 8px;
+}
+/*.modules-center {
+    margin-left: -6px;
+}*/
+
+.modules-right {
+    margin-right: 2px;
+    padding-left: 8px;
+    padding-right: 8px;
+    background: linear-gradient(135deg, #2a2a2a, #1a1a1a);
+
+    border-radius: 3px;
+    border: 1px solid #737373;
+}
+
+#workspaces button {
+    all: initial;
+    padding: 0 8px;
+    margin: 0 1.5px;
+    min-width: 9px;
+    border: 1px solid transparent;
+
+    border-radius: 3px;
+    transition: all 0.1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+#workspaces button.active {
+    background: linear-gradient(135deg, #2a2a2a, #1a1a1a);
+    border: 1px solid #737373;
+    padding: 0 12px;
+    min-width: 10px;
+}
+#workspaces button.empty {
+    opacity: 0.6;
+    background: transparent;
+}
+#workspaces button:hover {
+    border: 1px solid #737373;
+    padding: 0 12px;
+
+    box-shadow: 0 0 4px rgba(85, 85, 85, 0.3);
+    background: rgba(0, 0, 0, 0.2);
+}
+
+#window {
+    background: linear-gradient(135deg, #2a2a2a, #1a1a1a);
+    border: 1px solid #737373;
+    border-radius: 3px;
+    padding: 0 12px;
+    min-width: 10px;
+}
+
+window#waybar.empty #window {
+    opacity: 0;
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    padding: 0;
+    margin: 0;
+}
+#custom-update,
+#custom-omarchy,
+#custom-screenrecording-indicator {
+    min-width: 12px;
+    margin: 0 7.5px;
+}
+
+#tray {
+    margin-right: 16px;
+}
+#custom-omarchy {
+    color: #d9d9d9;
+    font-size: 13;
+    margin-left: -3px;
+}
+#bluetooth {
+    margin-right: 20px;
+}
+#pulseaudio {
+    margin-right: 20px;
+}
+
+#network {
+    margin-right: 22px;
+}
+#memory {
+    margin-right: 12px;
+}
+#cpu {
+    margin-right: 12px;
+}
+#temperature {
+    margin-right: 12px;
+}
+
+#battery {
+    margin-right: 0px;
+}
+/*#power-profiles-daemon {
+    font-size: 13;
+    margin-right: 5px;
+}*/
+#custom-expand-icon {
+    margin-right: 18px;
+}
+
+tooltip {
+    background: #1a1a1a;
+    border: 0.5px solid #e6e6e6;
+    border-radius: 3;
+    color: #e6e6e6;
+    font-family: "CaskaydiaMono Nerd Font";
+}
+
+#clock {
+    margin-left: 8.75px;
+}
+
+.hidden {
+    opacity: 0;
+}
+
+#custom-screenrecording-indicator {
+    min-width: 12px;
+    margin-top: 2;
+    font-size: 11px;
+    padding-bottom: 1px;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+#custom-screenrecording-indicator.active {
+    color: #d9d9d9;
+    animation-name: blink-recording;
+    animation-duration: 0.7s;
+}
+
+@keyframes blink-recording {
+    to {
+        color: transparent;
+    }
+}
+
+#custom-voxtype {
+    min-width: 22px;
+    font-size: 15px;
+    margin-right: 10px;
+}
+
+#custom-voxtype.recording {
+    color: #cdd6f4;
+}
+
+/*-------------- EXTRAS ------------------*/
+#custom-timer {
+    background-color: #1e1e2e;
+    /*color: #cdd6f4;*/
+    padding: 0 7px;
+    font-size: 12.5px;
+    margin-left: 0px;
+    border-radius: 15px;
+    font-family: "CaskaydiaMono Nerd Font";
+    transition: all 0.2s ease;
+}
+
+/* --- STATE: DISABLED (00:00, Idle) --- */
+#custom-timer.disabled {
+    background-color: transparent;
+    color: #bfbfbf;
+    opacity: 0.6;
+    font-weight: normal;
+
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-direction: alternate;
+}
+
+/* --- STATE: IDLE (Active but 00:00) --- */
+#custom-timer.idle {
+    background-color: transparent;
+    color: #bfbfbf;
+}
+
+/* --- STATE: SELECTION MODE --- */
+#custom-timer.select {
+    background-color: #373948;
+    color: #85b2fa;
+}
+
+/* --- STATE: RUNNING (Normal Timer & Pomodoro Work) --- */
+#custom-timer.running {
+    background-color: transparent;
+    color: #cccccc;
+}
+
+/* --- STATE: POMODORO BREAK (New) --- */
+#custom-timer.pomo_break {
+    background-color: transparent;
+    color: #f9e2af;
+}
+
+/* --- STATE: POMODORO MESSAGE (New: "Work 1/4") --- */
+#custom-timer.pomo_msg {
+    background-color: transparent;
+    color: #cba6f7;
+}
+
+/* --- STATE: PAUSED --- */
+#custom-timer.paused {
+    background-color: #404040;
+    color: #f9e2af;
+    /*border: 1px solid #f9e2af; */
+}
+
+/* --- STATE: WARNING (< 10s or 30s alert) --- */
+#custom-timer.warning {
+    background-color: transparent;
+    animation-name: red-alert;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+/* --- STATE: DONE --- */
+#custom-timer.done {
+    background-color: #bfbfbf;
+    color: #11111b;
+}
+
+/* --- STATE: RESET ANIMATION --- */
+#custom-timer.reset {
+    color: #ff4d4d;
+    background-color: transparent;
+}
+
+/* KEYFRAMES: Red Color Fading */
+@keyframes red-alert {
+    0% {
+        color: #ff4d4d; /* Bright, visible Red */
+        opacity: 1;
+    }
+    100% {
+        color: #ff4d4d;
+        opacity: 0.8; /* Fade cleanly to 80% transparency */
+        text-shadow: none;
+    }
+}

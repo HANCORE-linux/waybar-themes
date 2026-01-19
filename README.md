@@ -486,6 +486,80 @@ git clone https://github.com/HANCORE-linux/waybar-themes.git /tmp/repo && cp -rf
 ```
 <img width="2560" height="359" alt="screenshot-2026-01-02_20-53-50" src="https://github.com/user-attachments/assets/9e5f77ec-ba1f-42c0-810d-46f5327ed3f4" />
 
+## Screenshot V7.a-ascii-air
+- Retro ASCII art theme featuring block character aesthetics and air-themed display
+##### V7.a-ascii-air Install-command (copy and paste in your terminal): <br>
+```bash
+git clone https://github.com/HANCORE-linux/waybar-themes.git /tmp/repo && cp -rf /tmp/repo/config/V7.a-ascii-air/. ~/.config/waybar && rm -rf /tmp/repo && omarchy-restart-waybar
+```
+<img width="2560" height="1440" alt="ascii-air" src="./config/V7.a-ascii-air/ascii-air.png" />
+
+## Screenshot V7.a-ascii-arc
+- Retro ASCII art theme featuring block character aesthetics and arc-themed display
+##### V7.a-ascii-arc Install-command (copy and paste in your terminal): <br>
+```bash
+git clone https://github.com/HANCORE-linux/waybar-themes.git /tmp/repo && cp -rf /tmp/repo/config/V7.a-ascii-arc/. ~/.config/waybar && rm -rf /tmp/repo && omarchy-restart-waybar
+```
+<img width="2560" height="1440" alt="ascii-arc" src="./config/V7.a-ascii-arc/ascii-arc.png" />
+
+## Screenshot V7.b-ascii-cava
+- Retro ASCII art theme with audio visualization using CAVA, featuring block character aesthetics
+##### V7.b-ascii-cava Install-command (copy and paste in your terminal): <br>
+```bash
+git clone https://github.com/HANCORE-linux/waybar-themes.git /tmp/repo && cp -rf /tmp/repo/config/V7.b-ascii-cava/. ~/.config/waybar && rm -rf /tmp/repo && omarchy-restart-waybar
+```
+<img width="2560" height="1440" alt="ascii-cava" src="./config/V7.b-ascii-cava/ascii-cava.png" />
+
+## Screenshot V7.b-ascii-grid
+- Retro ASCII art theme featuring grid-based block character aesthetics
+##### V7.b-ascii-grid Install-command (copy and paste in your terminal): <br>
+```bash
+git clone https://github.com/HANCORE-linux/waybar-themes.git /tmp/repo && cp -rf /tmp/repo/config/V7.b-ascii-grid/. ~/.config/waybar && rm -rf /tmp/repo && omarchy-restart-waybar
+```
+<img width="2560" height="1440" alt="ascii-grid" src="./config/V7.b-ascii-grid/ascii-grid.png" />
+
+## Screenshot V7.c-ascii-grid-v2
+- Enhanced version of the ASCII grid theme with improved block character aesthetics
+##### V7.c-ascii-grid-v2 Install-command (copy and paste in your terminal): <br>
+```bash
+git clone https://github.com/HANCORE-linux/waybar-themes.git /tmp/repo && cp -rf /tmp/repo/config/V7.c-ascii-grid-v2/. ~/.config/waybar && rm -rf /tmp/repo && omarchy-restart-waybar
+```
+<img width="2560" height="1440" alt="ascii-grid-v2" src="./config/V7.c-ascii-grid-v2/ascii-grid-v2.png" />
+
+## Screenshot V7.c-ascii-horiz
+- Retro ASCII art theme featuring horizontal block character aesthetics
+##### V7.c-ascii-horiz Install-command (copy and paste in your terminal): <br>
+```bash
+git clone https://github.com/HANCORE-linux/waybar-themes.git /tmp/repo && cp -rf /tmp/repo/config/V7.c-ascii-horiz/. ~/.config/waybar && rm -rf /tmp/repo && omarchy-restart-waybar
+```
+<img width="2560" height="1440" alt="ascii-horiz" src="./config/V7.c-ascii-horiz/ascii-horiz.png" />
+
+## Screenshot V7.d-ascii-stats
+- Retro ASCII art theme focused on system statistics with block character aesthetics
+##### V7.d-ascii-stats Install-command (copy and paste in your terminal): <br>
+```bash
+git clone https://github.com/HANCORE-linux/waybar-themes.git /tmp/repo && cp -rf /tmp/repo/config/V7.d-ascii-stats/. ~/.config/waybar && rm -rf /tmp/repo && omarchy-restart-waybar
+```
+<img width="2560" height="1440" alt="ascii-stats" src="./config/V7.d-ascii-stats/ascii-stats.png" />
+
+## Screenshot V7.d-ascii-vert
+- Retro ASCII art theme featuring vertical block character aesthetics
+##### V7.d-ascii-vert Install-command (copy and paste in your terminal): <br>
+```bash
+git clone https://github.com/HANCORE-linux/waybar-themes.git /tmp/repo && cp -rf /tmp/repo/config/V7.d-ascii-vert/. ~/.config/waybar && rm -rf /tmp/repo && omarchy-restart-waybar
+```
+<img width="2560" height="1440" alt="ascii-vert" src="./config/V7.d-ascii-vert/ascii-vert.png" />
+
+## Screenshot V7.d-extra
+- Retro ASCII art theme with additional modules and block character aesthetics
+##### V7.d-extra Install-command (copy and paste in your terminal): <br>
+```bash
+git clone https://github.com/HANCORE-linux/waybar-themes.git /tmp/repo && cp -rf /tmp/repo/config/V7.d-extra/. ~/.config/waybar && rm -rf /tmp/repo && omarchy-restart-waybar
+```
+<img width="2560" height="1440" alt="V7.d-extra" src="./config/V7.d-extra/eclipse.png" />
+
+**Note**: The ASCII themes were adapted from [nirabyte/ascii-waybar](https://github.com/nirabyte/ascii-waybar) - a collection of retro ASCII art themes for Waybar featuring block character aesthetics and system monitoring modules.
+
 
 
 
