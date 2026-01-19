@@ -1,0 +1,275 @@
+/* ████████ ASCII WAYBAR THEME ████████ */
+/* ════════════════════════════════════════════════ */
+
+* {
+    background: transparent;
+    color: #bfbfbf;
+    font-family: "CaskaydiaMono Nerd Font";
+    /*color: #bfbfbf;*/
+}
+
+#waybar {
+    background: transparent;
+}
+
+/* ▓▓▓▓▓▓▓ LEFT MODULES ▓▓▓▓▓▓▓ */
+.modules-left {
+    margin-left: 8px;
+    min-width: 9px;
+}
+#workspaces button {
+    all: initial;
+    padding: 0px 6px;
+    margin: 2;
+
+    margin-right: 3;
+    font-size: 15px;
+    border: 1px solid transparent;
+    transition: all 0.1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+#workspaces button.active {
+    border: 1px solid #737373;
+
+    padding: 0 8px;
+}
+
+#workspaces button:hover {
+    border: 1px solid #737373;
+
+    padding: 0 13px;
+
+    box-shadow: 0 0 4px rgba(85, 85, 85, 0.3);
+}
+
+/*#workspaces button.visible {
+    opacity: 0.5;
+}*/
+
+#workspaces button.empty {
+    opacity: 0.6;
+}
+#custom-omarchy {
+    margin-top: 1px;
+    font-size: 13.5px;
+    margin-right: 3px;
+}
+/* ▓▓▓▓▓▓▓ CENTER MODULES ▓▓▓▓▓▓▓ */
+
+#clock {
+    border-right: none;
+    padding: 1px 6px;
+    font-size: 13px;
+    margin: 1px 0px;
+}
+
+/* ▓▓▓▓▓▓▓ RIGHT MODULES ▓▓▓▓▓▓▓ */
+.modules-right {
+    background: transparent;
+    border: 1px solid #737373;
+    font-size: 11px;
+    margin-right: 2;
+}
+/*#bluetooth {
+    background: transparent;
+    border: 1px solid #737373;
+    background: linear-gradient(135deg, #333333, #1a1a1a);
+
+    padding: 1px 6px;
+    margin: 2px 1px;
+    font-size: 10px;
+}*/
+#pulseaudio {
+    border-right: 1px solid #737373;
+    padding: 1px 6px;
+    margin: 1px 0px;
+}
+
+#memory {
+    border-right: 1px solid #737373;
+    padding: 1px 6px;
+    margin: 1px 4px;
+}
+/*#cpu {
+    border: 1px solid #737373;
+    background: linear-gradient(135deg, #333333, #1a1a1a);
+    padding: 1px 5px;
+    margin: 2px 4px;
+    font-size: 10;
+}*/
+
+#battery {
+    padding: 1px 6px;
+    margin: 1px 4px;
+}
+
+#network {
+    border-right: 1px solid #737373;
+
+    padding: 1px 6px;
+    margin: 1px 0px;
+}
+
+/*#custom-analog-clock {
+    background: transparent;
+    border: 0.4px solid #bfbfbf;
+    font-size: 14px;
+    margin-top: 2px;
+    padding-right: 1px;
+    color: #cccccc;
+}*/
+
+/* ▓▓▓▓▓▓▓ TOOLTIPS ▓▓▓▓▓▓▓ */
+tooltip {
+    border: 1px solid #737373;
+
+    font-size: 13px;
+}
+
+/*▓▓▓▓▓▓▓ Extras ▓▓▓▓▓▓▓*/
+
+#tray {
+    margin-right: 4px;
+    padding: 1px 6px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    border: none;
+    border-right: 1px solid #737373;
+}
+#custom-expand-icon {
+    margin-right: 6px;
+    margin-top: -4;
+    font-size: 18px;
+}
+#custom-update {
+    font-size: 12px;
+    margin-left: 5px;
+    opacity: 0.9;
+}
+#custom-screenrecording-indicator {
+    margin: 3px 6 2 8;
+    font-size: 10px;
+    padding-bottom: 1px;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+#custom-screenrecording-indicator.active {
+    animation-name: blink-recording;
+    animation-duration: 0.7s;
+}
+
+@keyframes blink-recording {
+    to {
+        color: rgba(24, 24, 36, 0);
+    }
+}
+
+#custom-voxtype {
+    min-width: 22px;
+    font-size: 13px;
+}
+
+#custom-voxtype.recording {
+    color: #bfbfbf;
+}
+
+/* ▓▓▓▓▓▓▓ EMPTY WINDOW STATE ▓▓▓▓▓▓▓ */
+window#waybar.empty #window {
+    background: transparent;
+    border: none;
+    color: transparent;
+}
+
+/*--------------Extras -----------*/
+#custom-timer {
+    min-width: 20px;
+    padding: 0 6px;
+    border-radius: 15px;
+    margin-top: 1;
+    font-size: 12.5;
+    transition: all 0.2s ease;
+}
+*
+/* --- STATE: DISABLED (00:00, Idle) --- */
+#custom-timer.disabled {
+    background-color: transparent;
+    color: #bfbfbf;
+    opacity: 0.5;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-direction: alternate;
+}
+
+/* --- STATE: IDLE (Active but 00:00) --- */
+#custom-timer.idle {
+    background-color: transparent;
+    color: #bfbfbf;
+}
+
+/* --- STATE: SELECTION MODE --- */
+#custom-timer.select {
+    background-color: #373948;
+    color: #85b2fa;
+}
+
+/* --- STATE: RUNNING (Normal Timer & Pomodoro Work) --- */
+#custom-timer.running {
+    background-color: transparent;
+    color: #cccccc;
+}
+
+/* --- STATE: POMODORO BREAK (New) --- */
+#custom-timer.pomo_break {
+    background-color: transparent;
+    color: #f9e2af; /* Yellow/Gold to distinguish break from work */
+}
+
+/* --- STATE: POMODORO MESSAGE (New: "Work 1/4") --- */
+#custom-timer.pomo_msg {
+    background-color: transparent;
+    color: #cba6f7;
+}
+
+/* --- STATE: PAUSED --- */
+#custom-timer.paused {
+    background-color: #404040;
+    color: #f9e2af;
+
+    /*border: 1px solid #f9e2af; */
+}
+
+/* --- STATE: WARNING (< 10s or 30s alert) --- */
+#custom-timer.warning {
+    background-color: transparent;
+    animation-name: red-alert;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+/* --- STATE: DONE --- */
+#custom-timer.done {
+    background-color: #bfbfbf;
+    color: #000000;
+}
+
+/* --- STATE: RESET ANIMATION --- */
+#custom-timer.reset {
+    color: #ff4d4d;
+    background-color: transparent;
+}
+
+/* ----KEYFRAMES: Red Color Fading --------- */
+@keyframes red-alert {
+    0% {
+        color: #ff4d4d;
+        opacity: 1;
+    }
+    100% {
+        color: #ff4d4d;
+        opacity: 0.8;
+    }
+}

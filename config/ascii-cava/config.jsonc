@@ -1,0 +1,414 @@
+{
+  "reload_style_on_change": true,
+  "layer": "top",
+  "position": "top",
+  "spacing": 0,
+  "height": 20,
+
+  "modules-left": [
+    "custom/omarchy", // "custom/timer",
+    "hyprland/workspaces",
+    "custom/update",
+    // "custom/voxtype",
+    "custom/screenrecording-indicator",
+  ],
+
+  "modules-center": [
+    "custom/analog-clock",
+
+    // "hyprland/window",
+    "cava#left",
+    "mpris",
+    "cava#right",
+  ],
+
+  "modules-right": [
+    "tray",
+    // "group/tray-expander",
+
+    "pulseaudio",
+
+    // "power-profiles-daemon",
+    // "cpu",
+    "memory",
+
+    // "temperature",
+    "network",
+    "battery",
+    "clock",
+  ],
+
+  "hyprland/workspaces": {
+    "disable-scroll": false,
+    "all-outputs": true,
+    "on-click": "activate",
+    "format": "{name} {windows}",
+    "format-window-separator": " ",
+    "window-rewrite-default": "{}",
+    "workspace-taskbar": {
+      "enable": true,
+      "format": "{icon}",
+      "icon-size": 15,
+      "icon-theme": "YAMIS",
+    },
+    "sort-by-number": true,
+    "persistent-workspaces": {
+      "*": 5,
+    },
+  },
+  "hyprland/window": {
+    "format": "{title}",
+    "tooltip": true,
+    "max-length": 45,
+
+    "rewrite": {
+      " - ": "",
+      "(.*) - dev\\.zed\\.Zed": "$1",
+      "(.*) - Cursor": "$1",
+      "(.*) - Google Chrome": "$1",
+      "(.*nvim)...(.*)": "$2",
+      "(.*code) - (.*)": "$1",
+      "^.*btop( .*|$)": "BTOP $1",
+      "^.*unimatrix( .*|$)": "MATRIX $1",
+      "(.*) - Spotify": "$1",
+      "(.*) - com.mitchellh.ghostty": "$1",
+      "(.*) - Alacritty": "$1",
+      "(.*Discord)...(.*)": "$2",
+      "(.*) - Vesktop": "$1",
+      "(.*) - org.gnome.Nautilus": "$1",
+      "(.*Steam)...(.*)": "$1",
+      "(.*imv)...(.*).. (.*)": "$2",
+      "(.*) - com.obsproject.Studio": "$1",
+      "(.*) - mpv": "$1",
+    },
+  },
+
+  // "custom/timer": {
+  //   "format": "{}",
+  //   "exec": "~/.config/waybar/scripts/timer.sh",
+  //   "return-type": "json",
+  //   "on-click": "~/.config/waybar/scripts/timer.sh click",
+  //   "on-click-right": "~/.config/waybar/scripts/timer.sh right",
+  //   "on-click-middle": "~/.config/waybar/scripts/timer.sh middle",
+  //   "on-scroll-up": "~/.config/waybar/scripts/timer.sh down",
+  //   "on-scroll-down": "~/.config/waybar/scripts/timer.sh up",
+  //   "tooltip": true,
+  // },
+
+  "custom/omarchy": {
+    "format": " ",
+    "on-click": "omarchy-menu-tofi",
+    "on-click-right": "sh -c 'wlogout'",
+    "tooltip-format": "Menu\n\nSuper + Alt + Space",
+  },
+  "custom/update": {
+    "format": "",
+    "exec": "omarchy-update-available",
+    "on-click": "omarchy-launch-floating-terminal-with-presentation omarchy-update",
+    "tooltip-format": "Omarchy update available",
+    "signal": 7,
+    "interval": 21600,
+  },
+
+  "cpu": {
+    "format": "CPU {icon} {usage}%",
+    "interval": 2,
+    "on-click": "omarchy-launch-or-focus-tui btop",
+    "format-icons": [
+      "<span font='CaskaydiaMono Nerd Font'>░</span>",
+      "<span font='CaskaydiaMono Nerd Font'>▁</span>",
+      "<span font='CaskaydiaMono Nerd Font'>▂</span>",
+      "<span font='CaskaydiaMono Nerd Font'>▃</span>",
+      "<span font='CaskaydiaMono Nerd Font'>▄</span>",
+      "<span font='CaskaydiaMono Nerd Font'>▅</span>",
+      "<span font='CaskaydiaMono Nerd Font'>▆</span>",
+      "<span font='CaskaydiaMono Nerd Font'>▇</span>",
+      "<span font='CaskaydiaMono Nerd Font'>█</span>",
+    ],
+  },
+
+  "memory": {
+    "format": "MEM {icon} {percentage}%",
+    "interval": 2,
+    "on-click": "omarchy-launch-or-focus-tui btop",
+
+    "format-icons": [
+      "<span font='CaskaydiaMono Nerd Font'>░</span>",
+      "<span font='CaskaydiaMono Nerd Font'>▁</span>",
+      "<span font='CaskaydiaMono Nerd Font'>▂</span>",
+      "<span font='CaskaydiaMono Nerd Font'>▃</span>",
+      "<span font='CaskaydiaMono Nerd Font'>▄</span>",
+      "<span font='CaskaydiaMono Nerd Font'>▅</span>",
+      "<span font='CaskaydiaMono Nerd Font'>▆</span>",
+      "<span font='CaskaydiaMono Nerd Font'>▇</span>",
+      "<span font='CaskaydiaMono Nerd Font'>█</span>",
+    ],
+  },
+
+  // "power-profiles-daemon": {
+  //   "format": "{icon}",
+  //   "tooltip-format": "{profile}",
+  //   "tooltip": true,
+  //   "format-icons": {
+  //     "performance": "󰓅",
+  //     "balanced": "󰾅",
+  //     "power-saver": "󰾆",
+  //   },
+  // },
+
+  // },
+
+  "mpris": {
+    "interval": 0,
+    "format": "{player_icon} {dynamic}",
+    "format-paused": "{status_icon}<i> {artist} - {title}</i>",
+    "on-click-middle": "playerctl previous",
+    "on-click": "playerctl play-pause",
+    "on-click-right": "playerctl next",
+    "scroll-step": 5.0,
+    "on-scroll-up": "pactl set-sink-volume @DEFAULT_SINK@ +5%",
+    "on-scroll-down": "pactl set-sink-volume @DEFAULT_SINK@ -5%",
+    "smooth-scrolling-threshold": 1,
+    "tooltip": true,
+    "tooltip-format": "{status_icon} {dynamic}",
+    "player-icons": {
+      "chromium": "󰎇",
+      "discord": " ",
+      "default": "󰎇",
+      "mopidy": "",
+      "mpv": " ",
+      "spotify": "",
+      "vlc": "󰕼",
+    },
+    "status-icons": {
+      "paused": "",
+      "playing": "",
+      "stopped": "",
+    },
+
+    "dynamic-order": ["artist", "title"],
+    "ignored-players": ["firefox", "zen"],
+    "max-length": 50,
+  },
+  "cava#left": {
+    "framerate": 30,
+    "autosens": 1,
+    // "lower_cutoff_freq": 50,
+    // "higher_cutoff_freq": 10000,
+    "bars": 6,
+    "method": "pulse",
+    "source": "auto",
+    "stereo": true,
+    "bar_delimiter": 0,
+    "format-icons": ["░", "▒", "▓", "█", "▓", "▒", "░"],
+    "reverse": false,
+  },
+
+  "cava#right": {
+    "framerate": 30,
+    "autosens": 1,
+
+    "bars": 6,
+    "method": "pulse",
+    "source": "auto",
+    "stereo": true,
+    "bar_delimiter": 0,
+    "format-icons": ["░", "▒", "▓", "█", "▓", "▒", "░"],
+    "reverse": true,
+  },
+
+  // "bluetooth": {
+  //   "format": "",
+  //   "format-off": "󰂲",
+  //   "format-disabled": "󰂲",
+  //   "format-connected": "󰂱",
+  //   "format-no-controller": "",
+  //   "tooltip-format": "Devices connected: {num_connections}",
+  //   "on-click": "omarchy-launch-bluetooth",
+  // },
+
+  "pulseaudio": {
+    "format": "VOL {volume}% {icon}",
+    "on-click": "omarchy-launch-or-focus-tui wiremix",
+    "on-click-right": "pamixer -t",
+    "tooltip-format": "Playing at {volume}%",
+    "scroll-step": 5,
+    "format-muted": "  {volume}% {icon}",
+    "headphone": "  {volume}% {icon}",
+    "phone": "  {volume}% {icon}",
+    "phone-muted": "  {volume}% {icon}",
+    "portable": "  {volume}% {icon}",
+    "format-icons": {
+      "default": [
+        "<span font='CaskaydiaMono Nerd Font'>░</span>",
+        "<span font='CaskaydiaMono Nerd Font'>▁</span>",
+        "<span font='CaskaydiaMono Nerd Font'>▂</span>",
+        "<span font='CaskaydiaMono Nerd Font'>▃</span>",
+        "<span font='CaskaydiaMono Nerd Font'>▄</span>",
+        "<span font='CaskaydiaMono Nerd Font'>▅</span>",
+        "<span font='CaskaydiaMono Nerd Font'>▆</span>",
+        "<span font='CaskaydiaMono Nerd Font'>▇</span>",
+        "<span font='CaskaydiaMono Nerd Font'>█</span>",
+      ],
+    },
+  },
+
+  // "group/tray-expander": {
+  //   "orientation": "inherit",
+  //   "drawer": {
+  //     "transition-duration": 600,
+  //     "children-class": "tray-group-item",
+  //   },
+  //   "modules": ["custom/expand-icon", "tray"],
+  // },
+  // "custom/expand-icon": {
+  //   "format": "‹",
+  //   "tooltip": false,
+  //   "on-scroll-up": "",
+  //   "on-scroll-down": "",
+  //   "on-scroll-left": "",
+  //   "on-scroll-right": "",
+  // },
+  "custom/screenrecording-indicator": {
+    "on-click": "omarchy-cmd-screenrecord",
+    "exec": "$OMARCHY_PATH/default/waybar/indicators/screen-recording.sh",
+    "signal": 8,
+    "return-type": "json",
+  },
+  "custom/voxtype": {
+    "exec": "omarchy-voxtype-status",
+    "return-type": "json",
+    "format": "{icon}",
+    "format-icons": {
+      "idle": "",
+      "recording": "󰍬",
+      "transcribing": "󰔟",
+    },
+    "tooltip": true,
+    "on-click-right": "omarchy-voxtype-config",
+    "on-click": "omarchy-voxtype-model",
+  },
+  "tray": {
+    "icon-size": 12,
+    "spacing": 17,
+  },
+
+  "custom/volume-ascii": {
+    "exec": "~/.config/waybar/scripts/volume-ascii.sh",
+    "return-type": "text",
+    "interval": 1,
+    "tooltip": "Audio volume control - Click to mute, Scroll to adjust",
+    "on-click": "omarchy-launch-audio",
+    "on-click-right": "pamixer -t",
+    "on-scroll-up": "pactl set-sink-volume @DEFAULT_SINK@ +5%",
+    "on-scroll-down": "pactl set-sink-volume @DEFAULT_SINK@ -5%",
+  },
+
+  "network": {
+    "format-icons": [
+      "<span font='CaskaydiaMono Nerd Font'>░</span>",
+      "<span font='CaskaydiaMono Nerd Font'>▁</span>",
+      "<span font='CaskaydiaMono Nerd Font'>▂</span>",
+      "<span font='CaskaydiaMono Nerd Font'>▃</span>",
+      "<span font='CaskaydiaMono Nerd Font'>▄</span>",
+      "<span font='CaskaydiaMono Nerd Font'>▅</span>",
+      "<span font='CaskaydiaMono Nerd Font'>▆</span>",
+      "<span font='CaskaydiaMono Nerd Font'>▇</span>",
+      "<span font='CaskaydiaMono Nerd Font'>█</span>",
+    ],
+    "format": "WIFI {icon}",
+    "format-wifi": "WIFI {icon}",
+    "format-ethernet": "ETH ▓▓",
+    "format-disconnected": "WIFI ░",
+    "interval": 5,
+    "tooltip-format-wifi": "{essid} ({frequency} GHz)\n⇣{bandwidthDownBytes}  ⇡{bandwidthUpBytes}",
+    "tooltip-format-ethernet": "⇣{bandwidthDownBytes}  ⇡{bandwidthUpBytes}",
+    "tooltip-format-disconnected": "Disconnected",
+    "on-click": "omarchy-launch-wifi",
+  },
+
+  // the 󱈏 icon is configured for indicating limit charging.
+  "battery": {
+    // "format": "BAT {icon} 󱈏 {capacity}%",
+    "format": "BAT {icon}♥ {capacity}%",
+
+    "format-discharging": "BAT {icon} {capacity}%",
+    "format-charging": "BAT {icon}  {capacity}%",
+    // "format-plugged": "BAT {icon} 󱈏 {capacity}%",
+    "format-plugged": "BAT {icon}♥ {capacity}%",
+
+    "format-icons": {
+      "charging": [
+        "<span font='CaskaydiaMono Nerd Font'>░</span>",
+        "<span font='CaskaydiaMono Nerd Font'>▁</span>",
+        "<span font='CaskaydiaMono Nerd Font'>▂</span>",
+        "<span font='CaskaydiaMono Nerd Font'>▃</span>",
+        "<span font='CaskaydiaMono Nerd Font'>▄</span>",
+        "<span font='CaskaydiaMono Nerd Font'>▅</span>",
+        "<span font='CaskaydiaMono Nerd Font'>▆</span>",
+        "<span font='CaskaydiaMono Nerd Font'>▇</span>",
+        "<span font='CaskaydiaMono Nerd Font'>█</span>",
+      ],
+      "default": [
+        "<span font='CaskaydiaMono Nerd Font'>░</span>",
+        "<span font='CaskaydiaMono Nerd Font'>▁</span>",
+        "<span font='CaskaydiaMono Nerd Font'>▂</span>",
+        "<span font='CaskaydiaMono Nerd Font'>▃</span>",
+        "<span font='CaskaydiaMono Nerd Font'>▄</span>",
+        "<span font='CaskaydiaMono Nerd Font'>▅</span>",
+        "<span font='CaskaydiaMono Nerd Font'>▆</span>",
+        "<span font='CaskaydiaMono Nerd Font'>▇</span>",
+        "<span font='CaskaydiaMono Nerd Font'>█</span>",
+      ],
+    },
+    "format-full": "BAT <span font='CaskaydiaMono Nerd Font'>█</span>+ {capacity}%",
+    "tooltip-format-discharging": "{power:>1.0f}W↓ {time}",
+    "tooltip-format-charging": "{power:>1.0f}W↑ {time}",
+    "interval": 2,
+    "on-click": "omarchy-menu-tofi profile",
+    "on-click-right": "omarchy-menu-tofi power",
+    "states": {
+      "warning": 20,
+      "critical": 10,
+    },
+  },
+
+  // "custom/analog-clock": {
+  //   "format": {},
+  //   "exec": "~/.config/waybar/scripts/analog-clock.sh",
+  //   "interval": 1,
+  //   "return-type": "json",
+  // },
+
+  "clock": {
+    "format": "{:%I:%M %p}",
+    "format-alt": "󰸗 {:%a %e-%b %Y}",
+    "interval": 60, // update every minute is enough
+    "tooltip": true,
+    "tooltip-format": "{:%Y-%m-%d %A}\n{calendar}",
+
+    // Calendar settings
+    "calendar": {
+      "mode": "month",
+      "mode-mon-col": 3,
+      // "weeks-pos": "right",
+      "on-scroll": 1,
+
+      "format": {
+        "months": "<span color='#ffead3'><b>{}</b></span>",
+        // "days": "<span color='#ecc6d9'><b>{}</b></span>",
+        "weeks": "<span color='#99ffdd'><b>W{}</b></span>",
+        "weekdays": "<span color='#ffcc66'><b>{}</b></span>",
+        "today": "<span color='#ffcc66'><b>{}</b></span>",
+      },
+    },
+
+    // Mouse controls inside the calendar tooltip
+    "actions": {
+      "on-click-right": "mode", // right-click → toggle year ↔ month
+      "on-scroll-down": "shift_up", // scroll up   → future year/month
+      "on-scroll-up": "shift_down", // scroll down → past year/month
+      "on-click-middle": "shift_reset", // middle-click → jump back to today / current view
+    },
+  },
+}
