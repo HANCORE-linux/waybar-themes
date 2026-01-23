@@ -138,6 +138,10 @@ opacity: 1;
 opacity: 1;
 }
 
+#tray {
+opacity: 1;
+}
+
 #idle_inhibitor{
 opacity: 0.25;
 }
