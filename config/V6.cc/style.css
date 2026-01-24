@@ -203,6 +203,34 @@ tooltip label {
   color: #a55555;
 }
 
+
+/* --- Hover right module  --- */
+#clock:hover,
+#tray:hover,
+#custom-expand-icon:hover,
+#cpu:hover,
+#memory:hover,
+#window:hover,
+#mpris:hover,
+#temperature:hover,
+#battery:hover,
+#power-profiles-daemon:hover,
+#bluetooth:hover,
+#backlight:hover,
+#custom-omarchy:hover,
+#custom-weather:hover,
+#custom-update:hover,
+#idle_inhibitor:hover,
+#custom-screenrecording-indicator,
+#custom-updatespacman:hover,
+#network:hover,
+#pulseaudio:hover {
+  border-radius: 0px;
+  opacity: 1;
+  background-color: transparent;
+  color: @foreground;
+}
+
 /* Specific animation Module */
 
 
