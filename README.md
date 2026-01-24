@@ -34,6 +34,14 @@ git clone https://github.com/HANCORE-linux/waybar-themes.git /tmp/repo && cp -rf
 ```
 <img width="2560" height="392" alt="screenshot-2026-01-18_01-41-05" src="https://github.com/user-attachments/assets/faecaa18-018e-45af-bf63-14bd5bac8218" />
 
+## Screenshots V1.2
+- Split left/right modules into separate groups with full rounded corners on both ends <br>
+##### V1.2 Install-command (copy and paste in your terminal): <br>
+```bash
+git clone https://github.com/HANCORE-linux/waybar-themes.git /tmp/repo && cp -rf /tmp/repo/config/V1.2/. ~/.config/waybar && rm -rf /tmp/repo && omarchy-restart-waybar
+```
+<img width="2560" height="473" alt="screenshot-2026-01-24_14-39-46" src="https://github.com/user-attachments/assets/8e3e26d5-9929-496a-96f9-79b2efc92c32" />
+
 
 ## Screenshots V1.5
 - V1 base evolved: numbered workspaces, ultra-minimal full-width bar with shadowed modules seamlessly integrated into the background <br>
