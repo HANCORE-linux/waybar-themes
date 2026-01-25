@@ -127,7 +127,8 @@ tooltip {
 #power-profiles-daemon.performance,
 #power-profiles-daemon.balanced,
 #power-profiles-daemon.power-saver {
-    margin: 0 6px 0px 0px;
+    margin: 0 4px;
+	padding-left: 6px;
 }
 
 #group-tray-expander {
