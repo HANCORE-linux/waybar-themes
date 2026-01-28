@@ -169,7 +169,7 @@
       "mode-mon-col": 3,
       "on-click-right": "mode",
       "format": {
-        "mouth": "<span color='#ffead3'><b>{}</b></span>",
+        "month": "<span color='#ffead3'><b>{}</b></span>",
         "weekdays": "<span color='#ffcc66'><b>{}</b></span>",
         "today": "<span color='#ff6699'><b>{}</b></span>",
       },
