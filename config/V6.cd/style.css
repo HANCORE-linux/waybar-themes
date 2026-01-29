@@ -109,6 +109,11 @@ font-size: 11px;
 padding-top: 0px;
 }
 
+#custom-update {
+opacity: 1;
+}
+	
+
 #custom-updatespacman {
 opacity: 1;
 }
