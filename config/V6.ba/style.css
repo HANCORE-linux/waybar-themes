@@ -38,6 +38,7 @@ margin-left: 4px;
 
 #workspaces {
     background: transparent;
+	color: @foreground;
     margin: 4px 0px;
     padding: 4px 4px;
     border: 1.5px solid alpha(@foreground, 0.5);
@@ -53,6 +54,7 @@ margin-left: 4px;
     border-radius: 26px;
     opacity: 0.65;
     background: @foreground;
+	color: @foreground;
     font-weight: 800;
     transition: all 0.15s ease-in-out;
 }
