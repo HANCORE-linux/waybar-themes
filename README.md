@@ -328,6 +328,7 @@ git clone https://github.com/HANCORE-linux/waybar-themes.git /tmp/repo && cp -rf
 
 ## Screenshots V4.2b
 - base config V4.2 , re-simplified with some Chinese accents
+- Instead of the omarchy-menu icon, it is replaced with the Chinese text "menu," the same as for "time."
 ##### V4.2b Install-command (copy and paste in your terminal): <br>
 ```bash
 git clone https://github.com/HANCORE-linux/waybar-themes.git /tmp/repo && cp -rf /tmp/repo/config/V4.2b/. ~/.config/waybar && rm -rf /tmp/repo && omarchy-restart-waybar
