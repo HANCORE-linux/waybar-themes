@@ -182,8 +182,7 @@ git clone https://github.com/HANCORE-linux/waybar-themes.git /tmp/repo && cp -rf
 
 ## Screenshots V2.5b
 - dynamic color version <br>
-- Base config of V2.4 & V4.2 and in combination of (Credits to him) [sofyan-rs](https://github.com/sofyan-rs/hyprdots) hyprdots
-##### V2.5a Install-command (copy and paste in your terminal): <br>
+##### V2.5b Install-command (copy and paste in your terminal): <br>
 ```bash
 git clone https://github.com/HANCORE-linux/waybar-themes.git /tmp/repo && cp -rf /tmp/repo/config/V2.5b/. ~/.config/waybar && rm -rf /tmp/repo && omarchy-restart-waybar
 ```
