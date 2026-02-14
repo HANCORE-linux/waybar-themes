@@ -44,7 +44,7 @@
     "sort-by-number": true
   },
  "custom/omarchy": {
-    "format": "菜单",
+    "format": "󰀘",
     "on-click": "omarchy-menu",
     "on-click-right": "xdg-terminal-exec",
     "tooltip-format": "Omarchy Menu\n\nSuper + Alt + Space"
@@ -125,7 +125,7 @@
     "on-click": "omarchy-launch-or-focus-tui btop"
   },
   "clock": {
-    "format": "时间 󰥔 {:%H:%M}",
+    "format": "{:%B %d | %H:%M}",
     "format-alt": "{:L%d %B W%V %Y}",
     "tooltip-format": "<span>{calendar}</span>",
     "calendar": {
