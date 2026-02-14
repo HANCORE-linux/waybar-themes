@@ -171,6 +171,25 @@ git clone https://github.com/HANCORE-linux/waybar-themes.git /tmp/repo && cp -rf
 ```
 <img width="2560" height="390" alt="screenshot-2025-12-10_23-40-32" src="https://github.com/user-attachments/assets/a12ab1d9-0119-4766-ab27-6289937ad2da" />
 
+## Screenshots V2.5a
+- static quartz color <br>
+##### V2.5a Install-command (copy and paste in your terminal): <br>
+```bash
+git clone https://github.com/HANCORE-linux/waybar-themes.git /tmp/repo && cp -rf /tmp/repo/config/V2.5a/. ~/.config/waybar && rm -rf /tmp/repo && omarchy-restart-waybar
+```
+<img width="1552" height="234" alt="screenshot-2026-02-14_16-31-36" src="https://github.com/user-attachments/assets/5b871a55-7049-447d-aafe-1601b307bfe0" />
+
+
+## Screenshots V2.5b
+- dynamic color version <br>
+- Base config of V2.4 & V4.2 and in combination of (Credits to him) [sofyan-rs](https://github.com/sofyan-rs/hyprdots) hyprdots
+##### V2.5a Install-command (copy and paste in your terminal): <br>
+```bash
+git clone https://github.com/HANCORE-linux/waybar-themes.git /tmp/repo && cp -rf /tmp/repo/config/V2.5b/. ~/.config/waybar && rm -rf /tmp/repo && omarchy-restart-waybar
+```
+<img width="1582" height="257" alt="screenshot-2026-02-14_16-38-57" src="https://github.com/user-attachments/assets/d1cf0c92-7214-4c23-9f62-8ec19216d921" />
+
+
 ## Screenshots V2.6
 - Base config of V2.4 - short version 
 ##### V2.6 Install-command (copy and paste in your terminal): <br>
