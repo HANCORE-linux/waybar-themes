@@ -276,7 +276,7 @@
   },
 
    "mpris": {
-    "format": "  {artist} - {title}",
+    "format": " {artist} - {title}",
     "format-paused": "<span color='grey'>{status_icon}  {title}</span>",
     "max-length": 75,
     "player-icons": {
