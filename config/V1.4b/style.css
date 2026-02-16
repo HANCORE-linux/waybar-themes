@@ -1,0 +1,273 @@
+@import "../omarchy/current/theme/waybar.css";
+@define-color bg @background;
+@define-color border alpha(@foreground, 0.25);
+@define-color fg @foreground;
+@define-color fg2 alpha(@foreground, 0.65);
+@define-color ia1 #111111;
+
+* {
+
+  border: 0px;
+  font-family: 'JetBrainsMono Nerd Font Propo';
+  font-size: 12px;
+  font-weight: bold;
+  min-height: 0;
+  }
+
+
+/* --- Waybar ---*/
+window#waybar {
+ background-color: transparent;
+}
+
+#waybar > box {
+  border-radius: 2px;
+  margin: 0px 2px 3px 2px;
+  background-color: @bg;
+  box-shadow: 1px 1px 2px 0px #101010;
+  transition-property: background-color;
+  transition-duration: .5s;
+  min-height: 0px;
+}
+
+window#waybar.hidden {
+  opacity: 0.2;
+}
+
+window#waybar.empty #window {
+  background-color: transparent;
+}
+
+/* --- Modules --- */
+
+#left1 {
+  color: @fg2;
+  border-radius: 2px;
+  border: 1px solid @border;
+  padding: 0 8px;
+  margin: 2px 0px;
+  margin-left: 4px;
+ }
+
+ #left3 {
+  color: @fg2;
+  border: 1px solid @border;
+  border-radius: 2px;
+  padding: 0px;
+  margin: 2px 0px;
+ }
+
+.modules-center {
+  color: @fg2;
+  border-radius: 2px;
+  border: 1px solid @border;
+  padding: 0px;
+  margin: 2px 0px;
+  margin-left: 4px;
+}
+#right {
+  color: @fg2;
+  border: 1px solid @border;
+  border-radius: 2px;
+  padding: 0px;
+  margin: 2px 4px;
+  margin-right: 4px;
+}
+
+#right1 {
+  color: @fg2;
+  border: 1px solid @border;
+  border-radius: 2px;
+  padding: 0px;
+  margin: 2px 0px;
+}
+
+/* --- Workspaces --- */
+#workspaces {
+margin: 2px;
+padding: 0px;
+}
+
+#workspaces button {
+  all: initial;
+  color: @fg;
+  background-color: @bg;
+  padding: 0 5px;
+  margin: 0px 2px;
+  border-radius: 2px;
+  border: 1.5px dashed @border;
+  opacity: 0.55;
+}
+#workspaces button.active {
+  background: @bg;
+  color: @fg;
+  opacity: 1;
+}
+
+#workspaces button.empty {
+  color: @fg;
+  background: @bg;
+  opacity: 0.35;
+}
+
+#workspaces button.empty.active {
+  color: @fg;
+  background-color: transparent;
+  opacity: 1;
+}
+
+#workspaces button:hover {
+    background-color: transparent;
+    color: @fg;
+    opacity: 1;
+}
+
+
+/* --- General Modules --- */
+
+#power-profiles-daemon,
+#power-profiles-daemon.performance,
+#power-profiles-daemon.balanced,
+#power-profiles-daemon.power-saver,
+#cava,
+#mpris,
+#tray,
+#memory,
+#cpu,
+#battery,
+#network,
+#backlight,
+#idle_inhibitor,
+#custom-updatespacman,
+#bluetooth,
+#pulseaudio,
+#custom-update,
+#custom-screenrecording-indicator,
+#clock {
+  min-width: 14px;
+  padding-left: 3px;
+  padding-right: 3px;
+  margin: 0 2px 0 2px;
+  
+}
+
+#custom-expand-icon2,
+#custom-expand-icon {
+  opacity: 1;
+  font-size: 11px;
+  color: @fg2;
+  padding: 0 5px;
+}
+
+
+/* --- Module Hover color --- */
+#clock:hover,
+#cpu:hover,
+#memory:hover,
+#mpris:hover,
+#battery:hover,
+#power-profiles-daemon:hover,
+#bluetooth:hover,
+#backlight:hover,
+#custom-omarchy:hover,
+#custom-update:hover,
+#idle_inhibitor:hover,
+#custom-screenrecording-indicator,
+#custom-updatespacman:hover,
+#network:hover,
+#pulseaudio:hover {
+  color: @fg;
+  background-color: transparent;
+}
+
+
+tooltip {
+  padding: 2px;
+}
+
+tooltip {
+ padding: 4px;
+ background: @bg;
+ font-size: 10px;
+ border: 1.5px solid alpha(@fg, 0.8);
+ border-radius: 8px;
+}
+tooltip label {
+    color: @fg;
+    font-weight: normal;
+}
+
+#custom-voxtype {
+  min-width: 12px;
+  margin: 0 0 0 2.5px;
+}
+
+#custom-voxtype.recording {
+  color: #a55555;
+}
+
+
+/* Specific Module */
+
+.hidden {
+  opacity: 0;
+}
+
+#mpris {
+color: @fg2;
+animation: repeat;
+	animation-name: blink;
+	animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes blink {
+    to {
+        color: #4a4a4a;
+        
+    }
+}
+
+#custom-screenrecording-indicator {
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  color: transparent;
+}
+
+#custom-screenrecording-indicator.active {
+  color: #eb7087;
+  background-color: @bg;
+  animation-name: blink-recording;
+  animation-duration: 0.5s;
+}
+
+@keyframes blink-recording {
+    to {
+        color: @bg;
+    }
+}
+
+#battery.warning {
+  color: #c95d0f;
+   background-color: @bg;
+}
+
+@keyframes blink2 {
+  to {
+    background-color: @bg;
+    color: #f53c3c;
+  }
+}
+
+#battery.critical:not(.charging) {
+  background-color: @bg;
+  color: #e6d8ba;
+  animation-name: blink2;
+  animation-duration: 0.5s;
+  animation-timing-function: steps(12);
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
