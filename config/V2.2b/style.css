@@ -1,0 +1,324 @@
+@import "../omarchy/current/theme/waybar.css";
+
+/* --- Global-Settings ---*/
+
+* {
+  font-family: 'JetBrainsMono Nerd Font';
+  font-size: 12px;
+  font-weight: bold;
+  min-height: 0px;
+  }
+
+  /* --- Waybar ---*/
+  window#waybar {
+  min-height: 0px;
+  border-radius: 4px;
+  border: 1px groove alpha(@foreground, 0.5);
+  background-color: alpha(@background, 0.9);
+  transition-property: background-color;
+  transition-duration: .5s;
+}
+
+window#waybar.empty #window {
+  background: transparent;
+  background-color: transparent;
+  border: none;
+  border-radius: 0;
+  color: transparent;
+  padding: 0;
+  margin: 0;
+}
+#waybar.empty .modules-center {
+  opacity: 0;
+}
+
+/* --- Tooltip ---*/
+tooltip {
+  opacity: 1;
+
+ }
+
+ /* --- Sub-Groups ---*/
+
+#left1 {
+  border-radius: 4px;
+  opacity: 0.95;
+  color: @foreground;
+  padding: 0px;
+  margin: 3px 4px;
+  background: linear-gradient(180deg, @background 85%, @foreground);
+  border: 0.5px groove alpha(@foreground, 0.9);
+}
+
+#left2 {
+
+}
+
+#left3{
+
+}
+
+#mpris{
+  border-radius: 4px;
+  background: linear-gradient(180deg, @background 85%, @foreground);
+  border: 0.5px groove alpha(@foreground, 0.9);
+  padding: 0px;
+  margin: 3px 4px;
+}
+
+ /* --- Modules ---*/
+
+.modules-center {
+  color: @foreground;
+  border-radius: 4px;
+  opacity: 0.95;
+  background: linear-gradient(180deg, @background 85%, @foreground);
+  border: 0.5px groove alpha(@foreground, 0.9);
+  padding: 0px;
+  margin: 3px 0px;
+ }
+
+
+ .modules-right {
+  color: @foreground;
+  border-radius: 4px;
+  opacity: 0.95;
+  background: linear-gradient(180deg, @background 85%, @foreground);
+  border: 0.5px groove alpha(@foreground, 0.9);
+  padding: 0px;
+  margin: 3px 4px;
+}
+
+
+/* --- Workspaces --- */
+#workspaces {
+  background: linear-gradient(180deg, @background 85%, @foreground);
+  border: 0.5px groove alpha(@foreground, 0.9);
+  border-radius: 4px;
+  opacity: 0.95;
+  margin: 3px 1px;
+  padding: 0px 2px 0px;
+}
+
+#workspaces button {
+  padding: 0px 6px;
+  margin: 3px 2px;
+  border-radius: 2px;
+  background-color: alpha(@foreground, 0.5);
+  color: @background; 
+  transition: all 0.3s ease-in-out;
+  opacity: 0.95;
+}
+
+#workspaces button.active {
+  color: @background;
+  background-color: alpha(@foreground, 0.9);
+  border-radius: 2px;
+  opacity: 1.0;
+  transition: all 0.3s ease-in-out;
+}
+
+#workspaces button.empty {
+  background-color: alpha(@foreground, 0.4);
+  border: 1px groove alpha(@foreground, 0.9);
+  color: @foreground;
+  opacity: 0.45;
+  border-radius: 2px;
+  transition: all 0.3s ease-in-out;
+}
+
+#workspaces button.empty.active {
+  background-color: alpha(@foreground, 1);
+  color: @background;
+  opacity: 1;
+  border-radius: 2px;
+}
+
+#workspaces button:hover {
+  color: @foreground;
+  border-radius: 2px;
+  opacity: 0.9;
+  background: linear-gradient(180deg, @background 75%, @foreground);
+}
+
+
+/* --- General Modules --- */
+
+#tray,
+#group-tray-expander,
+#mpris,
+#cpu,
+#clock,
+#battery,
+#network,
+#memory,
+#backlight,
+#bluetooth,
+#pulseaudio,
+#custom-weather,
+#custom-omarchy,
+#window,
+#power-profiles-daemon,
+#custom-update,
+#idle_inhibitor,
+#custom-screenrecording-indicator,
+#custom-updatespacman {
+  min-width: 14px;
+  margin: 3px 1px 3px 1px;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+/* --- Hover right module  --- */
+#clock:hover,
+#tray:hover,
+#custom-expand-icon:hover,
+#cpu:hover,
+#memory:hover,
+#window:hover,
+#temperature:hover,
+#battery:hover,
+#bluetooth:hover,
+#power-profiles-daemon:hover,
+#backlight:hover,
+#custom-omarchy:hover,
+#custom-weather:hover,
+#custom-update:hover,
+#idle_inhibitor:hover,
+#custom-updatespacman:hover,
+#network:hover,
+#pulseaudio:hover {
+  color: @foreground;
+  border-radius: 2px;
+  opacity: 0.9;
+  background: linear-gradient(180deg, @background 75%, @foreground);
+}
+
+/* Specific Module */
+
+#group-tray-expander {
+  background-color: alpha(@background, 0.9);
+  color: @foreground;
+}
+
+#tray {
+    background-color: @background;
+}
+
+#tray > .passive {
+    -gtk-icon-effect: dim;
+}
+
+#tray > .needs-attention {
+    -gtk-icon-effect: highlight;
+    background-color: @transparent;
+}
+
+.hidden {
+  opacity: 0;
+}
+
+#custom-voxtype {
+  min-width: 12px;
+  margin: 0 0 0 2.5px;
+}
+
+#custom-voxtype.recording {
+  color: #a55555;
+}
+
+tooltip {
+ padding: 4px;
+ background: @background;
+ border: 1px solid alpha(@foreground, 0.8);
+ border-radius: 8px;
+ box-shadow: 1px 1px 3px 1px #131313;
+ font-size: 12px;
+ 
+}
+tooltip label {
+    color: @foreground;
+    font-weight: normal;
+}
+
+#mpris {
+color: @foreground;
+animation: repeat;
+	animation-name: blink;
+	animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+
+/* Specific animation Module */
+
+#custom-screenrecording-indicator {
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  color: transparent;
+}
+
+#custom-screenrecording-indicator.active {
+  color: #eb7087;
+  animation-name: blink-recording;
+  animation-duration: 0.5s;
+}
+
+@keyframes blink-recording {
+    to {
+        color: @background;
+    }
+}
+
+
+
+@keyframes blink {
+    to {
+        color: #4a4a4a;
+        
+    }
+}
+
+@keyframes blink-inhibitor {
+    to {
+        color: @background;
+    }
+}
+
+#idle_inhibitor {
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  color: @foreground;
+ }
+
+#idle_inhibitor.activated {
+  color: #178b76;
+  animation-name: blink-inhibitor;
+  animation-duration: 1s;
+}
+
+#battery.warning {
+  color: #c95d0f;
+  background-color: alpha(@background, 0.9);
+}
+
+@keyframes blink2 {
+  to {
+    background-color: transparent;
+    color: #f53c3c;
+  }
+}
+
+#battery.critical:not(.charging) {
+  background-color: transparent;
+  color: #e6d8ba;
+  animation-name: blink2;
+  animation-duration: 0.5s;
+  animation-timing-function: steps(12);
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
