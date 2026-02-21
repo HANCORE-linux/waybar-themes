@@ -151,7 +151,7 @@
   },
   "battery": {
     "format": "<span size='6pt'>BAT </span>{capacity}%",
-    "format-discharging": "<span size='6pt'>BAT_d </span>{capacity}%",
+    "format-discharging": "<span size='6pt'>BAT </span>{capacity}%",
     "format-charging": "<span size='6pt'>BAT_c </span>{capacity}%",
     "format-plugged": "<span size='6pt'>BAT_p </span>{capacity}%",
     "format-icons": {
