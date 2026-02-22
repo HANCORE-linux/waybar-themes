@@ -80,7 +80,6 @@ button:hover {
 }
 
 #workspaces button {
-  all: initial;
   color: @fg;
   background-color: @bg;
   padding: 4px 6px;
