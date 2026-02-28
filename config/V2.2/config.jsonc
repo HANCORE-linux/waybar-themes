@@ -13,6 +13,8 @@
     "orientation": "inherit",
     "modules": [
       "custom/omarchy",
+      "custom/idle-indicator",
+      "custom/notification-silencing-indicator",
       "custom/voxtype",
       "idle_inhibitor",
       "custom/screenrecording-indicator",
@@ -93,6 +95,18 @@
     "tooltip": true,
     "on-click-right": "omarchy-voxtype-config",
     "on-click": "omarchy-voxtype-model"
+  },
+    "custom/idle-indicator": {
+    "on-click": "omarchy-toggle-idle",
+    "exec": "$OMARCHY_PATH/default/waybar/indicators/idle.sh",
+    "signal": 9,
+    "return-type": "json"
+  },
+  "custom/notification-silencing-indicator": {
+    "on-click": "omarchy-toggle-notification-silencing",
+    "exec": "$OMARCHY_PATH/default/waybar/indicators/notification-silencing.sh",
+    "signal": 10,
+    "return-type": "json"
   },
    "custom/updatespacman": {
     "format": "{}{icon}",
