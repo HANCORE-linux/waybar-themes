@@ -27,6 +27,8 @@
     "orientation": "inherit",
     "modules": [
     "clock",
+    "custom/idle-indicator",
+    "custom/notification-silencing-indicator",
     "custom/voxtype",
     "custom/screenrecording-indicator",
     "custom/update",
@@ -110,7 +112,7 @@
     "exec-if": "which waybar-module-pacman-updates",
     "exec": "waybar-module-pacman-updates --no-zero-output"
   },
-  "custom/voxtype": {
+    "custom/voxtype": {
     "exec": "omarchy-voxtype-status",
     "return-type": "json",
     "format": "{icon}",
@@ -122,6 +124,18 @@
     "tooltip": true,
     "on-click-right": "omarchy-voxtype-config",
     "on-click": "omarchy-voxtype-model"
+  },
+    "custom/idle-indicator": {
+    "on-click": "omarchy-toggle-idle",
+    "exec": "$OMARCHY_PATH/default/waybar/indicators/idle.sh",
+    "signal": 9,
+    "return-type": "json"
+  },
+  "custom/notification-silencing-indicator": {
+    "on-click": "omarchy-toggle-notification-silencing",
+    "exec": "$OMARCHY_PATH/default/waybar/indicators/notification-silencing.sh",
+    "signal": 10,
+    "return-type": "json"
   },
   "idle_inhibitor": {
     "format": "{icon}",
