@@ -86,7 +86,6 @@
 }
 
 
-
 #tray,
 #cpu,
 #memory,
@@ -123,7 +122,7 @@ tooltip {
 }
 
 #tray {
-    background-color: @background;
+    background-color: @bg;
 }
 
 #tray > .passive {
@@ -132,7 +131,7 @@ tooltip {
 
 #tray > .needs-attention {
     -gtk-icon-effect: highlight;
-    background-color: @background;
+    background-color: @bg;
 }
 
 .hidden {
@@ -144,7 +143,7 @@ tooltip {
 }
 
 #group-tray-expander {
-  background-color: @background;
+  background-color: @bg;
   color: @foreground;
 }
 
@@ -161,7 +160,7 @@ tooltip {
 
 tooltip {
  padding: 4px;
- background: @background;
+ background: @bg;
  font-size: 10px;
  border: 2px solid @border-active;
  border-radius: 8px;
@@ -203,6 +202,11 @@ tooltip label {
   color: #08bdba
 }
 
+#idle_inhibitor {
+
+ 
+}
+
 #custom-omarchy-theme-set,
 #custom-colorpicker {
   color: #33b1ff
@@ -219,6 +223,7 @@ tooltip label {
 
 #backlight,
 #clock {
+  background-color: @bg;
   color: #dde1e6;
 }
 
@@ -250,6 +255,20 @@ tooltip label {
 }
 
 #custom-voxtype.recording {
+  color: #a55555;
+}
+
+#custom-idle-indicator,
+#custom-notification-silencing-indicator {
+  min-width: 12px;
+  margin-left: 6px;
+  margin-right: 0px;
+  font-size: 11px;
+  padding-bottom: 0px;
+}
+
+#custom-idle-indicator.active,
+#custom-notification-silencing-indicator.active {
   color: #a55555;
 }
 
