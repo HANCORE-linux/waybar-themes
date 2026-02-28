@@ -199,16 +199,27 @@ tooltip {
   color: #a55555;
 }
 
-#custom-idle-indicator,
-#custom-notification-silencing-indicator {
+#custom-idle-indicator {
   min-width: 12px;
-  margin-left: 0;
+  margin-left: 0px;
   margin-right: 0;
   font-size: 10px;
   padding-bottom: 0px;
 }
 
-#custom-idle-indicator.active,
+#custom-notification-silencing-indicator {
+  min-width: 12px;
+  margin-left: 3px;
+  margin-right: 0;
+  font-size: 10px;
+  padding-bottom: 0px;
+}
+
+#custom-idle-indicator.active {
+  color: #a55555;
+  background-color: #3c3836;
+}
+
 #custom-notification-silencing-indicator.active {
   color: #a55555;
   background-color: #3c3836;
