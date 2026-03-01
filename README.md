@@ -103,7 +103,7 @@ git clone https://github.com/HANCORE-linux/waybar-themes.git /tmp/repo && cp -rf
 <img width="2560" height="459" alt="screenshot-2025-12-18_15-37-41" src="https://github.com/user-attachments/assets/e89e6cb5-1158-4dab-b07b-f590d7e052e2" />
 
 ## Screenshots V2.a
-- New V2.a see [PR](https://github.com/HANCORE-linux/waybar-themes/commit/bc938ed7747fb520adbb01f540c6d16eba1b4e69) - static Gruvbox color scheme
+- New V2.a see [PR](https://github.com/HANCORE-linux/waybar-themes/commit/bc938ed7747fb520adbb01f540c6d16eba1b4e69) - static Gruvbox color scheme by @stannorbvb-cmd Dazzaai
 ##### V2.a Install-command (copy and paste in your terminal): <br>
 ```bash
 git clone https://github.com/HANCORE-linux/waybar-themes.git /tmp/repo && cp -rf /tmp/repo/config/V2.a/. ~/.config/waybar && rm -rf /tmp/repo && omarchy-restart-waybar
