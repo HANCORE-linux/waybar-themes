@@ -120,6 +120,8 @@ tooltip {
 #custom-update,
 #idle_inhibitor,
 #custom-screenrecording-indicator,
+#custom-idle-indicator,
+#custom-screenrecording-indicator,
 #custom-updatespacman {
   min-width: 14px;
   margin: 0 4px 0 2px;
@@ -198,6 +200,21 @@ margin-left: 4px;
 }
 
 #custom-voxtype.recording {
+  color: #a55555;
+}
+
+#custom-idle-indicator,
+#custom-notification-silencing-indicator {
+  min-width: 12px;
+  margin-left: 2px;
+  margin-right: 2px;
+  padding: 0 2px;
+  font-size: 12px;
+  padding-bottom: 0px;
+}
+
+#custom-idle-indicator.active,
+#custom-notification-silencing-indicator.active {
   color: #a55555;
 }
 
