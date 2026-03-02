@@ -121,6 +121,8 @@ window#waybar  {
 #power-profiles-daemon,
 #custom-omarchy,
 #idle_inhibitor,
+#custom-screenrecording-indicator,
+#custom-idle-indicator,
 #custom-updatespacman,
 #custom-screenrecording-indicator,
 #custom-update {
@@ -159,6 +161,20 @@ tooltip label {
 
 #custom-voxtype.recording {
   color: #a55555;
+}
+
+#custom-idle-indicator,
+#custom-notification-silencing-indicator {
+  min-width: 12px;
+  margin-left: 3px;
+  margin-right: 3px;
+  font-size: 11px;
+  padding-bottom: 0px;
+}
+
+#custom-idle-indicator.active,
+#custom-notification-silencing-indicator.active {
+  color: #7b1020;
 }
 
 /* --- Hover right module  --- */

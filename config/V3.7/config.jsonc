@@ -10,6 +10,8 @@
   ],
   "modules-center": [
     "clock",
+    "custom/idle-indicator",
+    "custom/notification-silencing-indicator",
     "custom/voxtype",
     "custom/weather",
     "custom/screenrecording-indicator"
@@ -68,7 +70,19 @@
 	"format": "{windows}",
 	"format-window-separator": " ",
 	"window-rewrite-default": "",
-	"window-rewrite": {		
+	"window-rewrite": {		"custom/voxtype": {
+    "exec": "omarchy-voxtype-status",
+    "return-type": "json",
+    "format": "{icon}",
+    "format-icons": {
+      "idle": "",
+      "recording": "󰍬",
+      "transcribing": "󰔟"
+    },
+    "tooltip": true,
+    "on-click-right": "omarchy-voxtype-config",
+    "on-click": "omarchy-voxtype-model"
+  },
         "class<.*imv*.>": "",
         "class<.*bambustudio*.>": "󰐫",
         "class<.*bitwarden*.>": "",
@@ -162,6 +176,18 @@
     "tooltip": true,
     "on-click-right": "omarchy-voxtype-config",
     "on-click": "omarchy-voxtype-model"
+  },
+    "custom/idle-indicator": {
+    "on-click": "omarchy-toggle-idle",
+    "exec": "$OMARCHY_PATH/default/waybar/indicators/idle.sh",
+    "signal": 9,
+    "return-type": "json"
+  },
+  "custom/notification-silencing-indicator": {
+    "on-click": "omarchy-toggle-notification-silencing",
+    "exec": "$OMARCHY_PATH/default/waybar/indicators/notification-silencing.sh",
+    "signal": 10,
+    "return-type": "json"
   },
   "custom/weather": {
     "format": "{}°",
