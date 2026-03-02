@@ -209,7 +209,7 @@
   },
   "bluetooth": {
     "format": "<span size='6pt' color='#df6124'>BT </span>{status} {num_connections}",
-    "format-disabled": "󰂲",
+    "format-disabled": "<span size='6pt' color='#df6124'>BT </span>{status}",
     "format-connected": "<span size='6pt' color='#df6124'>BT </span>{num_connections}",
     "tooltip-format": "Devices connected: {num_connections}",
     "on-click": "omarchy-launch-bluetooth"
