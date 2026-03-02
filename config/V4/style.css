@@ -121,6 +121,8 @@ window#waybar.empty #window{
 #backlight,
 #clock,
 #idle_inhibitor,
+#custom-screenrecording-indicator,
+#custom-idle-indicator,
 #custom-updatespacman,
 #custom-screenrecording-indicator,
 #custom-update {
@@ -158,6 +160,19 @@ margin-left: 4px;
   color: #a55555;
 }
 
+#custom-idle-indicator,
+#custom-notification-silencing-indicator {
+  min-width: 12px;
+  margin-left: 0;
+  margin-right: 0;
+  font-size: 12px;
+  padding-bottom: 0px;
+}
+
+#custom-idle-indicator.active,
+#custom-notification-silencing-indicator.active {
+  color: #a55555;
+}
 
 tooltip {
  padding: 4px;
