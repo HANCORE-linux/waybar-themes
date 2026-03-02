@@ -133,7 +133,8 @@ button:hover {
 }
 
 
-
+#bluetooth,
+#backlight,
 #battery,
 #network,
 #clock,
