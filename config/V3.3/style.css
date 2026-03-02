@@ -141,8 +141,8 @@ tooltip {
 #custom-idle-indicator,
 #custom-notification-silencing-indicator {
   min-width: 12px;
-  margin-left: 3px;
-  margin-right: 3px;
+  margin-left: 6px;
+  margin-right: 0px;
   font-size: 12px;
   padding-bottom: 0px;
 }
