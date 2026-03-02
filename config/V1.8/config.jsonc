@@ -230,7 +230,7 @@
   "backlight": {
         "device": "intel_backlight",
         "rotate": 0,
-        "format": "<span size='6pt' color='#df6124'>BL </span>{icon} {percent}%",
+        "format": "<span size='6pt' color='#df6124'>BL </span>{percent}%",
         "tooltip-format": "🌕 {percent}%",
             "format-icons": [
       "󰃜",
