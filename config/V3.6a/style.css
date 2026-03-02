@@ -40,7 +40,7 @@ font-size: 16px;
 }
 
 .modules-left {
-border: 2px solid rgba(255, 255, 255, 0.1);
+border: 1.5px solid rgba(255, 255, 255, 0.1);
 background: alpha(@background, 0.2);
 border-radius: 6px;
 opacity: 0.95;
@@ -57,7 +57,7 @@ opacity: 0.95;
 }
 
 .modules-right {
-  border-left: 2px solid rgba(255, 255, 255, 0.1);
+  border-left: 1.5px solid rgba(255, 255, 255, 0.1);
   padding-left: 4px;
   padding-top: 0px;
   margin-right: 4px;
@@ -67,14 +67,15 @@ opacity: 0.95;
 
 #workspaces {
     padding: 1px 0px 1px;
-    margin: 1px 1px;
+    margin: 1px;
     border-radius: 4px;
     opacity: 0.95;
 }
 
 #workspaces button {
     min-width: 15px;
-    padding: 1px 0px 1px;
+    min-height: 8px;
+    padding: 1px;
     margin: 1px 1px;
     border-radius: 2px;
     background-color: alpha(@foreground, 0.75);
@@ -86,12 +87,12 @@ opacity: 0.95;
 
 #workspaces button.active {
     background-color: alpha(@foreground, 0.9);
-    padding: 1px 0px 1px;
-    margin: 1px 1px;
     border-radius: 2px;
     color: @background;
+    font-size: 8px;
     min-width: 25px;
     opacity: 1.0;
+    font-size: 12px;
     transition: all 0.15s ease-in-out;
 }
 
@@ -119,13 +120,14 @@ opacity: 0.95;
 #mpris,
 #tray,
 #cpu,
-#custom-cava,
 #battery,
 #network,
 #bluetooth,
 #pulseaudio,
 #custom-omarchy,
 #idle_inhibitor,
+#custom-screenrecording-indicator,
+#custom-idle-indicator,
 #custom-updatespacman,
 #custom-screenrecording-indicator,
 #custom-update {
@@ -162,7 +164,7 @@ tooltip {
 }
 
 
-/* EXTRA FIX! */
+
 
 #custom-cava {
   padding: 0 5px;
@@ -173,10 +175,24 @@ tooltip {
 
 #custom-voxtype {
   min-width: 12px;
-  margin: 0 0 0 3.5px;
+  margin: 0 0 0 7.5px;
 }
 
 #custom-voxtype.recording {
+  color: #a55555;
+}
+
+#custom-idle-indicator,
+#custom-notification-silencing-indicator {
+  min-width: 12px;
+  margin-left: 3px;
+  margin-right: 0;
+  font-size: 12px;
+  padding-bottom: 0px;
+}
+
+#custom-idle-indicator.active,
+#custom-notification-silencing-indicator.active {
   color: #a55555;
 }
 
