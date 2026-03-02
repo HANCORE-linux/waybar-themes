@@ -94,6 +94,8 @@ font-size: 14px;
 #backlight,
 #clock,
 #group-tray-expander,
+#custom-screenrecording-indicator,
+#custom-idle-indicator,
 #custom-expand-icon,
 #custom-omarchy,
 #custom-weather,
@@ -133,6 +135,20 @@ tooltip {
 }
 
 #custom-voxtype.recording {
+  color: #a55555;
+}
+
+#custom-idle-indicator,
+#custom-notification-silencing-indicator {
+  min-width: 12px;
+  margin-left: 3px;
+  margin-right: 3px;
+  font-size: 12px;
+  padding-bottom: 0px;
+}
+
+#custom-idle-indicator.active,
+#custom-notification-silencing-indicator.active {
   color: #a55555;
 }
 
