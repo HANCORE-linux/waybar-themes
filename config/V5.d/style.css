@@ -59,7 +59,7 @@ window#waybar.empty #window{
     border-radius: 2px;
     background-color: alpha(@foreground, 0.75);
     box-shadow: inset 0 -3px transparent;
-    color: @foreground;
+    color: @background;
     transition: all 0.3s ease-in-out;
     opacity: 0.75;
     font-size: 8px;
