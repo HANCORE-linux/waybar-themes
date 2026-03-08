@@ -130,6 +130,8 @@ button:hover {
 #temperature,
 #idle_inhibitor,
 #group-tray-expander,
+#custom-idle-indicator,
+#custom-notification-silencing-indicator,
 #custom-update,
 #custom-voxtype,
 #custom-voxtype.recording,
@@ -180,6 +182,20 @@ tooltip {
 
 .hidden {
   opacity: 0;
+}
+
+#custom-idle-indicator,
+#custom-notification-silencing-indicator {
+  min-width: 12px;
+  margin-left: 0;
+  margin-right: 0;
+  font-size: 12px;
+  padding-bottom: 0px;
+}
+
+#custom-idle-indicator.active,
+#custom-notification-silencing-indicator.active {
+  color: #a55555;
 }
 
 #power-profiles-daemon,
