@@ -2,7 +2,7 @@
   "exclusive": true,
   "reload_style_on_change": true,
   "position": "top",
-  "width": 250,
+  "width": 50,
   "spacing": 0,
   "margin-top": 0,
 
@@ -34,6 +34,8 @@
     "custom/separator",
     "custom/omarchy",
     "clock",
+    "custom/idle-indicator",
+    "custom/notification-silencing-indicator",
     "custom/voxtype",
     "custom/screenrecording-indicator",
     "custom/separator",
@@ -107,7 +109,7 @@
     "signal": 7,
     "interval": 21600
   },
-   "custom/voxtype": {
+    "custom/voxtype": {
     "exec": "omarchy-voxtype-status",
     "return-type": "json",
     "format": "{icon}",
@@ -120,14 +122,26 @@
     "on-click-right": "omarchy-voxtype-config",
     "on-click": "omarchy-voxtype-model"
   },
+      "custom/idle-indicator": {
+    "on-click": "omarchy-toggle-idle",
+    "exec": "$OMARCHY_PATH/default/waybar/indicators/idle.sh",
+    "signal": 9,
+    "return-type": "json"
+  },
+  "custom/notification-silencing-indicator": {
+    "on-click": "omarchy-toggle-notification-silencing",
+    "exec": "$OMARCHY_PATH/default/waybar/indicators/notification-silencing.sh",
+    "signal": 10,
+    "return-type": "json"
+  },
   "power-profiles-daemon": {
     "format": "{icon}",
     "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
     "tooltip": true,
     "format-icons": {
-      "performance": "",
-      "balanced": "",
-      "power-saver": ""
+      "performance": " ",
+      "balanced": " ",
+      "power-saver": " "
     }
   },
   "cpu": {

@@ -47,12 +47,12 @@
 
 
 #center2 {
-  margin: 0 20px;
+  margin: 0 0px;
 }
 
 #workspaces {
   padding: 0 0px;
-  margin: 0px 80px;
+  margin: 0px 45px;
   background-color: @bg;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
 }
@@ -127,6 +127,8 @@ button:hover {
 #idle_inhibitor,
 #group-tray-expander,
 #custom-update,
+#custom-idle-indicator,
+#custom-notification-silencing-indicator,
 #custom-voxtype,
 #custom-voxtype.recording,
 #custom-voxtype.transcribing,
@@ -141,6 +143,9 @@ button:hover {
 
 }
 
+#network {
+  padding-left: 0px;
+}
 
 
 
@@ -182,12 +187,6 @@ tooltip {
   opacity: 0;
 }
 
-#power-profiles-daemon,
-#power-profiles-daemon.performance,
-#power-profiles-daemon.balanced,
-#power-profiles-daemon.power-saver {
-    margin: 0 6px 0px 0px;
-}
 
 #group-tray-expander {
   background-color: @bg;
@@ -244,6 +243,20 @@ tooltip label {
 }
 
 #custom-voxtype.recording {
+  color: #a55555;
+}
+
+#custom-idle-indicator,
+#custom-notification-silencing-indicator {
+  min-width: 10px;
+  margin-left: 0;
+  margin-right: 0;
+  font-size: 12px;
+  padding-bottom: 1px;
+}
+
+#custom-idle-indicator.active,
+#custom-notification-silencing-indicator.active {
   color: #a55555;
 }
 
