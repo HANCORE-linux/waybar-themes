@@ -88,6 +88,8 @@
 #temperature,
 #idle_inhibitor,
 #group-tray-expander,
+#custom-idle-indicator,
+#custom-notification-silencing-indicator,
 #custom-update,
 #custom-voxtype,
 #custom-voxtype.recording,
@@ -128,12 +130,26 @@ tooltip {
 #power-profiles-daemon.balanced,
 #power-profiles-daemon.power-saver {
     margin: 0 4px;
-	padding-left: 6px;
+	padding-left: 0px;
 }
 
 #group-tray-expander {
   background-color: @background;
   color: @foreground;
+}
+
+#custom-idle-indicator,
+#custom-notification-silencing-indicator {
+  min-width: 12px;
+  margin-left: 0;
+  margin-right: 0;
+  font-size: 12px;
+  padding-bottom: 2px;
+}
+
+#custom-idle-indicator.active,
+#custom-notification-silencing-indicator.active {
+  color: #a55555;
 }
 
 #custom-updatespacman {
