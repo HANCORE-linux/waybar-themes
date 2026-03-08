@@ -95,6 +95,8 @@ window#waybar  {
 #battery,
 #backlight,
 #network,
+#custom-idle-indicator,
+#custom-notification-silencing-indicator,
 #custom-voxtype,
 #custom-voxtype.transcribing,
 #custom-voxtype.recording,
@@ -128,6 +130,20 @@ tooltip {
 font-size: 16px;
 margin-top: 3px;
 margin-right: 4px;
+}
+
+#custom-idle-indicator,
+#custom-notification-silencing-indicator {
+  min-width: 12px;
+  margin-left: 0;
+  margin-right: 0;
+  font-size: 12px;
+  padding-bottom: 0px;
+}
+
+#custom-idle-indicator.active,
+#custom-notification-silencing-indicator.active {
+  color: #a55555;
 }
 
 #tray {
