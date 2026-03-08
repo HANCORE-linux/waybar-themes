@@ -109,6 +109,8 @@ margin-left: 4px;
 #bluetooth,
 #pulseaudio,
 #idle_inhibitor,
+#custom-idle-indicator,
+#custom-notification-silencing-indicator,
 #power-profiles-daemon,
 #power-profiles-daemon.performance,
 #power-profiles-daemon.balanced,
@@ -164,6 +166,20 @@ tooltip label {
 }
 
 #custom-voxtype.recording {
+  color: #a55555;
+}
+
+#custom-idle-indicator,
+#custom-notification-silencing-indicator {
+  min-width: 12px;
+  margin-left: 0;
+  margin-right: 0;
+  font-size: 12px;
+  padding-bottom: 0px;
+}
+
+#custom-idle-indicator.active,
+#custom-notification-silencing-indicator.active {
   color: #a55555;
 }
 
