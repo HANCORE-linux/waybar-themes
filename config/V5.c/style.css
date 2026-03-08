@@ -157,6 +157,8 @@ window#waybar.empty #window{
 #backlight,
 #clock,
 #idle_inhibitor,
+#custom-idle-indicator,
+#custom-notification-silencing-indicator,
 #custom-updatespacman,
 #power-profiles-daemon,
 #custom-screenrecording-indicator,
@@ -184,6 +186,20 @@ tooltip {
 }
 
 #custom-voxtype.recording {
+  color: #a55555;
+}
+
+#custom-idle-indicator,
+#custom-notification-silencing-indicator {
+  min-width: 12px;
+  margin-left: 0;
+  margin-right: 0;
+  font-size: 12px;
+  padding-bottom: 0px;
+}
+
+#custom-idle-indicator.active,
+#custom-notification-silencing-indicator.active {
   color: #a55555;
 }
 
