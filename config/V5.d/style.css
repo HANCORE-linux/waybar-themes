@@ -109,6 +109,8 @@ window#waybar.empty #window{
 #custom-omarchy,
 #backlight,
 #clock,
+#custom-idle-indicator,
+#custom-notification-silencing-indicator,
 #idle_inhibitor,
 #custom-updatespacman,
 #power-profiles-daemon,
@@ -137,6 +139,21 @@ tooltip {
 #power-profiles-daemon.power-saver {
 font-size: 14px;
 }
+
+#custom-idle-indicator,
+#custom-notification-silencing-indicator {
+  min-width: 12px;
+  margin-left: 0;
+  margin-right: 0;
+  font-size: 12px;
+  padding-bottom: 0px;
+}
+
+#custom-idle-indicator.active,
+#custom-notification-silencing-indicator.active {
+  color: #a55555;
+}
+
 
 #custom-voxtype {
   min-width: 12px;
