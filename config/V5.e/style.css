@@ -158,6 +158,8 @@ window#waybar.empty #window{
 #backlight,
 #clock,
 #idle_inhibitor,
+#custom-idle-indicator,
+#custom-notification-silencing-indicator,
 #custom-updatespacman,
 #power-profiles-daemon,
 #custom-screenrecording-indicator,
@@ -183,6 +185,30 @@ tooltip {
 #power-profiles-daemon.balanced,
 #power-profiles-daemon.power-saver {
 font-size: 14px;
+}
+
+#custom-idle-indicator{
+  min-width: 12px;
+  margin-left: 0;
+  margin-right: 0;
+  font-size: 12px;
+  padding-bottom: 0px;
+}
+
+#custom-idle-indicator.active {
+  color: #a55555;
+}
+
+#custom-notification-silencing-indicator {
+  min-width: 12px;
+  margin-left: 1;
+  margin-right: 0;
+  font-size: 12px;
+  padding-bottom: 0px;
+}
+
+#custom-notification-silencing-indicator {
+  color: #a55555;
 }
 
 #custom-voxtype {
