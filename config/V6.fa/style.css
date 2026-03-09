@@ -134,6 +134,8 @@ window#waybar > box {
 #custom-update,
 #custom-screenrecording-indicator,
 #clock,
+#custom-idle-indicator,
+#custom-notification-silencing-indicator,
 #custom-omarchy-theme,
 #custom-omarchy-theme-set,
 #custom-voxtype,
@@ -187,6 +189,20 @@ padding-right: 8px;
 }
 
 #custom-voxtype.recording {
+  color: #a55555;
+}
+
+#custom-idle-indicator,
+#custom-notification-silencing-indicator {
+  min-width: 12px;
+  margin-left: 0;
+  margin-right: 0;
+  font-size: 12px;
+  padding-bottom: 0px;
+}
+
+#custom-idle-indicator.active,
+#custom-notification-silencing-indicator.active {
   color: #a55555;
 }
 
