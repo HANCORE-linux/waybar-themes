@@ -11,6 +11,8 @@
     "custom/separator",
     "idle_inhibitor",
     "custom/voxtype",
+    "custom/idle-indicator",
+    "custom/notification-silencing-indicator",
     "custom/screenrecording-indicator",
     "custom/updatespacman",
     "custom/update"
@@ -64,7 +66,7 @@
     "signal": 7,
     "interval": 21600
   },
-  "custom/voxtype": {
+ "custom/voxtype": {
     "exec": "omarchy-voxtype-status",
     "return-type": "json",
     "format": "{icon}",
@@ -76,6 +78,18 @@
     "tooltip": true,
     "on-click-right": "omarchy-voxtype-config",
     "on-click": "omarchy-voxtype-model"
+  },
+      "custom/idle-indicator": {
+    "on-click": "omarchy-toggle-idle",
+    "exec": "$OMARCHY_PATH/default/waybar/indicators/idle.sh",
+    "signal": 9,
+    "return-type": "json"
+  },
+  "custom/notification-silencing-indicator": {
+    "on-click": "omarchy-toggle-notification-silencing",
+    "exec": "$OMARCHY_PATH/default/waybar/indicators/notification-silencing.sh",
+    "signal": 10,
+    "return-type": "json"
   },
   "power-profiles-daemon": {
     "format": "{icon}",
