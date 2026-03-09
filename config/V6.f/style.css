@@ -155,6 +155,8 @@ button:hover {
 #custom-update,
 #custom-screenrecording-indicator,
 #clock,
+#custom-idle-indicator,
+#custom-notification-silencing-indicator,
 #custom-omarchy-theme,
 #custom-omarchy-theme-set,
 #custom-voxtype,
@@ -187,6 +189,20 @@ tooltip {
 font-size: 13.5px;
 margin-top: 0px;
 padding-right: 8px;
+}
+
+#custom-idle-indicator,
+#custom-notification-silencing-indicator {
+  min-width: 12px;
+  margin-left: 0;
+  margin-right: 0;
+  font-size: 12px;
+  padding-bottom: 0px;
+}
+
+#custom-idle-indicator.active,
+#custom-notification-silencing-indicator.active {
+  color: #a55555;
 }
 
 #custom-theme-switcher {
