@@ -12,18 +12,19 @@
     "hyprland/workspaces",
     "custom/separator",
     "tray",
+    "custom/separator",
     "custom/voxtype",
     "custom/update",
     "custom/screenrecording-indicator",
+    "custom/updatespacman",
     "custom/separator",
-    "custom/updatespacman"
+    "idle_inhibitor"
   ],
   "modules-center": [
    "custom/windowpill"
   ],
   "modules-right": [
   "group/right-group2",
-  "group/right-group3",
   "group/right-group1"
   ],
 
@@ -41,17 +42,7 @@
   "justify": "left",
   "align": "left",
   "modules": [
-  "group/right2",
-  "group/right3"
-  ]
-},
-"group/right-group3": {
-  "orientation": "vertical",
-  "justify": "left",
-  "align": "left",
-  "modules": [
-   "group/right4",
-   "group/right5"
+  "group/right2"
   ]
 },
 "group/right1":{
@@ -60,19 +51,9 @@
 },
 "group/right2":{
   "orientation": "horizontal",
-  "modules": ["custom/separator","backlight", "bluetooth"]
-},
-"group/right3":{
-  "orientation": "horizontal",
-  "modules": ["custom/separator", "pulseaudio#output","pulseaudio#input"]
-},
-"group/right4":{
-  "orientation": "horizontal",
-  "modules": ["custom/separator", "battery", "power-profiles-daemon","idle_inhibitor"]
-},
-"group/right5":{
-  "orientation": "horizontal",
-  "modules": ["custom/separator", "memory","cpu", "network", "custom/separator3"]
+  "modules": [
+    "group/tray-expander",
+  ]
 },
   "hyprland/workspaces": {
     "on-click": "activate",
@@ -311,6 +292,29 @@
     "exec": "$OMARCHY_PATH/default/waybar/indicators/screen-recording.sh",
     "signal": 8,
     "return-type": "json"
+  },
+  "group/tray-expander": {
+    "orientation": "inherit",
+    "drawer": {
+      "transition-duration": 600,
+      "children-class": "tray-group-item"
+    },
+    "modules": [
+    "custom/expand-icon",
+    "backlight",
+    "bluetooth",
+    "pulseaudio#output",
+    "pulseaudio#input",
+    "power-profiles-daemon",
+    "network",
+    "memory",
+    "cpu",
+    "battery"
+        ]
+  },
+    "custom/expand-icon": {
+    "format": "",
+    "tooltip": false
   },
   "tray": {
     "icon-size": 12,

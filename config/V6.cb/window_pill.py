@@ -50,7 +50,7 @@ def print_status():
         workspace = get_hyprland_data("activeworkspace")
         ws_id = workspace.get("id", "1")
         top_line = f"Workspace {ws_id}"
-        bottom_line = ""
+        bottom_line = "\u00A0"
 
     # 3. Sanitize for Pango
     top_line = html.escape(top_line)

@@ -39,6 +39,11 @@
   margin-right: 4px;
 }
 
+#right2 {
+  margin-right: 4px;
+  padding-top: 8px;
+}
+
 #workspaces {
   padding: 0 0px;
   margin-top: 2px;
@@ -73,7 +78,7 @@
 }
 
 
-
+#custom-expand-icon,
 #tray,
 #cpu,
 #memory,
@@ -114,10 +119,16 @@ tooltip {
 
 #custom-omarchy {
   padding-top: 2px;
+  padding-left: 3px;
 }
 
 #custom-update {
   font-size: 10px;
+}
+
+#custom-expand-icon {
+  margin-right: 0px;
+  opacity: 0.5;
 }
 
 #tray {
@@ -141,7 +152,8 @@ tooltip {
 #power-profiles-daemon.performance,
 #power-profiles-daemon.balanced,
 #power-profiles-daemon.power-saver {
-    margin: 0 0px 0px 0px;
+    margin: 0;
+    padding-left: 2px;
 }
 
 #custom-updatespacman {
