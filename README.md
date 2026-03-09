@@ -555,7 +555,8 @@ git clone https://github.com/HANCORE-linux/waybar-themes.git /tmp/repo && cp -rf
 ```bash
 git clone https://github.com/HANCORE-linux/waybar-themes.git /tmp/repo && cp -rf /tmp/repo/config/V6.cb/. ~/.config/waybar && rm -rf /tmp/repo && omarchy-restart-waybar
 ```
-<img width="1920" height="921" alt="screenshot-2026-01-13_01-21-24" src="https://github.com/user-attachments/assets/50c82679-c2b0-4b3f-80eb-02eaec4aa553" />
+<img width="2560" height="736" alt="screenshot-2026-03-09_01-01-33" src="https://github.com/user-attachments/assets/7488fd5b-7751-4989-843b-66d2f1081a14" />
+
 
 ## Screenshot V6.cc 
 - lowered "inactive" opacity on modules, only clock and active modules set to 1 <br>
