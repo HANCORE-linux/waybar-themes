@@ -8,9 +8,15 @@
   "margin-bottom": 0,
   "modules-center": [
     "hyprland/workspaces",
-    "group/right"
+    "group/center"
   ],
   "modules-left": [
+   "group/left"
+  ],
+
+     "group/left": {
+    "orientation": "inherit",
+    "modules": [
     "clock",
     "custom/separator",
     "custom/idle-indicator",
@@ -22,16 +28,17 @@
     "tray",
     "custom/separator",
     "custom/windowpill"
-  ],
+  ]
+  },
 
-  "modules-right": ["group/right2", "group/righ"],
+  "modules-right": ["group/right"],
 
-   "group/right2": {
+   "group/right": {
     "orientation": "inherit",
     "modules": ["mpris"]
   },
  
-  "group/right": {
+  "group/center": {
     "orientation": "inherit",
     "modules": [
     "backlight",
