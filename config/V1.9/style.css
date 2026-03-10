@@ -67,12 +67,16 @@ window#waybar.empty #window {
 .modules-center {
   border-radius: 3px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  margin: 1px 8px 2px 4px;
+  margin: 1px 4px 2px 4px;
   background-color: @bg;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 1);
   min-height: 15px;
   transition-property: background-color;
   transition-duration: .5s;
+}
+
+.modules-right {
+margin-right: 2px;
 }
 
 
@@ -160,7 +164,7 @@ button:hover {
   padding-right: 0px;
 }
 
-
+#mpris,
 #bluetooth,
 #backlight,
 #battery,
@@ -269,6 +273,23 @@ tooltip label {
 
 .hidden {
   opacity: 0;
+}
+
+#mpris {
+color: @fg;
+animation: repeat;
+	animation-name: blink;
+	animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes blink {
+    to {
+        color: #4a4a4a;
+        
+    }
 }
 
 #custom-screenrecording-indicator {
