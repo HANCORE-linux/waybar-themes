@@ -111,6 +111,15 @@ git clone https://github.com/HANCORE-linux/waybar-themes.git /tmp/repo && cp -rf
 ```
 <img width="1920" height="414" alt="screenshot-2026-03-10_20-29-36" src="https://github.com/user-attachments/assets/5b9db747-e4b9-4e6b-b52f-9efc794eaf62" />
 
+## Screenshots V1.9a
+- single rounded island version of base config V1.7 <br>
+- includes custom window script by Astraeya , make script executable : ```chmod +x ~/.config/waybar/window_pill.py```
+##### V1.9a Install-command (copy and paste in your terminal): <br>
+```bash
+git clone https://github.com/HANCORE-linux/waybar-themes.git /tmp/repo && cp -rf /tmp/repo/config/V1.9a/. ~/.config/waybar && rm -rf /tmp/repo && omarchy-restart-waybar
+```
+<img width="945" height="526" alt="screenshot-2026-03-11_21-36-37" src="https://github.com/user-attachments/assets/3acf8161-5848-44a1-9be8-f47816d54f7e" />
+
 
 ## Screenshots V2
 - New V2 version with static Gruvbox color scheme - see color [source](https://github.com/morhetz/gruvbox)
