@@ -29,10 +29,10 @@
     "backlight",
     "bluetooth",
     "network",
+    "battery",
     "pulseaudio",
     "memory",
-    "cpu",
-    "battery"
+    "cpu"
   ]
   },
 
@@ -204,7 +204,7 @@
   "backlight": {
         "device": "intel_backlight",
         "rotate": 0,
-        "format": "{percent}%",
+        "format": "{icon} {percent}%",
         "tooltip-format": "🌕 {percent}%",
         "format-icons": [
       "󰃜",
