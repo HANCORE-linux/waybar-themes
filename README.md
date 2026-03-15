@@ -140,6 +140,7 @@ git clone https://github.com/HANCORE-linux/waybar-themes.git /tmp/repo && cp -rf
 ```bash
 git clone https://github.com/HANCORE-linux/waybar-themes.git /tmp/repo && cp -rf /tmp/repo/config/V1.9b/. ~/.config/waybar && rm -rf /tmp/repo && omarchy-restart-waybar
 ```
+<img src="https://github.com/HANCORE-linux/waybar-themes/blob/main/config/V1.9b/screenshot-2026-03-16_00-34-26.png"/>
 
 ## Screenshots V2
 - New V2 version with static Gruvbox color scheme - see color [source](https://github.com/morhetz/gruvbox)
