@@ -173,12 +173,6 @@ tooltip label {
     font-weight: bold;
 }
 
-#custom-windowpill {
-  min-width: 50px;
-  padding-left: 5px;
-  padding-right: 5px;
-}
-
 #custom-expand-icon {
   opacity: 0.5;
   font-size: 11px;
