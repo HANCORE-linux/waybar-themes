@@ -134,6 +134,13 @@ git clone https://github.com/HANCORE-linux/waybar-themes.git /tmp/repo && cp -rf
 ```
 <img width="945" height="526" alt="screenshot-2026-03-11_21-36-37" src="https://github.com/user-attachments/assets/3acf8161-5848-44a1-9be8-f47816d54f7e" />
 
+## Screenshots V1.9b
+- single rounded island version of base config V1.7 <br>
+- includes custom window script by Astraeya , make script executable : ```chmod +x ~/.config/waybar/window_pill.py```
+##### V1.9b Install-command (copy and paste in your terminal): <br>
+```bash
+git clone https://github.com/HANCORE-linux/waybar-themes.git /tmp/repo && cp -rf /tmp/repo/config/V1.9b/. ~/.config/waybar && rm -rf /tmp/repo && omarchy-restart-waybar
+```
 
 ## Screenshots V2
 - New V2 version with static Gruvbox color scheme - see color [source](https://github.com/morhetz/gruvbox)
@@ -434,9 +441,6 @@ git clone https://github.com/HANCORE-linux/waybar-themes.git /tmp/repo && cp -rf
 ```
 <img width="1363" height="532" alt="V42b" src="https://github.com/user-attachments/assets/649ad9d0-9858-4722-a642-a3b30db8c632" />
 
-
-
-
 ## Screenshot V4.3
 - Enhancement release (Minimal build, mpris animation, wttrbar and gradient bottom color) <br>
 ##### V4.3 Install-command (copy and paste in your terminal): <br>
@@ -471,8 +475,6 @@ git clone https://github.com/HANCORE-linux/waybar-themes.git /tmp/repo && cp -rf
 ```
 <img width="1513" height="544" alt="screenshot-2026-03-08_23-35-10" src="https://github.com/user-attachments/assets/6c70e0c1-dc88-47b4-90c8-390caab196fd" />
 
-
-
 ## Screenshot V5.c
 - "3D" style <br>
 ##### V5.c Install-command (copy and paste in your terminal): <br>
@@ -480,8 +482,6 @@ git clone https://github.com/HANCORE-linux/waybar-themes.git /tmp/repo && cp -rf
 git clone https://github.com/HANCORE-linux/waybar-themes.git /tmp/repo && cp -rf /tmp/repo/config/V5.c/. ~/.config/waybar && rm -rf /tmp/repo && omarchy-restart-waybar
 ```
 <img width="1611" height="443" alt="screenshot-2025-12-19_23-40-56" src="https://github.com/user-attachments/assets/4ca83490-bd81-4028-9276-bfbac3fde1f4" />
-
-
 
 ## Screenshot V5.d
 - centered workspaces
@@ -499,8 +499,6 @@ git clone https://github.com/HANCORE-linux/waybar-themes.git /tmp/repo && cp -rf
 git clone https://github.com/HANCORE-linux/waybar-themes.git /tmp/repo && cp -rf /tmp/repo/config/V5.e/. ~/.config/waybar && rm -rf /tmp/repo && omarchy-restart-waybar
 ```
 <img width="1499" height="434" alt="screenshot-2025-12-20_15-39-22" src="https://github.com/user-attachments/assets/0f8dbea0-fd86-4b83-bdaa-de2c05851a3f" />
-
-
 
 
 ## Screenshot V6 
@@ -561,9 +559,6 @@ git clone https://github.com/HANCORE-linux/waybar-themes.git /tmp/repo && cp -rf
 ```
 <img width="1536" height="474" alt="screenshot-2026-02-10_00-40-31" src="https://github.com/user-attachments/assets/4b575a3d-9bf0-4c75-989d-972d666db116" />
 
-
-
-
 ## Screenshot V6.c 
 - long but minimal Style <br>
 ##### V6.c Install-command (copy and paste in your terminal): <br>
@@ -613,9 +608,6 @@ git clone https://github.com/HANCORE-linux/waybar-themes.git /tmp/repo && cp -rf
 ```
 <img width="1127" height="559" alt="screenshot-2026-02-05_08-41-56" src="https://github.com/user-attachments/assets/66c46911-781a-42c9-a2f7-621e253f5ef6" />
 
-
-
-
 ## Screenshot V6.d 
 - base config V6.c - tried to have less informations for "minimal" look / Style <br>
 - added power-profile demon <br>
@@ -649,9 +641,3 @@ git clone https://github.com/HANCORE-linux/waybar-themes.git /tmp/repo && cp -rf
 git clone https://github.com/HANCORE-linux/waybar-themes.git /tmp/repo && cp -rf /tmp/repo/config/V6.fa/. ~/.config/waybar && rm -rf /tmp/repo && omarchy-restart-waybar
 ```
 <img width="2560" height="359" alt="screenshot-2026-01-02_20-53-50" src="https://github.com/user-attachments/assets/9e5f77ec-ba1f-42c0-810d-46f5327ed3f4" />
-
-
-
-
-
-
