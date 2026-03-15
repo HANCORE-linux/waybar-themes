@@ -16,7 +16,21 @@ yay -S waybar-module-pacman-updates-git
 ```bash
 yay -S wttrbar
 ```
-    
+
+## Reset Waybar to default Omarchy style
+To restore the default Omarchy Waybar look and config:
+
+1. Open the **Omarchy Menu**  
+   Press **Super + Alt + Space**
+2. Select **Update**
+3. Select **Config**
+4. Select **Waybar**
+
+This action:
+- Resets `~/.config/waybar` to the stock Omarchy version
+- Usually backs up your current custom config (e.g. to `config.bak`, `style.css.bak`, etc.)
+- Reloads Waybar automatically in most cases
+
 ## Screenshots V1
 - first creation of my own Waybar config <br>
 - include weather, mpris, hyprland/window / pacman/update module / screenrecord button stop <br>
