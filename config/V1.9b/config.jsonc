@@ -95,7 +95,7 @@
       "format-icons": [
       "<span size='8pt'>━━━━━━━━━━</span>",
       "<span size='8pt'>■━━━━━━━━━</span>",
-      "<span size='8pt'>■■━━━━━━━━</span>",
+      "<span size='8pt' color='#ff79d2'>■■━━━━━━━━</span>",
       "<span size='8pt' color='#ff6fbe'>■■■━━━━━━━</span>",
       "<span size='8pt' color='#ff66a9'>■■■■━━━━━━</span>",
       "<span size='8pt' color='#ff5f94'>■■■■■━━━━━</span>",
