@@ -226,7 +226,7 @@ git clone https://github.com/HANCORE-linux/waybar-themes.git /tmp/repo && cp -rf
 
 ## Screenshots V2.2b
 - long bar version of V2.2 <br>
-##### V2.2 Install-command (copy and paste in your terminal): <br>
+##### V2.2b Install-command (copy and paste in your terminal): <br>
 ```bash
 git clone https://github.com/HANCORE-linux/waybar-themes.git /tmp/repo && cp -rf /tmp/repo/config/V2.2b/. ~/.config/waybar && rm -rf /tmp/repo && omarchy-restart-waybar
 ```
