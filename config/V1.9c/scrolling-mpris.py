@@ -13,7 +13,7 @@ GLYPHS = {
 }
 DEFAULT_GLYPH = ""  # Glyph when status is unknown or default
 TEXT_WHEN_STOPPED = "Nothing playing right now"  # Text to display when nothing is playing
-SCROLL_TEXT_LENGTH = 60  # Length of the song title part (excludes glyph and space)
+SCROLL_TEXT_LENGTH = 40  # Length of the song title part (excludes glyph and space)
 REFRESH_INTERVAL = 0.4  # How often the script updates (in seconds)
 PLAYERCTL_PATH = "/usr/bin/playerctl" # Path to playerctl, use which playerctl to find yours.
 
