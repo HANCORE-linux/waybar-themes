@@ -103,7 +103,7 @@
       "format-icons": [
       "<span size='8pt'>━━━━━━━━━━</span>",
       "<span size='8pt'>■━━━━━━━━━</span>",
-      "<span size='8pt'>■■━━━━━━━━</span>",
+      "<span size='8pt' color='#ff79d2'>■■━━━━━━━━</span>",
       "<span size='8pt' color='#ff6fbe'>■■■━━━━━━━</span>",
       "<span size='8pt' color='#ff66a9'>■■■■━━━━━━</span>",
       "<span size='8pt' color='#ff5f94'>■■■■■━━━━━</span>",
@@ -121,7 +121,7 @@
       "format-icons": [
       "<span size='8pt'>━━━━━━━━━━</span>",
       "<span size='8pt'>■━━━━━━━━━</span>",
-      "<span size='8pt'>■■━━━━━━━━</span>",
+      "<span size='8pt' color='#f7b69a'>■■━━━━━━━━</span>",
       "<span size='8pt' color='#ef9875'>■■■━━━━━━━</span>",
       "<span size='8pt' color='#e77b50'>■■■■━━━━━━</span>",
       "<span size='8pt' color='#df6124'>■■■■■━━━━━</span>",
