@@ -1,0 +1,260 @@
+{
+  "exclusive": true,
+  "reload_style_on_change": true,
+  "position": "top",
+  "spacing": 0,
+  "height": 0,
+  "width": 0,
+  "margin-top": 0,
+  "margin-bottom": 0,
+  "modules-left": [
+    "clock",
+    "custom/separator",
+    "custom/idle-indicator",
+    "custom/notification-silencing-indicator",
+    "custom/voxtype",
+    "custom/screenrecording-indicator",
+    "custom/update",
+    "custom/updatespacman",
+    "tray",
+    "custom/separator",
+    "hyprland/workspaces"
+  ],
+  "modules-center": [
+    "custom/mpris"
+  ],
+
+"modules-right": ["group/right"],
+
+  "group/right": {
+    "orientation": "inherit",
+    "modules": [ 
+    "backlight",
+    "bluetooth",
+    "network",
+    "pulseaudio",
+    "battery",
+    "memory",
+    "cpu"
+  ]
+  },
+
+  "hyprland/workspaces": {
+    "on-click": "activate",
+    "cursor": true,
+    "format": "{icon}"
+},
+"custom/separator": {
+    "format": "|", 
+    "tooltip": false
+},
+    "custom/windowpill": {
+    "format": "{}",
+    "exec": "~/.config/waybar/window_pill.py",
+    "return-type": "json",
+    "restart-interval": 1,
+    "align": 0,
+    "justify": "left"
+  },
+  "custom/update": {
+    "format": "",
+    "exec": "omarchy-update-available",
+    "on-click": "omarchy-launch-floating-terminal-with-presentation omarchy-update",
+    "tooltip-format": "Omarchy update available",
+    "signal": 7,
+    "interval": 21600
+  },
+  "custom/updatespacman": {
+    "format": "{}{icon}",
+    "return-type": "json",
+    "format-icons": {
+      "has-updates": " 󰏖",
+      "updated": ""
+    },
+    "exec-if": "which waybar-module-pacman-updates",
+    "exec": "waybar-module-pacman-updates --no-zero-output"
+  },
+   "custom/voxtype": {
+    "exec": "omarchy-voxtype-status",
+    "return-type": "json",
+    "format": "{icon}",
+    "format-icons": {
+      "idle": "",
+      "recording": "󰍬",
+      "transcribing": "󰔟"
+    },
+    "tooltip": true,
+    "on-click-right": "omarchy-voxtype-config",
+    "on-click": "omarchy-voxtype-model"
+  },
+    "custom/idle-indicator": {
+    "on-click": "omarchy-toggle-idle",
+    "exec": "$OMARCHY_PATH/default/waybar/indicators/idle.sh",
+    "signal": 9,
+    "return-type": "json"
+  },
+  "custom/notification-silencing-indicator": {
+    "on-click": "omarchy-toggle-notification-silencing",
+    "exec": "$OMARCHY_PATH/default/waybar/indicators/notification-silencing.sh",
+    "signal": 10,
+    "return-type": "json"
+  },
+  "cpu": {
+    "interval": 2,
+    "format": "<span size='10pt'></span> {icon} {usage}%",
+    "on-click": "omarchy-launch-or-focus-tui btop",
+      "format-icons": [
+      "<span size='8pt'>━</span>",
+      "<span size='8pt'>■</span>",
+      "<span size='8pt' color='#ff79d2'>■■</span>",
+      "<span size='8pt' color='#ff6fbe'>■■■</span>",
+      "<span size='8pt' color='#ff66a9'>■■■■</span>",
+      "<span size='8pt' color='#ff5f94'>■■■■■</span>",
+      "<span size='8pt' color='#ff5b7e'>■■■■■■</span>",
+      "<span size='8pt' color='#fe5968'>■■■■■■■</span>",
+      "<span size='8pt' color='#f65a52'>■■■■■■■■</span>",
+      "<span size='8pt' color='#ec5d3c'>■■■■■■■■■</span>",
+      "<span size='8pt' color='#df6124'>■■■■■■■■■■</span>"
+    ]
+  },
+  "memory": {
+    "interval": 2,
+    "format": "<span size='9pt'></span> {icon} {used:0.1f}G",
+    "on-click": "omarchy-launch-or-focus-tui btop",
+      "format-icons": [
+      "<span size='8pt'>━</span>",
+      "<span size='8pt'>■</span>",
+      "<span size='8pt' color='#f7b69a'>■■</span>",
+      "<span size='8pt' color='#ef9875'>■■■</span>",
+      "<span size='8pt' color='#e77b50'>■■■■</span>",
+      "<span size='8pt' color='#df6124'>■■■■■</span>",
+      "<span size='8pt' color='#d35720'>■■■■■■</span>",
+      "<span size='8pt' color='#c64e1c'>■■■■■■■</span>",
+      "<span size='8pt' color='#aa4318'>■■■■■■■■</span>",
+      "<span size='8pt' color='#8e3813'>■■■■■■■■■</span>",
+      "<span size='8pt' color='#722d0f'>■■■■■■■■■■</span>"
+    ]
+  },
+  "clock": {
+    "format": "{:%H:%M - %a, %d}",
+    "format-alt": "{:L%d %B W%V %Y}",
+    "tooltip-format": "<span>{calendar}</span>",
+    "calendar": {
+      "mode": "month",
+      "mode-mon-col": 3,
+      "on-click-right": "mode",
+      "format": {
+        "month": "<span color='#ffead3'><b>{}</b></span>",
+        "weekdays": "<span color='#ffcc66'><b>{}</b></span>",
+        "today": "<span color='#ff6699'><b>{}</b></span>"
+      }
+    },
+    "on-click-right": "omarchy-launch-floating-terminal-with-presentation omarchy-tz-select"
+  },
+  "network": {
+    "format-icons": ["󰤯", "󰤟", "󰤢", "󰤥", "󰤨"],
+    "format": "{icon}",
+    "format-wifi": "{icon} {signalStrength}%",
+    "format-ethernet": "󰈀 {bandwidthDownBytes:=}",
+    "format-disconnected": "󰤮",
+    "tooltip-format-wifi": "{essid} ({frequency} GHz)\n⇣{bandwidthDownBytes}  ⇡{bandwidthUpBytes}",
+    "tooltip-format-ethernet": "⇣{bandwidthDownBytes}  ⇡{bandwidthUpBytes}",
+    "tooltip-format-disconnected": "Disconnected",
+    "interval": 3,
+    "spacing": 1,
+    "on-click": "omarchy-launch-wifi"
+  },
+  "battery": {
+    "format": "{icon} {capacity}%",
+    "format-discharging": "{icon} {capacity}%",
+    "format-charging": "{icon} {capacity}%",
+    "format-plugged": "",
+    "format-icons": {
+      "charging": [
+       "󰢜 <span size='8pt' color='#df6124'>━</span>",
+       "󰢜 <span size='8pt' color='#df6124'>■</span>",
+       "󰂆 <span size='8pt' color='#dd7006'>■■</span>",
+       "󰂇 <span size='8pt' color='#d88000'>■■■</span>",
+       "󰂈 <span size='8pt' color='#d09000'>■■■■</span>",
+       "󰢝 <span size='8pt' color='#c5a000'>■■■■■</span>",
+       "󰂉 <span size='8pt' color='#b5af00'>■■■■■■</span>",
+       "󰢞 <span size='8pt' color='#a2be00'>■■■■■■■</span>",
+       "󰂊 <span size='8pt' color='#8acc00'>■■■■■■■■</span>",
+       "󰂋 <span size='8pt' color='#68da00'>■■■■■■■■■</span>",
+       "󰂅 <span size='8pt' color='#25e712'>■■■■■■■■■■</span>"
+      ],
+      "default": [
+      "󰁺 <span size='8pt' color='#df6124'>━</span>",
+      "󰁺 <span size='8pt' color='#df6124'>■</span>",
+      "󰁻 <span size='8pt' color='#dd7006'>■■</span>",
+      "󰁼 <span size='8pt' color='#d88000'>■■■</span>",
+      "󰁽 <span size='8pt' color='#d09000'>■■■■</span>",
+      "󰁾 <span size='8pt' color='#c5a000'>■■■■■</span>",
+      "󰁿 <span size='8pt' color='#b5af00'>■■■■■■</span>",
+      "󰂀 <span size='8pt' color='#a2be00'>■■■■■■■</span>",
+      "󰂁 <span size='8pt' color='#8acc00'>■■■■■■■■</span>",
+      "󰂂 <span size='8pt' color='#68da00'>■■■■■■■■■</span>",
+      "󰁹 <span size='8pt' color='#25e712'>■■■■■■■■■■</span>"
+      ]
+    },
+    "format-full": "󰂅",
+    "tooltip-format-discharging": "{timeTo}",
+    "tooltip-format-charging": "{timeTo}",
+    "interval": 5,
+    "on-click": "omarchy-menu power",
+    "states": {
+      "warning": 20,
+      "critical": 10
+    }
+  },
+  "bluetooth": {
+    "format": " {status} {num_connections}",
+    "format-off": "󰂲 OFF",
+    "format-disabled": "󰂲 {status}",
+    "format-connected": "󰂱 {num_connections}",
+    "tooltip-format": "Devices connected: {num_connections}",
+    "on-click": "omarchy-launch-bluetooth"
+  },
+  "pulseaudio": {
+    "format": "{icon} {volume}%",
+    "on-click": "omarchy-launch-audio",
+    "on-click-right": "pamixer -t",
+    "tooltip-format": "Playing at {volume}%",
+    "scroll-step": 5,
+    "format-muted": "",
+    "format-icons": {
+      "headphone": "",
+      "headset": "",
+      "default": ["", "", ""]
+    }
+  },
+  "backlight": {
+        "device": "intel_backlight",
+        "rotate": 0,
+        "format": "{icon} {percent}%",
+        "tooltip-format": "🌕 {percent}%",
+        "format-icons": [
+      "󰃜",
+      "󰃝",
+      "󰃞",
+      "󰃟",
+      "󰃠"
+    ]
+   },
+  "tray": {
+    "icon-size": 12,
+    "spacing": 5
+  },
+	"custom/mpris": {
+		"exec": "python3 -u ~/.config/waybar/scrolling-mpris.py",
+		"format": "{text}",
+    "return-type": "json",
+		"on-click": "playerctl play-pause"
+	},
+  "custom/screenrecording-indicator": {
+    "on-click": "omarchy-cmd-screenrecord",
+    "exec": "$OMARCHY_PATH/default/waybar/indicators/screen-recording.sh",
+    "signal": 8,
+    "return-type": "json"
+  },
+}
