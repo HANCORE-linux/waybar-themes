@@ -29,8 +29,8 @@
     "backlight",
     "bluetooth",
     "network",
-    "battery",
     "pulseaudio",
+    "battery",
     "memory",
     "cpu"
   ]
@@ -45,6 +45,14 @@
     "format": "|", 
     "tooltip": false
 },
+    "custom/windowpill": {
+    "format": "{}",
+    "exec": "~/.config/waybar/window_pill.py",
+    "return-type": "json",
+    "restart-interval": 1,
+    "align": 0,
+    "justify": "left"
+  },
   "custom/update": {
     "format": "",
     "exec": "omarchy-update-available",
@@ -89,13 +97,13 @@
     "return-type": "json"
   },
   "cpu": {
-    "interval": 5,
+    "interval": 2,
     "format": "<span size='10pt'></span> {icon} {usage}%",
     "on-click": "omarchy-launch-or-focus-tui btop",
       "format-icons": [
       "<span size='8pt'>━━━━━━━━━━</span>",
       "<span size='8pt'>■━━━━━━━━━</span>",
-      "<span size='8pt' color='#ff79d2'>■■━━━━━━━━</span>",
+      "<span size='8pt'>■■━━━━━━━━</span>",
       "<span size='8pt' color='#ff6fbe'>■■■━━━━━━━</span>",
       "<span size='8pt' color='#ff66a9'>■■■■━━━━━━</span>",
       "<span size='8pt' color='#ff5f94'>■■■■■━━━━━</span>",
@@ -107,13 +115,13 @@
     ]
   },
   "memory": {
-    "interval": 5,
+    "interval": 2,
     "format": "<span size='9pt'></span> {icon} {used:0.1f}G",
     "on-click": "omarchy-launch-or-focus-tui btop",
       "format-icons": [
       "<span size='8pt'>━━━━━━━━━━</span>",
       "<span size='8pt'>■━━━━━━━━━</span>",
-      "<span size='8pt' color='#f7b69a'>■■━━━━━━━━</span>",
+      "<span size='8pt'>■■━━━━━━━━</span>",
       "<span size='8pt' color='#ef9875'>■■■━━━━━━━</span>",
       "<span size='8pt' color='#e77b50'>■■■■━━━━━━</span>",
       "<span size='8pt' color='#df6124'>■■■■■━━━━━</span>",
@@ -154,13 +162,37 @@
     "on-click": "omarchy-launch-wifi"
   },
   "battery": {
-    "format": "{capacity}% {icon}",
+    "format": "{icon} {capacity}%",
     "format-discharging": "{icon} {capacity}%",
     "format-charging": "{icon} {capacity}%",
     "format-plugged": "",
     "format-icons": {
-      "charging": ["󰢜", "󰂆", "󰂇", "󰂈", "󰢝", "󰂉", "󰢞", "󰂊", "󰂋", "󰂅"],
-      "default": ["󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"]
+      "charging": [
+       "󰢜 <span size='8pt' color='#df6124'>━━━━━━━━━━</span>",
+       "󰢜 <span size='8pt' color='#df6124'>■━━━━━━━━━</span>",
+       "󰂆 <span size='8pt' color='#dd7006'>■■━━━━━━━━</span>",
+       "󰂇 <span size='8pt' color='#d88000'>■■■━━━━━━━</span>",
+       "󰂈 <span size='8pt' color='#d09000'>■■■■━━━━━━</span>",
+       "󰢝 <span size='8pt' color='#c5a000'>■■■■■━━━━━</span>",
+       "󰂉 <span size='8pt' color='#b5af00'>■■■■■■━━━━</span>",
+       "󰢞 <span size='8pt' color='#a2be00'>■■■■■■■━━━</span>",
+       "󰂊 <span size='8pt' color='#8acc00'>■■■■■■■■━━</span>",
+       "󰂋 <span size='8pt' color='#68da00'>■■■■■■■■■━</span>",
+       "󰂅 <span size='8pt' color='#25e712'>■■■■■■■■■■</span>"
+      ],
+      "default": [
+      "󰁺 <span size='8pt' color='#df6124'>━━━━━━━━━━</span>",
+      "󰁺 <span size='8pt' color='#df6124'>■━━━━━━━━━</span>",
+      "󰁻 <span size='8pt' color='#dd7006'>■■━━━━━━━━</span>",
+      "󰁼 <span size='8pt' color='#d88000'>■■■━━━━━━━</span>",
+      "󰁽 <span size='8pt' color='#d09000'>■■■■━━━━━━</span>",
+      "󰁾 <span size='8pt' color='#c5a000'>■■■■■━━━━━</span>",
+      "󰁿 <span size='8pt' color='#b5af00'>■■■■■■━━━━</span>",
+      "󰂀 <span size='8pt' color='#a2be00'>■■■■■■■━━━</span>",
+      "󰂁 <span size='8pt' color='#8acc00'>■■■■■■■■━━</span>",
+      "󰂂 <span size='8pt' color='#68da00'>■■■■■■■■■━</span>",
+      "󰁹 <span size='8pt' color='#25e712'>■■■■■■■■■■</span>"
+      ]
     },
     "format-full": "󰂅",
     "tooltip-format-discharging": "{timeTo}",
@@ -228,5 +260,5 @@
     "exec": "$OMARCHY_PATH/default/waybar/indicators/screen-recording.sh",
     "signal": 8,
     "return-type": "json"
-  }
+  },
 }
