@@ -179,10 +179,6 @@ min-width: 45px;
 }
 
 tooltip {
-  padding: 2px;
-}
-
-tooltip {
  padding: 4px;
  background: @bg;
  font-size: 10px;
