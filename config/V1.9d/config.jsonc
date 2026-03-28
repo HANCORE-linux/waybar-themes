@@ -1,0 +1,282 @@
+{
+  "exclusive": true,
+  "reload_style_on_change": true,
+  "position": "top",
+  "width": 220,
+  "spacing": 0,
+  "margin-top": 0,
+  "expand-left": true,     
+  "expand-center": true,   
+  "expand-right": true,    
+  "no-center": false,      
+  "fixed-center": true,
+  
+  "modules-center": ["group/center-group"],
+
+
+"group/center-group": {
+  "orientation": "vertical",
+  "justify": "center",
+  "align": "center",
+  "modules": [
+  "group/center2",
+  "group/center1"
+  ]
+},
+
+
+"group/center1":{
+  "orientation": "horizontal",
+  "justify": "center",
+  "align": "center",
+  "modules": ["custom/spacer","hyprland/workspaces"]
+},
+
+  "group/center2": {
+  "orientation": "horizontal",
+
+   "modules": [
+    "clock",
+    "custom/idle-indicator",
+    "custom/notification-silencing-indicator",
+    "custom/voxtype",
+    "custom/screenrecording-indicator",
+    "custom/separator",
+    "tray",
+    "custom/update",
+    "custom/updatespacman",
+    "custom/separator",
+    "backlight",
+    "bluetooth",
+    "custom/separator",
+    "pulseaudio",
+    "custom/separator",
+    "power-profiles-daemon",
+    "custom/separator",
+    "battery",
+    "network",
+    "custom/separator",
+    "memory",
+    "cpu" 
+ ]
+},
+
+"custom/spacer": {
+  "exec": "if ls /sys/class/power_supply/BAT* >/dev/null 2>&1 || ls /sys/class/backlight/* >/dev/null 2>&1; then echo ' '; else echo ''; fi",
+  "format": "{}",
+  "hide-empty-text": true,
+  "tooltip": false,
+  "interval": "once"
+},
+
+  "hyprland/workspaces": {
+   "align": "center",
+    "cursor": true,
+    "format": "{icon}",
+    "format-icons": {
+      "default": "",
+      "1": "1",
+      "2": "2",
+      "3": "3",
+      "4": "4",
+      "5": "5",
+      "6": "6",
+      "7": "7",
+      "8": "8",
+      "9": "9",
+      "10": "9+"
+    },
+    "persistent-workspaces": {
+      "*": 10
+	}
+},
+"custom/separator": {
+    "format": "|", 
+    "tooltip": false
+},
+  "custom/update": {
+    "format": "",
+    "exec": "omarchy-update-available",
+    "on-click": "omarchy-launch-floating-terminal-with-presentation omarchy-update",
+    "tooltip-format": "Omarchy update available",
+    "signal": 7,
+    "interval": 21600
+  },
+    "custom/voxtype": {
+    "exec": "omarchy-voxtype-status",
+    "return-type": "json",
+    "format": "{icon}",
+    "format-icons": {
+      "idle": "",
+      "recording": "󰍬",
+      "transcribing": "󰔟"
+    },
+    "tooltip": true,
+    "on-click-right": "omarchy-voxtype-config",
+    "on-click": "omarchy-voxtype-model"
+  },
+      "custom/idle-indicator": {
+    "on-click": "omarchy-toggle-idle",
+    "exec": "$OMARCHY_PATH/default/waybar/indicators/idle.sh",
+    "signal": 9,
+    "return-type": "json"
+  },
+  "custom/notification-silencing-indicator": {
+    "on-click": "omarchy-toggle-notification-silencing",
+    "exec": "$OMARCHY_PATH/default/waybar/indicators/notification-silencing.sh",
+    "signal": 10,
+    "return-type": "json"
+  },
+  "power-profiles-daemon": {
+    "format": "<span size='6pt' color='#df6124'>POWER </span>{profile}",
+    "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
+    "tooltip": true,
+    "format-icons": {
+      "performance": " ",
+      "balanced": " ",
+      "power-saver": " "
+    }
+  },
+  "cpu": {
+    "interval": 2,
+    "format": "<span size='6pt' color='#df6124'>CPU </span>{usage}%",
+    "on-click": "omarchy-launch-or-focus-tui btop"
+  },
+    "memory": {
+    "interval": 2,
+    "format": "<span size='6pt' color='#df6124'>MEM </span>{percentage}%",
+    "on-click": "omarchy-launch-or-focus-tui btop"
+  },
+ "backlight": {
+        "device": "intel_backlight",
+        "rotate": 0,
+        "format": "<span size='6pt' color='#df6124'>BL </span>{percent}%",
+        "tooltip-format": "🌕 {percent}%",
+            "format-icons": [
+      "󰃜",
+      "󰃝",
+      "󰃞",
+      "󰃟",
+      "󰃠"
+    ]
+   },
+   "clock": {
+    "format": "{:%H:%M - %a, %d}",
+    "format-alt": "{:L%d %B W%V %Y}",
+    "tooltip-format": "<span>{calendar}</span>",
+    "calendar": {
+      "mode": "month",
+      "mode-mon-col": 3,
+      "on-click-right": "mode",
+      "format": {
+        "month": "<span color='#ffead3'><b>{}</b></span>",
+        "weekdays": "<span color='#ffcc66'><b>{}</b></span>",
+        "today": "<span color='#ff6699'><b>{}</b></span>"
+      }
+    },
+    "on-click-right": "omarchy-launch-floating-terminal-with-presentation omarchy-tz-select"
+  },
+   "network": {
+    "format-icons": [
+      "󰤯",
+      "󰤟",
+      "󰤢",
+      "󰤥",
+      "󰤨"
+    ],
+    "format": "{icon}",
+    "format-wifi": "<span size='6pt' color='#df6124'>NET </span>{signalStrength}%",
+    "format-ethernet": "<span size='6pt' color='#df6124'>NET </span>{bandwidthDownBytes:=}",
+    "format-disconnected": "󰤮",
+    "tooltip-format-wifi": "{essid} ({frequency} GHz)\n⇣{bandwidthDownBytes}  ⇡{bandwidthUpBytes}",
+    "tooltip-format-ethernet": "⇣{bandwidthDownBytes}  ⇡{bandwidthUpBytes}",
+    "tooltip-format-disconnected": "Disconnected",
+    "interval": 3,
+    "spacing": 1,
+    "on-click": "omarchy-launch-wifi"
+  },
+  "battery": {
+    "format": "<span size='6pt' color='#df6124'>BAT </span>{capacity}%",
+    "format-discharging": "<span size='6pt' color='#df6124'>BAT </span>{capacity}%",
+    "format-charging": "<span size='6pt' color='#df6124'>BAT_c </span>{capacity}%",
+    "format-plugged": "<span size='6pt' color='#df6124'>BAT_p </span>{capacity}%",
+    "format-icons": {
+      "charging": [
+        "󰢜",
+        "󰂆",
+        "󰂇",
+        "󰂈",
+        "󰢝",
+        "󰂉",
+        "󰢞",
+        "󰂊",
+        "󰂋",
+        "󰂅"
+      ],
+      "default": [
+        "󰁺",
+        "󰁻",
+        "󰁼",
+        "󰁽",
+        "󰁾",
+        "󰁿",
+        "󰂀",
+        "󰂁",
+        "󰂂",
+        "󰁹"
+      ]
+    },
+    "format-full": "<span size='6pt' color='#df6124'>BAT_f </span>{capacity}%",
+    "tooltip-format-discharging": "{timeTo}",
+    "tooltip-format-charging": "{timeTo}",
+    "interval": 5,
+    "on-click": "omarchy-menu power",
+    "states": {
+      "warning": 20,
+      "critical": 10
+    }
+  },
+ "bluetooth": {
+    "format": "<span size='6pt' color='#df6124'>BT </span>{status} {num_connections}",
+    "format-disabled": "<span size='6pt' color='#df6124'>BT </span>{status}",
+    "format-connected": "<span size='6pt' color='#df6124'>BT </span>{num_connections}",
+    "tooltip-format": "Devices connected: {num_connections}",
+    "on-click": "omarchy-launch-bluetooth"
+  },
+  "pulseaudio": {
+    "format": "<span size='6pt' color='#df6124'>VOL </span>{volume}%",
+    "on-click": "omarchy-launch-audio",
+    "on-click-right": "pamixer -t",
+    "tooltip-format": "Playing at {volume}%",
+    "scroll-step": 5,
+    "format-muted": "",
+    "format-icons": {
+      "headphone": "",
+      "headset": "",
+      "default": ["", "", ""]
+    }
+  },
+ "custom/updatespacman": {
+    "format": "{}{icon}",
+    "return-type": "json",
+    "format-icons": {
+      "has-updates": " 󰏖",
+      "updated": ""
+    },
+    "exec-if": "which waybar-module-pacman-updates",
+    "exec": "waybar-module-pacman-updates --no-zero-output"
+  },
+  "custom/screenrecording-indicator": {
+    "on-click": "omarchy-cmd-screenrecord",
+    "exec": "$OMARCHY_PATH/default/waybar/indicators/screen-recording.sh",
+    "signal": 8,
+    "return-type": "json"
+  },
+  "tray": {
+    "icon-size": 12,
+    "spacing": 2,
+    "cursor": true,
+    "show-passive-items": true
+  },
+
+}
