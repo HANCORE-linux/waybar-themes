@@ -85,7 +85,7 @@
     "tooltip": false
 },
   "custom/omarchy": {
-    "format": "<span size='12pt'>󰪫 </span>",
+    "format": "<span size='14pt'>󰪫</span>",
     "on-click": "omarchy-menu",
     "on-click-right": "xdg-terminal-exec",
     "tooltip-format": "Omarchy Menu\n\nSuper + Alt + Space"
@@ -279,7 +279,7 @@
     "format": "{}{icon}",
     "return-type": "json",
     "format-icons": {
-      "has-updates": " 󰏖 ",
+      "has-updates": " 󰏖",
       "updated": ""
     },
     "exec-if": "which waybar-module-pacman-updates",
@@ -291,23 +291,8 @@
     "signal": 8,
     "return-type": "json"
   },
-  "group/tray-expander": {
-    "orientation": "inherit",
-    "drawer": {
-      "transition-duration": 600,
-      "children-class": "tray-group-item"
-    },
-    "modules": [
-      "custom/expand-icon",
-
-    ]
-  },
-  "custom/expand-icon": {
-    "format": "  ",
-    "tooltip": false
-  },
   "tray": {
-    "icon-size": 11,
+    "icon-size": 12,
     "spacing": 2,
     "cursor": true,
     "show-passive-items": true
