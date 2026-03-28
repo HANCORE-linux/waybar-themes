@@ -25,6 +25,7 @@
   "orientation": "horizontal",
   "justify": "center",
   "align": "center",
+  "fixed-center": true,
   "modules": ["hyprland/workspaces"]
 },
 
