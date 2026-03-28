@@ -47,8 +47,8 @@
 
 
 #center2 {
-  margin-left: 0px;
-  margin-right: 0px;
+  margin-left: 5px;
+  margin-right: 5px;
   padding: 0px 0px;
 }
 
@@ -81,7 +81,7 @@ button:hover {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
   border-radius: 16px;
   padding: 0px;
-  min-width: 72px;
+  min-width: 75px;
   margin: 0 1px;
   opacity: 1;
   color: @fg;
@@ -143,7 +143,7 @@ button:hover {
 #custom-omarchy,
 #custom-updatespacman,
 #custom-screenrecording-indicator {
-  min-width: 14px;
+  min-width: 35px;
   margin: 3px 2px 4px 2px;
   padding-left: 6px;
   padding-right: 6px;
@@ -181,7 +181,6 @@ tooltip {
 #tray {
     background-color: transparent;
     padding: 0;
-    min-width: 35px;
 }
 
 #tray > .passive {
