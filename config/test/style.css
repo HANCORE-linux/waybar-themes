@@ -57,7 +57,7 @@
 }
 
 #workspaces {
-  padding: 0 5px;
+  padding: 0 0px;
   margin: 0px 0px;
   background-color: @bg;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
@@ -80,7 +80,7 @@ button:hover {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
   border-radius: 16px;
   padding: 0px;
-  min-width: 40px;
+  min-width: 45px;
   margin: 0 1px;
   opacity: 1;
   color: @fg;
