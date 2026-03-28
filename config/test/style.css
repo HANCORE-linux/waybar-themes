@@ -47,7 +47,7 @@
 
 
 #center2 {
-  margin-left: 5px;
+  margin-left: 0px;
   margin-right: 0px;
   padding: 0px 0px;
 }
@@ -181,7 +181,7 @@ tooltip {
 #tray {
     background-color: transparent;
     padding: 0;
-    min-width: 25px;
+    min-width: 35px;
 }
 
 #tray > .passive {
