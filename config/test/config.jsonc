@@ -11,8 +11,6 @@
 
 "group/center-group": {
   "orientation": "vertical",
-  "justify": "center",
-  "align": "center",
   "modules": [
   "group/center2",
   "group/center1"
