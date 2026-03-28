@@ -545,6 +545,14 @@ git clone https://github.com/HANCORE-linux/waybar-themes.git /tmp/repo && cp -rf
 ```
 <img width="1312" height="715" alt="screenshot-2026-01-14_21-24-34" src="https://github.com/user-attachments/assets/96d7730f-8829-49c4-a480-dde98d9f7e25" />
 
+## Screenshots V6.ab2
+- new version of double-top-min bar - dynamic colors 
+##### V6.ab2 Install-command (copy and paste in your terminal): <br>
+```bash
+git clone https://github.com/HANCORE-linux/waybar-themes.git /tmp/repo && cp -rf /tmp/repo/config/V6.ab2/. ~/.config/waybar && rm -rf /tmp/repo && omarchy-restart-waybar
+```
+<img src="https://github.com/HANCORE-linux/waybar-themes/blob/main/config/V6.ab2/screenshot-2026-03-28_17-11-04.png?raw=true"/>
+
 ## Screenshot V6.ac
 - top-min bar with **_dynamic colors_** 
 ##### V6.ac Install-command (copy and paste in your terminal): <br>
