@@ -152,6 +152,14 @@ git clone https://github.com/HANCORE-linux/waybar-themes.git /tmp/repo && cp -rf
 ```
 <img src="https://github.com/HANCORE-linux/waybar-themes/blob/main/config/V1.9c/screenshot-2026-03-17_22-17-44.png"/>
 
+## Screenshots V1.9d
+- midbar with new workspace bars 
+##### V1.9d Install-command (copy and paste in your terminal): <br>
+```bash
+git clone https://github.com/HANCORE-linux/waybar-themes.git /tmp/repo && cp -rf /tmp/repo/config/V1.9d/. ~/.config/waybar && rm -rf /tmp/repo && omarchy-restart-waybar
+```
+<img src="https://github.com/HANCORE-linux/waybar-themes/blob/main/config/V1.9d/screenshot-2026-03-28_19-51-19.png?raw=true"/>
+
 ## Screenshots V2
 - New V2 version with static Gruvbox color scheme - see color [source](https://github.com/morhetz/gruvbox)
 ##### V2 Install-command (copy and paste in your terminal): <br>
