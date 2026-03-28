@@ -47,12 +47,13 @@
 
 
 #center2 {
-  margin: 0 5px;
+  margin-left: 5px;
+  margin-right: 5px;
   padding: 0px 0px;
 }
 
 #center1 {
-  margin: 0px 15px;
+  margin: 0px 0px;
   padding: 0px 0px;
 }
 
