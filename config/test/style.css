@@ -169,7 +169,7 @@ tooltip {
 #custom-spacer {
   padding: 0;
   margin-right: 0px;
-  min-width: 0px;
+  min-width: 8px;
   min-height: 0;
   font-size: 0px;
 }

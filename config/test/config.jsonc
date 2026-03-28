@@ -29,14 +29,14 @@
   "orientation": "horizontal",
   "justify": "center",
   "align": "center",
-  "modules": ["hyprland/workspaces"]
+  "modules": ["custom/spacer","hyprland/workspaces"]
 },
 
   "group/center2": {
   "orientation": "horizontal",
 
    "modules": [
-    "custom/spacer",
+  
     "clock",
     "custom/idle-indicator",
     "custom/notification-silencing-indicator",
