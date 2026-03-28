@@ -17,7 +17,7 @@
   text-shadow: none;
   padding: 0;
 	min-height: 0;
-  font-family: 'CaskaydiaMono Nerd Font';
+  font-family: 'JetBrains Mono Nerd Font';
     text-shadow: 0 0 5px #1b1b1b, /* Soft inner glow */
                  0 0 5px #2b2b2b, /* Brighter glow */
                  0 0 5px #3d3d3d, /* Even brighter */
@@ -43,6 +43,7 @@
   transition-property: background-color;
   transition-duration: .5s;
   min-height: 26px;
+  min-width: 100px;
 }
 
 
