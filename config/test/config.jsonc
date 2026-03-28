@@ -29,14 +29,13 @@
   "orientation": "horizontal",
   "justify": "center",
   "align": "center",
-  "modules": ["hyprland/workspaces"]
+  "modules": ["custom/spacer","hyprland/workspaces"]
 },
 
   "group/center2": {
   "orientation": "horizontal",
 
    "modules": [
-    "custom/spacer",
     "custom/omarchy",
     "clock",
     "custom/idle-indicator",
@@ -68,7 +67,7 @@
 
 "custom/spacer": {
   "exec-if": "ls /sys/class/power_supply/BAT* >/dev/null 2>&1 || ls /sys/class/backlight/* >/dev/null 2>&1",
-  "format": "   ",           
+  "format": "     ",           
   "tooltip": false,
   "interval": "once"
 },
