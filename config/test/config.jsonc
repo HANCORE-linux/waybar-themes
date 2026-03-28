@@ -2,7 +2,7 @@
   "exclusive": true,
   "reload_style_on_change": true,
   "position": "top",
-  "width": 260,
+  "width": 300,
   "spacing": 0,
   "margin-top": 0,
 
@@ -16,7 +16,6 @@
   "modules": [
   "group/center2",
   "group/center1"
-   
   ]
 },
 
@@ -33,6 +32,7 @@
   "orientation": "horizontal",
   "justify": "center",
   "align": "center",
+  "fixed-center": true,
   "modules": [
     "custom/omarchy",
     "clock",
