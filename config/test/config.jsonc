@@ -2,7 +2,7 @@
   "exclusive": true,
   "reload_style_on_change": true,
   "position": "top",
-  "width": 520,
+  "width": 220,
   "spacing": 0,
   "margin-top": 0,
   "expand-left": true,     
@@ -10,12 +10,14 @@
   "expand-right": true,    
   "no-center": false,      
   "fixed-center": true,
-  "modules-center": ["group/center-group"],
   
+  "modules-center": ["group/center-group"],
+
 
 "group/center-group": {
   "orientation": "vertical",
-
+  "justify": "center",
+  "align": "center",
   "modules": [
   "group/center2",
   "group/center1"
@@ -25,7 +27,8 @@
 
 "group/center1":{
   "orientation": "horizontal",
-"expand": true,
+  "justify": "center",
+  "align": "center",
   "modules": ["hyprland/workspaces"]
 },
 
