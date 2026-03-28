@@ -52,13 +52,13 @@
 }
 
 #center1 {
-  margin: 0px 45px;
-
+  margin: 0px 0px;
+  padding: 0px;
 }
 
 #workspaces {
   padding: 0 0px;
-  margin: 0px 0px;
+  margin: 0px 50px;
   background-color: @bg;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
 }
