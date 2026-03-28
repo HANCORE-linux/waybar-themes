@@ -36,6 +36,7 @@
   "orientation": "horizontal",
 
    "modules": [
+    "custom/spacer",
     "custom/omarchy",
     "clock",
     "custom/idle-indicator",
@@ -66,9 +67,10 @@
 },
 
 "custom/spacer": {
-  "format": "   ",           // single space – invisible but prevents the widget from collapsing to 0 width
-  "tooltip": false,        // no tooltip
-  "interval": "once"       // optional – no script, so it only runs once
+  "exec-if": "ls /sys/class/power_supply/BAT* >/dev/null 2>&1 || ls /sys/class/backlight/* >/dev/null 2>&1",
+  "format": "   ",           
+  "tooltip": false,
+  "interval": "once"
 },
 
   "hyprland/workspaces": {
