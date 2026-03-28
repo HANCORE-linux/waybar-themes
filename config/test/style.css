@@ -2,6 +2,7 @@
 
 @define-color bg @background;
 @define-color fg @foreground;
+@define-color fg2 #df6124;
 @define-color border alpha(@foreground, 0.1);
 @define-color border-inactive_ws alpha(@foreground, 0.5);
 @define-color border-active_ws alpha(@foreground, 1);
@@ -26,30 +27,28 @@
 
 #waybar  {
   background-color: transparent;
+  transition-property: background-color;
+  transition-duration: .5s;
 }
 
 #waybar > box {
-  color: @fg;
+  border-radius: 3px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  margin: 1px 4px 2px 4px;
   background-color: @bg;
-  margin: 2px 2px 2px 2px;
-  padding: 0px;
-  box-shadow: 1px 1px 2px rgba(0, 0, 0, 1);
-  border-left: 0.5px solid @border;
-  border-right: 0.5px solid @border;
-  border-bottom: 0.5px solid @border;
-  border-radius: 12px;
-  font-weight: 700;
-  font-size: 12px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 1);
+  min-height: 15px;
   transition-property: background-color;
   transition-duration: .5s;
-  min-height: 26px;
-  min-width: 100px;
+  min-height: 25px;
+  font-size: 12px;
+  font-weight: bold;
 }
 
 
 #center2 {
-  margin-left: 15px;
-  margin-right: 15px;
+  margin-left: 5px;
+  margin-right: 5px;
   padding: 0px 0px;
 }
 
@@ -59,8 +58,8 @@
 
 #workspaces {
   padding: 0 0px;
-  margin-left: 30px;
-  margin-right: 15px;
+  margin-left: 20px;
+  margin-right: 0px;
   background-color: @bg;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
 }
@@ -82,7 +81,7 @@ button:hover {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
   border-radius: 16px;
   padding: 0px;
-  min-width: 45px;
+  min-width: 65px;
   margin: 0 1px;
   opacity: 1;
   color: @fg;
@@ -91,8 +90,8 @@ button:hover {
 }
 
 #workspaces button.active {
-  color: @fg;
-  border: 1.5px solid @border-active_ws;
+  color: @border-active_ws;
+  border: 1.5px solid @fg2;
   opacity: 1.0;
   font-size: 0px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
@@ -145,17 +144,16 @@ button:hover {
 #custom-updatespacman,
 #custom-screenrecording-indicator {
   min-width: 14px;
-  margin: 2px 2px 0px 2px;
+  margin: 3px 2px 4px 2px;
   padding-left: 6px;
   padding-right: 6px;
 
 }
 
-
-#custom-omarchy {
- padding-bottom: 1px;
+#memory,
+#cpu {
+min-width: 45px;
 }
-
 
 #custom-update {
 font-size: 10px;
@@ -182,6 +180,7 @@ tooltip {
 
 #tray {
     background-color: transparent;
+    padding: 0;
 }
 
 #tray > .passive {

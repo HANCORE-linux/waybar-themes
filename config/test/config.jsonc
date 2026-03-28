@@ -36,7 +36,6 @@
   "orientation": "horizontal",
 
    "modules": [
-    "custom/omarchy",
     "clock",
     "custom/idle-indicator",
     "custom/notification-silencing-indicator",
@@ -50,8 +49,7 @@
     "backlight",
     "bluetooth",
     "custom/separator",
-    "pulseaudio#output",
-    "pulseaudio#input",
+    "pulseaudio",
     "custom/separator",
     "power-profiles-daemon",
     "custom/separator",
@@ -96,12 +94,6 @@
     "format": "|", 
     "tooltip": false
 },
-  "custom/omarchy": {
-    "format": "<span size='14pt'>󰪫</span>",
-    "on-click": "omarchy-menu",
-    "on-click-right": "xdg-terminal-exec",
-    "tooltip-format": "Omarchy Menu\n\nSuper + Alt + Space"
-  },
   "custom/update": {
     "format": "",
     "exec": "omarchy-update-available",
@@ -136,7 +128,7 @@
     "return-type": "json"
   },
   "power-profiles-daemon": {
-    "format": "{icon}",
+    "format": "<span size='6pt' color='#df6124'>POWER </span>{profile}",
     "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
     "tooltip": true,
     "format-icons": {
@@ -146,40 +138,31 @@
     }
   },
   "cpu": {
-    "interval": 10,
-    "format": "  {usage}%",
-    "on-click": "omarchy-launch-or-focus-tui btop"
-  },
-  "memory": {
     "interval": 2,
-    "format": "  {used:0.1f}G",
+    "format": "<span size='6pt' color='#df6124'>CPU </span>{usage}%",
     "on-click": "omarchy-launch-or-focus-tui btop"
   },
-  "backlight": {
-    "device": "intel_backlight",
-    "format": "{icon}",
-    "tooltip-format": "{percent}%",
-    "format-icons": [
-      "",
-      "",
-      "",
-      "",
-      "",
-      "",
-      "",
-      "",
-      "",
-      "",
-      "",
-      "",
-      "",
-      "",
-      ""
-    ]
+    "memory": {
+    "interval": 2,
+    "format": "<span size='6pt' color='#df6124'>MEM </span>{percentage}%",
+    "on-click": "omarchy-launch-or-focus-tui btop"
   },
-  "clock": {
-    "format": "{:%H:%M}",
-    "format-alt": "{:%H:%M - %d/%m/%Y}",
+ "backlight": {
+        "device": "intel_backlight",
+        "rotate": 0,
+        "format": "<span size='6pt' color='#df6124'>BL </span>{percent}%",
+        "tooltip-format": "🌕 {percent}%",
+            "format-icons": [
+      "󰃜",
+      "󰃝",
+      "󰃞",
+      "󰃟",
+      "󰃠"
+    ]
+   },
+   "clock": {
+    "format": "{:%H:%M - %a, %d}",
+    "format-alt": "{:L%d %B W%V %Y}",
     "tooltip-format": "<span>{calendar}</span>",
     "calendar": {
       "mode": "month",
@@ -188,12 +171,12 @@
       "format": {
         "month": "<span color='#ffead3'><b>{}</b></span>",
         "weekdays": "<span color='#ffcc66'><b>{}</b></span>",
-        "today": "<span color='#ff6699'><b>{}</b></span>",
-      },
+        "today": "<span color='#ff6699'><b>{}</b></span>"
+      }
     },
     "on-click-right": "omarchy-launch-floating-terminal-with-presentation omarchy-tz-select"
   },
-  "network": {
+   "network": {
     "format-icons": [
       "󰤯",
       "󰤟",
@@ -202,8 +185,8 @@
       "󰤨"
     ],
     "format": "{icon}",
-    "format-wifi": "{icon}",
-    "format-ethernet": "󰈀",
+    "format-wifi": "<span size='6pt' color='#df6124'>NET </span>{signalStrength}%",
+    "format-ethernet": "<span size='6pt' color='#df6124'>NET </span>{bandwidthDownBytes:=}",
     "format-disconnected": "󰤮",
     "tooltip-format-wifi": "{essid} ({frequency} GHz)\n⇣{bandwidthDownBytes}  ⇡{bandwidthUpBytes}",
     "tooltip-format-ethernet": "⇣{bandwidthDownBytes}  ⇡{bandwidthUpBytes}",
@@ -213,10 +196,10 @@
     "on-click": "omarchy-launch-wifi"
   },
   "battery": {
-    "format": "{capacity}% {icon}",
-    "format-discharging": "{capacity}% {icon}",
-    "format-charging": "{capacity}% {icon}",
-    "format-plugged": "",
+    "format": "<span size='6pt' color='#df6124'>BAT </span>{capacity}%",
+    "format-discharging": "<span size='6pt' color='#df6124'>BAT </span>{capacity}%",
+    "format-charging": "<span size='6pt' color='#df6124'>BAT_c </span>{capacity}%",
+    "format-plugged": "<span size='6pt' color='#df6124'>BAT_p </span>{capacity}%",
     "format-icons": {
       "charging": [
         "󰢜",
@@ -243,7 +226,7 @@
         "󰁹"
       ]
     },
-    "format-full": "󰂅 {capacity}%",
+    "format-full": "<span size='6pt' color='#df6124'>BAT_f </span>{capacity}%",
     "tooltip-format-discharging": "{timeTo}",
     "tooltip-format-charging": "{timeTo}",
     "interval": 5,
@@ -253,39 +236,25 @@
       "critical": 10
     }
   },
-  "bluetooth": {
-    "format": "",
-    "format-disabled": "󰂲",
-    "format-connected": "󰂱",
+ "bluetooth": {
+    "format": "<span size='6pt' color='#df6124'>BT </span>{status} {num_connections}",
+    "format-disabled": "<span size='6pt' color='#df6124'>BT </span>{status}",
+    "format-connected": "<span size='6pt' color='#df6124'>BT </span>{num_connections}",
     "tooltip-format": "Devices connected: {num_connections}",
     "on-click": "omarchy-launch-bluetooth"
   },
-  "pulseaudio#input": {
-    "format-source": "",
-    "format-source-muted": "",
-    "format": "{format_source}",
-    "tooltip-format": "{format_source} {source_volume}%",
-    "scroll-step": 1,
-    "smooth-scrolling-threshold": 1,
-    "max-volume": 100,
+  "pulseaudio": {
+    "format": "<span size='6pt' color='#df6124'>VOL </span>{volume}%",
     "on-click": "omarchy-launch-audio",
     "on-click-right": "pamixer -t",
-    "on-scroll-up": "pactl set-source-volume @DEFAULT_SOURCE@ +1%",
-    "on-scroll-down": "pactl set-source-volume @DEFAULT_SOURCE@ -1%",
-  },
-  "pulseaudio#output": {
-    "format": "{icon}",
-    "tooltip-format": "{icon}   {volume}%",
+    "tooltip-format": "Playing at {volume}%",
+    "scroll-step": 5,
     "format-muted": "",
-      "format-icons": {
+    "format-icons": {
       "headphone": "",
+      "headset": "",
       "default": ["", "", ""]
-    },
-    "max-volume": 100,
-    "scroll-step": 2,
-    "smooth-scrolling-threshold": 1,
-    "on-click": "omarchy-launch-audio",
-    "on-click-right": "pamixer -t"
+    }
   },
  "custom/updatespacman": {
     "format": "{}{icon}",
