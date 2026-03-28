@@ -47,8 +47,8 @@
 
 
 #center2 {
-  margin-left: 5px;
-  margin-right: 5px;
+  margin-left: 15px;
+  margin-right: 15px;
   padding: 0px 0px;
 }
 
@@ -58,7 +58,7 @@
 
 #workspaces {
   padding: 0 0px;
-  margin: 0px 15px;
+  margin: 0px 5px;
   background-color: @bg;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
 }
@@ -151,13 +151,12 @@ button:hover {
 
 
 #custom-omarchy {
-  padding-right: 4px;
-  padding-bottom: 1px;
+ padding-bottom: 1px;
 }
 
 
 #custom-update {
-font-size: 11px;
+font-size: 10px;
 padding-left: 2px;
 padding-right: 2px;
 }
