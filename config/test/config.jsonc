@@ -37,7 +37,6 @@
 
    "modules": [
     "custom/spacer",
-    "custom/spacer2",
     "clock",
     "custom/idle-indicator",
     "custom/notification-silencing-indicator",
@@ -70,12 +69,6 @@
   "tooltip": false,
   "interval": "once"
 },
-
-"custom/spacer2": {
-  "format": "  ",
-  "tooltip": false
-},
-
   "hyprland/workspaces": {
    "align": "center",
     "cursor": true,

@@ -81,7 +81,7 @@ button:hover {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
   border-radius: 16px;
   padding: 0px;
-  min-width: 75px;
+  min-width: 70px;
   margin: 0 1px;
   opacity: 1;
   color: @fg;
@@ -143,7 +143,7 @@ button:hover {
 #custom-omarchy,
 #custom-updatespacman,
 #custom-screenrecording-indicator {
-  min-width: 35px;
+  min-width: 25px;
   margin: 3px 2px 4px 2px;
   padding-left: 6px;
   padding-right: 6px;
@@ -181,6 +181,7 @@ tooltip {
 #tray {
     background-color: transparent;
     padding: 0;
+    padding-top: 1px;
 }
 
 #tray > .passive {
@@ -260,7 +261,7 @@ tooltip label {
   min-width: 10px;
   margin-left: 0;
   margin-right: 0;
-  font-size: 12px;
+  font-size: 11px;
   padding-bottom: 1px;
 }
 
