@@ -66,8 +66,9 @@
 },
 
 "custom/spacer": {
-  "exec-if": "ls /sys/class/power_supply/BAT* >/dev/null 2>&1 || ls /sys/class/backlight/* >/dev/null 2>&1",
-  "format": "     ",           
+  "exec": "if ls /sys/class/power_supply/BAT* >/dev/null 2>&1 || ls /sys/class/backlight/* >/dev/null 2>&1; then echo '   '; else echo ''; fi",
+  "format": "{}",
+  "hide-empty-text": true,
   "tooltip": false,
   "interval": "once"
 },
