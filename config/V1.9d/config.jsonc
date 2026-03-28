@@ -36,6 +36,7 @@
   "orientation": "horizontal",
 
    "modules": [
+  
     "clock",
     "custom/idle-indicator",
     "custom/notification-silencing-indicator",
@@ -68,7 +69,6 @@
   "tooltip": false,
   "interval": "once"
 },
-
   "hyprland/workspaces": {
    "align": "center",
     "cursor": true,
