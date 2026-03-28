@@ -29,13 +29,15 @@
   "orientation": "horizontal",
   "justify": "center",
   "align": "center",
-  "modules": ["custom/spacer","hyprland/workspaces"]
+  "modules": ["hyprland/workspaces"]
 },
 
   "group/center2": {
   "orientation": "horizontal",
 
    "modules": [
+    "custom/spacer",
+    "custom/spacer2",
     "clock",
     "custom/idle-indicator",
     "custom/notification-silencing-indicator",
@@ -67,6 +69,11 @@
   "hide-empty-text": true,
   "tooltip": false,
   "interval": "once"
+},
+
+"custom/spacer2": {
+  "format": "  ",
+  "tooltip": false
 },
 
   "hyprland/workspaces": {
