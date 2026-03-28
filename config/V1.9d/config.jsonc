@@ -274,7 +274,7 @@
   },
   "tray": {
     "icon-size": 12,
-    "spacing": 2,
+    "spacing": 0,
     "cursor": true,
     "show-passive-items": true
   },
