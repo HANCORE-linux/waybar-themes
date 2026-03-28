@@ -48,7 +48,7 @@
 
 #center2 {
   margin-left: 5px;
-  margin-right: 5px;
+  margin-right: 0px;
   padding: 0px 0px;
 }
 
@@ -155,10 +155,6 @@ button:hover {
 min-width: 45px;
 }
 
-#cpu {
-  margin-right: 5px;
-}
-
 #custom-update {
 font-size: 10px;
 padding-left: 2px;
@@ -185,6 +181,7 @@ tooltip {
 #tray {
     background-color: transparent;
     padding: 0;
+    min-width: 25px;
 }
 
 #tray > .passive {
