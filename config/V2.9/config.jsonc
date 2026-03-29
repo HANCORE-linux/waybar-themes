@@ -18,7 +18,7 @@
   ],
   "modules-center": ["mpris"],
   "modules-right": [
-    "tray",
+    "group/tray-expander",
     "backlight",
     "bluetooth",
     "network",
@@ -254,14 +254,11 @@
     },
     "modules": [
       "custom/expand-icon",
-      "tray",
-      "custom/separator",
-      "",
- 
+      "tray"
       ]
   },
   "custom/expand-icon": {
-    "format": " ",
+    "format": " ",
     "tooltip": false
   },
   "tray": {

@@ -97,6 +97,7 @@ padding: 0px;
 #power-profiles-daemon.performance,
 #power-profiles-daemon.balanced,
 #power-profiles-daemon.power-saver,
+#custom-expand-icon,
 #custom-omarchy,
 #custom-idle-indicator,
 #custom-notification-silencing-indicator,
@@ -110,6 +111,14 @@ padding: 0px;
   opacity: 1;
   font-weight: bold;
   font-size: 10px;
+}
+#custom-expand-icon {
+  opacity: 0.5;
+  font-size: 11px;
+  color: @foreground;
+  padding-left: 8px;
+  padding-bottom: 5px;
+  margin: 0px;
 }
 
 #memory {
