@@ -86,7 +86,7 @@
   },
     "power-profiles-daemon": {
     "justify": "center",
-    "format": "{icon}\npower",
+    "format": "{icon}\npow",
     "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
     "tooltip": true,
    "format-icons": {
