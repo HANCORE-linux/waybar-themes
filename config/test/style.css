@@ -112,20 +112,10 @@ padding: 0px;
   font-size: 10px;
 }
 
-#power-profiles-daemon,
-#power-profiles-daemon.performance,
-#power-profiles-daemon.balanced,
-#power-profiles-daemon.power-saver {
-  padding: 0px 4px;
-}
-
 #memory {
   padding-right: 7px;
 }
 
-#bluetooth {
-padding-left: 0px;
-}
 
 #clock {
   margin-bottom: 5px;
@@ -247,8 +237,7 @@ animation: repeat;
     }
 }
 
-#network.ethernet.disconnected,
-#network.wifi.disconnected,
+#network.disconnected,
 #battery.warning {
   color: #c95d0f;
 }

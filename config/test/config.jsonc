@@ -150,10 +150,10 @@
     "format": "{icon}",
     "format-wifi": "{signalStrength}%\nnet",
     "format-ethernet": "on\nnet",
-    "format-disconnected": "󰤮",
+    "format-disconnected": "󰤮\n󰈀",
     "tooltip-format-wifi": "{essid} ({frequency} GHz)\n⇣{bandwidthDownBytes}  ⇡{bandwidthUpBytes}",
     "tooltip-format-ethernet": "⇣{bandwidthDownBytes}  ⇡{bandwidthUpBytes}",
-    "tooltip-format-disconnected": "󰈀",
+    "tooltip-format-disconnected": "Disconnected",
     "interval": 3,
     "spacing": 1,
     "on-click": "omarchy-launch-wifi"
@@ -240,7 +240,7 @@
     "format": "{}{icon}",
     "return-type": "json",
     "format-icons": {
-      "has-updates": " 󰏖",
+      "has-updates": "󰏖",
       "updated": ""
     },
     "exec-if": "which waybar-module-pacman-updates",
