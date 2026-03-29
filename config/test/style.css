@@ -144,7 +144,7 @@ opacity: 1;
 
 #custom-separator {
   opacity: 0.2;
-  padding-top: 2px;
+  padding-top: 5px;
   padding-left: 0px;
   padding-right: 0px;
 }
@@ -198,33 +198,9 @@ tooltip label {
 }
 
 
-/* --- Hover for all modules  --- */
-#clock:hover,
-#tray:hover,
-#custom-expand-icon:hover,
-#cpu:hover,
-#memory:hover,
-#mpris:hover,
-#battery:hover,
-#power-profiles-daemon:hover,
-#bluetooth:hover,
-#backlight:hover,
-#custom-omarchy:hover,
-#custom-update:hover,
-#idle_inhibitor:hover,
-#custom-screenrecording-indicator,
-#custom-updatespacman:hover,
-#network:hover,
-#pulseaudio:hover {
-  border-radius: 0px;
-  opacity: 1;
-  background-color: transparent;
-  color: @foreground;
-}
+
 
 /* Specific animation Module */
-
-
 #custom-screenrecording-indicator {
   animation-timing-function: linear;
   animation-iteration-count: infinite;
