@@ -222,9 +222,11 @@
     }
   },
    "mpris": {
+    "justify": "center",
+    "rotate": 90,
     "format": " {artist} - {title}",
     "format-paused": "<span color='grey'>{status_icon}</span>",
-    "max-length": 75,
+    "max-length": 25,
     "player-icons": {
       "default": "⏸",
       "mpv": "🎵"
