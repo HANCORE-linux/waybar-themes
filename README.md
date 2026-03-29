@@ -330,6 +330,13 @@ git clone https://github.com/HANCORE-linux/waybar-themes.git /tmp/repo && cp -rf
 ```
 <img width="789" height="392" alt="screenshot-2025-12-30_14-34-12" src="https://github.com/user-attachments/assets/51a17b49-1cbb-41f4-8208-e107cfbec17d" />
 
+## Screenshots V2.9
+- vertical bar - text based modules
+##### V2.9 Install-command (copy and paste in your terminal): <br>
+```bash
+git clone https://github.com/HANCORE-linux/waybar-themes.git /tmp/repo && cp -rf /tmp/repo/config/V2.9/. ~/.config/waybar && rm -rf /tmp/repo && omarchy-restart-waybar
+```
+<img src="https://github.com/HANCORE-linux/waybar-themes/blob/main/config/V2.9/screenshot-2026-03-29_18-02-35.png?raw=true"/>
 
 ## Screenshots V3
 - new waybar Style (without red accents)
