@@ -90,9 +90,9 @@
     "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
     "tooltip": true,
    "format-icons": {
-      "performance": "<span style='italic'>perf</span>",
-      "balanced": "<span style='italic'>bal</span>",
-      "power-saver": "<span style='italic'>save</span>"
+      "performance": "<span style='italic'weight='900'>perf</span>",
+      "balanced": "<span style='italic' weight='900'>bal</span>",
+      "power-saver": "<span style='italic' weight='900'>save</span>"
     }
   },
   "cpu": {
@@ -149,7 +149,7 @@
     "justify": "center",
     "format": "{icon}",
     "format-wifi": "{signalStrength}%\nnet",
-    "format-ethernet": "<span style='italic'>on</span>\nnet",
+    "format-ethernet": "<span style='italic' weight='900'>on</span>\nnet",
     "format-disconnected": "󰤮\n󰈀",
     "tooltip-format-wifi": "{essid} ({frequency} GHz)\n⇣{bandwidthDownBytes}  ⇡{bandwidthUpBytes}",
     "tooltip-format-ethernet": "⇣{bandwidthDownBytes}  ⇡{bandwidthUpBytes}",
