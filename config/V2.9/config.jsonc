@@ -123,7 +123,7 @@
   },
   "clock": {
     "justify": "center",
-    "format": "{:%d/%m\n%H:%M}",
+    "format": "<span weight='900'>{:%d/%m\n%H:%M}</span>",
     "format-alt": "{:L%d %B W%V %Y}",
     "tooltip-format": "<span>{calendar}</span>",
     "calendar": {
