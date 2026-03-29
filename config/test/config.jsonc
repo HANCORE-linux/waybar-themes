@@ -149,11 +149,11 @@
     "justify": "center",
     "format": "{icon}",
     "format-wifi": "{signalStrength}%\nnet",
-    "format-ethernet": "{ifname}\nnet",
+    "format-ethernet": "on\nnet",
     "format-disconnected": "󰤮",
     "tooltip-format-wifi": "{essid} ({frequency} GHz)\n⇣{bandwidthDownBytes}  ⇡{bandwidthUpBytes}",
     "tooltip-format-ethernet": "⇣{bandwidthDownBytes}  ⇡{bandwidthUpBytes}",
-    "tooltip-format-disconnected": "Disconnected",
+    "tooltip-format-disconnected": "󰈀",
     "interval": 3,
     "spacing": 1,
     "on-click": "omarchy-launch-wifi"

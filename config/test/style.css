@@ -247,6 +247,8 @@ animation: repeat;
     }
 }
 
+#network.ethernet.disconnected,
+#network.wifi.disconnected,
 #battery.warning {
   color: #c95d0f;
 }
