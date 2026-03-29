@@ -149,7 +149,7 @@
     "justify": "center",
     "format": "{icon}",
     "format-wifi": "{signalStrength}%\nnet",
-    "format-ethernet": "{bandwidthDownBytes:=}\nnet",
+    "format-ethernet": "{ifname}\nnet",
     "format-disconnected": "󰤮",
     "tooltip-format-wifi": "{essid} ({frequency} GHz)\n⇣{bandwidthDownBytes}  ⇡{bandwidthUpBytes}",
     "tooltip-format-ethernet": "⇣{bandwidthDownBytes}  ⇡{bandwidthUpBytes}",
