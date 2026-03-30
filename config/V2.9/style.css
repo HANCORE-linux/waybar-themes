@@ -181,12 +181,12 @@ tooltip {
  padding: 4px;
  background: @background;
  font-size: 10px;
- border: 1.5px solid alpha(@foreground, 0.6);
+ border: 1px solid alpha(@foreground, 0.6);
  border-radius: 8px;
  
 }
 tooltip label {
-    color: alpha(@foreground, 0.65);
+    color: alpha(@foreground, 1);
     font-weight: normal;
 }
 
