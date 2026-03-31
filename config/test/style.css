@@ -140,11 +140,6 @@ window#waybar  {
   padding-top: 0px;
 }
 
-#memory,
-#cpu {
-min-width: 45px;
-}
-
 #clock {
   padding-left: 0px;
 }

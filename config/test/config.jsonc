@@ -19,10 +19,10 @@
   "modules-center": ["mpris"],
   "modules-right": [
     "group/tray-expander",
-    "backlight",
     "bluetooth",
     "network",
     "power-profiles-daemon",
+    "backlight",
     "pulseaudio",
     "battery",
     "memory",
