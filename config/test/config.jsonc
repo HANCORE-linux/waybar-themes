@@ -22,7 +22,6 @@
 
 "group/center1":{
   "orientation": "horizontal",
-
   "modules": ["hyprland/workspaces"]
 },
 
@@ -30,6 +29,7 @@
   "orientation": "horizontal",
 
    "modules": [
+    "custom/spacer-desktop",
     "clock",
     "custom/idle-indicator",
     "custom/notification-silencing-indicator",
@@ -78,6 +78,13 @@
 "custom/separator": {
     "format": "|", 
     "tooltip": false
+},
+"custom/spacer-desktop": {
+    "exec": "if ls /sys/class/power_supply/BAT* >/dev/null 2>&1 || ls /sys/class/backlight/* >/dev/null 2>&1; then echo ''; else echo '    '; fi",
+    "format": "{}",
+    "hide-empty-text": true,
+    "tooltip": false,
+    "interval": "once"
 },
   "custom/update": {
     "format": "",

@@ -180,6 +180,13 @@ tooltip {
   opacity: 0;
 }
 
+#custom-spacer-desktop {
+  padding: 0 0px;
+  margin-right: 0px;
+  min-width: 25px;
+  min-height: 0;
+  font-size: 0px;
+}
 
 #group-tray-expander {
   background-color: @bg;
