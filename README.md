@@ -148,7 +148,7 @@ git clone https://github.com/HANCORE-linux/waybar-themes.git /tmp/repo && cp -rf
 - make sure script is executable: ```chmod +x ~/.config/waybar/scrolling-mpris.py```
 ##### V1.9c Install-command (copy and paste in your terminal): <br>
 ```bash
-git clone https://github.com/HANCORE-linux/waybar-themes.git /tmp/repo && cp -rf /tmp/repo/config/V1.9b/. ~/.config/waybar && rm -rf /tmp/repo && omarchy-restart-waybar
+git clone https://github.com/HANCORE-linux/waybar-themes.git /tmp/repo && cp -rf /tmp/repo/config/V1.9c/. ~/.config/waybar && rm -rf /tmp/repo && omarchy-restart-waybar
 ```
 <img src="https://github.com/HANCORE-linux/waybar-themes/blob/main/config/V1.9c/screenshot-2026-03-17_22-17-44.png"/>
 
