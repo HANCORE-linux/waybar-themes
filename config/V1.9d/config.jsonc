@@ -139,12 +139,12 @@
   },
   "cpu": {
     "interval": 2,
-    "format": "<span size='6pt' color='#df6124'>CPU </span>{usage}%",
+    "format": "<span size='6pt' color='#df6124'>CPU </span>{usage:02}%",
     "on-click": "omarchy-launch-or-focus-tui btop"
   },
     "memory": {
     "interval": 2,
-    "format": "<span size='6pt' color='#df6124'>MEM </span>{percentage}%",
+    "format": "<span size='6pt' color='#df6124'>MEM </span>{percentage:02}%",
     "on-click": "omarchy-launch-or-focus-tui btop"
   },
  "backlight": {
