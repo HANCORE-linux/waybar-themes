@@ -252,11 +252,6 @@ animation: repeat;
     }
 }
 
-#network.disconnected,
-#battery.warning {
-  color: #c95d0f;
-}
-
 @keyframes blink2 {
   to {
     background-color: transparent;
