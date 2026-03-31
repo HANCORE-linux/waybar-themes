@@ -147,6 +147,7 @@ window#waybar  {
 
 #battery {
   padding-right: 0px;
+  margin-right: 0px;
 }
 
 #tray {
