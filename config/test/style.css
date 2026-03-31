@@ -45,15 +45,18 @@
 }
 
 
-#center-group > widget > * {
-    margin: 0px 0px 0px 0px;
+.modules-center > widget > * {
+    margin: 0px 10px 0px 10px;
 }
 
-
+#workspaces > widget > * {
+    margin: 0px 0px 0px 10px;
+}
 
 #workspaces {
   padding: 0px 0px;
   margin: 0px 0px;
+  min-width: 0px;
 }
 
 button {
@@ -74,7 +77,7 @@ button:hover {
   border-radius: 3px;
   padding: 1px 0px;
   background-color: alpha (@fg, 0.75);
-  min-width: 88px;
+  min-width: 70px;
   margin: 0px 1px;
   opacity: 1;
   color: @fg;
@@ -137,7 +140,7 @@ button:hover {
 #custom-updatespacman,
 #custom-screenrecording-indicator {
   min-width: 25px;
-  margin: 5px 18px 5px 18px;
+ margin: 5px 5px 5px 5px;
   padding-left: 0px;
   padding-right: 0px;
 

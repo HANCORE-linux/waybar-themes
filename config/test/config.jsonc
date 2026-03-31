@@ -2,7 +2,7 @@
   "exclusive": true,
   "reload_style_on_change": true,
   "position": "top",
-  "width": 700,
+  "width": 500,
   "spacing": 0,
   "margin-top": 0,
   
@@ -22,8 +22,7 @@
 
 "group/center1":{
   "orientation": "horizontal",
-  "justify": "center",
-  "align": "center",
+
   "modules": ["hyprland/workspaces"]
 },
 
