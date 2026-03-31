@@ -175,9 +175,9 @@ tooltip {
 }
 
 #custom-spacer-desktop {
-  padding: 0 0px;
+  padding: 0 15px;
   margin-right: 0px;
-  min-width: 25px;
+  min-width: 0px;
   min-height: 0;
   font-size: 0px;
 }
@@ -189,6 +189,10 @@ tooltip {
 
 #custom-updatespacman.has-updates {
   opacity: 1;
+}
+
+#custom-updatespacman.updated {
+  opacity: 0.5;
 }
 
 #custom-separator {
