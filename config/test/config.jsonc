@@ -167,7 +167,6 @@
     "on-click": "omarchy-launch-wifi"
   },
   "battery": {
-    "justify": "center",
     "format": "bat {capacity}%",
     "format-discharging": "bat {capacity}%",
     "format-charging": "bat {capacity}%",
