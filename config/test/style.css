@@ -126,6 +126,11 @@ window#waybar  {
   margin-right: 2px;
 }
 
+#memory,
+#cpu {
+  min-width: 45px;
+}
+
 #custom-voxtype,
 #custom-screenrecording-indicator,
 #custom-update,
@@ -143,11 +148,6 @@ window#waybar  {
 #clock {
   padding-left: 0px;
   margin-left: 30px;
-}
-
-#battery {
-  padding-right: 0px;
-  margin-right: 0px;
 }
 
 #tray {
