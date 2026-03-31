@@ -120,12 +120,12 @@
   },
   "cpu": {
     "interval": 2,
-    "format": "<span size='6pt'>CPU </span>{usage}%",
+    "format": "<span size='6pt'>CPU </span>{usage:2}%",
     "on-click": "omarchy-launch-or-focus-tui btop"
   },
     "memory": {
     "interval": 2,
-    "format": "<span size='6pt'>MEM </span>{percentage}%",
+    "format": "<span size='6pt'>MEM </span>{percentage:2}%",
     "on-click": "omarchy-launch-or-focus-tui btop"
   },
   "clock": {
