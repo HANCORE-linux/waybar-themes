@@ -70,9 +70,8 @@ button:hover {
   border: 1px solid @border-inactive_ws;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
   border-radius: 3px;
-  padding: 1px 0px;
+  padding: 1px 35px;
   background-color: alpha (@fg, 0.75);
-  min-width: 70px;
   margin: 0px 1px;
   opacity: 1;
   color: @fg;
