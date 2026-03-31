@@ -145,6 +145,10 @@ window#waybar  {
   margin-left: 30px;
 }
 
+#battery {
+  padding-right: 0px;
+}
+
 #tray {
 opacity: 1;
 }
