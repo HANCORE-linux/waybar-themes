@@ -342,7 +342,7 @@ git clone https://github.com/HANCORE-linux/waybar-themes.git /tmp/repo && cp -rf
 - bottom bar - shipped with some text based modules + accent colors 
 ##### V2.9a Install-command (copy and paste in your terminal): <br>
 ```bash
-git clone https://github.com/HANCORE-linux/waybar-themes.git /tmp/repo && cp -rf /tmp/repo/config/V2.9/. ~/.config/waybar && rm -rf /tmp/repo && omarchy-restart-waybar
+git clone https://github.com/HANCORE-linux/waybar-themes.git /tmp/repo && cp -rf /tmp/repo/config/V2.9a/. ~/.config/waybar && rm -rf /tmp/repo && omarchy-restart-waybar
 ```
 <img src="https://github.com/HANCORE-linux/waybar-themes/blob/main/config/V2.9a/screenshot-2026-03-31_13-33-41.png?raw=true"/>
 
