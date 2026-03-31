@@ -1,7 +1,7 @@
 {
   "exclusive": true,
   "reload_style_on_change": true,
-  "position": "left",
+  "position": "bottom",
   "margin-top": 0,
   "spacing": 0,
   "height": 0,
@@ -18,15 +18,15 @@
   ],
   "modules-center": ["mpris"],
   "modules-right": [
-    "tray",
+    "group/tray-expander",
     "backlight",
     "bluetooth",
     "network",
-    "pulseaudio",
     "power-profiles-daemon",
+    "pulseaudio",
+    "battery",
     "memory",
     "cpu",
-    "battery",
     "clock"
   ],
   "hyprland/workspaces": {
@@ -48,7 +48,7 @@
     }
 },
 "custom/separator": {
-    "format": "", 
+    "format": "󰇙", 
     "tooltip": false
 },
   "custom/update": {
@@ -86,26 +86,30 @@
   },
     "power-profiles-daemon": {
     "justify": "center",
-    "format": "{icon}\npow",
+    "format": "power {icon}",
     "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
     "tooltip": true,
    "format-icons": {
-      "performance": "perf",
-      "balanced": "bal",
-      "power-saver": "save"
+      "performance": "<span style='italic'weight='900' color='#df6124'>performance</span>",
+      "balanced": "<span style='italic' weight='900' color='#df6124'>balanced</span>",
+      "power-saver": "<span style='italic' weight='900' color='#df6124'>saver</span>"
     }
   },
   "cpu": {
     "justify": "center",
     "interval": 10,
-    "format": "{usage}%\ncpu",
-    "on-click": "omarchy-launch-or-focus-tui btop"
+    "format": "{usage}% cpu",
+    "on-click": "omarchy-launch-or-focus-tui btop",
+    "states": {
+        "warning": 50,
+        "critical": 80
+    }
   },
   "backlight": {
     "justify": "center",
         "device": "intel_backlight",
         "rotate": 0,
-        "format": "{percent}%\nbl",
+        "format": "bl {percent}%",
         "tooltip-format": "🌕 {percent}%",
             "format-icons": [
       "󰃜",
@@ -118,12 +122,16 @@
   "memory": {
     "justify": "center",
     "interval": 2,
-    "format": " {percentage}%\n mem",
-    "on-click": "omarchy-launch-or-focus-tui btop"
+    "format": " {percentage}% mem",
+    "on-click": "omarchy-launch-or-focus-tui btop",
+       "states": {
+        "warning": 50,
+        "critical": 80
+    }
   },
   "clock": {
     "justify": "center",
-    "format": "{:%d/%m\n%H:%M}",
+    "format": "<span weight='900'>{:%H:%M\n%d/%m}</span>",
     "format-alt": "{:L%d %B W%V %Y}",
     "tooltip-format": "<span>{calendar}</span>",
     "calendar": {
@@ -148,9 +156,9 @@
     ],
     "justify": "center",
     "format": "{icon}",
-    "format-wifi": "{signalStrength}%\nnet",
-    "format-ethernet": "on\nnet",
-    "format-disconnected": "󰤮\n󰈀",
+    "format-wifi": "network <span style='italic' weight='900' color='#df6124'>{signalStrength}%</span>",
+    "format-ethernet": "network <span style='italic' weight='900' color='#df6124'>on</span>",
+    "format-disconnected": "<span style='italic' weight='900' color='#df6124'>off 󰤮/󰈀 </span>",
     "tooltip-format-wifi": "{essid} ({frequency} GHz)\n⇣{bandwidthDownBytes}  ⇡{bandwidthUpBytes}",
     "tooltip-format-ethernet": "⇣{bandwidthDownBytes}  ⇡{bandwidthUpBytes}",
     "tooltip-format-disconnected": "Disconnected",
@@ -160,10 +168,10 @@
   },
   "battery": {
     "justify": "center",
-    "format": "{capacity}%\nbat",
-    "format-discharging": "{capacity}%\nbat",
-    "format-charging": "{capacity}%\nbat",
-    "format-plugged": "{capacity}%\nbat_p",
+    "format": "bat {capacity}%",
+    "format-discharging": "bat {capacity}%",
+    "format-charging": "bat {capacity}%",
+    "format-plugged": "bat_p {capacity}%",
     "format-icons": {
       "charging": [
         "󰢜",
@@ -190,7 +198,7 @@
         "󰁹"
       ]
     },
-    "format-full": "{capacity}%\nbat_f",
+    "format-full": "bat_f {capacity}%",
     "tooltip-format-discharging": "{timeTo}",
     "tooltip-format-charging": "{timeTo}",
     "interval": 5,
@@ -202,20 +210,20 @@
   },
  "bluetooth": {
   "justify": "center",
-    "format": "{num_connections}\nbt",
-    "format-disabled": "{status}\nbt",
-    "format-connected": "{num_connections}\nbt",
+    "format": "bt <span style='italic' weight='900' color='#df6124'>{status}</span> {num_connections}",
+    "format-disabled": "bt <span style='italic' weight='900' color='#df6124'>{status}</span>",
+    "format-connected": "bt {num_connections}",
     "tooltip-format": "Devices connected: {num_connections}",
     "on-click": "omarchy-launch-bluetooth"
   },
   "pulseaudio": {
     "justify": "center",
-    "format": "{volume}%\nvol",
+    "format": "vol {volume}%",
     "on-click": "omarchy-launch-audio",
     "on-click-right": "pamixer -t",
     "tooltip-format": "Playing at {volume}%",
     "scroll-step": 5,
-    "format-muted": "",
+    "format-muted": "vol <span style='italic' weight='900' color='#df6124'>muted</span>",
     "format-icons": {
       "headphone": "",
       "default": ["", "", ""]
@@ -223,10 +231,9 @@
   },
    "mpris": {
     "justify": "center",
-    "rotate": 90,
     "format": " {artist} - {title}",
     "format-paused": "<span color='grey'>{status_icon}</span>",
-    "max-length": 25,
+    "max-length": 45,
     "player-icons": {
       "default": "⏸",
       "mpv": "🎵"
@@ -240,7 +247,7 @@
     "format": "{}{icon}",
     "return-type": "json",
     "format-icons": {
-      "has-updates": "󰏖",
+      "has-updates": " 󰏖",
       "updated": ""
     },
     "exec-if": "which waybar-module-pacman-updates",
@@ -254,14 +261,11 @@
     },
     "modules": [
       "custom/expand-icon",
-      "tray",
-      "custom/separator",
-      "",
- 
+      "tray"
       ]
   },
   "custom/expand-icon": {
-    "format": " ",
+    "format": " ",
     "tooltip": false
   },
   "tray": {
