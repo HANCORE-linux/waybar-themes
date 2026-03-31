@@ -124,6 +124,7 @@ window#waybar  {
 
 #clock {
   margin-right: 2px;
+  margin-left: 30px;
 }
 
 #memory,
@@ -145,18 +146,10 @@ window#waybar  {
   padding-top: 0px;
 }
 
-#clock {
-  padding-left: 0px;
-  margin-left: 30px;
-}
-
 #tray {
 opacity: 1;
 }
 
-#pulseaudio {
-  padding: 0px;
-}
 
 #custom-separator {
   opacity: 0.2;

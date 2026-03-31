@@ -96,9 +96,8 @@
     }
   },
   "cpu": {
-    "justify": "center",
     "interval": 10,
-    "format": "{usage}% cpu",
+    "format": "cpu {usage}%",
     "on-click": "omarchy-launch-or-focus-tui btop",
     "states": {
         "warning": 50,
@@ -106,7 +105,6 @@
     }
   },
   "backlight": {
-    "justify": "center",
         "device": "intel_backlight",
         "rotate": 0,
         "format": "bl {percent}%",
@@ -120,9 +118,8 @@
     ]
    },
   "memory": {
-    "justify": "center",
     "interval": 2,
-    "format": " {percentage}% mem",
+    "format": "mem {percentage}%",
     "on-click": "omarchy-launch-or-focus-tui btop",
        "states": {
         "warning": 50,
@@ -132,7 +129,7 @@
   "clock": {
     "justify": "right",
     "format": "<span weight='900'>{:%H:%M\n%d/%m/%y}</span>",
-    "format-alt": "{:L%d %B W%V %Y}",
+    "format-alt": "{:%H:%M\nL%d %B W%V %Y}",
     "tooltip-format": "<span>{calendar}</span>",
     "calendar": {
       "mode": "month",
