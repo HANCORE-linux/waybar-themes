@@ -118,13 +118,13 @@
     "return-type": "json"
   },
   "power-profiles-daemon": {
-    "format": "<span size='6pt' color='#df6124'>POWER </span>{profile}",
+    "format": "<span size='6pt' color='#df6124'>POWER </span>{icon}",
     "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
     "tooltip": true,
     "format-icons": {
-      "performance": " ",
-      "balanced": " ",
-      "power-saver": " "
+      "performance": "rapidity",
+      "balanced": "balanced",
+      "power-saver": "ecomode "
     }
   },
   "cpu": {
