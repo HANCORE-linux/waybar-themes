@@ -45,7 +45,7 @@
 }
 
 
-#center1 > widget > * {
+#center-group > widget > * {
     margin: 0px 0px 0px 0px;
 }
 
@@ -74,7 +74,7 @@ button:hover {
   border-radius: 3px;
   padding: 1px 0px;
   background-color: alpha (@fg, 0.75);
-  min-width: 80px;
+  min-width: 88px;
   margin: 0px 1px;
   opacity: 1;
   color: @fg;
@@ -137,7 +137,7 @@ button:hover {
 #custom-updatespacman,
 #custom-screenrecording-indicator {
   min-width: 25px;
-  margin: 5px 10px 5px 10px;
+  margin: 5px 18px 5px 18px;
   padding-left: 0px;
   padding-right: 0px;
 
