@@ -124,7 +124,8 @@ window#waybar  {
 
 #clock {
   margin-right: 2px;
-  margin-left: 30px;
+  padding-left: 0px;
+  margin-left: 2px;
 }
 
 #memory,
@@ -158,6 +159,16 @@ opacity: 1;
   padding-right: 5px;
   padding-bottom: 0px;
   margin: 0px;
+}
+
+#custom-separator2 {
+  opacity: 0.2;
+  padding-top: 2px;
+  padding-left: 3px;
+  padding-right: 0px;
+  padding-bottom: 0px;
+  margin-right: 0px;
+  font-size: 20px;
 }
 
 tooltip {

@@ -27,6 +27,7 @@
     "battery",
     "memory",
     "cpu",
+    "custom/separator",
     "clock"
   ],
   "hyprland/workspaces": {
@@ -128,7 +129,7 @@
   },
   "clock": {
     "justify": "right",
-    "format": "<span weight='900'>{:%H:%M\n%d/%m/%y}</span>",
+    "format": "<span weight='900'>{:%H:%M\n%d/%m}</span>",
     "format-alt": "{:%H:%M\nL%d %B W%V %Y}",
     "tooltip-format": "<span>{calendar}</span>",
     "calendar": {
