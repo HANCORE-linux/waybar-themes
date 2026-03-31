@@ -98,7 +98,7 @@
   },
   "cpu": {
     "interval": 10,
-    "format": "cpu {usage}%",
+    "format": "cpu {usage:02}%",
     "on-click": "omarchy-launch-or-focus-tui btop",
     "states": {
         "warning": 50,
@@ -120,7 +120,7 @@
    },
   "memory": {
     "interval": 2,
-    "format": "mem {percentage}%",
+    "format": "mem {percentage:02}%",
     "on-click": "omarchy-launch-or-focus-tui btop",
        "states": {
         "warning": 50,

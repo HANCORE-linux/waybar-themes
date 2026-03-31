@@ -129,11 +129,6 @@ window#waybar  {
   margin-left: 2px;
 }
 
-#memory,
-#cpu {
-  min-width: 45px;
-}
-
 #custom-voxtype,
 #custom-screenrecording-indicator,
 #custom-update,
