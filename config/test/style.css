@@ -151,11 +151,6 @@ tooltip {
 }
 
 
-#memory,
-#cpu {
-min-width: 45px;
-}
-
 #custom-expand-icon {
   padding-left: 0;
 }
