@@ -37,30 +37,21 @@
   margin: 1px 4px 2px 4px;
   background-color: @bg;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 1);
-  min-height: 15px;
+  min-height: 30px;
   transition-property: background-color;
   transition-duration: .5s;
-  min-height: 25px;
   font-size: 12px;
   font-weight: bold;
 }
 
 
-#center2 {
-  margin-left: 5px;
-  margin-right: 5px;
-  padding: 0px 0px;
-}
-
-#center1 {
-
+.modules-center > widget > * {
+    margin: 0px 0px 0px 0px;
 }
 
 #workspaces {
   padding: 0px 0px;
   margin: 0px 0px;
-  background-color: @bg;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
 }
 
 button {
@@ -78,10 +69,9 @@ button:hover {
   all: initial;
   border: 1px solid @border-inactive_ws;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
-  border-radius: 16px;
-  padding: 0px 0px;
-  background-color: @fg;
-  min-width: 70px;
+  border-radius: 3px;
+  padding: 1px 35px;
+  background-color: alpha (@fg, 0.75);
   margin: 0px 1px;
   opacity: 1;
   color: @fg;
@@ -144,9 +134,9 @@ button:hover {
 #custom-updatespacman,
 #custom-screenrecording-indicator {
   min-width: 25px;
-  margin: 3px 2px 4px 2px;
-  padding-left: 6px;
-  padding-right: 6px;
+  margin: 5px 5px 5px 5px;
+  padding-left: 0px;
+  padding-right: 0px;
 
 }
 
@@ -160,14 +150,6 @@ tooltip {
   padding: 2px;
 }
 
-
-#custom-spacer {
-  padding: 0 0px;
-  margin-right: 0px;
-  min-width: 25px;
-  min-height: 0;
-  font-size: 0px;
-}
 
 #custom-expand-icon {
   padding-left: 0;
@@ -192,14 +174,21 @@ tooltip {
   opacity: 0;
 }
 
+#custom-spacer-desktop {
+  padding: 0 0px;
+  margin-right: 0px;
+  min-width: 25px;
+  min-height: 0;
+  font-size: 0px;
+}
 
 #group-tray-expander {
   background-color: @bg;
   color: @fg;
 }
 
-#custom-updatespacman {
-  opacity: 0.55;
+#custom-updatespacman.has-updates {
+  opacity: 1;
 }
 
 #custom-separator {
@@ -253,11 +242,11 @@ tooltip label {
 
 #custom-idle-indicator,
 #custom-notification-silencing-indicator {
-  min-width: 10px;
-  margin-left: 0;
-  margin-right: 0;
-  font-size: 11px;
-  padding-bottom: 1px;
+  min-width: 15px;
+  margin-left: 1px;
+  margin-right: 1px;
+  font-size: 12px;
+  padding-bottom: 0px;
 }
 
 #custom-idle-indicator.active,

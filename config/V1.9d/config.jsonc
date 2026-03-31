@@ -2,22 +2,15 @@
   "exclusive": true,
   "reload_style_on_change": true,
   "position": "top",
-  "width": 220,
+  "width": 10,
   "spacing": 0,
   "margin-top": 0,
-  "expand-left": true,     
-  "expand-center": true,   
-  "expand-right": true,    
-  "no-center": false,      
-  "fixed-center": true,
   
-  "modules-center": ["group/center-group"],
+"modules-center": ["group/center-group"],
 
 
 "group/center-group": {
   "orientation": "vertical",
-  "justify": "center",
-  "align": "center",
   "modules": [
   "group/center2",
   "group/center1"
@@ -27,16 +20,14 @@
 
 "group/center1":{
   "orientation": "horizontal",
-  "justify": "center",
-  "align": "center",
-  "modules": ["custom/spacer","hyprland/workspaces"]
+  "modules": ["hyprland/workspaces"]
 },
 
   "group/center2": {
   "orientation": "horizontal",
 
    "modules": [
-  
+    "custom/spacer-desktop",
     "clock",
     "custom/idle-indicator",
     "custom/notification-silencing-indicator",
@@ -60,14 +51,6 @@
     "memory",
     "cpu" 
  ]
-},
-
-"custom/spacer": {
-  "exec": "if ls /sys/class/power_supply/BAT* >/dev/null 2>&1 || ls /sys/class/backlight/* >/dev/null 2>&1; then echo ' '; else echo ''; fi",
-  "format": "{}",
-  "hide-empty-text": true,
-  "tooltip": false,
-  "interval": "once"
 },
   "hyprland/workspaces": {
    "align": "center",
@@ -93,6 +76,13 @@
 "custom/separator": {
     "format": "|", 
     "tooltip": false
+},
+"custom/spacer-desktop": {
+    "exec": "if ls /sys/class/power_supply/BAT* >/dev/null 2>&1 || ls /sys/class/backlight/* >/dev/null 2>&1; then echo ''; else echo '    '; fi",
+    "format": "{}",
+    "hide-empty-text": true,
+    "tooltip": false,
+    "interval": "once"
 },
   "custom/update": {
     "format": "",
@@ -257,14 +247,14 @@
     }
   },
  "custom/updatespacman": {
-    "format": "{}{icon}",
+    "format": "{} {icon}",
     "return-type": "json",
     "format-icons": {
-      "has-updates": " 󰏖",
-      "updated": ""
+      "has-updates": "󰏖",
+      "updated": "󰂪"
     },
     "exec-if": "which waybar-module-pacman-updates",
-    "exec": "waybar-module-pacman-updates --no-zero-output"
+    "exec": "waybar-module-pacman-updates --interval-seconds 5 --network-interval-seconds 300"
   },
   "custom/screenrecording-indicator": {
     "on-click": "omarchy-cmd-screenrecord",
