@@ -129,6 +129,10 @@ window#waybar  {
   margin-left: 2px;
 }
 
+#cpu {
+  padding-bottom: 1px;
+}
+
 #custom-voxtype,
 #custom-screenrecording-indicator,
 #custom-update,
