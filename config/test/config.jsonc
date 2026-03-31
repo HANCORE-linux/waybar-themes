@@ -2,7 +2,7 @@
   "exclusive": true,
   "reload_style_on_change": true,
   "position": "top",
-  "width": 500,
+  "width": 10,
   "spacing": 0,
   "margin-top": 0,
   
@@ -11,8 +11,6 @@
 
 "group/center-group": {
   "orientation": "vertical",
-  "justify": "center",
-  "align": "center",
   "modules": [
   "group/center2",
   "group/center1"

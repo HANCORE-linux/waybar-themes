@@ -46,17 +46,12 @@
 
 
 .modules-center > widget > * {
-    margin: 0px 10px 0px 10px;
-}
-
-#workspaces > widget > * {
-    margin: 0px 0px 0px 10px;
+    margin: 0px 0px 0px 0px;
 }
 
 #workspaces {
   padding: 0px 0px;
   margin: 0px 0px;
-  min-width: 0px;
 }
 
 button {
@@ -156,6 +151,11 @@ tooltip {
   padding: 2px;
 }
 
+
+#memory,
+#cpu {
+min-width: 45px;
+}
 
 #custom-expand-icon {
   padding-left: 0;
