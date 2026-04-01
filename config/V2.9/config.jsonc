@@ -90,9 +90,9 @@
     "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
     "tooltip": true,
    "format-icons": {
-      "performance": "<span style='italic'weight='900'>perf</span>",
+      "performance": "<span style='italic'weight='900'>per</span>",
       "balanced": "<span style='italic' weight='900'>bal</span>",
-      "power-saver": "<span style='italic' weight='900'>save</span>"
+      "power-saver": "<span style='italic' weight='900'>eco</span>"
     }
   },
   "cpu": {
