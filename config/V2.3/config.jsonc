@@ -142,12 +142,12 @@
   },
  "cpu": {
     "interval": 2,
-    "format": " {usage}%",
+    "format": " {usage:02}%",
     "on-click": "omarchy-launch-or-focus-tui btop"
   },
   "memory": {
     "interval": 2,
-    "format": " {percentage}%",
+    "format": " {percentage:02}%",
     "on-click": "omarchy-launch-or-focus-tui btop"
   },
   "clock": {
