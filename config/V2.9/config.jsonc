@@ -98,8 +98,12 @@
   "cpu": {
     "justify": "center",
     "interval": 10,
-    "format": "{usage}%\ncpu",
-    "on-click": "omarchy-launch-or-focus-tui btop"
+    "format": "{usage:02}%\ncpu",
+    "on-click": "omarchy-launch-or-focus-tui btop",
+    "states": {
+        "warning": 50,
+        "critical": 80
+    }
   },
   "backlight": {
     "justify": "center",
@@ -118,13 +122,17 @@
   "memory": {
     "justify": "center",
     "interval": 2,
-    "format": " {percentage}%\n mem",
-    "on-click": "omarchy-launch-or-focus-tui btop"
+    "format": " {percentage:02}%\n mem",
+    "on-click": "omarchy-launch-or-focus-tui btop",
+    "states": {
+        "warning": 50,
+        "critical": 80
+    }
   },
   "clock": {
     "justify": "center",
     "format": "<span weight='900'>{:%d/%m\n%H:%M}</span>",
-    "format-alt": "{:L%d %B W%V %Y}",
+    "format-alt": "<span weight='900'>{:%d/%m\n%H:%M}</span>",
     "tooltip-format": "<span>{calendar}</span>",
     "calendar": {
       "mode": "month",
@@ -150,7 +158,7 @@
     "format": "{icon}",
     "format-wifi": "{signalStrength}%\nnet",
     "format-ethernet": "<span style='italic' weight='900'>on</span>\nnet",
-    "format-disconnected": "󰤮\n󰈀",
+"format-disconnected": "<span style='italic' weight='900' color='#df6124'>󰤮\n󰈀</span>",
     "tooltip-format-wifi": "{essid} ({frequency} GHz)\n⇣{bandwidthDownBytes}  ⇡{bandwidthUpBytes}",
     "tooltip-format-ethernet": "⇣{bandwidthDownBytes}  ⇡{bandwidthUpBytes}",
     "tooltip-format-disconnected": "Disconnected",
