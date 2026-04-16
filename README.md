@@ -348,7 +348,7 @@ git clone https://github.com/HANCORE-linux/waybar-themes.git /tmp/repo && cp -rf
 
 ## Screenshots V2.9b
 - top bar version of V2.9a - shipped with some text based modules + extra accent colors on workspace module 
-##### V2.9a Install-command (copy and paste in your terminal): <br>
+##### V2.9b Install-command (copy and paste in your terminal): <br>
 ```bash
 git clone https://github.com/HANCORE-linux/waybar-themes.git /tmp/repo && cp -rf /tmp/repo/config/V2.9b/. ~/.config/waybar && rm -rf /tmp/repo && omarchy-restart-waybar
 ```
