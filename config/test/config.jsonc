@@ -244,17 +244,15 @@
     }
   },
    "mpris": {
-    "format": " {title}",
-    "format-paused": "<span color='grey'>{artist}</span>",
-    "max-length": 10,
-    "player-icons": {
-      "default": "⏸",
-      "mpv": "🎵"
-    },
+    "format": " {dynamic}",
+    "format-paused": "<span color='grey'>{status_icon} {dynamic}</span>",
+    "title-len": 15,
+    "dynamic-order": ["title"],
     "status-icons": {
       "paused": "󰝛"
     },
-    "ignored-players": ["firefox", "chromium", "brave"]
+    "ignored-players": ["firefox", "chromium", "brave"],
+    "ignore-dynamic": ["album", "length"]
   },
   "idle_inhibitor": {
     "format": "{icon}",
