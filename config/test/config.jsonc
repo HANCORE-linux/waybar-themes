@@ -246,7 +246,7 @@
    "mpris": {
     "format": " {title}",
     "format-paused": "<span color='grey'>{artist}</span>",
-    "max-length": 25,
+    "max-length": 10,
     "player-icons": {
       "default": "⏸",
       "mpv": "🎵"
