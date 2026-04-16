@@ -30,6 +30,7 @@
     "backlight",
     "custom/separator4",
     "battery",
+    "custom/separator4",
     "power-profiles-daemon",
     "custom/separator3",
     "network",
