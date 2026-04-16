@@ -28,6 +28,7 @@
     "bluetooth",
     "custom/separator3",
     "backlight",
+    "custom/separator4",
     "battery",
     "power-profiles-daemon",
     "custom/separator3",
@@ -68,6 +69,11 @@
 "custom/separator3": {
     "format": "󰿟", 
     "tooltip": false
+},
+"custom/separator4": {
+    "exec": "sh -c '[ -d /sys/class/backlight ] && [ \"$(ls -A /sys/class/backlight 2>/dev/null)\" ] && ls /sys/class/power_supply 2>/dev/null | grep -q \"^BAT\" && echo \"󰿟\"'",
+    "tooltip": false,
+    "interval": "once"
 },
   "custom/update": {
     "format": "",
