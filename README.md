@@ -346,6 +346,14 @@ git clone https://github.com/HANCORE-linux/waybar-themes.git /tmp/repo && cp -rf
 ```
 <img src="https://github.com/HANCORE-linux/waybar-themes/blob/main/config/V2.9a/screenshot-2026-03-31_13-33-41.png?raw=true"/>
 
+## Screenshots V2.9b
+- top bar version of V2.9a - shipped with some text based modules + extra accent colors on workspace module 
+##### V2.9a Install-command (copy and paste in your terminal): <br>
+```bash
+git clone https://github.com/HANCORE-linux/waybar-themes.git /tmp/repo && cp -rf /tmp/repo/config/V2.9b/. ~/.config/waybar && rm -rf /tmp/repo && omarchy-restart-waybar
+```
+<img src="https://github.com/HANCORE-linux/waybar-themes/blob/main/config/V2.9b/screenshot-2026-04-16_17-00-15.png?raw=true"/>
+
 ## Screenshots V3
 - new waybar Style (without red accents)
 - base config is [from](https://github.com/CobyPowers/omarchy/tree/master/config/waybar) (Credits goes [to](https://github.com/CobyPowers)) , i added some functions according to my needs and changed the high <br>
