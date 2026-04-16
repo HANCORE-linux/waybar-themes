@@ -244,9 +244,9 @@
     }
   },
    "mpris": {
-    "format": " {artist} - {title}",
-    "format-paused": "<span color='grey'>{status_icon}</span>",
-    "max-length": 75,
+    "format": " {title}",
+    "format-paused": "<span color='grey'>{artist}</span>",
+    "max-length": 25,
     "player-icons": {
       "default": "⏸",
       "mpv": "🎵"
