@@ -1,216 +1,204 @@
 @import "../omarchy/current/theme/waybar.css";
 
-@define-color bg @background;
-@define-color fg @foreground;
-@define-color fg2 #df6124;
-@define-color border alpha(@foreground, 0.1);
-@define-color border-inactive_ws alpha(@foreground, 0.5);
-@define-color border-active_ws alpha(@foreground, 1);
-@define-color hover_bg @foreground;
-@define-color hover_fg @background;
 
 * {
   /* background-color: @background; */
   /* color: @foreground; */
-  
-  border-radius: 0;
+
   border: none;
-  text-shadow: none;
-  padding: 0;
-	min-height: 0;
-  font-family: 'JetBrains Mono Nerd Font';
-    text-shadow: 0 0 5px #1b1b1b, /* Soft inner glow */
-                 0 0 5px #2b2b2b, /* Brighter glow */
-                 0 0 5px #3d3d3d, /* Even brighter */
-                 0 0 5px #100c08; /* Wider glow */
+  padding: 0px;
+  font-family: "JetBrains Mono Nerd Font";
+  transition: background-color .3s ease-out;
+  font-weight: bold;
+  font-size: 12px;
 }
 
-#waybar  {
+window#waybar  {
   background-color: transparent;
-  transition-property: background-color;
-  transition-duration: .5s;
 }
 
 #waybar > box {
-  border-radius: 3px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  margin: 1px 4px 2px 4px;
-  background-color: @bg;
+  border-radius: 0px;
+  border-bottom: 1.5px solid rgba(255, 255, 255, 0.1);
+  margin: 0px 0px 2px 0px;
+  background-color: @background;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 1);
-  min-height: 30px;
+  min-height: 25px;
   transition-property: background-color;
   transition-duration: .5s;
-  font-size: 12px;
-  font-weight: bold;
 }
 
+.modules-left {
+margin-left: 4px;
+}
 
-.modules-center > widget > * {
-    margin: 0px 0px 0px 0px;
+.modules-right {
+  margin-right: 4px;
 }
 
 #workspaces {
-  padding: 0px 0px;
-  margin: 0px 0px;
-}
-
-button {
-  box-shadow: inset 0 -3px transparent;
-  border: none;
-  border-radius: 0;
-  transition: 0.3s ease-in-out;
-}
-
-button:hover {
-  background: inherit;
+    margin: 0px 0px;
+    transition: 0.1s ease-in-out;
+    padding: 0px 0px;
 }
 
 #workspaces button {
   all: initial;
-  border: 1px solid @border-inactive_ws;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
-  border-radius: 3px;
-  padding: 1px 35px;
-  background-color: alpha (@fg, 0.75);
-  margin: 0px 1px;
+  padding: 0px 4px;
+  margin: 4px 2px;
+  min-width: 10px;
+  color: @foreground;
+  border: none;
   opacity: 1;
-  color: @fg;
-  font-size: 0px;
-  font-weight: bold;
+  font-weight: 900;
 }
 
 #workspaces button.active {
-  color: @border-active_ws;
-  border: 1.5px solid @fg2;
+  color: @background;
+  background-color: @foreground;
+  padding: 0px 4px;
+  margin: 4px 2px;
   opacity: 1.0;
-  font-size: 0px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+
+}
+
+#workspaces button.empty:hover, 
+#workspaces button:hover {
+    background: transparent;
+    color: alpha(@foreground, 1);
+    transition: all 150ms ease;
+    opacity: 0.75;
 }
 
 #workspaces button.empty {
-  opacity: 0.45;
-  font-size: 0px;
-  color: @fg;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+  opacity: 0.4;
+  padding: 0px 4px;
+  margin: 4px 2px;
+  color: alpha(@foreground, 0.45);
 }
 
 #workspaces button.empty.active {
-  font-size: 0px;
-  color: @fg;
-  opacity: 1.0;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+  opacity: 1;
+  background-color: @foreground;
+  color: @background;
 }
 
-#workspaces button.empty:hover,
-#workspaces button:hover {
-  background: @hover_bg;
-  color: @hover_fg;
-  opacity: 1.0;
-}
-
-
-#tray,
-#clock,
-#cpu,
 #memory,
+#mpris,
+#custom-expand-icon,
+#tray,
+#cpu,
+#custom-clock,
 #battery,
 #backlight,
 #network,
 #bluetooth,
 #pulseaudio,
 #power-profiles-daemon,
-#mpris,
-#temperature,
+#power-profiles-daemon.performance,
+#power-profiles-daemon.balanced,
+#power-profiles-daemon.power-saver,
+#custom-omarchy,
 #idle_inhibitor,
-#group-tray-expander,
-#custom-update,
 #custom-idle-indicator,
 #custom-notification-silencing-indicator,
-#custom-voxtype,
-#custom-voxtype.recording,
-#custom-voxtype.transcribing,
-#custom-expand-icon,
-#custom-omarchy,
 #custom-updatespacman,
-#custom-screenrecording-indicator {
-  min-width: 25px;
- margin: 5px 5px 5px 5px;
-  padding-left: 0px;
-  padding-right: 0px;
-
+#custom-screenrecording-indicator,
+#custom-update {
+  min-width: 12px;
+  padding: 0 4px;
+  margin: 1px 3px 1px 3px;
+  opacity: 1;
 }
 
 #custom-update {
-font-size: 10px;
-padding-left: 2px;
-padding-right: 2px;
+opacity: 1;
+}
+	
+
+#custom-updatespacman {
+opacity: 1;
+}
+
+#bluetooth {
+padding-left: 0px;
+}
+
+#tray {
+opacity: 1;
+padding-top: 2px;
+}
+
+#idle_inhibitor {
+opacity: 0.5;
+}
+
+
+#idle_inhibitor.activated {
+opacity: 1;
+}
+
+#network {
+  margin-left: 0;
+}
+
+#custom-separator3,
+#custom-separator2,
+#custom-separator {
+  opacity: 0.2;
+  padding-top: 2px;
+  padding-left: 2px;
+  padding-right: 2px;
+  font-size: 14px;
 }
 
 tooltip {
   padding: 2px;
 }
 
-
-#custom-expand-icon {
-  padding-left: 0;
+#custom-idle-indicator,
+#custom-notification-silencing-indicator {
+  min-width: 12px;
+  margin-left: 0;
+  margin-right: 0;
+  font-size: 12px;
+  padding-bottom: 0px;
 }
 
-#tray {
-    background-color: transparent;
-    padding: 0;
-    padding-top: 1px;
-}
-
-#tray > .passive {
-    -gtk-icon-effect: dim;
-}
-
-#tray > .needs-attention {
-    -gtk-icon-effect: highlight;
-    background-color: @bg;
+#custom-idle-indicator.active,
+#custom-notification-silencing-indicator.active {
+  color: #a55555;
+  opacity: 1;
 }
 
 .hidden {
   opacity: 0;
 }
 
-#custom-spacer-desktop {
-  padding: 0 0px;
-  margin-right: 0px;
-  min-width: 25px;
-  min-height: 0;
-  font-size: 0px;
-}
-
-#group-tray-expander {
-  background-color: @bg;
-  color: @fg;
-}
-
-#custom-updatespacman.has-updates {
-  opacity: 1;
-}
-
-#custom-separator {
-  opacity: 0.2;
-  padding-top: 2px;
-  padding-left: 4px;
-  padding-right: 4px;
-  color: @border-inactive;
-}
-
 tooltip {
  padding: 4px;
- background: @bg;
- font-size: 11px;
+ background: @background;
+ font-size: 10px;
+ border: 1.5px solid alpha(@foreground, 0.6);
  border-radius: 8px;
- border: 1.5px solid rgba(255, 255, 255, 0.25);
+ 
 }
 tooltip label {
-    color: @fg;
+    color: alpha(@foreground, 0.65);
+    font-weight: normal;
+}
+
+#custom-voxtype {
+  min-width: 12px;
+  margin: 0 0 0 2.5px;
+}
+
+#custom-voxtype.recording {
+  color: #a55555;
 }
 
 /* Specific animation Module */
+
 
 #custom-screenrecording-indicator {
   animation-timing-function: linear;
@@ -227,41 +215,41 @@ tooltip label {
 
 @keyframes blink-recording {
     to {
-        color: @bg;
+        color: @background;
     }
 }
 
-#custom-voxtype {
-  min-width: 12px;
-  margin: 0 0 0 2.5px;
+@keyframes blink-inhibitor {
+    to {
+        color: @background;
+    }
 }
 
-#custom-voxtype.recording {
-  color: #a55555;
+#mpris {
+opacity: 1;
+color: @foreground;
+animation: repeat;
+	animation-name: blink;
+	animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
 }
 
-#custom-idle-indicator,
-#custom-notification-silencing-indicator {
-  min-width: 15px;
-  margin-left: 1px;
-  margin-right: 1px;
-  font-size: 12px;
-  padding-bottom: 0px;
-}
-
-#custom-idle-indicator.active,
-#custom-notification-silencing-indicator.active {
-  color: #a55555;
+@keyframes blink {
+    to {
+        color: #4a4a4a;
+        
+    }
 }
 
 #battery.warning {
   color: #c95d0f;
-  background-color: @bg;
 }
 
 @keyframes blink2 {
   to {
-    background-color: @bg;
+    background-color: transparent;
     color: #f53c3c;
   }
 }
@@ -274,4 +262,16 @@ tooltip label {
   animation-timing-function: steps(12);
   animation-iteration-count: infinite;
   animation-direction: alternate;
+}
+
+#pulseaudio.warning,
+#memory.warning,
+#cpu.warning {
+    color: #e3c1b1; /* medium load */
+}
+
+#pulseaudio.critical,
+#memory.critical,
+#cpu.critical {
+    color: #df6124; /* high load */
 }
