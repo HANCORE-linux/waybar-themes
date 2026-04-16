@@ -167,9 +167,9 @@
       "󰤨"
     ],
     "format": "{icon}",
-    "format-wifi": "network <span style='italic' weight='900' color='#df6124'>{signalStrength}%</span>",
-    "format-ethernet": "network <span style='italic' weight='900' color='#df6124'>on</span>",
-    "format-disconnected": "network <span style='italic' weight='900' color='#df6124'>off 󰤮 / 󰈀 </span>",
+    "format-wifi": "net <span style='italic' weight='900' color='#df6124'>{signalStrength}%</span>",
+    "format-ethernet": "net <span style='italic' weight='900' color='#df6124'>on</span>",
+    "format-disconnected": "net <span style='italic' weight='900' color='#df6124'>off 󰤮 / 󰈀 </span>",
     "tooltip-format-wifi": "{essid} ({frequency} GHz)\n⇣{bandwidthDownBytes}  ⇡{bandwidthUpBytes}",
     "tooltip-format-ethernet": "⇣{bandwidthDownBytes}  ⇡{bandwidthUpBytes}",
     "tooltip-format-disconnected": "Disconnected",
