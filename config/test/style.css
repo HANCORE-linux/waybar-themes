@@ -1,5 +1,6 @@
 @import "../omarchy/current/theme/waybar.css";
-
+@define-color bg @background;
+@define-color fg @foreground;
 
 * {
   /* background-color: @background; */
@@ -48,7 +49,6 @@ margin-left: 4px;
   margin: 4px 2px;
   min-width: 10px;
   color: @foreground;
-  border: none;
   opacity: 1;
   font-weight: 900;
 }

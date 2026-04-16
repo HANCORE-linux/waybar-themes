@@ -115,9 +115,9 @@
     "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
     "tooltip": true,
    "format-icons": {
-      "performance": "<span style='italic'weight='900' color='#df6124'>performance</span>",
-      "balanced": "<span style='italic' weight='900' color='#df6124'>balanced</span>",
-      "power-saver": "<span style='italic' weight='900' color='#df6124'>saver</span>"
+      "performance": "<span style='italic'weight='900' color='#df6124'>perf</span>",
+      "balanced": "<span style='italic' weight='900' color='#df6124'>bal</span>",
+      "power-saver": "<span style='italic' weight='900' color='#df6124'>eco</span>"
     }
   },
  "cpu": {
