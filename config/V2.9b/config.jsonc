@@ -79,15 +79,15 @@
     "interval": "once"
 },
 "custom/separator5": {
-    "exec": "playerctl status 2>/dev/null | grep -E -q 'Playing|Paused' && echo '{\"text\":\"[\",\"class\":\"show\"}' || echo '{\"text\":\"\",\"class\":\"hide\"}'",
+    "exec": "pgrep -x cliamp >/dev/null && echo '{\"text\":\"[\",\"class\":\"show\"}' || echo '{\"text\":\"\",\"class\":\"hide\"}'",
     "return-type": "json",
-    "interval": 1,
+    "interval": 2,
     "format": "{}"
 },
 "custom/separator6": {
-    "exec": "playerctl status 2>/dev/null | grep -E -q 'Playing|Paused' && echo '{\"text\":\"]\",\"class\":\"show\"}' || echo '{\"text\":\"\",\"class\":\"hide\"}'",
+    "exec": "pgrep -x cliamp >/dev/null && echo '{\"text\":\"]\",\"class\":\"show\"}' || echo '{\"text\":\"\",\"class\":\"hide\"}'",
     "return-type": "json",
-    "interval": 1,
+    "interval": 2,
     "format": "{}"
 },
 "custom/separator7": {
@@ -271,8 +271,7 @@
       "paused": "󰝛"
     },
     "ignored-players": ["firefox", "chromium", "brave"],
-    "ignore-dynamic": ["album"]
-  },
+    },
   "idle_inhibitor": {
     "format": "{icon}",
     "format-icons": {
