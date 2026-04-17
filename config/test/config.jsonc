@@ -9,17 +9,19 @@
   "modules-left": [
     "hyprland/workspaces",
     "custom/separator",
+    "tray",
+    "custom/separator7",
     "idle_inhibitor",
-    "custom/separator3",
     "custom/voxtype",
     "custom/idle-indicator",
     "custom/notification-silencing-indicator",
     "custom/screenrecording-indicator",
     "custom/updatespacman",
     "custom/update",
-    "tray",
     "custom/separator2",
-    "mpris"
+    "custom/separator5",
+    "mpris",
+    "custom/separator6"
   ],
   "modules-center": ["custom/separator", "custom/clock", "custom/separator2"],
   "modules-right": [
@@ -39,7 +41,7 @@
     "custom/separator3",
     "memory",
     "custom/separator3",
-    "cpu", 
+    "cpu",
     "custom/separator2"
   ],
   "hyprland/workspaces": {
@@ -67,9 +69,28 @@
     "format": "]", 
     "tooltip": false
 },
+"custom/separator5": {
+"exec": "sh -c 'status=$(playerctl status 2>/dev/null); if [ \"$status\" = \"Playing\" ]; then echo \"{\\\"text\\\":\\\"[\\\",\\\"class\\\":\\\"show\\\"}\"; else echo \"{\\\"text\\\":\\\"\\\",\\\"class\\\":\\\"hide\\\"}\"; fi'",
+    "return-type": "json",
+    "interval": 1,
+    "format": "{}",
+    "tooltip": false
+},
+"custom/separator6": {
+"exec": "sh -c 'status=$(playerctl status 2>/dev/null); if [ \"$status\" = \"Playing\" ]; then echo \"{\\\"text\\\":\\\"]\\\",\\\"class\\\":\\\"show\\\"}\"; else echo \"{\\\"text\\\":\\\"\\\",\\\"class\\\":\\\"hide\\\"}\"; fi'",
+    "return-type": "json",
+    "interval": 1,
+    "format": "{}",
+    "tooltip": false
+},
 "custom/separator3": {
     "format": "󰿟", 
     "tooltip": false
+},
+"custom/separator7": {
+"exec": "sh -c 'count=$(busctl --user get-property org.kde.StatusNotifierWatcher /StatusNotifierWatcher org.kde.StatusNotifierWatcher RegisteredStatusNotifierItems | sed -n \"s/^as \\([0-9]\\+\\).*/\\1/p\"); if [ \"${count:-0}\" -gt 0 ]; then echo \"{\\\"text\\\":\\\"󰿟\\\",\\\"class\\\":\\\"show\\\"}\"; else echo \" {\\\"text\\\":\\\"\\\",\\\"class\\\":\\\"hide\\\"}\"; fi'",
+    "return-type": "json",
+    "interval": 2
 },
 "custom/separator4": {
     "exec": "sh -c '[ -d /sys/class/backlight ] && [ \"$(ls -A /sys/class/backlight 2>/dev/null)\" ] && ls /sys/class/power_supply 2>/dev/null | grep -q \"^BAT\" && echo \"󰿟\"'",
@@ -243,16 +264,16 @@
       "critical": 10
     }
   },
-   "mpris": {
+ "mpris": {
     "format": " {dynamic}",
     "format-paused": "<span color='grey'>{status_icon} {dynamic}</span>",
-    "title-len": 15,
-    "dynamic-order": ["title"],
+    "title-len": 20,
+    "dynamic-order": ["artist", "title"],
     "status-icons": {
       "paused": "󰝛"
     },
     "ignored-players": ["firefox", "chromium", "brave"],
-    "ignore-dynamic": ["album", "length"]
+    "ignore-dynamic": ["album"]
   },
   "idle_inhibitor": {
     "format": "{icon}",

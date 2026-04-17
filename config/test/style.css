@@ -55,7 +55,7 @@ margin-left: 4px;
 
 #workspaces button.active {
   color: @background;
-  background-color: @foreground;
+  background-color: #df6124;
   padding: 0px 4px;
   margin: 4px 2px;
   opacity: 1.0;
@@ -120,16 +120,12 @@ opacity: 1;
 opacity: 1;
 }
 
-#bluetooth {
-padding-left: 0px;
-}
-
 #tray {
 opacity: 1;
 padding-top: 2px;
 }
 
-#idle_inhibitor {
+#idle_inhibitor.deactivated {
 opacity: 0.5;
 }
 
@@ -142,6 +138,9 @@ opacity: 1;
   margin-left: 0;
 }
 
+#custom-separator7,
+#custom-separator6,
+#custom-separator5,
 #custom-separator4,
 #custom-separator3,
 #custom-separator2,
