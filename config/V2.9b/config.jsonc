@@ -79,13 +79,13 @@
     "interval": "once"
 },
 "custom/separator5": {
-    "exec": "pgrep -x cliamp >/dev/null && echo '{\"text\":\"[\",\"class\":\"show\"}' || echo '{\"text\":\"\",\"class\":\"hide\"}'",
+"exec": "sh -c 'if pgrep -x cliamp >/dev/null || playerctl status 2>/dev/null | grep -qE \"Playing|Paused\"; then echo \"{\\\"text\\\":\\\"[\\\",\\\"class\\\":\\\"show\\\"}\"; else echo \"{\\\"text\\\":\\\"\\\",\\\"class\\\":\\\"hide\\\"}\"; fi'",
     "return-type": "json",
     "interval": 2,
     "format": "{}"
 },
 "custom/separator6": {
-    "exec": "pgrep -x cliamp >/dev/null && echo '{\"text\":\"]\",\"class\":\"show\"}' || echo '{\"text\":\"\",\"class\":\"hide\"}'",
+"exec": "sh -c 'if pgrep -x cliamp >/dev/null || playerctl status 2>/dev/null | grep -qE \"Playing|Paused\"; then echo \"{\\\"text\\\":\\\"]\\\",\\\"class\\\":\\\"show\\\"}\"; else echo \"{\\\"text\\\":\\\"\\\",\\\"class\\\":\\\"hide\\\"}\"; fi'",
     "return-type": "json",
     "interval": 2,
     "format": "{}"
@@ -270,7 +270,7 @@
     "status-icons": {
       "paused": "󰝛"
     },
-    "ignored-players": ["firefox", "chromium", "brave"],
+    //"ignored-players": ["firefox", "chromium", "brave"]
     },
   "idle_inhibitor": {
     "format": "{icon}",
