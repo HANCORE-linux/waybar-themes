@@ -249,7 +249,7 @@
     "format": " {dynamic}",
     "format-paused": "<span color='grey'>{status_icon} {dynamic}</span>",
     "title-len": 20,
-    "dynamic-order": ["artist", "title"],,
+    "dynamic-order": ["artist", "title"],
     "status-icons": {
       "paused": "󰝛"
     },
