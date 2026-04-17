@@ -70,14 +70,14 @@
     "tooltip": false
 },
 "custom/separator5": {
-"exec": "sh -c 'status=$(playerctl status 2>/dev/null); if [ \"$status\" = \"Playing\" ]; then echo \"{\\\"text\\\":\\\"[\\\",\\\"class\\\":\\\"show\\\"}\"; else echo \"{\\\"text\\\":\\\"\\\",\\\"class\\\":\\\"hide\\\"}\"; fi'",
+    "exec": "sh -c 'status=$(playerctl status 2>/dev/null); if [ -n \"$status\" ]; then echo \"{\\\"text\\\":\\\"[\\\",\\\"class\\\":\\\"show\\\"}\"; else echo \"{\\\"text\\\":\\\"\\\",\\\"class\\\":\\\"hide\\\"}\"; fi'",
     "return-type": "json",
     "interval": 1,
     "format": "{}",
     "tooltip": false
 },
 "custom/separator6": {
-"exec": "sh -c 'status=$(playerctl status 2>/dev/null); if [ \"$status\" = \"Playing\" ]; then echo \"{\\\"text\\\":\\\"]\\\",\\\"class\\\":\\\"show\\\"}\"; else echo \"{\\\"text\\\":\\\"\\\",\\\"class\\\":\\\"hide\\\"}\"; fi'",
+    "exec": "sh -c 'status=$(playerctl status 2>/dev/null); if [ -n \"$status\" ]; then echo \"{\\\"text\\\":\\\"]\\\",\\\"class\\\":\\\"show\\\"}\"; else echo \"{\\\"text\\\":\\\"\\\",\\\"class\\\":\\\"hide\\\"}\"; fi'",
     "return-type": "json",
     "interval": 1,
     "format": "{}",
