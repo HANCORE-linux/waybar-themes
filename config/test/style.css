@@ -1,32 +1,40 @@
 @import "../omarchy/current/theme/waybar.css";
 @define-color bg @background;
 @define-color fg @foreground;
+@define-color red #df6124;
+@define-color grey #353839;
 
 * {
-  /* background-color: @background; */
-  /* color: @foreground; */
+    font-family: "JetBrainsMono Nerd Font";
+    font-size: 12px;
+    font-weight: 900;
+    margin: 0;
+    padding: 0;
+    transition-property: background-color;
+    transition-duration: 0.5s;
+}
 
-  border: none;
-  padding: 0px;
-  font-family: "JetBrains Mono Nerd Font";
-  transition: background-color .3s ease-out;
-  font-weight: bold;
-  font-size: 12px;
+/* Reset all styles */
+* {
+    border: none;
+    border-radius: 3px;
+    min-height: 0;
+    margin: 0.1rem 0.1rem 0.1rem 0.1rem;
 }
 
 window#waybar  {
   background-color: transparent;
 }
 
+/* The whole bar */
 #waybar > box {
-  border-radius: 0px;
-  border-bottom: 1.5px solid rgba(255, 255, 255, 0.1);
-  margin: 0px 0px 2px 0px;
-  background-color: @background;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 1);
-  min-height: 25px;
-  transition-property: background-color;
-  transition-duration: .5s;
+    background-color: @bg;
+    color: @fg;
+    transition-property: background-color;
+    transition-duration: 0.5s;
+    border: 2px solid @grey;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 1);
+    border-radius: 20px;
 }
 
 .modules-left {
@@ -48,14 +56,15 @@ margin-left: 4px;
   padding: 0px 4px;
   margin: 4px 2px;
   min-width: 10px;
-  color: @foreground;
+  color: @red;
   opacity: 1;
   font-weight: 900;
+  border-radius: 5px;
 }
 
 #workspaces button.active {
-  color: @background;
-  background-color: #df6124;
+  color: @red;
+  background-color: @grey;
   padding: 0px 4px;
   margin: 4px 2px;
   opacity: 1.0;
@@ -65,7 +74,7 @@ margin-left: 4px;
 #workspaces button.empty:hover, 
 #workspaces button:hover {
     background: transparent;
-    color: alpha(@foreground, 1);
+    color: alpha(@fg, 1);
     transition: all 150ms ease;
     opacity: 0.75;
 }
@@ -74,13 +83,21 @@ margin-left: 4px;
   opacity: 0.4;
   padding: 0px 4px;
   margin: 4px 2px;
-  color: alpha(@foreground, 0.45);
+  color: alpha(@fg, 0.45);
 }
 
 #workspaces button.empty.active {
   opacity: 1;
-  background-color: @foreground;
-  color: @background;
+  background-color: alpha(@fg, 0.5);
+  color: @bg;
+}
+
+#custom-omarchy {
+    background-image: url("bob2.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    border-radius: 2px;
 }
 
 #memory,
@@ -123,6 +140,7 @@ opacity: 1;
 #tray {
 opacity: 1;
 padding-top: 2px;
+padding-left: 0px;
 }
 
 #idle_inhibitor.deactivated {
@@ -139,17 +157,26 @@ opacity: 1;
 }
 
 #custom-separator7,
-#custom-separator6,
-#custom-separator5,
 #custom-separator4,
-#custom-separator3,
-#custom-separator2,
-#custom-separator {
+#custom-separator3 {
   opacity: 0.2;
   padding-top: 2px;
   padding-left: 2px;
   padding-right: 2px;
   font-size: 14px;
+  color: @fg;
+}
+
+#custom-separator6,
+#custom-separator5,
+#custom-separator2,
+#custom-separator {
+  opacity: 0.3;
+  padding-top: 2px;
+  padding-left: 2px;
+  padding-right: 2px;
+  font-size: 14px;
+  color: @fg;
 }
 
 tooltip {
@@ -177,14 +204,14 @@ tooltip {
 
 tooltip {
  padding: 4px;
- background: @background;
+ background: @bg;
  font-size: 10px;
  border: 1.5px solid alpha(@foreground, 0.6);
  border-radius: 8px;
  
 }
 tooltip label {
-    color: alpha(@foreground, 0.65);
+    color: alpha(@fg, 0.65);
     font-weight: normal;
 }
 
@@ -215,19 +242,19 @@ tooltip label {
 
 @keyframes blink-recording {
     to {
-        color: @background;
+        color: @bg;
     }
 }
 
 @keyframes blink-inhibitor {
     to {
-        color: @background;
+        color: @bg;
     }
 }
 
 #mpris {
 opacity: 1;
-color: @foreground;
+color: @fg;
 animation: repeat;
 	animation-name: blink;
 	animation-duration: 3s;
