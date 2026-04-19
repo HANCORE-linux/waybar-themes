@@ -203,8 +203,8 @@
   "battery": {
     "format": "bat {capacity}%",
     "format-discharging": "bat {capacity}%",
-    "format-charging": "bat {capacity}%",
-    "format-plugged": "bat {capacity}% ",
+    "format-charging": "bat {capacity}% ",
+    "format-plugged": "bat_p {capacity}%",
     "format-icons": {
       "charging": [
         "󰢜",
