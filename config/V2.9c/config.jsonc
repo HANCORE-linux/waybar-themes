@@ -201,10 +201,10 @@
     "on-click": "omarchy-launch-wifi"
   },
   "battery": {
-    "format": "bat {capacity}%",
-    "format-discharging": "bat {capacity}%",
-    "format-charging": "bat {capacity}% ",
-    "format-plugged": "bat_p {capacity}%",
+    "format": "<span weight='900' color='#df6124'>bat</span> {capacity}%",
+    "format-discharging": "<span weight='900' color='#df6124'>bat</span> {capacity}%",
+    "format-charging": "<span weight='900' color='#df6124'>bat</span> {capacity}% ",
+    "format-plugged": "<span weight='900' color='#df6124'>bat_p</span> {capacity}%",
     "format-icons": {
       "charging": [
         "󰢜",
