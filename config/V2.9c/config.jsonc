@@ -245,7 +245,7 @@
   "justify": "center",
     "format": "bt <span style='italic' weight='900' color='#df6124'>{status}</span> {num_connections}",
     "format-disabled": "bt <span style='italic' weight='900' color='#df6124'>{status}</span>",
-    "format-connected": "bt <span style='italic' weight='900' color='#df6124'>{status}</span> {num_connections}",
+    "format-connected": "bt <span style='italic' weight='900' color='#df6124'>con</span> {num_connections}",
     "tooltip-format": "Devices connected: {num_connections}",
     "on-click": "omarchy-launch-bluetooth"
   },
