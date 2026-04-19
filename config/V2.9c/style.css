@@ -1,0 +1,304 @@
+@import "../omarchy/current/theme/waybar.css";
+@define-color bg @background;
+@define-color fg @foreground;
+@define-color red #df6124;
+@define-color grey #353839;
+
+* {
+    font-family: "JetBrainsMono Nerd Font";
+    font-size: 12px;
+    font-weight: 900;
+    margin: 0;
+    padding: 0;
+    transition-property: background-color;
+    transition-duration: 0.5s;
+}
+
+/* Reset all styles */
+* {
+    border: none;
+    border-radius: 3px;
+    min-height: 0;
+    margin: 0.1rem 0.1rem 0.1rem 0.1rem;
+}
+
+window#waybar  {
+  background-color: transparent;
+}
+
+/* The whole bar */
+#waybar > box {
+    background-color: @bg;
+    color: @fg;
+    transition-property: background-color;
+    transition-duration: 0.5s;
+    border: 2px solid @grey;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 1);
+    border-radius: 20px;
+}
+
+.modules-left {
+margin-left: 4px;
+}
+
+.modules-right {
+  margin-right: 4px;
+}
+
+#workspaces {
+    margin: 0px 0px;
+    transition: 0.1s ease-in-out;
+    padding: 0px 0px;
+}
+
+#workspaces button {
+  all: initial;
+  padding: 0px 4px;
+  margin: 4px 2px;
+  min-width: 10px;
+  color: @red;
+  opacity: 1;
+  font-weight: 900;
+  border-radius: 5px;
+}
+
+#workspaces button.active {
+  color: @red;
+  background-color: @grey;
+  padding: 0px 4px;
+  margin: 4px 2px;
+  opacity: 1.0;
+
+}
+
+#workspaces button.empty:hover, 
+#workspaces button:hover {
+    background: transparent;
+    color: alpha(@fg, 1);
+    transition: all 150ms ease;
+    opacity: 0.75;
+}
+
+#workspaces button.empty {
+  opacity: 0.4;
+  padding: 0px 4px;
+  margin: 4px 2px;
+  color: alpha(@fg, 0.45);
+}
+
+#workspaces button.empty.active {
+  opacity: 1;
+  background-color: alpha(@fg, 0.5);
+  color: @bg;
+}
+
+#custom-omarchy {
+    background-image: url("bob2.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    border-radius: 2px;
+}
+
+#memory,
+#mpris,
+#custom-expand-icon,
+#tray,
+#cpu,
+#custom-clock,
+#battery,
+#backlight,
+#network,
+#bluetooth,
+#pulseaudio,
+#power-profiles-daemon,
+#power-profiles-daemon.performance,
+#power-profiles-daemon.balanced,
+#power-profiles-daemon.power-saver,
+#custom-omarchy,
+#idle_inhibitor,
+#custom-idle-indicator,
+#custom-notification-silencing-indicator,
+#custom-updatespacman,
+#custom-screenrecording-indicator,
+#custom-update {
+  min-width: 12px;
+  padding: 0 4px;
+  margin: 1px 3px 1px 3px;
+  opacity: 1;
+}
+
+#custom-update {
+opacity: 1;
+}
+	
+
+#custom-updatespacman {
+opacity: 1;
+}
+
+#tray {
+opacity: 1;
+padding-top: 2px;
+padding-left: 0px;
+}
+
+#idle_inhibitor.deactivated {
+opacity: 0.5;
+}
+
+
+#idle_inhibitor.activated {
+opacity: 1;
+}
+
+#network {
+  margin-left: 0;
+}
+
+#custom-separator7,
+#custom-separator4,
+#custom-separator3 {
+  opacity: 0.2;
+  padding-top: 2px;
+  padding-left: 2px;
+  padding-right: 2px;
+  font-size: 14px;
+  color: @fg;
+}
+
+#custom-separator6,
+#custom-separator5,
+#custom-separator2,
+#custom-separator {
+  opacity: 0.3;
+  padding-top: 2px;
+  padding-left: 2px;
+  padding-right: 2px;
+  font-size: 14px;
+  color: @fg;
+}
+
+tooltip {
+  padding: 2px;
+}
+
+#custom-idle-indicator,
+#custom-notification-silencing-indicator {
+  min-width: 12px;
+  margin-left: 0;
+  margin-right: 0;
+  font-size: 12px;
+  padding-bottom: 0px;
+}
+
+#custom-idle-indicator.active,
+#custom-notification-silencing-indicator.active {
+  color: #a55555;
+  opacity: 1;
+}
+
+.hidden {
+  opacity: 0;
+}
+
+tooltip {
+ padding: 4px;
+ background: @bg;
+ font-size: 10px;
+ border: 1.5px solid alpha(@foreground, 0.6);
+ border-radius: 8px;
+ 
+}
+tooltip label {
+    color: alpha(@fg, 0.65);
+    font-weight: normal;
+}
+
+#custom-voxtype {
+  min-width: 12px;
+  margin: 0 0 0 2.5px;
+}
+
+#custom-voxtype.recording {
+  color: #a55555;
+}
+
+/* Specific animation Module */
+
+
+#custom-screenrecording-indicator {
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  color: transparent;
+}
+
+#custom-screenrecording-indicator.active {
+  color: #eb7087;
+  animation-name: blink-recording;
+  animation-duration: 0.5s;
+}
+
+@keyframes blink-recording {
+    to {
+        color: @bg;
+    }
+}
+
+@keyframes blink-inhibitor {
+    to {
+        color: @bg;
+    }
+}
+
+#mpris {
+opacity: 1;
+color: @fg;
+animation: repeat;
+	animation-name: blink;
+	animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes blink {
+    to {
+        color: #4a4a4a;
+        
+    }
+}
+
+#battery.warning {
+  color: #c95d0f;
+}
+
+@keyframes blink2 {
+  to {
+    background-color: transparent;
+    color: #f53c3c;
+  }
+}
+
+#battery.critical:not(.charging) {
+  background-color: transparent;
+  color: #e6d8ba;
+  animation-name: blink2;
+  animation-duration: 0.5s;
+  animation-timing-function: steps(12);
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+#pulseaudio.warning,
+#memory.warning,
+#cpu.warning {
+    color: #e3c1b1; /* medium load */
+}
+
+#pulseaudio.critical,
+#memory.critical,
+#cpu.critical {
+    color: #df6124; /* high load */
+}
