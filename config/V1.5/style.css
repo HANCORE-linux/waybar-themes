@@ -105,9 +105,10 @@ window#waybar.empty #window {
 }
 
 
-/* --- Custom Color+Shdow Omarchy --- */
+/* --- Custom Color+Shadow Omarchy --- */
 #custom-omarchy{
   padding: 0 5px;
+  font-size: 12px;
   border-radius: 2px;
   background-color: @bg;
   box-shadow: 1px 1px 3px 0px @ia1;
