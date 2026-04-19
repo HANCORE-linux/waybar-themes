@@ -231,7 +231,7 @@
         "󰁹"
       ]
     },
-    "format-full": "bat_f {capacity}%",
+    "format-full": "<span weight='900' color='#df6124'>bat_f</span> {capacity}%",
     "tooltip-format-discharging": "{timeTo}",
     "tooltip-format-charging": "{timeTo}",
     "interval": 5,
