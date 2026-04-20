@@ -361,6 +361,13 @@ git clone https://github.com/HANCORE-linux/waybar-themes.git /tmp/repo && cp -rf
 git clone https://github.com/HANCORE-linux/waybar-themes.git /tmp/repo && cp -rf /tmp/repo/config/V2.9c/. ~/.config/waybar && rm -rf /tmp/repo && omarchy-restart-waybar
 ```
 <img src="https://github.com/HANCORE-linux/waybar-themes/blob/main/config/V2.9c/screenshot-2026-04-19_19-38-35.png?raw=true"/>
+## Screenshots V2.9d
+- top single bar version with custom omarchy.svg logo as home button 
+##### V2.9d Install-command (copy and paste in your terminal): <br>
+```bash
+git clone https://github.com/HANCORE-linux/waybar-themes.git /tmp/repo && cp -rf /tmp/repo/config/V2.9d/. ~/.config/waybar && rm -rf /tmp/repo && omarchy-restart-waybar
+```
+<img src="https://github.com/HANCORE-linux/waybar-themes/blob/main/config/V2.9d/screenshot-2026-04-20_22-47-33.png?raw=true"/>
 
 ## Screenshots V3
 - new waybar Style (without red accents)
