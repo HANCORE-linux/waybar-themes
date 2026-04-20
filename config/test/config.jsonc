@@ -211,7 +211,7 @@
   },
   "pulseaudio#input": {
     "format-source": "",
-    "format-source-muted": "",
+    "format-source-muted": " ",
     "format": "{format_source}",
     "tooltip-format": "{format_source} {source_volume}%",
     "scroll-step": 1,
