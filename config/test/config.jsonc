@@ -78,40 +78,7 @@
     }
 
 },
-"custom/separator": {
-    "format": "󰇘", 
-    "tooltip": false
-},
-"custom/separator2": {
-    "format": "󰇙", 
-    "tooltip": false
-},
-"custom/separator3": {
-    "format": "󰿟", 
-    "tooltip": false
-},
-"custom/separator4": {
-    "exec": "sh -c '[ -d /sys/class/backlight ] && [ \"$(ls -A /sys/class/backlight 2>/dev/null)\" ] && ls /sys/class/power_supply 2>/dev/null | grep -q \"^BAT\" && echo \"󰇙\"'",
-    "tooltip": false,
-    "interval": "once"
-},
-"custom/separator5": {
-"exec": "sh -c 'if pgrep -x cliamp >/dev/null || playerctl status 2>/dev/null | grep -qE \"Playing|Paused\"; then echo \"{\\\"text\\\":\\\"󰇙\\\",\\\"class\\\":\\\"show\\\"}\"; else echo \"{\\\"text\\\":\\\"\\\",\\\"class\\\":\\\"hide\\\"}\"; fi'",
-    "return-type": "json",
-    "interval": 2,
-    "format": "{}"
-},
-"custom/separator6": {
-"exec": "sh -c 'if pgrep -x cliamp >/dev/null || playerctl status 2>/dev/null | grep -qE \"Playing|Paused\"; then echo \"{\\\"text\\\":\\\"󰇙\\\",\\\"class\\\":\\\"show\\\"}\"; else echo \"{\\\"text\\\":\\\"\\\",\\\"class\\\":\\\"hide\\\"}\"; fi'",
-    "return-type": "json",
-    "interval": 2,
-    "format": "{}"
-},
-"custom/separator7": {
-"exec": "sh -c 'count=$(busctl --user get-property org.kde.StatusNotifierWatcher /StatusNotifierWatcher org.kde.StatusNotifierWatcher RegisteredStatusNotifierItems | sed -n \"s/^as \\([0-9]\\+\\).*/\\1/p\"); if [ \"${count:-0}\" -gt 0 ]; then echo \"{\\\"text\\\":\\\"󰿟\\\",\\\"class\\\":\\\"show\\\"}\"; else echo \" {\\\"text\\\":\\\"\\\",\\\"class\\\":\\\"hide\\\"}\"; fi'",
-    "return-type": "json",
-    "interval": 2
-},
+
   "custom/omarchy": {
     "format": "         ",
     "on-click": "omarchy-menu",
@@ -172,19 +139,13 @@
   },
   "backlight": {
         "device": "intel_backlight",
-        "rotate": 0,
-        "format": "<span style='italic' weight='900' color='#df6124'>bl</span> {percent}%",
-        "tooltip-format": "🌕 {percent}%",
-            "format-icons": [
-      "󰃜",
-      "󰃝",
-      "󰃞",
-      "󰃟",
-      "󰃠"
-    ],
-    "on-scroll-down": "brightnessctl s 5%-",
-    "on-scroll-up": "brightnessctl s +5%"
-   },
+        "format": "{icon}  {percent}%",
+        "format-alt": "{percent}% {icon}",
+        "format-alt-click": "click-right",
+        "format-icons": ["", ""],
+        "on-scroll-down": "brightnessctl s 5%-",
+        "on-scroll-up": "brightnessctl s +5%"
+    },
    "memory": {
     "interval": 2,
     "format": " {percentage:02}%",
@@ -222,7 +183,7 @@
   },
    "battery": {
     "format": "{capacity}% {icon}",
-    "format-charging": " {capacity}% {icon}",
+    "format-charging": " {capacity}% {icon}",
     "format-plugged": " {capacity}%",
     "format-icons": [
             "",
@@ -231,13 +192,12 @@
             "",
             ""
     ],
-    "format-full": "󰂅 {capacity}%",
+    "format-full": "󱊦 {capacity}%",
     "tooltip-format-discharging": "{timeTo}",
     "tooltip-format-charging": "{timeTo}",
     "interval": 5,
     "on-click": "omarchy-menu power",
     "states": {
-      "good": 80,
       "warning": 30,
       "critical": 15
     }

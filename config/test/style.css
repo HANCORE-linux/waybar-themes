@@ -231,6 +231,10 @@ window#waybar.empty #mpris {
   padding-right: 11px;
 }
 
+#battery {
+  padding-right: 11px;
+}
+
 /* L2 single groups */
 
 #tray,
