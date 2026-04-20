@@ -18,7 +18,7 @@
 * {
     border: none;
     border-radius: 0px;
-    min-height: 18px;
+    min-height: 20px;
     margin: 0rem 0rem 0rem 0rem;
 }
 
@@ -142,9 +142,9 @@ window#waybar.empty #mpris {
 }
 
 #workspaces {
-    border-radius: 5px;
-    background-color: @bg;
-    transition: 0.1s ease-in-out;
+  border-radius: 5px;
+  background-color: @bg;
+  transition: 0.1s ease-in-out;
 }
 
 #workspaces button {
@@ -155,7 +155,7 @@ window#waybar.empty #mpris {
   opacity: 1;
   font-weight: 900;
   font-size: 12px;
-  border-radius: 1px;
+  border-radius: 0px;
   border: 0.5px solid @grey;
 }
 
@@ -262,7 +262,7 @@ opacity: 1;
 
 #tray {
 opacity: 1;
-padding-top: 2px;
+padding-top: 0px;
 }
 
 tooltip {
