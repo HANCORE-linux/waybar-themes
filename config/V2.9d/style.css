@@ -1,0 +1,402 @@
+@import "../omarchy/current/theme/waybar.css";
+@define-color bg @background;
+@define-color fg @foreground;
+@define-color red #df6124;
+@define-color grey #363636;
+
+* {
+    font-family: "JetBrainsMono Nerd Font";
+    font-size: 12px;
+    font-weight: 900;
+    margin: 0;
+    padding: 0;
+    transition-property: background-color;
+    transition-duration: 0.5s;
+}
+
+/* Reset all styles */
+* {
+    border: none;
+    border-radius: 0px;
+    min-height: 20px;
+    margin: 0rem 0rem 0rem 0rem;
+}
+
+window#waybar  {
+  background-color: transparent;
+}
+
+/* Container L1 */
+
+#l1 {
+  margin: 0px 3px 2px 3px;
+  padding: 0px 0px;
+  border-radius: 5px;
+  border: 1.5px solid @grey;
+  background-color: @bg;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 1);
+}
+
+#l1 > widget,
+#l1 #custom-omarchy,
+#workspaces button {
+  border: none; 
+  border-right: 1.5px solid @grey; 
+  border-radius: 0;
+  margin: 0;
+}
+
+#l1 > widget:first-child,
+#l1 #custom-omarchy {
+  border-radius: 3px 0px 0px 3px;
+}
+
+#workspaces button:last-child {
+  border-right: none;
+  border-radius: 0px 3px 3px 0px;
+}
+
+/* Container L2 */
+
+#l2 {
+margin: 0px 3px 2px 3px;
+  padding: 2px 0px;
+  border-radius: 5px;
+  border: 1.5px solid @grey;
+  background-color: @bg;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 1);
+}
+
+#l2 label, 
+#l2 > widget > label,
+#l2 > widget {
+  padding: 0px 9px;
+  margin: 0px 0px;
+  color: @fg;
+  font-weight: 900;
+  font-size: 12px;
+  border-right: 1.5px solid @grey; 
+}
+
+#l2 > widget:first-child label,
+#l2 > widget:first-child {
+  border-radius: 3px 0px 0px 3px;
+}
+
+#l2 > widget:last-child label,
+#l2 > widget:last-child {
+  border-radius: 0px 3px 3px 0px;
+  border-right: none; 
+}
+
+window#waybar.empty #mpris {
+    margin: 0;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+}
+
+/* Container module right */
+
+.modules-right {
+  margin: 0px 3px 2px 3px;
+  padding: 2px 0px;
+  border-radius: 5px;
+  border: 1.5px solid @grey;
+  background-color: @bg;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 1);
+}
+
+.modules-right label, 
+.modules-right > widget > label,
+.modules-right > widget {
+  padding: 0px 9px;
+  margin: 0px 0px;
+  color: @fg;
+  font-weight: 900;
+  font-size: 12px;
+  border-right: 1.5px solid @grey; 
+}
+
+
+.modules-right > widget:first-child label,
+.modules-right > widget:first-child {
+  border-radius: 3px 0px 0px 3px;
+}
+
+.modules-right > widget:last-child label,
+.modules-right > widget:last-child {
+  border-radius: 0px 3px 3px 0px;
+  border-right: none;
+}
+
+/* Container module center */
+
+.modules-center {
+  margin: 0px 3px 2px 3px;
+  padding: 2px 9px;
+  border-radius: 5px;
+  border: 1.5px solid @grey;
+  background-color: @bg;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 1);
+}
+
+#workspaces {
+  border-radius: 5px;
+  background-color: @bg;
+  transition: 0.1s ease-in-out;
+}
+
+#workspaces button {
+  all: initial;
+  padding: 0px 9px;
+  margin: 0px 0px;
+  color: @red;
+  opacity: 1;
+  font-weight: 900;
+  font-size: 12px;
+  border-radius: 0px;
+  border: 0.5px solid @grey;
+}
+
+#workspaces button.active {
+  color: @bg;
+  background-color: @red;
+  padding: 0px 9px;
+  margin: 0px 0px;
+  opacity: 1.0;
+}
+
+#workspaces button.empty:hover, 
+#workspaces button:hover {
+    background: transparent;
+    color: @fg;
+    transition: all 150ms ease;
+    opacity: 1;
+}
+
+#workspaces button.empty {
+  opacity: 1;
+  padding: 0px 9px;
+  margin: 0px 0px;
+  color: alpha(@fg, 0.25);
+}
+
+#workspaces button.empty.active {
+  opacity: 1;
+  padding: 0px 9px;
+  background-color: alpha(@fg, 0.75);
+  color: @bg;
+}
+
+#workspaces button:first-child {
+  border-radius: 0px 0px 0px 0px;
+}
+
+#workspaces button:last-child {
+  border-radius: 1px 3px 3px 1px;
+}
+
+#custom-omarchy {
+    background-image: url("bob2.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 92%;
+    border-radius: 3px;
+  }
+
+
+  /* L1 single groups */
+#memory,
+#mpris,
+#cpu,
+#battery,
+#backlight,
+#network,
+#bluetooth,
+#pulseaudio,
+#power-profiles-daemon,
+#power-profiles-daemon.performance,
+#power-profiles-daemon.balanced,
+#power-profiles-daemon.power-saver,
+#custom-omarchy {
+  min-width: 15px;
+  color: @fg;
+  opacity: 1;
+  padding-left: 9px;
+  padding-right: 9px;
+}
+
+#network {
+  padding-right: 12px;
+}
+
+#battery {
+  padding-right: 14px;
+}
+
+/* L2 single groups */
+
+#tray,
+#idle_inhibitor,
+#custom-idle-indicator,
+#custom-notification-silencing-indicator,
+#custom-updatespacman,
+#custom-screenrecording-indicator,
+#custom-update {
+  min-width: 15px;
+  color: @fg;
+  opacity: 1;
+  padding-left: 9px;
+  padding-right: 9px;
+}
+
+#custom-update {
+opacity: 1;
+}
+	
+
+#custom-updatespacman {
+opacity: 1;
+}
+
+#tray {
+opacity: 1;
+padding-top: 0px;
+}
+
+tooltip {
+  padding: 2px;
+}
+
+
+#power-profiles-daemon.power-saver {
+padding-right: 14px;
+}
+
+#custom-idle-indicator,
+#custom-notification-silencing-indicator {
+  min-width: 12px;
+  margin-left: 0;
+  margin-right: 0;
+  font-size: 12px;
+  padding-bottom: 0px;
+}
+
+#custom-idle-indicator.active,
+#custom-notification-silencing-indicator.active {
+  color: #a55555;
+  opacity: 1;
+}
+
+.hidden {
+  opacity: 0;
+}
+
+tooltip {
+ padding: 4px;
+ background: @bg;
+ font-size: 10px;
+ border: 1.5px solid alpha(@foreground, 0.6);
+ border-radius: 8px;
+ 
+}
+tooltip label {
+    color: alpha(@fg, 0.65);
+    font-weight: normal;
+}
+
+#custom-voxtype {
+  min-width: 12px;
+  margin: 0 0 0 2.5px;
+}
+
+#custom-voxtype.recording {
+  color: #a55555;
+}
+
+/* Specific animation Module */
+
+
+#custom-screenrecording-indicator {
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  color: transparent;
+}
+
+#custom-screenrecording-indicator.active {
+  color: #eb7087;
+  animation-name: blink-recording;
+  animation-duration: 0.5s;
+}
+
+@keyframes blink-recording {
+    to {
+        color: @bg;
+    }
+}
+
+@keyframes blink-inhibitor {
+    to {
+        color: @bg;
+    }
+}
+
+#mpris {
+    margin: 0px 3px 2px 3px;
+  padding: 2px 9px;
+  border-radius: 5px;
+  border: 1.5px solid @grey;
+  background-color: @bg;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 1);
+opacity: 1;
+color: @fg;
+animation: repeat;
+	animation-name: blink;
+	animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes blink {
+    to {
+        color: #4a4a4a;
+        
+    }
+}
+
+#network.disconnected,
+#battery.warning {
+  color: #c95d0f;
+}
+
+@keyframes blink2 {
+  to {
+    background-color: transparent;
+    color: #f53c3c;
+  }
+}
+
+#battery.critical:not(.charging) {
+  background-color: transparent;
+  color: #e6d8ba;
+  animation-name: blink2;
+  animation-duration: 0.5s;
+  animation-timing-function: steps(12);
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+#pulseaudio.warning,
+#memory.warning,
+#cpu.warning {
+    color: #e3c1b1; /* medium load */
+}
+
+#pulseaudio.critical,
+#memory.critical,
+#cpu.critical {
+    color: #df6124; /* high load */
+}
