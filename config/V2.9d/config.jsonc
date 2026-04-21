@@ -242,7 +242,7 @@
   },
   "pulseaudio#output": {
     "format": "<span>{icon}</span>  {volume}%",
-    "tooltip-format": "{icon}    {volume}%",
+    "tooltip-format": "{icon}  {volume}%",
      "format-muted": "",
       "format-icons": {
       "default": ["", "", ""]
