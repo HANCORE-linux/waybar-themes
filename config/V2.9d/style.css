@@ -233,6 +233,7 @@ margin: 0px 3px 2px 3px;
   padding-right: 13px;
 }
 
+#battery.discharging,
 #battery.full,
 #battery.plugged,
 #battery.charging {
