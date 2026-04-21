@@ -248,8 +248,9 @@
 	"custom/mpris": {
 		"exec": "python3 -u ~/.config/waybar/scrolling-mpris.py",
 		"format": "{text}",
-    "return-type": "json",
-		"on-click": "playerctl play-pause"
+        "return-type": "json",
+		"on-click": "playerctl play-pause",
+        "tooltip": false
 	},
   "custom/screenrecording-indicator": {
     "on-click": "omarchy-cmd-screenrecord",
