@@ -37,6 +37,13 @@
 
   "modules-center": ["custom/clock"],
   "modules-right": [
+    "group/r2",
+    "group/r1"
+  ],
+
+   "group/r1": {
+   "orientation": "inherit",
+   "modules": [
     "bluetooth",
     "backlight",
     "battery",
@@ -46,7 +53,13 @@
     "pulseaudio#output",
     "memory",
     "cpu"
-  ],
+  ]
+},
+   "group/r2": {
+   "orientation": "inherit",
+   "modules": ["custom/cava"]
+},
+
   "hyprland/workspaces": {
     "disable-scroll": true,
     "all-outputs": true,
@@ -78,7 +91,12 @@
     }
 
 },
-
+ "custom/cava": {
+    //"cava_config": "~/.config/cava/config",
+    "format": "{}",
+    "exec": "~/.config/waybar/cava.sh",
+    "tooltip": false
+  },
   "custom/omarchy": {
     "format": "         ",
     "on-click": "omarchy-menu",
@@ -203,9 +221,9 @@
     }
   },
  "bluetooth": {
-    "format": "",
-    "format-disabled": "󰂲",
-    "format-connected": "󰂱",
+    "format": " {num_connections}",
+    "format-disabled": "󰂲 {status}",
+    "format-connected": "󰂱 {num_connections}",
     "tooltip-format": "Devices connected: {num_connections}",
     "on-click": "omarchy-launch-bluetooth"
   },
@@ -224,7 +242,7 @@
   },
   "pulseaudio#output": {
     "format": "<span>{icon}</span>  {volume}%",
-    "tooltip-format": "{icon}    {volume}%",
+    "tooltip-format": "{icon}  {volume}%",
      "format-muted": "",
       "format-icons": {
       "default": ["", "", ""]

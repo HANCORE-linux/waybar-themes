@@ -98,8 +98,8 @@ window#waybar.empty #mpris {
 
 /* Container module right */
 
-.modules-right {
-  margin: 0px 3px 2px 3px;
+#r1 {
+margin: 0px 3px 2px 3px;
   padding: 2px 0px;
   border-radius: 5px;
   border: 1.5px solid @grey;
@@ -107,9 +107,9 @@ window#waybar.empty #mpris {
   box-shadow: 0 1px 2px rgba(0, 0, 0, 1);
 }
 
-.modules-right label, 
-.modules-right > widget > label,
-.modules-right > widget {
+#r1 label, 
+#r1 > widget > label,
+#r1 > widget {
   padding: 0px 9px;
   margin: 0px 0px;
   color: @fg;
@@ -118,16 +118,15 @@ window#waybar.empty #mpris {
   border-right: 1.5px solid @grey; 
 }
 
-
-.modules-right > widget:first-child label,
-.modules-right > widget:first-child {
+#r1 > widget:first-child label,
+#r1 > widget:first-child {
   border-radius: 3px 0px 0px 3px;
 }
 
-.modules-right > widget:last-child label,
-.modules-right > widget:last-child {
+#r1 > widget:last-child label,
+#r1 > widget:last-child {
   border-radius: 0px 3px 3px 0px;
-  border-right: none;
+  border-right: none; 
 }
 
 /* Container module center */
@@ -150,20 +149,20 @@ window#waybar.empty #mpris {
 #workspaces button {
   all: initial;
   padding: 0px 9px;
-  margin: 0px 0px;
+  margin: 1px 0px;
   color: @red;
   opacity: 1;
   font-weight: 900;
   font-size: 12px;
-  border-radius: 0px;
-  border: 0.5px solid @grey;
+  border-radius: 2px;
 }
 
 #workspaces button.active {
   color: @bg;
+  border-radius: 2px;
   background-color: @red;
   padding: 0px 9px;
-  margin: 0px 0px;
+  margin: 1px 0px;
   opacity: 1.0;
 }
 
@@ -177,24 +176,19 @@ window#waybar.empty #mpris {
 
 #workspaces button.empty {
   opacity: 1;
+  border-radius: 2px;
   padding: 0px 9px;
-  margin: 0px 0px;
+  margin: 1px 1px;
   color: alpha(@fg, 0.25);
 }
 
 #workspaces button.empty.active {
   opacity: 1;
+  border-radius: 2px;
   padding: 0px 9px;
+  margin: 1px 1px;
   background-color: alpha(@fg, 0.75);
   color: @bg;
-}
-
-#workspaces button:first-child {
-  border-radius: 0px 0px 0px 0px;
-}
-
-#workspaces button:last-child {
-  border-radius: 1px 3px 3px 1px;
 }
 
 #custom-omarchy {
@@ -207,6 +201,7 @@ window#waybar.empty #mpris {
 
 
   /* L1 single groups */
+#custom-cava,
 #memory,
 #mpris,
 #cpu,
@@ -227,11 +222,16 @@ window#waybar.empty #mpris {
   padding-right: 9px;
 }
 
-#network {
-  padding-right: 12px;
+#network.disconnected,
+#network.wifi,
+#network.ethernet {
+  padding-right: 13px;
 }
 
-#battery {
+#battery.discharging,
+#battery.full,
+#battery.plugged,
+#battery.charging {
   padding-right: 14px;
 }
 
@@ -341,6 +341,17 @@ tooltip label {
     to {
         color: @bg;
     }
+}
+
+#custom-cava {
+  margin: 0px 3px 2px 3px;
+  padding: 2px 9px;
+  border-radius: 5px;
+  border: 1.5px solid @grey;
+  background-color: @bg;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 1);
+opacity: 1;
+color: @fg;
 }
 
 #mpris {
