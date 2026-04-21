@@ -149,7 +149,7 @@ margin: 0px 3px 2px 3px;
 #workspaces button {
   all: initial;
   padding: 0px 9px;
-  margin: 1px 2px;
+  margin: 1px 1px;
   color: @red;
   opacity: 1;
   font-weight: 900;
@@ -162,7 +162,7 @@ margin: 0px 3px 2px 3px;
   border-radius: 2px;
   background-color: @red;
   padding: 0px 9px;
-  margin: 1px 2px;
+  margin: 1px 1px;
   opacity: 1.0;
 }
 
@@ -178,7 +178,7 @@ margin: 0px 3px 2px 3px;
   opacity: 1;
   border-radius: 2px;
   padding: 0px 9px;
-  margin: 1px 2px;
+  margin: 1px 1px;
   color: alpha(@fg, 0.25);
 }
 
@@ -186,7 +186,7 @@ margin: 0px 3px 2px 3px;
   opacity: 1;
   border-radius: 2px;
   padding: 0px 9px;
-  margin: 1px 2px;
+  margin: 1px 1px;
   background-color: alpha(@fg, 0.75);
   color: @bg;
 }
