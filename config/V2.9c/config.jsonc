@@ -25,7 +25,6 @@
   ],
   "modules-center": ["custom/separator", "custom/clock", "custom/separator2"],
   "modules-right": [
-    "group/tray-expander",
     "custom/separator",
     "bluetooth",
     "custom/separator3",
