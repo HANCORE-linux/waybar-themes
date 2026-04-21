@@ -28,6 +28,7 @@
     "custom/separator",
     "pulseaudio#output",
     "pulseaudio#input",
+    "custom/separator",
     "power-profiles-daemon",
     "memory",
     "cpu",
@@ -97,12 +98,12 @@
   },
   "cpu": {
     "interval": 10,
-    "format": " ",
+    "format": "",
     "on-click": "omarchy-launch-or-focus-tui btop"
   },
   "memory": {
     "interval": 2,
-    "format": " ",
+    "format": "",
     "on-click": "omarchy-launch-or-focus-tui btop"
   },
   "backlight": {
