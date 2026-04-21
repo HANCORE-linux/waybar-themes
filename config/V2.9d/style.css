@@ -149,20 +149,20 @@ margin: 0px 3px 2px 3px;
 #workspaces button {
   all: initial;
   padding: 0px 9px;
-  margin: 0px 0px;
+  margin: 1px 2px;
   color: @red;
   opacity: 1;
   font-weight: 900;
   font-size: 12px;
-  border-radius: 0px;
-  border: 0.5px solid @grey;
+  border-radius: 2px;
 }
 
 #workspaces button.active {
   color: @bg;
+  border-radius: 2px;
   background-color: @red;
   padding: 0px 9px;
-  margin: 0px 0px;
+  margin: 1px 2px;
   opacity: 1.0;
 }
 
@@ -176,24 +176,19 @@ margin: 0px 3px 2px 3px;
 
 #workspaces button.empty {
   opacity: 1;
+  border-radius: 2px;
   padding: 0px 9px;
-  margin: 0px 0px;
+  margin: 1px 2px;
   color: alpha(@fg, 0.25);
 }
 
 #workspaces button.empty.active {
   opacity: 1;
+  border-radius: 2px;
   padding: 0px 9px;
+  margin: 1px 2px;
   background-color: alpha(@fg, 0.75);
   color: @bg;
-}
-
-#workspaces button:first-child {
-  border-radius: 0px 0px 0px 0px;
-}
-
-#workspaces button:last-child {
-  border-radius: 1px 3px 3px 1px;
 }
 
 #custom-omarchy {
