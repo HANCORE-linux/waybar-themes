@@ -227,11 +227,15 @@ margin: 0px 3px 2px 3px;
   padding-right: 9px;
 }
 
-#network {
-  padding-right: 12px;
+#network.disconnected,
+#network.wifi,
+#network.ethernet {
+  padding-right: 13px;
 }
 
-#battery {
+#battery.full,
+#battery.plugged,
+#battery.charging {
   padding-right: 14px;
 }
 

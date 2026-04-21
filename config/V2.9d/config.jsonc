@@ -203,11 +203,11 @@
     "format-charging": " {capacity}% {icon}",
     "format-plugged": " {capacity}%",
     "format-icons": [
-            " ",
-            " ",
-            " ",
-            " ",
-            " "
+            "",
+            "",
+            "",
+            "",
+            ""
     ],
     "format-full": "󱊦 {capacity}%",
     "tooltip-format-discharging": "{timeTo}",
