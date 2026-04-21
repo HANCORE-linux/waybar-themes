@@ -18,6 +18,7 @@
     "tray",
     "mpris",
     "backlight",
+    "network",
     "bluetooth",
     "custom/update",
     "custom/updatespacman",
@@ -32,7 +33,6 @@
     "power-profiles-daemon",
     "memory",
     "cpu",
-    "network",
     "battery",
     "custom/separator"
   ],
@@ -164,9 +164,9 @@
     "on-click": "omarchy-launch-wifi"
   },
   "battery": {
-    "format": "{capacity}% {icon}",
-    "format-discharging": "{capacity}% {icon}",
-    "format-charging": "{capacity}% {icon}",
+    "format": "{icon}",
+    "format-discharging": "{icon}",
+    "format-charging": "  {icon}",
     "format-plugged": "",
     "format-icons": {
       "charging": [
@@ -213,7 +213,7 @@
   },
   "pulseaudio#input": {
     "format-source": "",
-    "format-source-muted": "",
+    "format-source-muted": " ",
     "format": "{format_source}",
     "tooltip-format": "{format_source} {source_volume}%",
     "scroll-step": 1,
