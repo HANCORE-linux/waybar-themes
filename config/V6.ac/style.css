@@ -32,7 +32,8 @@
   color: @fg;
   background-color: @bg;
   margin: 2px 2px 2px 2px;
-  padding: 0px 4px;
+  padding-top: 1px;
+  padding-bottom: 0px;
   box-shadow: 0px 1px 2px rgba(0, 0, 0, 1);
   border-radius: 2px;
   font-weight: 700;
@@ -137,7 +138,8 @@ button:hover {
 #custom-omarchy,
 #custom-updatespacman,
 #custom-screenrecording-indicator {
-    margin: 0;             
+    margin-top: 1px;
+    margin-bottom: 0px;             
     padding: 0 4px;        
     min-width: 12px;       
 }
@@ -205,6 +207,7 @@ tooltip {
 #custom-separator {
   opacity: 0.2;
   padding-top: 2px;
+  padding-bottom: 0px; 
   padding-left: 4px;
   padding-right: 4px;
   color: @border-inactive;
