@@ -245,7 +245,8 @@
   "custom/cava": {
     //"cava_config": "~/.config/cava/config",
     "format": "{}",
-    "exec": "~/.config/waybar/cava.sh"
+    "exec": "~/.config/waybar/cava.sh",
+    "tooltip": false
   },
   "idle_inhibitor": {
     "format": "{icon}",
