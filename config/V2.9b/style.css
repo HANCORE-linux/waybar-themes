@@ -268,10 +268,12 @@ animation: repeat;
 #memory.warning,
 #cpu.warning {
     color: #e3c1b1; /* medium load */
+    background-color: @background;
 }
 
 #pulseaudio.critical,
 #memory.critical,
 #cpu.critical {
     color: #df6124; /* high load */
+    background-color: @background;
 }
