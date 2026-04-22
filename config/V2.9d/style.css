@@ -75,7 +75,7 @@ margin: 0px 3px 2px 3px;
   color: @fg;
   font-weight: 900;
   font-size: 12px;
-  border-right: 1.5px solid @grey; 
+  border-right: 0.5px solid @grey; 
 }
 
 #l2 > widget:first-child label,
@@ -115,7 +115,7 @@ margin: 0px 3px 2px 3px;
   color: @fg;
   font-weight: 900;
   font-size: 12px;
-  border-right: 1.5px solid @grey; 
+  border-right: 0.5px solid @grey; 
 }
 
 #r1 > widget:first-child label,
