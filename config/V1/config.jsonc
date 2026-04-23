@@ -215,7 +215,7 @@
   },
   "tray": {
     "icon-size": 12,
-    "spacing": 12
+    "spacing": 0
   },
 
   "mpris": {

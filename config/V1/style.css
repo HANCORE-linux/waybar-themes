@@ -46,13 +46,13 @@ window#waybar.empty #window {
  }
 
 .modules-right {
-  margin-right: 5px;
   background: @bg;
   box-shadow: 1px 1px 3px 0px @ia1;
   border-radius: 2px;
   margin: 1px 8px 2px 0px;
   padding: 0px;
 }
+
 
 /* --- Workspaces --- */
 #workspaces {
@@ -67,7 +67,7 @@ window#waybar.empty #window {
   background-color: transparent;
   margin: 2px;
   padding: 0 5px;
-  border-radius: 0;
+  border-radius: 1px;
 }
 
 
@@ -91,6 +91,7 @@ window#waybar.empty #window {
 #workspaces button.active {
   background-color: @rd1;
   color: @bg;
+  border-radius: 1px;
 }
 
 #workspaces button.empty {
@@ -133,6 +134,7 @@ window#waybar.empty #window {
 #temperature,
 #bluetooth,
 #pulseaudio,
+#custom-expand-icon,
 #custom-weather,
 #custom-update,
 #custom-screenrecording-indicator,
@@ -162,7 +164,6 @@ window#waybar.empty #window {
   border-radius: 2px;
   box-shadow: 1px 1px 3px 0px @ia1;
   margin: 1px 8px 2px 0px;
-  border-radius: 0;
   color: #ff9b71;
 }
 
@@ -217,11 +218,13 @@ tooltip label {
 
 /* Specific Module */
 
+
 #tray-expander {
-  padding: 0 5px;
-  background: @bg;
+  padding: 0 0px;
+  margin: 0px;
+  background: @transparent;
   color: @fg;
-  border-radius: 1px;
+  border-radius: 2px;
 }
 
 .hidden {
