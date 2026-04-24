@@ -282,7 +282,7 @@
   },
   "tray": {
     "icon-size": 14,
-    "spacing": 0
+    "spacing": 4
   },
   "custom/screenrecording-indicator": {
     "on-click": "omarchy-cmd-screenrecord",
