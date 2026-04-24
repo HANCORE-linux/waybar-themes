@@ -1,6 +1,6 @@
 <h1 align="center"> Waybar Themes </h1>
 
-<h4 align="center"> My Waybar themes with individual and personalized designs. Enjoy exploring and customizing </h4>
+<h4 align="center"> My Waybar themes with individual and personalized designs. Enjoy exploring and customizing them! </h4>
 <div align="center">
 
 [![Stars](https://img.shields.io/github/stars/HANCORE-linux/waybar-themes?style=for-the-badge&labelColor=000000&color=df6124&logo=github&logoColor=df6124)](https://github.com/HANCORE-linux/waybar-themes)
