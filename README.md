@@ -45,7 +45,7 @@ This action:
 - Reloads Waybar automatically in most cases
 </details>
 
-## Screenshots V1
+## V1
 - first creation of my own Waybar config <br>
 - include weather, mpris, hyprland/window / pacman/update module / screenrecord button stop <br>
 ##### V1 Install-command (copy and paste in your terminal): <br>
@@ -54,7 +54,7 @@ git clone https://github.com/HANCORE-linux/waybar-themes.git /tmp/repo && cp -rf
 ```
 <img width="2560" height="1440" alt="screenshot-2025-09-07_18-38-28" src="https://github.com/user-attachments/assets/16c8b398-d1b3-4519-bcbe-e15ad920c7ff" />
 
-## Screenshots V1.1
+## V1.1
 - island version of V1.6 with VOL dynamic circle status <br>
 ##### V1.1 Install-command (copy and paste in your terminal): <br>
 ```bash
@@ -62,7 +62,7 @@ git clone https://github.com/HANCORE-linux/waybar-themes.git /tmp/repo && cp -rf
 ```
 <img width="2560" height="392" alt="screenshot-2026-01-18_01-41-05" src="https://github.com/user-attachments/assets/faecaa18-018e-45af-bf63-14bd5bac8218" />
 
-## Screenshots V1.2
+## V1.2
 - Split left/right modules into separate groups with full rounded corners on both ends <br>
 ##### V1.2 Install-command (copy and paste in your terminal): <br>
 ```bash
@@ -70,7 +70,7 @@ git clone https://github.com/HANCORE-linux/waybar-themes.git /tmp/repo && cp -rf
 ```
 <img width="2560" height="473" alt="screenshot-2026-01-24_14-39-46" src="https://github.com/user-attachments/assets/8e3e26d5-9929-496a-96f9-79b2efc92c32" />
 
-## Screenshots V1.3
+## V1.3
 - double Split left/right modules into separate groups with full rounded corners on both ends <br>
 ##### V1.3 Install-command (copy and paste in your terminal): <br>
 ```bash
@@ -78,7 +78,7 @@ git clone https://github.com/HANCORE-linux/waybar-themes.git /tmp/repo && cp -rf
 ```
 <img width="1616" height="514" alt="screenshot-2026-01-28_09-44-28" src="https://github.com/user-attachments/assets/39b6a0dd-b86a-48b1-87db-f6c26b61e124" />
 
-## Screenshots V1.4
+## V1.4
 - new workspace style with static dark colors <br>
 ##### V1.4 Install-command (copy and paste in your terminal): <br>
 ```bash
@@ -86,7 +86,7 @@ git clone https://github.com/HANCORE-linux/waybar-themes.git /tmp/repo && cp -rf
 ```
 <img width="1499" height="485" alt="screenshot-2026-02-15_21-31-53" src="https://github.com/user-attachments/assets/4e0bdb3d-c74a-4b26-8503-a41c44b870d3" />
 
-## Screenshots V1.4b
+## V1.4b
 - new workspace style , long version with dynamic theme color support <br>
 ##### V1.4b Install-command (copy and paste in your terminal): <br>
 ```bash
@@ -96,7 +96,7 @@ git clone https://github.com/HANCORE-linux/waybar-themes.git /tmp/repo && cp -rf
 
 
 
-## Screenshots V1.5
+## V1.5
 - V1 base evolved: numbered workspaces, ultra-minimal full-width bar with shadowed modules seamlessly integrated into the background <br>
 ##### V1.5 Install-command (copy and paste in your terminal): <br>
 ```bash
@@ -104,7 +104,7 @@ git clone https://github.com/HANCORE-linux/waybar-themes.git /tmp/repo && cp -rf
 ```
 <img width="2560" height="381" alt="screenshot-2026-01-01_22-19-57" src="https://github.com/user-attachments/assets/16b385c5-c9c2-4a62-9446-177ece4795dd" />
 
-## Screenshots V1.6
+## V1.6
 - long bar - dynamic **RAM/CPU rounded circle's**  <br>
 ##### V1.6 Install-command (copy and paste in your terminal): <br>
 ```bash
@@ -112,7 +112,7 @@ git clone https://github.com/HANCORE-linux/waybar-themes.git /tmp/repo && cp -rf
 ```
 <img width="2560" height="562" alt="V1 6" src="https://github.com/user-attachments/assets/8964b8b7-6b13-400b-b598-976925e23456" />
 
-## Screenshots V1.7
+## V1.7
 - short bar with text modules on right side   <br>
 - includes custom window script by Astraeya , make script executable : ```chmod +x ~/.config/waybar/window_pill.py```
 ##### V1.7 Install-command (copy and paste in your terminal): <br>
