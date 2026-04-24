@@ -512,7 +512,7 @@ git clone https://github.com/HANCORE-linux/waybar-themes.git /tmp/repo && cp -rf
 ```
 <img width="1363" height="532" alt="V42b" src="https://github.com/user-attachments/assets/649ad9d0-9858-4722-a642-a3b30db8c632" />
 
-## Screenshot V4.3
+## V4.3
 - Enhancement release (Minimal build, mpris animation, wttrbar and gradient bottom color) <br>
 ##### V4.3 Install-command (copy and paste in your terminal): <br>
 ```bash
@@ -520,7 +520,7 @@ git clone https://github.com/HANCORE-linux/waybar-themes.git /tmp/repo && cp -rf
 ```
 <img width="1236" height="262" alt="screenshot-2025-11-28_21-48-35" src="https://github.com/user-attachments/assets/88b6f0c6-84a0-4c5e-88ae-dd79659a0ece" />
 
-## Screenshot V4.4
+## V4.4
 - just an "optimized" adjustment of V4.3 modules (integration of modules in workspaces) <br>
 ##### V4.4 Install-command (copy and paste in your terminal): <br>
 ```bash
@@ -529,7 +529,7 @@ git clone https://github.com/HANCORE-linux/waybar-themes.git /tmp/repo && cp -rf
 <img width="1195" height="478" alt="screenshot-2025-12-01_20-13-22" src="https://github.com/user-attachments/assets/15ed23b7-fa7d-422f-8b63-b5477f089945" />
 
 
-## Screenshot V5
+## V5
 - solo bars <br>
 ##### V5 Install-command (copy and paste in your terminal): <br>
 ```bash
@@ -538,7 +538,7 @@ git clone https://github.com/HANCORE-linux/waybar-themes.git /tmp/repo && cp -rf
 <img width="2560" height="402" alt="V5" src="https://github.com/user-attachments/assets/8478ce36-1a71-4e3b-af78-7275e10ce49b" />
 
 
-## Screenshot V5.b
+## V5.b
 - "flat" style <br>
 ##### V5.b Install-command (copy and paste in your terminal): <br>
 ```bash
@@ -546,7 +546,7 @@ git clone https://github.com/HANCORE-linux/waybar-themes.git /tmp/repo && cp -rf
 ```
 <img width="1513" height="544" alt="screenshot-2026-03-08_23-35-10" src="https://github.com/user-attachments/assets/6c70e0c1-dc88-47b4-90c8-390caab196fd" />
 
-## Screenshot V5.c
+## V5.c
 - "3D" style <br>
 ##### V5.c Install-command (copy and paste in your terminal): <br>
 ```bash
@@ -554,7 +554,7 @@ git clone https://github.com/HANCORE-linux/waybar-themes.git /tmp/repo && cp -rf
 ```
 <img width="1611" height="443" alt="screenshot-2025-12-19_23-40-56" src="https://github.com/user-attachments/assets/4ca83490-bd81-4028-9276-bfbac3fde1f4" />
 
-## Screenshot V5.d
+## V5.d
 - centered workspaces
 ##### V5.d Install-command (copy and paste in your terminal): <br>
 ```bash
@@ -563,7 +563,7 @@ git clone https://github.com/HANCORE-linux/waybar-themes.git /tmp/repo && cp -rf
 <img width="1512" height="404" alt="screenshot-2025-12-20_14-42-24" src="https://github.com/user-attachments/assets/b351efef-e8e3-4ce1-ae72-908eb336d606" />
 
 
-## Screenshot V5.e
+## V5.e
 - added borders to all modules to fit the style of the workspaces
 ##### V5.e Install-command (copy and paste in your terminal): <br>
 ```bash
@@ -572,7 +572,7 @@ git clone https://github.com/HANCORE-linux/waybar-themes.git /tmp/repo && cp -rf
 <img width="1499" height="434" alt="screenshot-2025-12-20_15-39-22" src="https://github.com/user-attachments/assets/0f8dbea0-fd86-4b83-bdaa-de2c05851a3f" />
 
 
-## Screenshot V6 
+## V6 
 - Original version by [Adso](https://github.com/adsovetzky/Adso-dotfiles), adapted by me to fit my needs and style<br>
 - Shadow effects in the text field, icons, and page margins<br>
 - length of waybar can be adjust in config.jsonc and change the "width" value to your needs
@@ -582,7 +582,7 @@ git clone https://github.com/HANCORE-linux/waybar-themes.git /tmp/repo && cp -rf
 ```
 <img width="1581" height="454" alt="screenshot-2025-12-11_22-16-59" src="https://github.com/user-attachments/assets/bf7b0de2-5984-4b25-9ea5-ece2ed7b0e6d" />
 
-## Screenshot V6.a
+## V6.a
 - top-min bar - static colors - recommended for dark themes 
 ##### V6.a Install-command (copy and paste in your terminal): <br>
 ```bash
