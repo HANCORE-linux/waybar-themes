@@ -4,7 +4,7 @@
 <div align="center">
 
 [![Stars](https://img.shields.io/github/stars/HANCORE-linux/waybar-themes?style=for-the-badge&labelColor=000000&color=df6124&logo=github&logoColor=df6124)](https://github.com/HANCORE-linux/waybar-themes)
-[![Forks](https://img.shields.io/github/forks/HANCORE-linux/waybar-themes?style=for-the-badge&labelColor=000000&color=df6124&logo=github&logoColor=df6124)](https://github.com/HANCORE-linux/waybar-themes/network/members)
+[![Forks](https://img.shields.io/github/forks/HANCORE-linux/waybar-themes?style=for-the-badge&labelColor=000000&color=df6124&logo=github&logoColor=df6124&cacheSeconds=3600)](https://github.com/HANCORE-linux/waybar-themes/network)
 [![Issues](https://img.shields.io/github/issues/HANCORE-linux/waybar-themes?style=for-the-badge&labelColor=000000&color=df6124&logo=github&logoColor=df6124)](https://github.com/HANCORE-linux/waybar-themes/issues)
 [![Buy Me A Coffee](https://img.shields.io/badge/Buy%20Me%20A%20Coffee-SUPPORT-000000?style=for-the-badge&labelColor=000000&color=df6124&logo=buymeacoffee&logoColor=df6124)](https://buymeacoffee.com/hancore)
 
@@ -720,3 +720,5 @@ git clone https://github.com/HANCORE-linux/waybar-themes.git /tmp/repo && cp -rf
 git clone https://github.com/HANCORE-linux/waybar-themes.git /tmp/repo && cp -rf /tmp/repo/config/V6.fa/. ~/.config/waybar && rm -rf /tmp/repo && omarchy-restart-waybar
 ```
 <img width="2560" height="359" alt="screenshot-2026-01-02_20-53-50" src="https://github.com/user-attachments/assets/9e5f77ec-ba1f-42c0-810d-46f5327ed3f4" />
+
+&cacheSeconds=3600
