@@ -11,12 +11,14 @@
 
 </div>
 
-## Usability 
+## Usability
+<details>
 - These configs are Omarchy-based, including optional Omarchy-specific modules (logo, screen recorder, update module).
 - Aside from that, they use standard modules (e.g. pacman updates, wttrbar), so <b>they can be used on any distro by simply removing the Omarchy modules and define colors.</b>
+</details>
 
 ## Instructions
-
+<details>
 My Waybar configurations use additional packages such as wttrbar (weahter module) and waybar-cava-module-update-git (pacman AUR updates).
 
 ```bash
@@ -25,8 +27,10 @@ yay -S waybar-module-pacman-updates-git
 ```bash
 yay -S wttrbar
 ```
+</details>
 
 ## Reset Waybar to default Omarchy style
+<details>
 To restore the default Omarchy Waybar look and config:
 
 1. Open the **Omarchy Menu**  
@@ -39,6 +43,7 @@ This action:
 - Resets `~/.config/waybar` to the stock Omarchy version
 - Usually backs up your current custom config (e.g. to `config.bak`, `style.css.bak`, etc.)
 - Reloads Waybar automatically in most cases
+</details>
 
 ## Screenshots V1
 - first creation of my own Waybar config <br>
