@@ -1,8 +1,17 @@
-## Waybar Themes for opinionated Omarchy
+<h1 align="center"> Waybar Themes </h1>
 
- A collection of my Waybar themes – have fun exploring and customizing them!
+<h4 align="center"> My Waybar themes with individual and personalized designs. Enjoy exploring and customizing </h4>
+<div align="center">
 
-### Usability 
+[![Stars](https://img.shields.io/github/stars/HANCORE-linux/waybar-themes?style=for-the-badge&labelColor=000000&color=df6124&logo=github&logoColor=df6124)](https://github.com/HANCORE-linux/waybar-themes)
+[![Forks](https://img.shields.io/github/forks/HANCORE-linux/waybar-themes?style=for-the-badge&labelColor=000000&color=df6124&logo=github&logoColor=df6124)](https://github.com/HANCORE-linux/waybar-themes/network)
+[![Issues](https://img.shields.io/github/issues/HANCORE-linux/waybar-themes?style=for-the-badge&labelColor=000000&color=df6124&logo=github&logoColor=df6124)](https://github.com/HANCORE-linux/waybar-themes/issues)
+[![Support](https://img.shields.io/badge/SUPPORT-Buy%20Me%20A%20Coffee-000000?style=for-the-badge&labelColor=000000&color=df6124&logo=buymeacoffee&logoColor=df6124)](https://buymeacoffee.com/hancore)
+
+
+</div>
+
+## Usability 
 - These configs are Omarchy-based, including optional Omarchy-specific modules (logo, screen recorder, update module).
 - Aside from that, they use standard modules (e.g. pacman updates, wttrbar), so <b>they can be used on any distro by simply removing the Omarchy modules and define colors.</b>
 
