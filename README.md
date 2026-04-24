@@ -6,7 +6,7 @@
 [![Stars](https://img.shields.io/github/stars/HANCORE-linux/waybar-themes?style=for-the-badge&labelColor=000000&color=df6124&logo=github&logoColor=df6124)](https://github.com/HANCORE-linux/waybar-themes)
 [![Forks](https://img.shields.io/github/forks/HANCORE-linux/waybar-themes?style=for-the-badge&labelColor=000000&color=df6124&logo=github&logoColor=df6124)](https://github.com/HANCORE-linux/waybar-themes/network)
 [![Issues](https://img.shields.io/github/issues/HANCORE-linux/waybar-themes?style=for-the-badge&labelColor=000000&color=df6124&logo=github&logoColor=df6124)](https://github.com/HANCORE-linux/waybar-themes/issues)
-[![Support](https://img.shields.io/badge/SUPPORT-Buy%20Me%20A%20Coffee-000000?style=for-the-badge&labelColor=000000&color=df6124&logo=buymeacoffee&logoColor=df6124)](https://buymeacoffee.com/hancore)
+[![Buy Me A Coffee](https://img.shields.io/badge/Buy%20Me%20A%20Coffee-SUPPORT-000000?style=for-the-badge&labelColor=000000&color=df6124&logo=buymeacoffee&logoColor=df6124)](https://buymeacoffee.com/hancore)
 
 
 </div>
