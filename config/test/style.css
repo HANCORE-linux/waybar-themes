@@ -158,6 +158,14 @@ margin-right: 5px;
   color: @red;
 }
 
+#battery,
+#battery.discharging,
+#battery.full,
+#battery.plugged,
+#battery.charging {
+  padding-right: 18px;
+}
+
 #pulseaudio.input {
   padding-right: 4px;
 }
