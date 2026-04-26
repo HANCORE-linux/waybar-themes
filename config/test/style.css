@@ -154,6 +154,15 @@ margin-right: 5px;
   margin: 0px 0px 0px 0px;
 }
 
+
+#battery,
+#battery.discharging,
+#battery.full,
+#battery.plugged,
+#battery.charging {
+  padding-right: 14px;
+}
+
 #custom-clock {
   color: @red;
 }
@@ -274,7 +283,7 @@ tooltip label {
 }
 
 #custom-cava {
-margin: 0px 6px 0px 8px;
+margin: 0px 6px 0px 0px;
 padding: 0px 9px;
 border-radius: 2px;
 background-color: @red; /*optional use @red for omarchy logo consistencie or @fg to match other themes colors*/
@@ -297,7 +306,7 @@ color: @bg;
 }*/
 
 #mpris {
-margin: 0px 0px 0px 8px;
+margin: 0px 6px 0px 8px;
 padding: 0px 9px;
 border-radius: 2px;
 background-color: @red; /*optional use @red for omarchy logo consistencie or @fg to match other themes colors*/
