@@ -176,9 +176,6 @@ margin-right: 5px;
   color: @red;
 }
 
-#pulseaudio.input {
-  padding-right: 4px;
-}
 
 #bluetooth {
   padding-right: 4px;
