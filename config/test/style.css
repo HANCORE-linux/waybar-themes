@@ -251,12 +251,21 @@ tooltip label {
   
 }
 
-#custom-separator6,
+#custom-separator6 {
+  opacity: 0.35;
+  padding-bottom: 0px;
+  padding-top: 0px;
+  padding-left: 4px;
+  padding-right: 4px;
+  font-size: 10px;
+  color: @fg;
+}
+
 #custom-separator5,
 #custom-separator4 {
   opacity: 0.35;
   padding-bottom: 0px;
-  padding-top: 0px;
+  padding-top: 1px;
   padding-left: 4px;
   padding-right: 4px;
   font-size: 10px;
