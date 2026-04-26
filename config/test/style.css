@@ -3,22 +3,15 @@
 @define-color fg @foreground;
 @define-color red #df6124;
 @define-color grey #363636;
+@define-color blink-fg #2f4f4f;
 
 * {
     font-family: "JetBrainsMono Nerd Font";
     font-size: 12px;
     font-weight: 900;
-    margin: 0;
-    padding: 0;
-    transition-property: background-color;
-    transition-duration: 0.5s;
-}
-
-/* Reset all styles */
-* {
     border: none;
     border-radius: 0px;
-    min-height: 20px;
+    min-height: 0px;
     margin: 0rem 0rem 0rem 0rem;
 }
 
@@ -28,65 +21,16 @@ window#waybar  {
 
 /* Container L1 */
 
-#l1 {
-  margin: 0px 3px 2px 3px;
-  padding: 0px 0px;
+#waybar > box {
+  margin: 2px 17px 5px 8px;
+  padding: 2px 0px 2px 0px;
   border-radius: 5px;
-  border: 1.5px solid @grey;
+  border: 4px ridge @grey;
   background-color: @bg;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 1);
-}
-
-#l1 > widget,
-#l1 #custom-omarchy,
-#workspaces button {
-  border: none; 
-  border-right: 1.5px solid @grey; 
-  border-radius: 0;
-  margin: 0;
-}
-
-#l1 > widget:first-child,
-#l1 #custom-omarchy {
-  border-radius: 3px 0px 0px 3px;
-}
-
-#workspaces button:last-child {
-  border-right: none;
-  border-radius: 0px 3px 3px 0px;
-}
-
-/* Container L2 */
-
-#l2 {
-margin: 0px 3px 2px 3px;
-  padding: 2px 0px;
-  border-radius: 5px;
-  border: 1.5px solid @grey;
-  background-color: @bg;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 1);
-}
-
-#l2 label, 
-#l2 > widget > label,
-#l2 > widget {
-  padding: 0px 9px;
-  margin: 0px 0px;
-  color: @fg;
-  font-weight: 900;
-  font-size: 12px;
-  border-right: 1.5px solid @grey; 
-}
-
-#l2 > widget:first-child label,
-#l2 > widget:first-child {
-  border-radius: 3px 0px 0px 3px;
-}
-
-#l2 > widget:last-child label,
-#l2 > widget:last-child {
-  border-radius: 0px 3px 3px 0px;
-  border-right: none; 
+      box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.9),
+             2px 2px 4px rgba(0, 0, 0, 0.6),
+             3px 3px 6px rgba(0, 0, 0, 0.4),
+             4px 4px 8px rgba(0, 0, 0, 0.2); 
 }
 
 window#waybar.empty #mpris {
@@ -98,58 +42,30 @@ window#waybar.empty #mpris {
 
 /* Container module right */
 
-#r1 {
-margin: 0px 3px 2px 3px;
-  padding: 2px 0px;
-  border-radius: 5px;
-  border: 1.5px solid @grey;
-  background-color: @bg;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 1);
-}
 
-#r1 label, 
-#r1 > widget > label,
-#r1 > widget {
-  padding: 0px 9px;
-  margin: 0px 0px;
-  color: @fg;
-  font-weight: 900;
-  font-size: 12px;
-  border-right: 1.5px solid @grey; 
-}
-
-#r1 > widget:first-child label,
-#r1 > widget:first-child {
-  border-radius: 3px 0px 0px 3px;
-}
-
-#r1 > widget:last-child label,
-#r1 > widget:last-child {
-  border-radius: 0px 3px 3px 0px;
-  border-right: none; 
-}
 
 /* Container module center */
 
-.modules-center {
-  margin: 0px 3px 2px 3px;
-  padding: 2px 9px;
-  border-radius: 5px;
-  border: 1.5px solid @grey;
-  background-color: @bg;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 1);
+.modules-left {
+margin-left: 5px;
 }
 
+.modules-right {
+margin-right: 5px;
+}
+
+
 #workspaces {
-  border-radius: 5px;
   background-color: @bg;
   transition: 0.1s ease-in-out;
+  margin: 0px 0px 0px 0px;
+  padding: 0px 0px;
 }
 
 #workspaces button {
   all: initial;
   padding: 0px 9px;
-  margin: 1px 0px;
+  margin: 0px 1px;
   color: @red;
   opacity: 1;
   font-weight: 900;
@@ -162,7 +78,7 @@ margin: 0px 3px 2px 3px;
   border-radius: 2px;
   background-color: @red;
   padding: 0px 9px;
-  margin: 1px 0px;
+  margin: 0px 1px;
   opacity: 1.0;
 }
 
@@ -178,7 +94,7 @@ margin: 0px 3px 2px 3px;
   opacity: 1;
   border-radius: 2px;
   padding: 0px 9px;
-  margin: 1px 1px;
+  margin: 0px 1px;
   color: alpha(@fg, 0.25);
 }
 
@@ -186,83 +102,72 @@ margin: 0px 3px 2px 3px;
   opacity: 1;
   border-radius: 2px;
   padding: 0px 9px;
-  margin: 1px 1px;
-  background-color: alpha(@fg, 0.75);
+  margin: 0px 1px;
+  background-color: alpha(@fg, 0.5);
   color: @bg;
 }
 
-#custom-omarchy {
-    background-image: url("bob2.svg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 92%;
-    border-radius: 3px;
-  }
+#custom-omarchy {  
+  background-image: url("bob2.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  padding: 1px 8px 1px 8px;
+  margin: 0px 5px 0px 0px;
+}
 
 
   /* L1 single groups */
-#custom-cava,
+#tray,
+#idle_inhibitor,
 #memory,
 #mpris,
 #cpu,
 #battery,
+#battery.discharging,
+#battery.full,
+#battery.plugged,
+#battery.charging,
 #backlight,
 #network,
+#network.disconnected,
+#network.wifi,
+#network.ethernet,
 #bluetooth,
 #pulseaudio,
+#pulseaudio.input,
+#pulseaudio.output,
 #power-profiles-daemon,
 #power-profiles-daemon.performance,
 #power-profiles-daemon.balanced,
 #power-profiles-daemon.power-saver,
-#custom-omarchy {
-  min-width: 15px;
-  color: @fg;
-  opacity: 1;
-  padding-left: 9px;
-  padding-right: 9px;
-}
-
-#network.disconnected,
-#network.wifi,
-#network.ethernet {
-  padding-right: 13px;
-}
-
-#battery.discharging,
-#battery.full,
-#battery.plugged,
-#battery.charging {
-  padding-right: 14px;
-}
-
-/* L2 single groups */
-
-#tray,
-#idle_inhibitor,
-#custom-idle-indicator,
-#custom-notification-silencing-indicator,
+#custom-weather,
+#custom-cava,
+#custom-clock,
 #custom-updatespacman,
 #custom-screenrecording-indicator,
-#custom-update {
-  min-width: 15px;
+#custom-update  {
+  min-width: 12px;
   color: @fg;
   opacity: 1;
-  padding-left: 9px;
-  padding-right: 9px;
+  padding: 1px 8px 1px 8px;
+  margin: 0px 0px 0px 0px;
 }
 
-#custom-update {
-opacity: 1;
+#custom-clock {
+  color: @red;
 }
-	
 
-#custom-updatespacman {
-opacity: 1;
+#pulseaudio.input {
+  padding-right: 4px;
+}
+
+#bluetooth {
+  padding-right: 4px;
 }
 
 #tray {
-opacity: 1;
-padding-top: 0px;
+padding-top: 2px;
 }
 
 tooltip {
@@ -270,15 +175,12 @@ tooltip {
 }
 
 
-#power-profiles-daemon.power-saver {
-padding-right: 14px;
-}
-
 #custom-idle-indicator,
 #custom-notification-silencing-indicator {
   min-width: 12px;
-  margin-left: 0;
-  margin-right: 0;
+  padding: 0 2px;
+  margin-left: 0px;
+  margin-right: 0px;
   font-size: 12px;
   padding-bottom: 0px;
 }
@@ -286,7 +188,7 @@ padding-right: 14px;
 #custom-idle-indicator.active,
 #custom-notification-silencing-indicator.active {
   color: #a55555;
-  opacity: 1;
+  opacity: 1;;
 }
 
 .hidden {
@@ -297,12 +199,12 @@ tooltip {
  padding: 4px;
  background: @bg;
  font-size: 10px;
- border: 1.5px solid alpha(@foreground, 0.6);
+ border: 3px ridge @grey;
  border-radius: 8px;
  
 }
 tooltip label {
-    color: alpha(@fg, 0.65);
+    color: alpha(@fg, 1);
     font-weight: normal;
 }
 
@@ -313,6 +215,32 @@ tooltip label {
 
 #custom-voxtype.recording {
   color: #a55555;
+}
+
+
+#custom-separator3,
+#custom-separator2,
+#custom-separator {
+  opacity: 0.35;
+  padding-bottom: 0px;
+  padding-top: 0px;
+  padding-left: 4px;
+  padding-right: 4px;
+  font-size: 10px;
+  color: @fg;
+  
+}
+
+#custom-separator6,
+#custom-separator5,
+#custom-separator4 {
+  opacity: 0.35;
+  padding-bottom: 0px;
+  padding-top: 1px;
+  padding-left: 1px;
+  padding-right: 1px;
+  font-size: 10px;
+  color: @fg;
 }
 
 /* Specific animation Module */
@@ -344,25 +272,35 @@ tooltip label {
 }
 
 #custom-cava {
-  margin: 0px 3px 2px 3px;
-  padding: 2px 9px;
-  border-radius: 5px;
-  border: 1.5px solid @grey;
-  background-color: @bg;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 1);
+margin: 0px 6px 0px 8px;
+padding: 0px 9px;
+border-radius: 2px;
+background-color: @red; /*optional use @red for omarchy logo consistencie or @fg to match other themes colors*/
 opacity: 1;
-color: @fg;
+color: @bg;
+/*animation: repeat;
+	animation-name: blink3;
+	animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;*/
 }
 
+/* remove comment for cava color transmissions
+@keyframes blink3 {
+    to {
+        color: @cava-fg;
+        
+    }
+}*/
+
 #mpris {
-    margin: 0px 3px 2px 3px;
-  padding: 2px 9px;
-  border-radius: 5px;
-  border: 1.5px solid @grey;
-  background-color: @bg;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 1);
+margin: 0px 0px 0px 8px;
+padding: 0px 9px;
+border-radius: 2px;
+background-color: @red; /*optional use @red for omarchy logo consistencie or @fg to match other themes colors*/
 opacity: 1;
-color: @fg;
+color: @bg;
 animation: repeat;
 	animation-name: blink;
 	animation-duration: 3s;
@@ -373,7 +311,7 @@ animation: repeat;
 
 @keyframes blink {
     to {
-        color: #4a4a4a;
+        color: @blink-fg;
         
     }
 }

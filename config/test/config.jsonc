@@ -2,63 +2,46 @@
   "exclusive": true,
   "reload_style_on_change": true,
   "position": "top",
+  "mod": "dock",
+  "passthrough": false,
+  "gtk-layer-shell": true,
   "margin-top": 2,
-    "margin-left": 5,
-    "margin-bottom": 3,
-    "margin-right": 5,
-  "modules-left": ["group/l1","group/l2","group/l3"],
-
-"group/l1": {
-    "orientation": "inherit",
-    "modules": [
+  "margin-left": 80,
+  "margin-bottom": 0,
+  "margin-right": 80,
+  "modules-left": [
     "custom/omarchy",
-    "hyprland/workspaces"
-  ]
-},
-
-  "group/l2": {
-    "orientation": "inherit",
-    "modules": [
-    "tray",
+    "custom/separator",
     "idle_inhibitor",
     "custom/voxtype",
     "custom/idle-indicator",
     "custom/notification-silencing-indicator",
     "custom/screenrecording-indicator",
+    "custom/update",
+    "custom/separator3",
+    "mpris",
+    "custom/cava",
+    "custom/separator",
     "custom/updatespacman",
-    "custom/update"
-  ]
-},
-
-  "group/l3": {
-   "orientation": "inherit",
-   "modules": ["mpris"]
-},
-
-  "modules-center": ["custom/clock"],
-  "modules-right": [
-    "group/r2",
-    "group/r1"
-  ],
-
-   "group/r1": {
-   "orientation": "inherit",
-   "modules": [
     "bluetooth",
+    "power-profiles-daemon",
+    "network"  
+  ],
+  "modules-center": ["hyprland/workspaces"],
+  "modules-right": [
     "backlight",
     "battery",
-    "power-profiles-daemon",
-    "network",
-    "pulseaudio#input",
-    "pulseaudio#output",
+    "custom/separator6",
+    "pulseaudio",
     "memory",
-    "cpu"
-  ]
-},
-   "group/r2": {
-   "orientation": "inherit",
-   "modules": ["custom/cava"]
-},
+    "cpu",
+    "custom/separator2",
+    "custom/weather",
+    "custom/separator5",
+    "custom/clock",
+    "custom/separator4",
+    "tray"
+  ],
 
   "hyprland/workspaces": {
     "disable-scroll": true,
@@ -78,19 +61,44 @@
       "10": "9+"
     },
     "persistent-workspaces": {
-      "1": [],
-      "2": [],
-      "3": [],
-      "4": [],
-      "5": [],
-      "6": [],
-      "7": [],
-      "8": [],
-      "9": [],
-      "10": []
-    }
-
+      "*": 10 // 5 workspaces by default on every monitor
+      }
 },
+"custom/separator": {
+    "format": "", 
+    "tooltip": false
+},
+"custom/separator2": {
+    "format": "", 
+    "tooltip": false
+},
+"custom/separator3": {
+"exec": "sh -c 'if pgrep -x cliamp >/dev/null || playerctl status 2>/dev/null | grep -qE \"Playing|Paused\"; then echo \"{\\\"text\\\":\\\"\\\",\\\"class\\\":\\\"show\\\"}\"; else echo \"{\\\"text\\\":\\\"\\\",\\\"class\\\":\\\"hide\\\"}\"; fi'",
+    "return-type": "json",
+    "interval": 2,
+    "format": "{}"
+},
+"custom/separator4": {
+"exec": "sh -c 'count=$(busctl --user get-property org.kde.StatusNotifierWatcher /StatusNotifierWatcher org.kde.StatusNotifierWatcher RegisteredStatusNotifierItems | sed -n \"s/^as \\([0-9]\\+\\).*/\\1/p\"); if [ \"${count:-0}\" -gt 0 ]; then echo \"{\\\"text\\\":\\\"|\\\",\\\"class\\\":\\\"show\\\"}\"; else echo \" {\\\"text\\\":\\\"\\\",\\\"class\\\":\\\"hide\\\"}\"; fi'",
+    "return-type": "json",
+    "interval": 2
+},
+"custom/separator5": {
+    "format": "|", 
+    "tooltip": false
+},
+"custom/separator6": {
+    "exec": "sh -c '[ -d /sys/class/backlight ] && [ \"$(ls -A /sys/class/backlight 2>/dev/null)\" ] && ls /sys/class/power_supply 2>/dev/null | grep -q \"^BAT\" && echo \"\"'",
+    "tooltip": false,
+    "interval": "once"
+},
+  "custom/weather": {
+    "format": "{}°",
+    "tooltip": true,
+    "interval": 60,
+    "exec": "wttrbar --nerd --location Hildesheim",
+    "return-type": "json"
+  },
  "custom/cava": {
     //"cava_config": "~/.config/cava/config",
     "format": "{}",
@@ -98,7 +106,7 @@
     "tooltip": false
   },
   "custom/omarchy": {
-    "format": "         ",
+    "format": "            ",
     "on-click": "omarchy-menu",
     "on-click-right": "xdg-terminal-exec",
     "tooltip-format": "Omarchy Menu\n\nSuper + Alt + Space"
@@ -142,7 +150,7 @@
     "tooltip": true,
     "format-icons": {
       "performance": "",
-      "balanced": " ",
+      "balanced": "",
       "power-saver": ""
     }
   },
@@ -167,6 +175,7 @@
    "memory": {
     "interval": 2,
     "format": " {percentage:02}%",
+    "tooltip-format": "Used {percentage}%\n{used:0.1f}GB/{total:0.1f}GB",
     "on-click": "omarchy-launch-or-focus-tui btop",
        "states": {
         "warning": 50,
@@ -175,7 +184,7 @@
   },
 
   "custom/clock": {
-    "exec": "date +'%H:%M %p - %A, %b %d' | tr '[:upper:]' '[:lower:]'",
+    "exec": "date +'%H:%M %p' | tr '[:upper:]' '[:lower:]'",
     "interval": 60,
     "tooltip": false,
     "on-click-right": "omarchy-launch-floating-terminal-with-presentation omarchy-tz-select"
@@ -227,41 +236,28 @@
     "tooltip-format": "Devices connected: {num_connections}",
     "on-click": "omarchy-launch-bluetooth"
   },
-  "pulseaudio#input": {
-    "format-source": "",
-    "format-source-muted": " ",
-    "format": "{format_source}",
-    "tooltip-format": "{format_source} {source_volume}%",
-    "scroll-step": 1,
-    "smooth-scrolling-threshold": 1,
-    "max-volume": 100,
+"pulseaudio": {
+    "format": "{icon} {volume}%",
     "on-click": "omarchy-launch-audio",
     "on-click-right": "pamixer -t",
-    "on-scroll-up": "pactl set-source-volume @DEFAULT_SOURCE@ +1%",
-    "on-scroll-down": "pactl set-source-volume @DEFAULT_SOURCE@ -1%"
-  },
-  "pulseaudio#output": {
-    "format": "<span>{icon}</span>  {volume}%",
-    "tooltip-format": "{icon}  {volume}%",
-     "format-muted": "",
-      "format-icons": {
-      "default": ["", "", ""]
-    },
-    "max-volume": 100,
-    "scroll-step": 2,
-    "smooth-scrolling-threshold": 1,
-    "on-click": "omarchy-launch-audio",
-    "on-click-right": "pamixer -t"
+    "tooltip-format": "Playing at {volume}%",
+    "scroll-step": 5,
+    "format-muted": "",
+    "format-icons": {
+     // "headphone": "",
+     // "headset": "",
+      "default": [" ", " ", " "]
+    }
   },
  "mpris": {
     "format": " {dynamic}",
-    "format-paused": "<span color='grey'>{status_icon} {dynamic}</span>",
+    "format-paused": "<span color='#1b1b1b'>{status_icon} {dynamic}</span>",
     "title-len": 20,
-    "dynamic-order": ["artist", "title"],
+    "dynamic-order": ["artist"],
     "status-icons": {
       "paused": "󰝛"
     },
-    //"ignored-players": ["firefox", "chromium", "brave"]
+    "ignored-players": ["firefox", "chromium", "brave"]
     },
   "idle_inhibitor": {
     "format": "{icon}",
@@ -280,9 +276,25 @@
     "exec-if": "which waybar-module-pacman-updates",
     "exec": "waybar-module-pacman-updates --no-zero-output"
   },
+  "group/tray-expander": {
+    "orientation": "inherit",
+    "drawer": {
+      "transition-duration": 600,
+      "children-class": "tray-group-item",
+      "click-to-reveal": true
+    },
+    "modules": [
+    "custom/expand-icon",
+
+    ]
+  },
+  "custom/expand-icon": {
+    "format": " ",
+    "tooltip": false
+  },
   "tray": {
-    "icon-size": 14,
-    "spacing": 0
+    "icon-size": 13,
+    "spacing": 2
   },
   "custom/screenrecording-indicator": {
     "on-click": "omarchy-cmd-screenrecord",
