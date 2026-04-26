@@ -158,14 +158,6 @@ margin-right: 5px;
   color: @red;
 }
 
-#battery,
-#battery.discharging,
-#battery.full,
-#battery.plugged,
-#battery.charging {
-  padding-right: 18px;
-}
-
 #pulseaudio.input {
   padding-right: 4px;
 }
@@ -176,6 +168,8 @@ margin-right: 5px;
 
 #tray {
 padding-top: 2px;
+padding-left: 0px;
+padding-right: 0px;
 }
 
 tooltip {
@@ -244,9 +238,9 @@ tooltip label {
 #custom-separator4 {
   opacity: 0.35;
   padding-bottom: 0px;
-  padding-top: 1px;
-  padding-left: 1px;
-  padding-right: 1px;
+  padding-top: 0px;
+  padding-left: 4px;
+  padding-right: 4px;
   font-size: 10px;
   color: @fg;
 }
