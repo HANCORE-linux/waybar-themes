@@ -1,0 +1,306 @@
+{
+  "exclusive": true,
+  "reload_style_on_change": true,
+  "position": "top",
+  "mod": "dock",
+  "passthrough": false,
+  "gtk-layer-shell": true,
+  "margin-top": 2,
+  "margin-left": 80,
+  "margin-bottom": 0,
+  "margin-right": 80,
+  "modules-left": [
+    "custom/omarchy",
+    "custom/separator",
+    "idle_inhibitor",
+    "custom/voxtype",
+    "custom/idle-indicator",
+    "custom/notification-silencing-indicator",
+    "custom/screenrecording-indicator",
+    "custom/update",
+    "custom/separator3",
+    "mpris",
+    "custom/cava",
+    "custom/separator",
+    "custom/updatespacman",
+    "bluetooth",
+    "power-profiles-daemon",
+    "network"  
+  ],
+  "modules-center": ["hyprland/workspaces"],
+  "modules-right": [
+    "backlight",
+    "battery",
+    "custom/separator6",
+    "pulseaudio",
+    "memory",
+    "cpu",
+    "custom/separator2",
+    "custom/weather",
+    "custom/separator5",
+    "custom/clock",
+    "custom/separator4",
+    "tray"
+  ],
+
+  "hyprland/workspaces": {
+    "disable-scroll": true,
+    "all-outputs": true,
+    "cursor": true,
+    "format": "{icon}",
+    "format-icons": {
+      "1": "1",
+      "2": "2",
+      "3": "3",
+      "4": "4",
+      "5": "5",
+      "6": "6",
+      "7": "7",
+      "8": "8",
+      "9": "9",
+      "10": "9+"
+    },
+    "persistent-workspaces": {
+      "*": 10 // 5 workspaces by default on every monitor
+      }
+},
+"custom/separator": {
+    "format": "", 
+    "tooltip": false
+},
+"custom/separator2": {
+    "format": "", 
+    "tooltip": false
+},
+"custom/separator3": {
+"exec": "sh -c 'if pgrep -x cliamp >/dev/null || playerctl status 2>/dev/null | grep -qE \"Playing|Paused\"; then echo \"{\\\"text\\\":\\\"\\\",\\\"class\\\":\\\"show\\\"}\"; else echo \"{\\\"text\\\":\\\"\\\",\\\"class\\\":\\\"hide\\\"}\"; fi'",
+    "return-type": "json",
+    "interval": 2,
+    "format": "{}"
+},
+"custom/separator4": {
+"exec": "sh -c 'count=$(busctl --user get-property org.kde.StatusNotifierWatcher /StatusNotifierWatcher org.kde.StatusNotifierWatcher RegisteredStatusNotifierItems | sed -n \"s/^as \\([0-9]\\+\\).*/\\1/p\"); if [ \"${count:-0}\" -gt 0 ]; then echo \"{\\\"text\\\":\\\"|\\\",\\\"class\\\":\\\"show\\\"}\"; else echo \" {\\\"text\\\":\\\"\\\",\\\"class\\\":\\\"hide\\\"}\"; fi'",
+    "return-type": "json",
+    "interval": 2
+},
+"custom/separator5": {
+    "format": "|", 
+    "tooltip": false
+},
+"custom/separator6": {
+    "exec": "sh -c '[ -d /sys/class/backlight ] && [ \"$(ls -A /sys/class/backlight 2>/dev/null)\" ] && ls /sys/class/power_supply 2>/dev/null | grep -q \"^BAT\" && echo \"\"'",
+    "tooltip": false,
+    "interval": "once"
+},
+  "custom/weather": {
+    "format": "{}°",
+    "tooltip": true,
+    "interval": 60,
+    "exec": "wttrbar --nerd --location Chongqing",
+    "return-type": "json"
+  },
+ "custom/cava": {
+    //"cava_config": "~/.config/cava/config",
+    "format": "{}",
+    "exec": "~/.config/waybar/cava.sh",
+    "tooltip": false
+  },
+  "custom/omarchy": {
+    "format": "            ",
+    "on-click": "omarchy-menu",
+    "on-click-right": "xdg-terminal-exec",
+    "tooltip-format": "Omarchy Menu\n\nSuper + Alt + Space"
+  },
+  "custom/update": {
+    "format": "",
+    "exec": "omarchy-update-available",
+    "on-click": "omarchy-launch-floating-terminal-with-presentation omarchy-update",
+    "tooltip-format": "Omarchy update available",
+    "signal": 7,
+    "interval": 21600
+  },
+ "custom/voxtype": {
+    "exec": "omarchy-voxtype-status",
+    "return-type": "json",
+    "format": "{icon}",
+    "format-icons": {
+      "idle": "",
+      "recording": "󰍬",
+      "transcribing": "󰔟"
+    },
+    "tooltip": true,
+    "on-click-right": "omarchy-voxtype-config",
+    "on-click": "omarchy-voxtype-model"
+  },
+      "custom/idle-indicator": {
+    "on-click": "omarchy-toggle-idle",
+    "exec": "$OMARCHY_PATH/default/waybar/indicators/idle.sh",
+    "signal": 9,
+    "return-type": "json"
+  },
+  "custom/notification-silencing-indicator": {
+    "on-click": "omarchy-toggle-notification-silencing",
+    "exec": "$OMARCHY_PATH/default/waybar/indicators/notification-silencing.sh",
+    "signal": 10,
+    "return-type": "json"
+  },
+  "power-profiles-daemon": {
+    "format": "{icon}",
+    "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
+    "tooltip": true,
+    "format-icons": {
+      "performance": "",
+      "balanced": "",
+      "power-saver": ""
+    }
+  },
+ "cpu": {
+    "interval": 5,
+    "format": " {usage:02}%",
+    "on-click": "omarchy-launch-or-focus-tui btop",
+    "states": {
+        "warning": 50,
+        "critical": 80
+    }
+  },
+  "backlight": {
+        "device": "intel_backlight",
+        "format": "{icon}  {percent}%",
+        "format-alt": "{percent}% {icon}",
+        "format-alt-click": "click-right",
+        "format-icons": ["", ""],
+        "on-scroll-down": "brightnessctl s 5%-",
+        "on-scroll-up": "brightnessctl s +5%"
+    },
+   "memory": {
+    "interval": 5,
+    "format": " {used:02.1f}GB",
+    "tooltip-format": "Used {percentage}%\n{used:0.1f}GB/{total:0.1f}GB",
+    "on-click": "omarchy-launch-or-focus-tui btop",
+       "states": {
+        "warning": 50,
+        "critical": 80
+    }
+  },
+
+  "custom/clock": {
+    "exec": "date +'%H:%M %p' | tr '[:upper:]' '[:lower:]'",
+    "interval": 60,
+    "tooltip": false,
+    "on-click-right": "omarchy-launch-floating-terminal-with-presentation omarchy-tz-select"
+},
+  "network": {
+    "format-icons": [
+      "󰤯",
+      "󰤟",
+      "󰤢",
+      "󰤥",
+      "󰤨"
+    ],
+    "format": "{icon}",
+    "format-wifi": "{icon}",
+    "format-ethernet": "󰈀",
+    "format-disconnected": "󰤮",
+    "tooltip-format-wifi": "{essid} ({frequency} GHz)\n⇣{bandwidthDownBytes}  ⇡{bandwidthUpBytes}",
+    "tooltip-format-ethernet": "⇣{bandwidthDownBytes}  ⇡{bandwidthUpBytes}",
+    "tooltip-format-disconnected": "Disconnected",
+    "interval": 3,
+    "spacing": 1,
+    "on-click": "omarchy-launch-wifi"
+  },
+   "battery": {
+    "format": "{capacity}% {icon}",
+    "format-charging": " {capacity}% {icon}",
+    "format-plugged": " {capacity}%",
+    "format-icons": [
+            "",
+            "",
+            "",
+            "",
+            ""
+    ],
+    "format-full": "󱊦 {capacity}%",
+    "tooltip-format-discharging": "{timeTo}",
+    "tooltip-format-charging": "{timeTo}",
+    "interval": 5,
+    "on-click": "omarchy-menu power",
+    "states": {
+      "warning": 30,
+      "critical": 15
+    }
+  },
+ "bluetooth": {
+    "format": " {num_connections}",
+    "format-disabled": "󰂲 {status}",
+    "format-connected": "󰂱 {num_connections}",
+    "tooltip-format": "Devices connected: {num_connections}",
+    "on-click": "omarchy-launch-bluetooth"
+  },
+"pulseaudio": {
+    "format": "{icon} {volume}%",
+    "on-click": "omarchy-launch-audio",
+    "on-click-right": "pamixer -t",
+    "tooltip-format": "Playing at {volume}%",
+    "scroll-step": 5,
+    "format-muted": "",
+    "format-icons": {
+     // "headphone": "",
+     // "headset": "",
+      "default": [" ", " ", " "]
+    }
+  },
+ "mpris": {
+    "format": " {dynamic}",
+    "format-paused": "<span color='#1b1b1b'>{status_icon} {dynamic}</span>",
+    "title-len": 20,
+    "dynamic-order": ["artist"],
+    "status-icons": {
+      "paused": "󰝛"
+    },
+    "ignored-players": ["firefox", "chromium", "brave"]
+    },
+  "idle_inhibitor": {
+    "format": "{icon}",
+    "format-icons": {
+      "activated": "idle <span style='italic' weight='900' color='#df6124'>active</span>",
+      "deactivated": "idle <span style='italic' weight='900' color='grey'>off</span>"
+    }
+  },
+  "custom/updatespacman": {
+    "format": "{}{icon}",
+    "return-type": "json",
+    "format-icons": {
+      "has-updates": " 󰏖",
+      "updated": ""
+    },
+    "exec-if": "which waybar-module-pacman-updates",
+    "exec": "waybar-module-pacman-updates --no-zero-output"
+  },
+  "group/tray-expander": {
+    "orientation": "inherit",
+    "drawer": {
+      "transition-duration": 600,
+      "children-class": "tray-group-item",
+      "click-to-reveal": true
+    },
+    "modules": [
+    "custom/expand-icon",
+
+    ]
+  },
+  "custom/expand-icon": {
+    "format": " ",
+    "tooltip": false
+  },
+  "tray": {
+    "icon-size": 13,
+    "spacing": 2
+  },
+  "custom/screenrecording-indicator": {
+    "on-click": "omarchy-cmd-screenrecord",
+    "exec": "$OMARCHY_PATH/default/waybar/indicators/screen-recording.sh",
+    "signal": 8,
+    "return-type": "json"
+  },
+  
+}
