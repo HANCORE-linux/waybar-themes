@@ -163,6 +163,15 @@ margin-right: 5px;
   padding-right: 14px;
 }
 
+#power-profiles-daemon.performance {
+  padding-right: 4px;
+}
+
+#power-profiles-daemon.balanced {
+  padding-right: 8px;
+}
+
+
 #custom-clock {
   color: @red;
 }
