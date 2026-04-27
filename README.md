@@ -385,7 +385,8 @@ git clone https://github.com/HANCORE-linux/waybar-themes.git /tmp/repo && cp -rf
 <img src="https://github.com/HANCORE-linux/waybar-themes/blob/main/config/V2.9d/screenshot-2026-04-20_22-47-33.png?raw=true"/>
 
 ## V2.9e
-- another top bar version with custom omarchy.svg logo as home button 
+- another top bar version with custom omarchy.svg logo as home button
+- this verison also includes wttr weather module - set your location in config.json file reload waybar
 ##### V2.9e Install-command (copy and paste in your terminal): <br>
 ```bash
 git clone https://github.com/HANCORE-linux/waybar-themes.git /tmp/repo && cp -rf /tmp/repo/config/V2.9e/. ~/.config/waybar && rm -rf /tmp/repo && omarchy-restart-waybar
