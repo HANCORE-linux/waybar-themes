@@ -163,9 +163,15 @@ margin-right: 5px;
 
 #power-profiles-daemon.performance {
   padding-right: 4px;
+  color: @red;
+}
+
+#power-profiles-daemon.power-saver {
+  color: #25e712;
 }
 
 #power-profiles-daemon.balanced {
+  color: #b722e1;
   padding-right: 8px;
 }
 
