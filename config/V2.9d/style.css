@@ -255,11 +255,6 @@ margin: 0px 3px 2px 3px;
 padding-top: 0px;
 }
 
-tooltip {
-  padding: 2px;
-}
-
-
 #power-profiles-daemon.power-saver {
 padding-right: 14px;
 }
@@ -287,7 +282,7 @@ tooltip {
  padding: 4px;
  background: @bg;
  font-size: 10px;
- border: 1.5px solid alpha(@foreground, 0.6);
+ border: 2px solid @grey;
  border-radius: 8px;
  
 }
