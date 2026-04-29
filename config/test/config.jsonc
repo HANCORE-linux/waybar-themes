@@ -83,7 +83,7 @@
     "format": "",
     "on-click": "omarchy-menu system",
     "on-click-right": "xdg-terminal-exec",
-    "tooltip-format": "Omarchy Menu\n\nSuper + Alt + Space"
+    "tooltip-format": "Omarchy System menu\n\nSuper + Alt + Space"
   },
   "custom/update": {
     "format": "",
