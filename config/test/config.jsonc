@@ -257,22 +257,6 @@
     "exec-if": "which waybar-module-pacman-updates",
     "exec": "waybar-module-pacman-updates --no-zero-output"
   },
-  "group/tray-expander": {
-    "orientation": "inherit",
-    "drawer": {
-      "transition-duration": 600,
-      "children-class": "tray-group-item",
-      "click-to-reveal": true
-    },
-    "modules": [
-    "custom/expand-icon",
-
-    ]
-  },
-  "custom/expand-icon": {
-    "format": " ",
-    "tooltip": false
-  },
   "tray": {
     "icon-size": 13,
     "spacing": 2
