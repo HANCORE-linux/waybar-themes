@@ -237,10 +237,12 @@
     "ignored-players": ["firefox", "brave"]
     },
   "idle_inhibitor": {
-    "format": "{icon}",
+   "format": "{icon}",
+   "tooltip-format-activated": "Stay Awake: ON 󱎴",
+   "tooltip-format-deactivated": "Stay Awake: OFF 󰶐",
     "format-icons": {
       "activated": "󱎴",
-      "deactivated": "󰶐"
+      "deactivated": "󰷛"
     }
   },
   "custom/updatespacman": {

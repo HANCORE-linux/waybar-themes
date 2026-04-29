@@ -2,7 +2,7 @@
 @define-color bg @background;
 @define-color fg @foreground;
 @define-color red #df6124;
-@define-color grey #363636;
+@define-color grey #4f4f4f;
 
 
 * {
@@ -142,8 +142,14 @@ button:hover {
   font-size: 14px;
 }
 
-#idle_inhibitor {
+#idle_inhibitor.deactivated {
   font-size: 14px;
+  color: @grey;
+}
+
+#idle_inhibitor.activated {
+  font-size: 14px;
+    color: @red;
 }
 
 
@@ -226,27 +232,27 @@ tooltip label {
   color: #a55555;
 }
 
-#custom-separator4,
+
 #custom-separator3,
 #custom-separator2,
 #custom-separator {
-  opacity: 0.35;
+  opacity: 1;
   padding-bottom: 0px;
   padding-top: 1px;
   padding-left: 4px;
   padding-right: 4px;
   font-size: 10px;
-  color: @fg;
+  color: @grey;
 }
 
 #custom-separator4 {
-  opacity: 0.35;
+  opacity: 1;
   padding-bottom: 0px;
   padding-top: 0px;
   padding-left: 4px;
   padding-right: 4px;
   font-size: 10px;
-  color: @fg;
+  color: @grey;
 }
 
 /* Specific animation Module */
@@ -286,6 +292,19 @@ margin-bottom: 1px;
 background-color: transparent; 
 opacity: 1;
 color: @fg;
+animation: repeat;
+	animation-name: blink;
+	animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes blink {
+    to {
+        color: @grey;
+        
+    }
 }
 
 #network.disconnected,
