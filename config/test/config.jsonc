@@ -37,9 +37,8 @@
     "pulseaudio#output",
     "memory",
     "cpu",
-    "custom/separator4",
-    "custom/weather",
     "custom/separator",
+    "custom/weather",
     "custom/clock",
     "custom/separator2",
     "tray"
