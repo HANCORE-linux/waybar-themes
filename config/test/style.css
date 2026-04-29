@@ -180,7 +180,6 @@ button:hover {
 }
 
 #tray {
-padding: 0 8px;
 margin-top: 1px;
 }
 
@@ -231,27 +230,26 @@ tooltip label {
 #custom-separator3,
 #custom-separator2,
 #custom-separator {
-  opacity: 1;
+  opacity: 0.25;
   padding-bottom: 0px;
   padding-top: 1px;
   padding-left: 4px;
   padding-right: 4px;
   font-size: 10px;
-  color: @grey;
+  color: @fg;
 }
 
 #custom-separator4 {
-  opacity: 1;
+  opacity: 0.25;
   padding-bottom: 0px;
   padding-top: 0px;
   padding-left: 4px;
   padding-right: 4px;
   font-size: 10px;
-  color: @grey;
+  color: @fg;
 }
 
 /* Specific animation Module */
-
 
 #custom-screenrecording-indicator {
   animation-timing-function: linear;
@@ -292,7 +290,7 @@ animation: border-glow 3s linear infinite alternate;
 
 @keyframes border-glow {
     from { border-bottom-color: @red; }
-    to   { border-bottom-color: rgba(223, 97, 36, 0.2); } /* @red mit Transparenz */
+    to   { border-bottom-color: rgba(223, 97, 36, 0.2); }
 }
 
 #network.disconnected,
