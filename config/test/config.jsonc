@@ -22,14 +22,14 @@
     "custom/update",
     "custom/updatespacman",
     "power-profiles-daemon",
-    "bluetooth"
+    "bluetooth",
+    "backlight"
 
   ],
   "modules-center": [
  "mpris"
   ],
   "modules-right": [
-    "backlight",
     "battery",
     "custom/separator3",
     "network",
