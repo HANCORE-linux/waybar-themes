@@ -226,7 +226,7 @@
   },
   "pulseaudio#output": {
     "format": "{icon}",
-    "tooltip-format": "{icon}",
+    "tooltip-format": "{icon} {volume}",
      "format-muted": "",
       "format-icons": {
       "default": ["", "", ""]
