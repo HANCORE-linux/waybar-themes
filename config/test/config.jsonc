@@ -33,8 +33,8 @@
     "battery",
     "custom/separator3",
     "network",
-    "pulseaudio#output",
     "pulseaudio#input",
+    "pulseaudio#output",
     "memory",
     "cpu",
     "custom/separator4",
@@ -176,7 +176,7 @@
     ],
     "format": "{icon}",
     "format-wifi": "{icon}",
-    "format-ethernet": "󰈀",
+    "format-ethernet": "󰌗",
     "format-disconnected": "󰤮",
     "tooltip-format-wifi": "{essid} ({frequency} GHz)\n⇣{bandwidthDownBytes}  ⇡{bandwidthUpBytes}",
     "tooltip-format-ethernet": "⇣{bandwidthDownBytes}  ⇡{bandwidthUpBytes}",
@@ -261,16 +261,16 @@
       "deactivated": "󰷛"
     }
   },
-  "custom/updatespacman": {
-    "format": "{}{icon}",
+"custom/updates": {
+    "format": "{} {icon}",
     "return-type": "json",
     "format-icons": {
-      "has-updates": "󰏖",
-      "updated": ""
+        "has-updates": "󰏖",
+        "updated": ""
     },
     "exec-if": "which waybar-module-pacman-updates",
     "exec": "waybar-module-pacman-updates --no-zero-output"
-  },
+},
   "tray": {
     "icon-size": 13,
     "spacing": 2
