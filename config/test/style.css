@@ -136,6 +136,10 @@ button:hover {
   
 }
 
+#pulseaudio.input {
+  padding-right: 0px;
+}
+
 #custom-omarchy {
   color: @red;
   font-size: 14px;
