@@ -131,9 +131,8 @@ button:hover {
   min-width: 12px;
   color: @fg;
   opacity: 1;
-  padding: 0px 6px;
-  margin: 0px;
-  
+  padding: 0px 4px;
+  margin: 0px 2px 0px 2px;
 }
 
 #pulseaudio.input {
@@ -163,7 +162,7 @@ button:hover {
 }
 
 #power-profiles-daemon.performance {
-  padding-right: 4px;
+  padding-right: 0px;
   color: @red;
 }
 
@@ -172,15 +171,11 @@ button:hover {
 }
 
 #power-profiles-daemon.balanced {
-  padding-right: 8px;
+  padding-right: 4px;
 }
 
 #custom-clock {
   color: @red;
-}
-
-#bluetooth {
-  padding-right: 3px;
 }
 
 #tray {
