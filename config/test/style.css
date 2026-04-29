@@ -283,7 +283,7 @@ padding: 0 12px;
 border-radius: 1px;
 border-bottom: 2px solid @red;
 margin-bottom: 1px;
-background-color: transparent; 
+background-color: transparent;
 opacity: 1;
 color: @fg;
 animation: border-glow 3s linear infinite alternate;

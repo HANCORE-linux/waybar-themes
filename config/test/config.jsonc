@@ -238,9 +238,8 @@
     "on-click-right": "pamixer -t"
   },
  "mpris": {
-    "format": " {dynamic}",
+    "format": "  {dynamic}",
     "format-paused": "{status_icon} {dynamic}",
-    "title-len": 20,
     "interval": 1, 
     "dynamic-order": ["artist", "position", "length"], 
     "dynamic-importance-order": ["position", "length", "artist"],
