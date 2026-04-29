@@ -3,7 +3,7 @@
 @define-color fg @foreground;
 @define-color red #df6124;
 @define-color grey #363636;
-@define-color blink-fg #2f4f4f;
+
 
 * {
     font-family: "JetBrainsMono Nerd Font";
@@ -11,7 +11,6 @@
     font-weight: 900;
     border: none;
     border-radius: 0px;
-    min-height: 0px;
     margin: 0rem 0rem 0rem 0rem;
 }
 
@@ -19,18 +18,17 @@ window#waybar  {
   background-color: transparent;
 }
 
-/* Container L1 */
 
 #waybar > box {
   margin: 2px 17px 5px 8px;
-  padding: 2px 0px 2px 0px;
-  border-radius: 5px;
-  border: 4px ridge @grey;
+  padding: 0px 0px ;
+  min-height: 30px;
+  border-radius: 6px;
   background-color: @bg;
-      box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.9),
-             2px 2px 4px rgba(0, 0, 0, 0.6),
-             3px 3px 6px rgba(0, 0, 0, 0.4),
-             4px 4px 8px rgba(0, 0, 0, 0.2); 
+box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3),
+              0px 3px 6px rgba(0, 0, 0, 0.2),
+              0px 6px 12px rgba(0, 0, 0, 0.1),
+              0px 10px 20px rgba(0, 0, 0, 0.05);
 }
 
 window#waybar.empty #mpris {
@@ -40,84 +38,68 @@ window#waybar.empty #mpris {
     background-color: transparent;
 }
 
-/* Container module right */
 
+.modules-center {
+margin: 0;
+padding: 0;
 
-
-/* Container module center */
-
-.modules-left {
-margin-left: 5px;
 }
 
+.modules-left,
 .modules-right {
-margin-right: 5px;
+border-radius: 2px;
+padding: 0 4px;
 }
 
+
+button {
+  box-shadow: inset 0 -3px transparent;
+  border: none;
+  border-radius: 0;
+  transition: 0.3s ease-in-out;
+}
+
+button:hover {
+  background: inherit;
+}
 
 #workspaces {
-  background-color: @bg;
-  transition: 0.1s ease-in-out;
-  margin: 0px 0px 0px 0px;
-  padding: 0px 0px;
+    border-radius: 2px;
+    padding: 0px;
+    margin: 0px;
 }
 
 #workspaces button {
-  all: initial;
-  padding: 0px 9px;
-  margin: 0px 1px;
-  color: @red;
-  opacity: 1;
-  font-weight: 900;
-  font-size: 12px;
-  border-radius: 2px;
+    padding: 0 4px;
+    color: @fg;
+    opacity: 0.75;
 }
 
 #workspaces button.active {
-  color: @bg;
-  border-radius: 2px;
-  background-color: @red;
-  padding: 0px 9px;
-  margin: 0px 1px;
-  opacity: 1.0;
-}
-
-#workspaces button.empty:hover, 
-#workspaces button:hover {
-    background: transparent;
-    color: @fg;
-    transition: all 150ms ease;
     opacity: 1;
+    color: @red;
+    border-bottom: 2px solid @red;
+    border-radius: 1px;
+    background: transparent;
+    transition: 0.1s;
+    margin-bottom: 1px;
 }
 
 #workspaces button.empty {
-  opacity: 1;
-  border-radius: 2px;
-  padding: 0px 9px;
-  margin: 0px 1px;
-  color: alpha(@fg, 0.25);
+    color: @grey;
 }
 
-#workspaces button.empty.active {
-  opacity: 1;
-  border-radius: 2px;
-  padding: 0px 9px;
-  margin: 0px 1px;
-  background-color: alpha(@fg, 0.5);
-  color: @bg;
-}
-
-#custom-omarchy {  
-  background-image: url("bob2.svg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: 100%;
-  padding: 1px 8px 1px 8px;
-  margin: 0px 5px 0px 0px;
+#mpris:hover,
+#workspaces button:hover {
+    opacity: 1;
+    color: @red;
+    border-bottom: 2px solid @red;
+    background: transparent;
+    transition: 0.1s; 
+    margin-bottom: 1px;
 }
 
 
-  /* L1 single groups */
 #tray,
 #idle_inhibitor,
 #memory,
@@ -142,16 +124,26 @@ margin-right: 5px;
 #power-profiles-daemon.balanced,
 #power-profiles-daemon.power-saver,
 #custom-weather,
-#custom-cava,
 #custom-clock,
 #custom-updatespacman,
 #custom-screenrecording-indicator,
-#custom-update  {
+#custom-update,
+#custom-omarchy {
   min-width: 12px;
   color: @fg;
   opacity: 1;
-  padding: 1px 8px 1px 8px;
-  margin: 0px 0px 0px 0px;
+  padding: 0px 8px;
+  margin: 0px;
+  
+}
+
+#custom-omarchy {
+  color: @red;
+  font-size: 14px;
+}
+
+#idle_inhibitor {
+  font-size: 14px;
 }
 
 
@@ -163,6 +155,11 @@ margin-right: 5px;
 
 #power-profiles-daemon.performance {
   padding-right: 4px;
+  color: @red;
+}
+
+#power-profiles-daemon.power-saver {
+  color: #25e712;
 }
 
 #power-profiles-daemon.balanced {
@@ -174,13 +171,12 @@ margin-right: 5px;
 }
 
 #bluetooth {
-  padding-right: 4px;
+  padding-right: 3px;
 }
 
 #tray {
-padding-top: 2px;
-padding-left: 4px;
-padding-right: 2px;
+padding: 0 8px;
+margin-top: 0px;
 }
 
 tooltip {
@@ -212,8 +208,8 @@ tooltip {
  padding: 4px;
  background: @bg;
  font-size: 10px;
- border: 3px ridge @grey;
- border-radius: 8px;
+ border: 1px solid @grey;
+ border-radius: 6px;
  
 }
 tooltip label {
@@ -230,35 +226,23 @@ tooltip label {
   color: #a55555;
 }
 
-
+#custom-separator4,
 #custom-separator3,
 #custom-separator2,
 #custom-separator {
   opacity: 0.35;
   padding-bottom: 0px;
-  padding-top: 0px;
-  padding-left: 4px;
-  padding-right: 4px;
-  font-size: 10px;
-  color: @fg;
-  
-}
-
-#custom-separator6 {
-  opacity: 0.35;
-  padding-bottom: 0px;
-  padding-top: 0px;
+  padding-top: 1px;
   padding-left: 4px;
   padding-right: 4px;
   font-size: 10px;
   color: @fg;
 }
 
-#custom-separator5,
 #custom-separator4 {
   opacity: 0.35;
   padding-bottom: 0px;
-  padding-top: 1px;
+  padding-top: 0px;
   padding-left: 4px;
   padding-right: 4px;
   font-size: 10px;
@@ -293,49 +277,15 @@ tooltip label {
     }
 }
 
-#custom-cava {
-margin: 0px 6px 0px 0px;
-padding: 0px 9px;
-border-radius: 2px;
-background-color: @red; /*optional use @red for omarchy logo consistencie or @fg to match other themes colors*/
-opacity: 1;
-color: @bg;
-/*animation: repeat;
-	animation-name: blink3;
-	animation-duration: 3s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;*/
-}
-
-/* remove comment for cava color transmissions
-@keyframes blink3 {
-    to {
-        color: @cava-fg;
-        
-    }
-}*/
-
 #mpris {
-margin: 0px 6px 0px 8px;
-padding: 0px 9px;
-border-radius: 2px;
-background-color: @red; /*optional use @red for omarchy logo consistencie or @fg to match other themes colors*/
+margin: 0px;
+padding: 0 15px;
+border-radius: 0px;
+border-bottom: 2px solid @red;
+margin-bottom: 1px;
+background-color: transparent; 
 opacity: 1;
-color: @bg;
-animation: repeat;
-	animation-name: blink;
-	animation-duration: 3s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
-}
-
-@keyframes blink {
-    to {
-        color: @blink-fg;
-        
-    }
+color: @fg;
 }
 
 #network.disconnected,
@@ -363,11 +313,11 @@ animation: repeat;
 #pulseaudio.warning,
 #memory.warning,
 #cpu.warning {
-    color: #e3c1b1; /* medium load */
+    color: #e3c1b1; 
 }
 
 #pulseaudio.critical,
 #memory.critical,
 #cpu.critical {
-    color: #df6124; /* high load */
+    color: #df6124; 
 }

@@ -6,11 +6,13 @@
   "passthrough": false,
   "gtk-layer-shell": true,
   "margin-top": 2,
-  "margin-left": 80,
+  "margin-left": 600,
   "margin-bottom": 0,
-  "margin-right": 80,
+  "margin-right": 600,
   "modules-left": [
     "custom/omarchy",
+    "custom/separator",
+    "hyprland/workspaces",
     "custom/separator",
     "idle_inhibitor",
     "custom/voxtype",
@@ -18,28 +20,27 @@
     "custom/notification-silencing-indicator",
     "custom/screenrecording-indicator",
     "custom/update",
-    "custom/separator3",
-    "mpris",
-    "custom/cava",
-    "custom/separator",
     "custom/updatespacman",
     "bluetooth",
-    "power-profiles-daemon",
-    "network"  
+    "power-profiles-daemon"
+
   ],
-  "modules-center": ["hyprland/workspaces"],
+  "modules-center": [
+ "mpris"
+  ],
   "modules-right": [
     "backlight",
     "battery",
-    "custom/separator6",
+    "custom/separator3",
+    "network",
     "pulseaudio",
     "memory",
     "cpu",
-    "custom/separator2",
-    "custom/weather",
-    "custom/separator5",
-    "custom/clock",
     "custom/separator4",
+    "custom/weather",
+    "custom/separator",
+    "custom/clock",
+    "custom/separator2",
     "tray"
   ],
 
@@ -48,49 +49,28 @@
     "all-outputs": true,
     "cursor": true,
     "format": "{icon}",
-    "format-icons": {
-      "1": "1",
-      "2": "2",
-      "3": "3",
-      "4": "4",
-      "5": "5",
-      "6": "6",
-      "7": "7",
-      "8": "8",
-      "9": "9",
-      "10": "9+"
-    },
-    "persistent-workspaces": {
-      "*": 10 // 5 workspaces by default on every monitor
-      }
-},
+      "persistent-workspaces": {
+      "*": 6
+    }
+  },
+
 "custom/separator": {
-    "format": "", 
+    "format": "|", 
     "tooltip": false
 },
 "custom/separator2": {
-    "format": "", 
-    "tooltip": false
-},
-"custom/separator3": {
-"exec": "sh -c 'if pgrep -x cliamp >/dev/null || playerctl status 2>/dev/null | grep -qE \"Playing|Paused\"; then echo \"{\\\"text\\\":\\\"\\\",\\\"class\\\":\\\"show\\\"}\"; else echo \"{\\\"text\\\":\\\"\\\",\\\"class\\\":\\\"hide\\\"}\"; fi'",
-    "return-type": "json",
-    "interval": 2,
-    "format": "{}"
-},
-"custom/separator4": {
 "exec": "sh -c 'count=$(busctl --user get-property org.kde.StatusNotifierWatcher /StatusNotifierWatcher org.kde.StatusNotifierWatcher RegisteredStatusNotifierItems | sed -n \"s/^as \\([0-9]\\+\\).*/\\1/p\"); if [ \"${count:-0}\" -gt 0 ]; then echo \"{\\\"text\\\":\\\"|\\\",\\\"class\\\":\\\"show\\\"}\"; else echo \" {\\\"text\\\":\\\"\\\",\\\"class\\\":\\\"hide\\\"}\"; fi'",
     "return-type": "json",
     "interval": 2
 },
-"custom/separator5": {
-    "format": "|", 
-    "tooltip": false
-},
-"custom/separator6": {
+"custom/separator3": {
     "exec": "sh -c '[ -d /sys/class/backlight ] && [ \"$(ls -A /sys/class/backlight 2>/dev/null)\" ] && ls /sys/class/power_supply 2>/dev/null | grep -q \"^BAT\" && echo \"\"'",
     "tooltip": false,
     "interval": "once"
+},
+"custom/separator4": {
+    "format": "", 
+    "tooltip": false
 },
   "custom/weather": {
     "format": "{}°",
@@ -99,15 +79,9 @@
     "exec": "wttrbar --nerd --location Chongqing",
     "return-type": "json"
   },
- "custom/cava": {
-    //"cava_config": "~/.config/cava/config",
-    "format": "{}",
-    "exec": "~/.config/waybar/cava.sh",
-    "tooltip": false
-  },
-  "custom/omarchy": {
-    "format": "            ",
-    "on-click": "omarchy-menu",
+    "custom/omarchy": {
+    "format": "",
+    "on-click": "omarchy-menu system",
     "on-click-right": "xdg-terminal-exec",
     "tooltip-format": "Omarchy Menu\n\nSuper + Alt + Space"
   },
@@ -156,7 +130,7 @@
   },
  "cpu": {
     "interval": 5,
-    "format": " {usage:02}%",
+    "format": "",
     "on-click": "omarchy-launch-or-focus-tui btop",
     "states": {
         "warning": 50,
@@ -174,7 +148,7 @@
     },
    "memory": {
     "interval": 5,
-    "format": " {used:02.1f}GB",
+    "format": "",
     "tooltip-format": "Used {percentage}%\n{used:0.1f}GB/{total:0.1f}GB",
     "on-click": "omarchy-launch-or-focus-tui btop",
        "states": {
@@ -237,7 +211,7 @@
     "on-click": "omarchy-launch-bluetooth"
   },
 "pulseaudio": {
-    "format": "{icon} {volume}%",
+    "format": "{icon}",
     "on-click": "omarchy-launch-audio",
     "on-click-right": "pamixer -t",
     "tooltip-format": "Playing at {volume}%",
@@ -251,19 +225,22 @@
   },
  "mpris": {
     "format": " {dynamic}",
-    "format-paused": "<span color='#1b1b1b'>{status_icon} {dynamic}</span>",
+    "format-paused": "{status_icon} {dynamic}",
     "title-len": 20,
-    "dynamic-order": ["artist"],
+    "interval": 1, 
+    "dynamic-order": ["artist", "position", "length"], 
+    "dynamic-importance-order": ["position", "length", "artist"],
+    "tooltip-format": "{player} ({status}):\n{artist} - {title}",  
     "status-icons": {
       "paused": "󰝛"
     },
-    "ignored-players": ["firefox", "chromium", "brave"]
+    "ignored-players": ["firefox", "brave"]
     },
   "idle_inhibitor": {
     "format": "{icon}",
     "format-icons": {
-      "activated": "idle <span style='italic' weight='900' color='#df6124'>active</span>",
-      "deactivated": "idle <span style='italic' weight='900' color='grey'>off</span>"
+      "activated": "󱎴",
+      "deactivated": "󰶐"
     }
   },
   "custom/updatespacman": {
