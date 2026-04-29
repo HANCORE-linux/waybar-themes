@@ -22,9 +22,7 @@
     "custom/update",
     "custom/updatespacman",
     "power-profiles-daemon",
-    "bluetooth",
-    "backlight"
-
+    "bluetooth"
   ],
   "modules-center": [
  "mpris"
@@ -32,6 +30,7 @@
   "modules-right": [
     "battery",
     "custom/separator3",
+    "backlight",
     "network",
     "pulseaudio#input",
     "pulseaudio#output",
