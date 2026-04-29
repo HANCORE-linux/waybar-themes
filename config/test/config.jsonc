@@ -140,6 +140,8 @@
   "backlight": {
         "device": "intel_backlight",
         "format": "{icon}",
+        "tooltip": true,
+        "tooltip-format": "Brightness:  {percent}%",
         "format-alt": "{percent}% {icon}",
         "format-alt-click": "click-right",
         "format-icons": ["", ""],
