@@ -82,7 +82,7 @@ window#waybar.empty .modules-center {
 
 #workspaces button.empty.active {
     color: @bg;
-    background-color: @fg; 
+    background-color: alpha(@fg, 0.5); 
 }
 
 #workspaces button:hover {
