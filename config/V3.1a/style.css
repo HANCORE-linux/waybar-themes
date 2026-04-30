@@ -28,6 +28,7 @@ window#waybar  {
 box-shadow: 
     0px 2px 4px rgba(0, 0, 0, 0.2),
     0px 2px 4px rgba(0, 0, 0, 0.15);
+border: 1.5px ridge alpha(@fg, 0.2);
 }
 
 window#waybar.empty .modules-center {
