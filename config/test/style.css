@@ -29,6 +29,14 @@ window#waybar {
     box-shadow: none;              
 }
 
+window#waybar.empty .modules-center {
+    margin: 0;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+}
+
+
 .modules-left,
 .modules-center,
 .modules-right {
@@ -151,6 +159,8 @@ padding-top: 1px;
 }
 
 #battery,
+#battery.discharging,
+#battery.charging,
 #backlight,
 #network,
 #cpu,
