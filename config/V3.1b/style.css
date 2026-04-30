@@ -280,3 +280,13 @@ tooltip label {
     color: #f53c3c;
     animation: blink-recording 0.5s steps(12) infinite alternate;
 }
+
+#memory.warning,
+#cpu.warning {
+    color: #e3c1b1; 
+}
+
+#memory.critical,
+#cpu.critical {
+    color: #df6124; 
+}
