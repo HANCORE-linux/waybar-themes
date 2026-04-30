@@ -203,7 +203,7 @@ padding-top: 1px;
 }
 
 #battery.charging, #battery.plugged {
-    color: #25e712;
+    color: #128a36;
 }
 
 #battery.warning:not(.charging) {
@@ -217,13 +217,13 @@ padding-top: 1px;
 #custom-idle-indicator.active,
 #custom-notification-silencing-indicator.active {
   color: #c95d0f;
-  opacity: 1;;
+  opacity: 1;
 }
 
 #power-profiles-daemon.performance { color: @red; }
 #power-profiles-daemon.power-saver { color: #25e712; }
 
-/* Tooltips & Separatoren */
+/* Tooltips & Separators */
 
 tooltip {
     background: alpha(@bg, 0.95);
@@ -251,7 +251,7 @@ tooltip label {
         background-color: @bg;
     }
     to {
-        box-shadow: inset 0 -2px @red; /* Exakt dein Hover-Style */
+        box-shadow: inset 0 -2px @red;
         background-color: @bg;
     }
 }
