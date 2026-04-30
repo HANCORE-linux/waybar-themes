@@ -42,7 +42,7 @@ window#waybar.empty .modules-center {
     background-color: @bg;              
     border: 1px solid alpha(@fg, 0.2);  
     border-radius: 15px;              
-    padding: 0px 2px; 
+    padding: 1px 2px; 
     margin: 2px 5px; 
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
 }
@@ -50,7 +50,7 @@ window#waybar.empty .modules-center {
 #workspaces {
     background-color: transparent;
     border: none;
-    padding: 0px 2px;
+    padding: 1px 2px;
     margin: 2px 0px;
     border-radius: 50px;
 }
