@@ -157,9 +157,6 @@ window#waybar.empty .modules-center {
 padding-top: 1px;
 }
 
-#battery,
-#battery.discharging,
-#battery.charging,
 #backlight,
 #network,
 #network.wifi,
@@ -215,12 +212,12 @@ padding-top: 1px;
 }
 
 #custom-voxtype.recording {
-  color: #a55555;
+  color: #c95d0f;
 }
 
 #custom-idle-indicator.active,
 #custom-notification-silencing-indicator.active {
-  color: #a55555;
+  color: #c95d0f;
   opacity: 1;;
 }
 
@@ -247,7 +244,7 @@ tooltip label {
     margin: 0 2px;
 }
 
-/* Animationen */
+/* Animation */
 
 @keyframes border-glow {
     from { border-bottom-color: @red; }

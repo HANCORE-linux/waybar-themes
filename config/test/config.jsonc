@@ -184,9 +184,9 @@
     "on-click": "omarchy-launch-wifi"
   },
    "battery": {
-    "format": "{capacity}% {icon}",
-    "format-charging": " {capacity}% {icon}",
-    "format-plugged": " {capacity}%",
+    "format": "{capacity}% {icon} ",
+    "format-charging": " {capacity}% {icon} ",
+    "format-plugged": " {capacity}% ",
     "format-icons": [
             "",
             "",
@@ -194,7 +194,7 @@
             "",
             ""
     ],
-    "format-full": "󱊦 {capacity}%",
+    "format-full": "󱊦 {capacity}% ",
     "tooltip-format-discharging": "{timeTo}",
     "tooltip-format-charging": "{timeTo}",
     "interval": 5,
