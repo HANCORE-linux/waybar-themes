@@ -203,7 +203,7 @@ padding-top: 1px;
 }
 
 #battery.charging, #battery.plugged {
-    color: #128a36;
+    color: #b7b083;
 }
 
 #battery.warning:not(.charging) {
