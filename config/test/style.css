@@ -150,6 +150,8 @@ window#waybar {
 padding-top: 1px;
 }
 
+#battery,
+#backlight,
 #network,
 #cpu,
 #memory,
