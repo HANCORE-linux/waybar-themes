@@ -33,13 +33,14 @@
 
     "group/left2": {
     "orientation": "inherit",
-    "modules": [
-    "mpris"
-    ]
+    "modules": ["mpris"]
   },
 
   "modules-center": [
- "hyprland/workspaces"
+ "hyprland/workspaces",
+ "memory",
+ "cpu",
+ "pulseaudio#output"
   ],
   "modules-right": [
     "battery",
@@ -47,9 +48,6 @@
     "backlight",
     "network",
     "pulseaudio#input",
-    "pulseaudio#output",
-    "memory",
-    "cpu",
     "custom/separator",
     "custom/weather",
     "custom/clock",
@@ -143,7 +141,7 @@
   },
  "cpu": {
     "interval": 5,
-    "format": "",
+    "format": " {usage:02}%",
     "on-click": "omarchy-launch-or-focus-tui btop",
     "states": {
         "warning": 50,
@@ -163,7 +161,7 @@
     },
    "memory": {
     "interval": 5,
-    "format": "",
+    "format": " {used:02.1f}GB",
     "tooltip-format": "Used {percentage}%\n{used:0.1f}GB/{total:0.1f}GB",
     "on-click": "omarchy-launch-or-focus-tui btop",
        "states": {
@@ -239,7 +237,7 @@
     "on-scroll-down": "pactl set-source-volume @DEFAULT_SOURCE@ -1%"
   },
   "pulseaudio#output": {
-    "format": "{icon}",
+    "format": "{icon}  {volume}%",
     "tooltip-format": "{icon}  {volume}%",
      "format-muted": "",
       "format-icons": {
@@ -262,7 +260,7 @@
       "paused": "󰝛"
     },
     "ignored-players": ["firefox", "brave"]
-    },
+  },
   "idle_inhibitor": {
    "format": "{icon}",
    "tooltip-format-activated": "Stay Awake: ON 󱎴",
