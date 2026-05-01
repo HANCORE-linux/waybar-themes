@@ -252,7 +252,7 @@ tooltip label {
         background-color: @bg;
     }
     to {
-        box-shadow: inset 0 -2px @magenta;
+        box-shadow: inset 0 -2px @cyan;
         background-color: @bg;
     }
 }
