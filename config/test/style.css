@@ -168,7 +168,7 @@ window#waybar.empty .modules-center {
   background-color: @cyan;
   color: @bg;
   padding: 0px 8px;
-  margin: 3px 2px;
+  margin: 3px 3px;
   border-radius: 15px;
   transition: all 0.25s ease;
 }
