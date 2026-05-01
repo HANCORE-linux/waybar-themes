@@ -30,7 +30,7 @@ window#waybar {
     box-shadow: none;              
 }
 
-window#waybar.empty .modules-center {
+window#waybar.empty #mpris {
     margin: 0;
     padding: 0;
     border: none;
@@ -70,7 +70,7 @@ window#waybar.empty .modules-center {
 #workspaces {
     background-color: transparent;
     border: none;
-    padding: 1px 2px;
+    padding: 1px 1px;
     margin: 2px 0px;
     margin-right: 6px;
     border-radius: 50px;
