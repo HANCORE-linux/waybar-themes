@@ -2,9 +2,10 @@
 
 @define-color bg @background;
 @define-color fg @foreground;
-@define-color red #df6124;
-@define-color grey #4f4f4f;
-@define-color grey2 #3f3f3f;
+@define-color magenta-border #c9aff0;
+@define-color magenta #b388eb;
+@define-color cyan #82eeff;
+
 
 /* Global Reset */
 
@@ -36,15 +37,32 @@ window#waybar.empty .modules-center {
     background-color: transparent;
 }
 
+#left1 {
+    background-color: @bg;              
+    border: 1px solid alpha(@magenta-border, 0.2);  
+    border-radius: 15px;              
+    padding: 0px 2px; 
+    margin: 5px 5px 2px 5px; 
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3);
+}
 
-.modules-left,
+.modules-center {
+    background-color: @bg;              
+    border: 1px solid alpha(@magenta-border, 0.2);  
+    border-radius: 15px;              
+    padding: 0px 0px; 
+    margin: 5px 5px 2px 5px; 
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+
 .modules-right {
     background-color: @bg;              
-    border: 1px solid alpha(@fg, 0.2);  
+    border: 1px solid alpha(@magenta-border, 0.2);  
     border-radius: 15px;              
-    padding: 1px 2px; 
-    margin: 2px 5px 6px 5px; 
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+    padding: 0px 2px; 
+    margin: 5px 5px 2px 5px;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3);
 }
 
 #workspaces {
@@ -57,10 +75,10 @@ window#waybar.empty .modules-center {
 
 #workspaces button {
     padding: 0px 5px;
-    margin: 1px 2px;
-    color: @bg;
+    margin: 0px 2px;
+    color: transparent;
     border-radius: 100px;
-    background-color: @grey2;
+    background: linear-gradient(45deg, @magenta, @cyan);
     transition:
         background 0.25s cubic-bezier(0.4, 0.0, 0.2, 1),
         color      0.25s cubic-bezier(0.4, 0.0, 0.2, 1),
@@ -69,25 +87,38 @@ window#waybar.empty .modules-center {
 
 #workspaces button.active {
     padding: 0px 18px;
-    margin: 1px 2px;
-    background: @red;
-    color: @bg;
+    margin: 0px 2px;
+    background: linear-gradient(45deg, @magenta, @cyan);
+    color: transparent;
     border-radius: 100px;
 }
 
 #workspaces button.empty {
-    color: alpha(@bg, 0.5); 
+    color: transparent;
+    background: rgba(179, 136, 235, 0.1);
 }
 
-#workspaces button.empty.active {
-    color: @bg;
-    background-color: @fg; 
+ #workspaces button.empty.active {
+    padding: 0px 18px;
+    margin: 0px 2px;
+    background: linear-gradient(45deg, rgba(179, 136, 235, 0.4), rgba(130, 238, 255, 0.4));
+    color: transparent;
+    border-radius: 100px;;
+    background-clip: padding-box;
 }
-
 #workspaces button:hover {
-    box-shadow: inset 0 -2px @red;
-    background-color: @bg;
-    color: @fg;
+    background: linear-gradient(135deg, rgba(179, 136, 235, 0.4), rgba(130, 238, 255, 0.4));
+    color: transparent;
+    border-radius: 100px;
+    box-shadow: none;
+    border: none;
+    transition: all 0.3s cubic-bezier(0.4, 0.0, 0.2, 1);
+}
+
+#workspaces button.empty:hover {
+    background: rgba(179, 136, 235, 0.25);
+    border-radius: 100px;
+    color: transparent;
 }
 
 #tray,
@@ -129,32 +160,10 @@ window#waybar.empty .modules-center {
     color: @fg;
     padding: 0px 8px;
     margin: 4px 3px;
-    border-radius: 10px;
+    border-radius: 15px;
     background-color: alpha(@fg, 0.1);
     transition: all 0.25s ease;
 }
-
-/* Hover-Glow effect */
-#battery:hover,
-#backlight:hover,
-#tray:hover,
-#bluetooth:hover,
-#power-profiles-daemon:hover,
-#custom-updatespacman:hover,
-#idle_inhibitor:hover,
-#custom-weather:hover,
-#tray:hover,
-#battery:hover,
-#pulseaudio:hover,
-#network:hover,
-#custom-clock:hover,
-#cpu:hover,
-#memory:hover {
-    box-shadow: inset 0 -2px @red;
-    background-color: @bg;
-}
-
-
 
 /*  Custom module adjustments */
 
@@ -177,39 +186,39 @@ padding-top: 1px;
 }
 
 #custom-omarchy {
-    color: @red;
+    color: @magenta-border;
     font-size: 16px;
     background: @bg;
     padding: 0 4px;
 }
 
 #custom-clock {
-    color: @red;
+    color: @magenta-border;
     font-weight: bold;
 }
 
 #mpris {
     background-color: @bg;
-    border: 1px solid alpha(@fg, 0.2);
+    border: 1px solid alpha(@magenta-border, 0.2);
     border-radius: 15px;
     padding: 2px 15px;
-    margin: 2px 5px 6px 5px;
-    color: @grey;
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+    margin: 2px 5px 2px 5px;
+    color: @cyan;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3);
 }
 
 #mpris.playing {
     animation: hover-mirror 3s ease-in-out infinite alternate;
-    color: @fg;
+    color: @magenta;
 }
 
 #idle_inhibitor.activated {
-    color: @red;
+    color: @magenta;
     font-size: 14px;
 }
 
 #idle_inhibitor.deactivated {
-    color: @grey;
+    color: @cyan;
     font-size: 14px;
 }
 
@@ -231,14 +240,14 @@ padding-top: 1px;
   opacity: 1;
 }
 
-#power-profiles-daemon.performance { color: @red; }
+#power-profiles-daemon.performance { color: @magenta; }
 #power-profiles-daemon.power-saver { color: #25e712; }
 
 /* Tooltips & Separators */
 
 tooltip {
     background: alpha(@bg, 0.95);
-    border: 1px solid @grey;
+    border: 1px solid alpha(@magenta-border, 0.2);
     border-radius: 8px;
 }
 
@@ -248,7 +257,7 @@ tooltip label {
 }
 
 #custom-separator, #custom-separator2, #custom-separator3 {
-    color: @grey;
+    color: @cyan;
     opacity: 0.4;
     font-size: 10px;
     margin: 0 2px;
@@ -258,11 +267,11 @@ tooltip label {
 
 @keyframes hover-mirror {
     from {
-        box-shadow: inset 0 0px @red;
+        box-shadow: inset 0 0px @magenta;
         background-color: @bg;
     }
     to {
-        box-shadow: inset 0 -2px @red;
+        box-shadow: inset 0 -2px @magenta;
         background-color: @bg;
     }
 }
@@ -279,4 +288,14 @@ tooltip label {
 #battery.critical:not(.charging) {
     color: #f53c3c;
     animation: blink-recording 0.5s steps(12) infinite alternate;
+}
+
+#memory.warning,
+#cpu.warning {
+    color: #e3c1b1; 
+}
+
+#memory.critical,
+#cpu.critical {
+    color: #df6124; 
 }

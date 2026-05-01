@@ -10,9 +10,14 @@
   "margin-right": 0,
   "margin-bottom": 0,
   "modules-left": [
+   "group/left1",
+   "group/left2" 
+  ],
+
+  "group/left1": {
+    "orientation": "inherit",
+    "modules": [
     "custom/omarchy",
-    "custom/separator",
-    "hyprland/workspaces",
     "custom/separator",
     "idle_inhibitor",
     "custom/voxtype",
@@ -23,9 +28,18 @@
     "custom/updatespacman",
     "power-profiles-daemon",
     "bluetooth"
-  ],
+    ]
+  },
+
+    "group/left2": {
+    "orientation": "inherit",
+    "modules": [
+    "mpris"
+    ]
+  },
+
   "modules-center": [
- "mpris"
+ "hyprland/workspaces"
   ],
   "modules-right": [
     "battery",
@@ -143,7 +157,7 @@
         "tooltip-format": "Brightness:  {percent}%",
         "format-alt": "{percent}% {icon}",
         "format-alt-click": "click-right",
-        "format-icons": ["󰃜", "󰃝", "󰃞", "󰃟", "󰃠"],
+        "format-icons": [" 󰃜", "󰃝", "󰃞", "󰃟", "󰃠"],
         "on-scroll-down": "brightnessctl s 5%-",
         "on-scroll-up": "brightnessctl s +5%"
     },
