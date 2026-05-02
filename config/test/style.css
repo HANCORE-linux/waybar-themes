@@ -226,8 +226,10 @@ padding-top: 1px;
   color: #c95d0f;
   opacity: 1;
 }
-
-#power-profiles-daemon.performance { color: @magenta; }
+#power-profiles-daemon.balanced,
+#power-profiles-daemon.performance,
+#power-profiles-daemon.power-saver {
+     padding-right: 0px;}
 #power-profiles-daemon.power-saver { color: #25e712; }
 
 /* Tooltips & Separators */
