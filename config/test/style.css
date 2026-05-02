@@ -2,9 +2,7 @@
 
 @define-color bg @background;
 @define-color fg @foreground;
-@define-color magenta-border #c9aff0;
-@define-color magenta #b388eb;
-@define-color cyan #82eeff;
+
 
 
 /* Global Reset */
@@ -43,7 +41,7 @@ window#waybar.empty #mpris {
     padding: 0px 2px; 
     margin: 5px 5px 2px 5px; 
     box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3);
-    border: 0.5px solid alpha(@magenta-border, 0.2); 
+    border: 0.5px solid alpha(@fg, 0.2); 
 }
 
 .modules-center {
@@ -52,7 +50,7 @@ window#waybar.empty #mpris {
     padding: 0px 0px; 
     margin: 5px 5px 2px 5px; 
     box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3);
-    border: 0.5px solid alpha(@magenta-border, 0.2); 
+    border: 0.5px solid alpha(@fg, 0.2); 
 
 }
 
@@ -60,10 +58,10 @@ window#waybar.empty #mpris {
 .modules-right {
     background-color: @bg;              
     border-radius: 15px;              
-    padding: 0px 2px; 
+    padding: 0px 1px; 
     margin: 5px 5px 2px 5px;
     box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3);
-    border: 0.5px solid alpha(@magenta-border, 0.2); 
+    border: 0.5px solid alpha(@fg, 0.2); 
 
 }
 
@@ -81,7 +79,7 @@ window#waybar.empty #mpris {
     margin: 0px 2px;
     color: transparent;
     border-radius: 100px;
-    background: linear-gradient(45deg, @magenta, @cyan);
+    background: linear-gradient(45deg, @fg, alpha(@fg, 0.5));
     transition:
         background 0.25s cubic-bezier(0.4, 0.0, 0.2, 1),
         color      0.25s cubic-bezier(0.4, 0.0, 0.2, 1),
@@ -89,29 +87,29 @@ window#waybar.empty #mpris {
 }
 
 #workspaces button.active {
-    padding: 0px 18px;
+    padding: 0px 22px;
     margin: 0px 2px;
-    background: linear-gradient(45deg, @magenta, @cyan);
-    color: transparent;
+    background: linear-gradient(45deg, @fg, alpha(@fg, 0.5));
+    color: @bg;
     border-radius: 100px;
 }
 
 #workspaces button.empty {
     color: transparent;
-    background: rgba(179, 136, 235, 0.1);
+    background: alpha(@fg, 0.2);
 }
 
  #workspaces button.empty.active {
     padding: 0px 18px;
     margin: 0px 2px;
-    background: linear-gradient(45deg, rgba(179, 136, 235, 0.4), rgba(130, 238, 255, 0.4));
-    color: transparent;
+    background: linear-gradient(45deg, alpha(@fg, 0.5), @bg);
+    color: @bg;
     border-radius: 100px;;
     background-clip: padding-box;
 }
 #workspaces button:hover {
-    background: linear-gradient(135deg, rgba(179, 136, 235, 0.4), rgba(130, 238, 255, 0.4));
-    color: transparent;
+    background: linear-gradient(45deg, alpha(@fg, 1), alpha(@fg, 0.5));
+    color: @bg;
     border-radius: 100px;
     box-shadow: none;
     border: none;
@@ -119,26 +117,16 @@ window#waybar.empty #mpris {
 }
 
 #workspaces button.empty:hover {
-    background: rgba(179, 136, 235, 0.25);
+    background: alpha(@fg, 0.5);
     border-radius: 100px;
-    color: transparent;
+    color: @bg;
 }
 
 #tray,
 #idle_inhibitor,
-#battery,
-#battery.discharging,
-#battery.full,
-#battery.plugged,
-#battery.charging,
 #backlight,
-#network,
-#network.disconnected,
-#network.wifi,
-#network.ethernet,
 #bluetooth,
 #pulseaudio,
-#pulseaudio.input,
 #power-profiles-daemon,
 #power-profiles-daemon.performance,
 #power-profiles-daemon.balanced,
@@ -156,7 +144,7 @@ window#waybar.empty #mpris {
 #custom-update,
 #custom-omarchy {
     min-width: 14px;
-    color: @cyan;
+    color: @fg;
     padding: 0px 4px;
     margin: 3px 2px;
     border-radius: 15px;
@@ -165,33 +153,29 @@ window#waybar.empty #mpris {
 
 /*  Custom module adjustments */
 
-
+#battery,
+#battery.discharging,
+#battery.full,
+#battery.plugged,
+#battery.charging,
 #memory,
 #cpu,
-#pulseaudio.output {
+#network,
+#network.disconnected,
+#network.wifi,
+#network.ethernet,
+#pulseaudio {
   min-width: 14px;
-  background-color: @cyan;
+  background: linear-gradient(45deg, @fg, alpha(@fg, 0.5));
   color: @bg;
   padding: 0px 8px;
-  margin: 3px 3px;
+  margin: 3px 2px;
   border-radius: 15px;
   transition: all 0.25s ease;
 }
 
-#custom-clock {
-    color: #6a85ff;
-}
-
-#battery,
-#bluetooth.connected,
-#idle_inhibitor.activated,
-#custom-updatespacman {
-    color: @magenta;
-}
-
-#power-profiles-daemon.balanced,
 #bluetooth {
-    padding:0 2px;
+    margin-right: 2px;
 }
 
 #tray {
@@ -200,8 +184,7 @@ padding-top: 1px;
 
 #custom-omarchy {
     font-size: 14px;
-    color: #6a85ff;
-    padding-left: 2px;
+    padding-left: 0px;
 }
 
 #mpris {
@@ -209,14 +192,14 @@ padding-top: 1px;
     border-radius: 15px;
     padding: 0px 2px; 
     margin: 5px 5px 2px 5px; 
-    color: @cyan;
+    color: alpha(@fg, 0.5);
     box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3);
-    border: 0.5px solid alpha(@magenta-border, 0.2); 
+    border: 0.5px solid alpha(@fg, 0.2); 
 }
 
 #mpris.playing {
     animation: hover-mirror 3s ease-in-out infinite alternate;
-    color: @magenta;
+    color: @fg;
 }
 
 #idle_inhibitor.activated,
@@ -250,7 +233,7 @@ padding-top: 1px;
 
 tooltip {
     background: alpha(@bg, 0.95);
-    border: 1px solid alpha(@magenta-border, 0.2);
+    border: 1px solid alpha(@fg, 0.2);
     border-radius: 8px;
 }
 
@@ -260,22 +243,30 @@ tooltip label {
 }
 
 #custom-separator, #custom-separator2, #custom-separator3 {
-    color: @magenta;
+    color: alpha(@fg, 0.3);
     opacity: 1;
     font-size: 10px;
     padding-top: 1px;
     padding: 0 3px;
 }
 
+#custom-separator4 {
+    color: alpha(@fg, 0.5);
+    opacity: 1;
+    font-size: 14px;
+    padding-top: 0px;
+    padding: 0 1px;
+}
+
 /* Animations */
 
 @keyframes hover-mirror {
     from {
-        box-shadow: inset 0 0px @magenta;
+        box-shadow: inset 0 0px alpha(@fg, 0.5);
         background-color: @bg;
     }
     to {
-        box-shadow: inset 0 -2px @cyan;
+        box-shadow: inset 0 -2px @fg;
         background-color: @bg;
     }
 }

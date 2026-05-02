@@ -40,16 +40,17 @@
  "hyprland/workspaces",
  "memory",
  "cpu",
- "pulseaudio#output"
+ "battery"
+
   ],
   "modules-right": [
-    "battery",
+    "network",
+    "pulseaudio",
     "custom/separator3",
     "backlight",
-    "network",
-    "pulseaudio#input",
     "custom/separator",
     "custom/weather",
+    "custom/separator4",
     "custom/clock",
     "custom/separator2",
     "tray"
@@ -78,6 +79,10 @@
     "exec": "sh -c '[ -d /sys/class/backlight ] && [ \"$(ls -A /sys/class/backlight 2>/dev/null)\" ] && ls /sys/class/power_supply 2>/dev/null | grep -q \"^BAT\" && echo \"|\"'",
     "tooltip": false,
     "interval": "once"
+},
+"custom/separator4": {
+    "format": "•", 
+    "tooltip": false
 },
  "custom/weather": {
     "format": "{}°",
@@ -181,8 +186,8 @@
       "󰤨"
     ],
     "format": "{icon}",
-    "format-wifi": "{icon}",
-    "format-ethernet": "󰌗",
+    "format-wifi": "{essid} {icon}",
+    "format-ethernet": "{ifname} 󰌗",
     "format-disconnected": "󰤮",
     "tooltip-format-wifi": "{essid} ({frequency} GHz)\n⇣{bandwidthDownBytes}  ⇡{bandwidthUpBytes}",
     "tooltip-format-ethernet": "⇣{bandwidthDownBytes}  ⇡{bandwidthUpBytes}",
@@ -219,31 +224,18 @@
     "tooltip-format": "Devices connected: {num_connections}",
     "on-click": "omarchy-launch-bluetooth"
   },
-"pulseaudio#input": {
-    "format-source": "",
-    "format-source-muted": "",
-    "format": "{format_source}",
-    "tooltip-format": "{format_source} {source_volume}%",
-    "scroll-step": 1,
-    "smooth-scrolling-threshold": 1,
-    "max-volume": 100,
+"pulseaudio": {
+    "format": "{icon} {volume}%",
     "on-click": "omarchy-launch-audio",
     "on-click-right": "pamixer -t",
-    "on-scroll-up": "pactl set-source-volume @DEFAULT_SOURCE@ +1%",
-    "on-scroll-down": "pactl set-source-volume @DEFAULT_SOURCE@ -1%"
-  },
-  "pulseaudio#output": {
-    "format": "{icon}  {volume}%",
-    "tooltip-format": "{icon}  {volume}%",
-     "format-muted": "",
-      "format-icons": {
+    "tooltip-format": "Playing at {volume}%",
+    "scroll-step": 5,
+    "format-muted": "",
+    "format-icons": {
+      "headphone": "",
+      "headset": "",
       "default": ["", "", ""]
-    },
-    "max-volume": 100,
-    "scroll-step": 2,
-    "smooth-scrolling-threshold": 1,
-    "on-click": "omarchy-launch-audio",
-    "on-click-right": "pamixer -t"
+    }
   },
  "mpris": {
     "format": "  {dynamic}",
