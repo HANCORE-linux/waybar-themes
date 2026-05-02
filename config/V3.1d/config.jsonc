@@ -74,11 +74,6 @@
     "return-type": "json",
     "interval": 2
 },
-"custom/separator3": {
-    "exec": "sh -c '[ -d /sys/class/backlight ] && [ \"$(ls -A /sys/class/backlight 2>/dev/null)\" ] && ls /sys/class/power_supply 2>/dev/null | grep -q \"^BAT\" && echo \"|\"'",
-    "tooltip": false,
-    "interval": "once"
-},
 "custom/separator4": {
     "format": "•", 
     "tooltip": false
