@@ -429,11 +429,19 @@ git clone https://github.com/HANCORE-linux/waybar-themes.git /tmp/repo && cp -rf
 
 ## V3.1c
 - waybar for my theme [Moodpeak](https://github.com/HANCORE-linux/omarchy-moodpeak-theme)
-##### V3.1b Install-command (copy and paste in your terminal): <br>
+##### V3.1c Install-command (copy and paste in your terminal): <br>
 ```bash
 git clone https://github.com/HANCORE-linux/waybar-themes.git /tmp/repo && cp -rf /tmp/repo/config/V3.1c/. ~/.config/waybar && rm -rf /tmp/repo && omarchy-restart-waybar
 ```
 <img src="https://github.com/HANCORE-linux/waybar-themes/blob/main/config/V3.1c/screenshot-2026-05-01_15-57-18.png?raw=true" />
+
+## V3.1d
+- stock fg & bg color support - no extra colors - base config V3.1c
+##### V3.1d Install-command (copy and paste in your terminal): <br>
+```bash
+git clone https://github.com/HANCORE-linux/waybar-themes.git /tmp/repo && cp -rf /tmp/repo/config/V3.1d/. ~/.config/waybar && rm -rf /tmp/repo && omarchy-restart-waybar
+```
+<img src="https://github.com/HANCORE-linux/waybar-themes/blob/main/config/V3.1d/screenshot-2026-05-02_13-19-56.png?raw=true" />
 
 ## V3.2
 - this Theme is recommended for darker Themes
