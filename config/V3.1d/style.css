@@ -1,0 +1,299 @@
+@import "../omarchy/current/theme/waybar.css";
+
+@define-color bg @background;
+@define-color fg @foreground;
+
+
+
+/* Global Reset */
+
+* {
+    margin: 0px;
+    padding: 0px;
+    border: none;
+    font-family: "JetBrainsMono Nerd Font";
+    font-size: 12px;
+    font-weight: 900;
+}
+
+window#waybar {
+    background-color: transparent;
+}
+
+#waybar > box {
+    margin: 0px 0px;
+    padding: 0px;
+    background-color: transparent;
+    border: none;                  
+    box-shadow: none;              
+}
+
+window#waybar.empty #mpris {
+    margin: 0;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+}
+
+#left1 {
+    background-color: @bg;           
+    border-radius: 15px;              
+    padding: 0px 2px; 
+    margin: 5px 5px 2px 5px; 
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3);
+    border: 0.5px solid alpha(@fg, 0.2); 
+}
+
+.modules-center {
+    background-color: @bg;              
+    border-radius: 15px;              
+    padding: 0px 0px; 
+    margin: 5px 5px 2px 5px; 
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3);
+    border: 0.5px solid alpha(@fg, 0.2); 
+
+}
+
+
+.modules-right {
+    background-color: @bg;              
+    border-radius: 15px;              
+    padding: 0px 1px; 
+    margin: 5px 5px 2px 5px;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3);
+    border: 0.5px solid alpha(@fg, 0.2); 
+
+}
+
+#workspaces {
+    background-color: transparent;
+    border: none;
+    padding: 1px 1px;
+    margin: 2px 0px;
+    margin-right: 6px;
+    border-radius: 50px;
+}
+
+#workspaces button {
+    padding: 0px 5px;
+    margin: 0px 2px;
+    color: transparent;
+    border-radius: 100px;
+    background: linear-gradient(45deg, @fg, alpha(@fg, 0.5));
+    transition:
+        background 0.25s cubic-bezier(0.4, 0.0, 0.2, 1),
+        color      0.25s cubic-bezier(0.4, 0.0, 0.2, 1),
+        padding    0.2s  cubic-bezier(0.4, 0.0, 0.2, 1);
+}
+
+#workspaces button.active {
+    padding: 0px 22px;
+    margin: 0px 2px;
+    background: linear-gradient(45deg, @fg, alpha(@fg, 0.5));
+    color: @bg;
+    border-radius: 100px;
+}
+
+#workspaces button.empty {
+    color: transparent;
+    background: alpha(@fg, 0.2);
+}
+
+ #workspaces button.empty.active {
+    padding: 0px 18px;
+    margin: 0px 2px;
+    background: linear-gradient(45deg, alpha(@fg, 0.5), @bg);
+    color: @bg;
+    border-radius: 100px;;
+    background-clip: padding-box;
+}
+#workspaces button:hover {
+    background: linear-gradient(45deg, alpha(@fg, 1), alpha(@fg, 0.5));
+    color: @bg;
+    border-radius: 100px;
+    box-shadow: none;
+    border: none;
+    transition: all 0.3s cubic-bezier(0.4, 0.0, 0.2, 1);
+}
+
+#workspaces button.empty:hover {
+    background: alpha(@fg, 0.5);
+    border-radius: 100px;
+    color: @bg;
+}
+
+#tray,
+#idle_inhibitor,
+#backlight,
+#bluetooth,
+#pulseaudio,
+#power-profiles-daemon,
+#power-profiles-daemon.performance,
+#power-profiles-daemon.balanced,
+#power-profiles-daemon.power-saver,
+#custom-voxtype,
+#custom-voxtype.recording,
+#custom-weather,
+#custom-clock,
+#custom-updatespacman,
+#custom-idle-indicator.active,
+#custom-idle-indicator,
+#custom-notification-silencing-indicator.active,
+#custom-notification-silencing-indicator
+#custom-screenrecording-indicator,
+#custom-update,
+#custom-omarchy {
+    min-width: 14px;
+    color: @fg;
+    padding: 0px 4px;
+    margin: 3px 2px;
+    border-radius: 15px;
+    transition: all 0.25s ease;
+}
+
+/*  Custom module adjustments */
+
+
+#battery,
+#battery.discharging,
+#battery.full,
+#battery.plugged,
+#battery.charging,
+#memory,
+#cpu,
+#network,
+#network.disconnected,
+#network.wifi,
+#network.ethernet,
+#pulseaudio {
+  min-width: 14px;
+  background: linear-gradient(45deg, @fg, alpha(@fg, 0.5));
+  color: @bg;
+  padding: 0px 8px;
+  margin: 3px 2px;
+  border-radius: 15px;
+  transition: all 0.25s ease;
+}
+
+#bluetooth {
+    margin-right: 2px;
+}
+
+#tray {
+padding-top: 1px;
+}
+
+#custom-omarchy {
+    font-size: 14px;
+    padding-left: 0px;
+}
+
+#mpris {
+    background-color: @bg;
+    border-radius: 15px;
+    padding: 0px 2px; 
+    margin: 5px 5px 2px 5px; 
+    color: alpha(@fg, 0.5);
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3);
+    border: 0.5px solid alpha(@fg, 0.2); 
+}
+
+#mpris.playing {
+    animation: hover-mirror 3s ease-in-out infinite alternate;
+    color: @fg;
+}
+
+#idle_inhibitor.activated,
+#idle_inhibitor.deactivated {
+    padding-left: 0px;
+    font-size: 12px;
+}
+
+#battery.charging, #battery.plugged {
+    color: #b7b083;
+}
+
+#battery.warning:not(.charging) {
+    color: #c95d0f;
+}
+
+#custom-voxtype.recording {
+  color: #c95d0f;
+}
+
+#custom-idle-indicator.active,
+#custom-notification-silencing-indicator.active {
+  color: #c95d0f;
+  opacity: 1;
+}
+#power-profiles-daemon.balanced,
+#power-profiles-daemon.performance,
+#power-profiles-daemon.power-saver {
+     padding-right: 0px;}
+#power-profiles-daemon.power-saver { color: #25e712; }
+
+/* Tooltips & Separators */
+
+tooltip {
+    background: alpha(@bg, 0.95);
+    border: 1px solid alpha(@fg, 0.2);
+    border-radius: 8px;
+}
+
+tooltip label {
+    color: @fg;
+    padding: 4px;
+}
+
+#custom-separator, #custom-separator2, #custom-separator3 {
+    color: alpha(@fg, 0.3);
+    opacity: 1;
+    font-size: 10px;
+    padding-top: 1px;
+    padding: 0 3px;
+}
+
+#custom-separator4 {
+    color: alpha(@fg, 0.5);
+    opacity: 1;
+    font-size: 14px;
+    padding-top: 0px;
+    padding: 0 1px;
+}
+
+/* Animations */
+
+@keyframes hover-mirror {
+    from {
+        box-shadow: inset 0 0px alpha(@fg, 0.5);
+        background-color: @bg;
+    }
+    to {
+        box-shadow: inset 0 -2px @fg;
+        background-color: @bg;
+    }
+}
+
+@keyframes blink-recording {
+    to { color: @bg; }
+}
+
+#custom-screenrecording-indicator.active {
+    color: #eb7087;
+    animation: blink-recording 0.5s linear infinite alternate;
+}
+
+#battery.critical:not(.charging) {
+    color: #f53c3c;
+    animation: blink-recording 0.5s steps(12) infinite alternate;
+}
+
+#memory.warning,
+#cpu.warning {
+    color: #eb7087; 
+}
+
+#memory.critical,
+#cpu.critical {
+    color: #df6124; 
+}
