@@ -35,7 +35,7 @@
     "format": " "
   },
   "hyprland/window": {
-    "format": "{title}",
+    "format": "{initialTitle}",
     "min-length": 20,
     "max-length": 20,
     "separate-outputs": true,
