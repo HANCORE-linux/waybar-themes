@@ -20,11 +20,8 @@
       "custom/voxtype",
       "custom/screenrecording-indicator",
       "custom/update",
-      "custom/updatespacman",
-      "backlight",
-      "bluetooth",
+
       "pulseaudio",
-      "power-profiles-daemon",
       "network",
       "memory",
       "cpu",
@@ -241,7 +238,13 @@
       "transition-duration": 600,
       "children-class": "tray-group-item"
     },
-    "modules": ["custom/expand-icon", "tray"]
+    "modules": [
+     "custom/expand-icon",
+     "tray",
+     "custom/updatespacman",
+     "backlight",
+     "bluetooth",
+     "power-profiles-daemon"]
   },
   "custom/expand-icon": {
     "format": "",
