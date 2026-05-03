@@ -2,7 +2,6 @@
 
 @define-color bg @background;
 @define-color fg @foreground;
-@define-color glow rgba(180, 180, 180, 0.4);
 
 * {
   font-family: 'JetBrainsMono Nerd Font'; 
