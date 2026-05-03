@@ -233,7 +233,7 @@ color: @foreground;
 
 #battery.warning {
   color: #c95d0f;
-  background-color: @background;
+  background-color: transparent;
 }
 
 @keyframes blink2 {
@@ -244,7 +244,7 @@ color: @foreground;
 }
 
 #battery.critical:not(.charging) {
-  background-color: @background;
+  background-color: transparent;
   color: #e6d8ba;
   animation-name: blink2;
   animation-duration: 0.5s;
