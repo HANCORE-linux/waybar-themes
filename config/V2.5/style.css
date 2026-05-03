@@ -34,7 +34,7 @@ window#waybar.empty #window{
 }
 
 #workspaces {
-  margin: 3px 0px;
+  margin: 3px 2px;
   padding: 0 1px;
   background-color: #27272a;
   margin-left: 0px;
@@ -77,6 +77,7 @@ window#waybar.empty #window{
 #clock,
 #battery,
 #cpu,
+#memory,
 #mpris,
 #network,
 #pulseaudio,
@@ -102,7 +103,7 @@ window#waybar.empty #window{
   background-color: #27272a;
 }
 
-#clock, #idle_inhibitor, #custom-update, #custom-updatespacman, #custom-voxtype, #custom-voxtype.recording {
+#memory, #clock, #idle_inhibitor, #custom-update, #custom-updatespacman, #custom-voxtype, #custom-voxtype.recording {
 background-color: #27272a;
 }
 
@@ -298,8 +299,7 @@ tooltip label {
 #mpris {
 color: #e6d8ba;
 font-size: 13px;
-margin: 3px 0px;
-margin-left: 2px;
+margin: 3px 2px;
 animation: repeat;
 	animation-name: blink;
 	animation-duration: 3s;
