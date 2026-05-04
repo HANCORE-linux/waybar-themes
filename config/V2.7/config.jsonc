@@ -199,6 +199,8 @@
     "format-full": "󰂅",
     "tooltip-format-discharging": "{timeTo}",
     "tooltip-format-charging": "{timeTo}",
+    "on-click": "omarchy-menu power",
+    "on-click-right": "notify-send -u low \"$(omarchy-battery-status)\"",
     "interval": 5,
     "states": {
       "warning": 20,
