@@ -6,7 +6,6 @@
   min-height: 0;
   font-family: 'JetBrainsMono Nerd Font';
   font-size: 14px;
-  padding: 1px;
 }
 
 
@@ -47,40 +46,30 @@ mpris.empty {
 }
 
 #workspaces {
-  margin: 6px;
+  margin: 0px 6px;
   padding: 0px;
+}
+
+#workspaces button label {
+    font-size: 17px;
 }
 
 #workspaces button {
   all: initial;
-  padding: 3px 10px 3px 5px;
-  margin: 0 5px;
-  min-width: 9px;
+  padding: 0px 10px 0px 5px;
+  margin: 0px 6px;
 }
 
 #workspaces button.active {
-  background: @foreground;
-  color: @background;
-  border-radius: 30px;
-  padding: 3px 10px 3px 5px;
-}
-
-#workspaces button:hover {
-  background: alpha(@foreground, .3);
-  border-radius: 30px;
-  padding: 3px 10px 3px 5px;
-  transition: .7s;
-}
-
-#workspaces button.active:hover {
-  background: @foreground;
-  color: @background;
-  border-radius: 30px;
-  padding: 3px 10px 3px 5px;
+  background: @background;
+  color: @foreground;
+  border-radius: 20px;
+  padding: 0px 10px 0px 5px;
+  margin: 0px 6px;
 }
 
 #workspaces button.empty {
-  opacity: 0.3;
+  opacity: 0.2;
 }
 
 #custom-weather,
@@ -98,9 +87,9 @@ mpris.empty {
 #custom-idle-indicator,
 #custom-notification-silencing-indicator,
 #custom-update{
-  background-color: alpha(@background, 0.7);
-  padding: 0px 10px;
-  margin: 4px 2px;
+  background-color: alpha(@foreground, 0.1);
+  padding: 2px 12px;
+  margin: 4px 0;
   border-radius: 0;
 }
 
@@ -143,9 +132,10 @@ mpris.empty {
 }
 
 #clock {
-  border-radius: 10px;
-  padding: 0 10px;
-  margin: 5px;
+  border-radius: 15px;
+  padding: 0 15px;
+  margin: 5px 0px;
+  background-color: transparent;
 }
 
 .hidden {
@@ -180,13 +170,14 @@ mpris.empty {
 #window {
   border-radius: 15px; 
   padding: 5px 15px;   
-  margin-right: 5px;   
+  margin-right: 0px;   
 }
 
 #tray-expander {
   padding: 0 0 0 1px;
   margin-left: 0px;
   border-radius: 15px;
+  background-color: transparent;
 }
 
 #backlight {
@@ -197,12 +188,13 @@ mpris.empty {
 }
 
 #network {
-  border-radius: 10px 0 0 10px;
+  border-radius: 15px 0 0 15px;
 }
 
 #cpu {
   padding: 0 15px 0 10px;
-  margin-right: 1px;
+  border-radius: 0 15px 15px 0;
+  margin-right: 0px;
 }
 
 #pulseaudio {
