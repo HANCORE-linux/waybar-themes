@@ -17,19 +17,12 @@
     "battery"
   ],
   "hyprland/workspaces": {
-    "on-click": "activate",
+    "disable-scroll": true,
+    "all-outputs": true,
+    "cursor": true,
     "format": "{icon}",
-    "format-icons": {
-      "default": "",
-      "active": "",
-      "empty": ""
-    },
-    "persistent-workspaces": {
-      "1": [],
-      "2": [],
-      "3": [],
-      "4": [],
-      "5": []
+      "persistent-workspaces": {
+      "*": 5
     }
   },
   "custom/omarchy": {

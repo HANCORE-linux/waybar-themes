@@ -27,17 +27,15 @@
   margin-right: 5px;
 }
 
-
 window#waybar {
   background: transparent;
-  margin-top: 10px;
 }
 
 window#waybar.empty #window {
   background: transparent;
   color: transparent;
   padding: 0;
-  margin-left: 5px;
+  margin: 0;
   transition: .5s;
 }
 
@@ -48,30 +46,46 @@ mpris.empty {
 }
 
 #workspaces {
-  margin: 0px 6px;
-  padding: 0px;
+    background-color: alpha(@foreground, .05);
+    border: none;
+    padding: 0px;
+    margin: 4px 6px;
+    margin-right: 0px;
+    border-radius: 15px;
 }
 
-#workspaces button label {
-    font-size: 17px;
-}
 
 #workspaces button {
-  all: initial;
-  padding: 0px 10px 0px 5px;
-  margin: 0px 6px;
+    padding: 0px 8px;
+    margin: 0px 2px;
+    color: @background;
+    border-radius: 100px;
+    background-color: alpha(@foreground, .45);
 }
 
 #workspaces button.active {
-  background: @background;
-  color: @foreground;
-  border-radius: 20px;
-  padding: 0px 10px 0px 5px;
-  margin: 0px 6px;
+    padding: 0px 8px;
+    margin: 0px 2px;
+    background: alpha(@foreground, 1);
+    color: @background;
+    border-radius: 15px;
+    opacity: 0.95; 
 }
 
 #workspaces button.empty {
-  opacity: 0.2;
+    opacity: 0.2; 
+}
+
+#workspaces button.empty.active {
+opacity: 0.75; 
+}
+
+#workspaces button.active:hover,
+#workspaces button:hover {
+    background-color: alpha(@foreground, .3);
+    color: @background;
+    opacity: 1; 
+    transition: .7s;
 }
 
 #custom-weather,
@@ -159,7 +173,7 @@ mpris.empty {
   color: @background;
   min-width: 10px;
   border-radius: 15px;
-  padding: 0 10px;
+  padding: 0 8px;
   margin: 5px 0 5px 0px;
 }
 
@@ -170,8 +184,12 @@ mpris.empty {
 #mpris,
 #window {
   border-radius: 15px; 
-  padding: 5px 15px;   
+  padding: 5px 10px;   
   margin-right: 0px;   
+}
+
+#window {
+  margin-left: 5px;   
 }
 
 #tray-expander {
@@ -203,7 +221,7 @@ mpris.empty {
 }
 
 tooltip {
-  border-radius: 10px;
+  border-radius: 15px;
   background: @background;
-  border: 3px solid alpha(@foreground, .5);
+  border: 2px solid alpha(@foreground, .5);
 }
