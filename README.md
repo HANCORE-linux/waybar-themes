@@ -762,3 +762,30 @@ git clone https://github.com/HANCORE-linux/waybar-themes.git /tmp/repo && cp -rf
 git clone https://github.com/HANCORE-linux/waybar-themes.git /tmp/repo && cp -rf /tmp/repo/config/V6.fa/. ~/.config/waybar && rm -rf /tmp/repo && omarchy-restart-waybar
 ```
 <img width="2560" height="359" alt="screenshot-2026-01-02_20-53-50" src="https://github.com/user-attachments/assets/9e5f77ec-ba1f-42c0-810d-46f5327ed3f4" />
+
+## V7
+- Base Waybar config/style derived from Omarchy by DHH – with my custom design modifications - Island V1.
+##### V7 Install-command (copy and paste in your terminal): <br>
+```bash
+git clone https://github.com/HANCORE-linux/waybar-themes.git /tmp/repo && cp -rf /tmp/repo/config/V7/. ~/.config/waybar && rm -rf /tmp/repo && omarchy-restart-waybar
+```
+<img src="https://github.com/HANCORE-linux/waybar-themes/blob/main/config/V7/desktopisland3.png?raw=true" />
+<img src="https://github.com/HANCORE-linux/waybar-themes/blob/main/config/V7/laptopisland3.png?raw=true" />
+
+## V7.1
+- Base Waybar config/style derived from Omarchy by DHH – with my custom design modifications - Island V2.
+##### V7.1 Install-command (copy and paste in your terminal): <br>
+```bash
+git clone https://github.com/HANCORE-linux/waybar-themes.git /tmp/repo && cp -rf /tmp/repo/config/V7.1/. ~/.config/waybar && rm -rf /tmp/repo && omarchy-restart-waybar
+```
+<img src="https://github.com/HANCORE-linux/waybar-themes/blob/main/config/V7.1/screenshot-2026-05-06_19-07-11.png?raw=true" />
+<img src="https://github.com/HANCORE-linux/waybar-themes/blob/main/config/V7.1/screenshot-2026-05-06_19-07-11.png?raw=true" />
+
+## V7.1a
+- Base Waybar config/style derived from Omarchy by DHH – with my custom design modifications - Island V3.
+##### V7.1a Install-command (copy and paste in your terminal): <br>
+```bash
+git clone https://github.com/HANCORE-linux/waybar-themes.git /tmp/repo && cp -rf /tmp/repo/config/V7.1a/. ~/.config/waybar && rm -rf /tmp/repo && omarchy-restart-waybar
+```
+<img src="https://github.com/HANCORE-linux/waybar-themes/blob/main/config/V7.1a/587964689-938bdc30-bf5c-44c2-97c5-6fda343685f3.png?raw=true" />
+<img src="https://github.com/HANCORE-linux/waybar-themes/blob/main/config/V7.1a/587977168-7dd9b01d-55b1-49d6-806a-7fa293ca93bb.png?raw=true" />
