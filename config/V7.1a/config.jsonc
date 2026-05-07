@@ -7,9 +7,8 @@
   "modules-left": ["custom/omarchy", "hyprland/workspaces", "hyprland/window"],
   "modules-center": ["clock", "custom/update", "custom/screenrecording-indicator", "custom/idle-indicator", "custom/notification-silencing-indicator"],
   "modules-right": [
-    "tray",
-    "custom/weather",
-    "memory",
+    "mpris",
+    "group/tray-expander",
     "backlight",
     "network",
     "bluetooth",
@@ -17,7 +16,6 @@
     "cpu",
     "battery"
   ],
-
   "hyprland/workspaces": {
     "disable-scroll": true,
     "all-outputs": true,
@@ -114,7 +112,7 @@
       "transition-duration": 600,
       "children-class": "tray-group-item"
     },
-    "modules": ["custom/expand-icon", ]
+    "modules": ["custom/expand-icon", "tray", "memory", "custom/weather"]
   },
   "custom/expand-icon": {
     "format": "",
@@ -172,7 +170,6 @@
     }
   },
   "hyprland/window": {
-    "format": "{}",
-    "max-length": 45
+    "format": "{}"
   },
 }
