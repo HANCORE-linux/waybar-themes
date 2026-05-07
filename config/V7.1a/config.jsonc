@@ -206,7 +206,7 @@
     "format": "{}°",
     "tooltip": true,
     "interval": 600,
-    "exec": "omarchy-cmd-present wttrbar && wttrbar || true",
+    "exec": "wttrbar --nerd --location Changchun",
     "return-type": "json"
   },
   "mpris": {
