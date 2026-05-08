@@ -110,7 +110,7 @@ window#waybar  {
   margin: 1px 0px 0px 10px;
   opacity: 1;
   font-weight: bold;
-  font-size: 10px;
+  font-size: 12px;
 }
 #custom-expand-icon {
   opacity: 0.5;
@@ -186,7 +186,7 @@ tooltip {
 tooltip {
  padding: 4px;
  background: @background;
- font-size: 10px;
+ font-size: 11px;
  border: 1px solid alpha(@foreground, 0.6);
  border-radius: 8px;
  
