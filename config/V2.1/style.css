@@ -71,10 +71,14 @@ window#waybar.empty #window {
 }
 
 #mpris {
-    background-color: @base;
+  background-color: @base;
   border-radius: 8px;
   border: 1px solid alpha(@text, 0.15);
   color: @love;
+  min-width: 16px;
+  margin: 0px 3px 0px 3px;
+  padding-left: 6px;
+  padding-right: 6px;
 }
 
 
@@ -119,7 +123,6 @@ tooltip {
 
 #tray,
 #window,
-#mpris,
 #cpu,
 #clock,
 #battery,
