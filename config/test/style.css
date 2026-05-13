@@ -31,7 +31,6 @@ window#waybar  {
 box-shadow: 
     0px 2px 4px rgba(0, 0, 0, 0.2),
     0px 2px 4px rgba(0, 0, 0, 0.15);
-border: 1.5px solid alpha(@fg, 0.2);
 }
 
 window#waybar.empty .modules-center {
@@ -44,7 +43,7 @@ window#waybar.empty .modules-center {
 .modules-left,
 .modules-right {
 border-radius: 2px;
-padding: 0 0px;
+padding: 0 1px;
 }
 
 
@@ -111,7 +110,6 @@ button:hover {
 #tray,
 #idle_inhibitor,
 #memory,
-#mpris,
 #cpu,
 #battery,
 #battery.discharging,
@@ -138,11 +136,11 @@ button:hover {
 #custom-update,
 #custom-omarchy {
   color: @bg;
-  background: alpha(@accent, 1);
+  background: alpha(@muted, 1);
   opacity: 1;
   border-radius: 2px;
-  padding: 0 10px;
-  margin: 2px 2px;
+  padding: 0 6px;
+  margin: 2px 1px;
 }
 
 #custom-omarchy {
@@ -150,7 +148,6 @@ button:hover {
     background-color: @red;
     font-size: 16px;
     padding: 0 12px;
-    margin-right: 5px;
 }
 
 #pulseaudio {
@@ -163,9 +160,14 @@ button:hover {
   padding: 0 13px 0 10px;
 }
 
+#tray {
+  background-color: @accent;
+}
+
 #idle_inhibitor.deactivated {
-  font-size: 14px;
+font-size: 14px;
 padding: 0 10px 0 5px;
+background-color: @accent;
 }
 
 #idle_inhibitor.activated {
@@ -187,12 +189,6 @@ padding: 0 10px 0 5px;
     color: @bg;
 }
 
-#power-profiles-daemon.performance,
-#power-profiles-daemon.power-saver,
-#power-profiles-daemon.balanced {
-  background-color: @muted;
-}
-
 #power-profiles-daemon.performance {
     background-color: @red;
     color: @bg;
@@ -202,26 +198,23 @@ padding: 0 10px 0 5px;
     color: @bg;
     background: @red;
     font-weight: bold;
-    padding: 0 10px;
-    border-radius: 2px;
 }
 
+#custom-voxtype,
 #custom-idle-indicator,
 #custom-notification-silencing-indicator {
-  min-width: 12px;
-  padding: 0 2px;
-  margin: 2px 1px;
-  margin-left: 1px;
-  margin-right: 0px;
-  font-size: 12px;
-  padding-bottom: 0px;
-  border-radius: 2px;
-  background-color: @muted;
+    background-color: @red;
+    color: @bg;
+    padding: 0 6px;       
+    margin: 2px 1px;      
+    border-radius: 2px;
+    min-width: 10px;      
 }
 
+#custom-voxtype,
 #custom-idle-indicator.active,
 #custom-notification-silencing-indicator.active {
-  color: #a55555;
+  color: @bg;
   opacity: 1;;
 }
 
@@ -242,17 +235,7 @@ tooltip label {
     font-weight: normal;
 }
 
-#custom-voxtype {
-  min-width: 12px;
-  margin: 0 0 0 2.5px;
-}
 
-#custom-voxtype.recording {
-  color: #a55555;
-}
-
-
-#custom-separator3,
 #custom-separator2,
 #custom-separator {
   opacity: 0.25;
