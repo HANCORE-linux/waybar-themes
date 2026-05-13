@@ -318,6 +318,14 @@ git clone https://github.com/HANCORE-linux/waybar-themes.git /tmp/repo && cp -rf
 ```
 <img width="1582" height="257" alt="screenshot-2026-02-14_16-38-57" src="https://github.com/user-attachments/assets/d1cf0c92-7214-4c23-9f62-8ec19216d921" />
 
+## V2.5c
+- static colors based of my new Theme [Ryū](https://github.com/HANCORE-linux/omarchy-ryu-theme)
+- Added a toggle button to switch Waybar position between top and bottom
+##### V2.5c Install-command (copy and paste in your terminal): <br>
+```bash
+git clone https://github.com/HANCORE-linux/waybar-themes.git /tmp/repo && cp -rf /tmp/repo/config/V2.5b/. ~/.config/waybar && rm -rf /tmp/repo && omarchy-restart-waybar
+```
+<img src="https://github.com/HANCORE-linux/waybar-themes/blob/main/config/V2.5c/screenshot-2026-05-13_12-19-52.png?raw=true" />
 
 ## V2.6
 - Base config of V2.4 - short version 
