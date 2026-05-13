@@ -65,7 +65,6 @@ button:hover {
 }
 
 #workspaces button {
-    background-color: alpha(@accent, 0.4);
     color: @fg;
     margin: 0 2px;
     padding: 0 6px;
@@ -133,10 +132,11 @@ button:hover {
 #custom-clock,
 #custom-updatespacman,
 #custom-screenrecording-indicator,
+#custom-screenrecording-indicator.active,
 #custom-update,
 #custom-omarchy {
   color: @bg;
-  background: alpha(@muted, 1);
+  background: alpha(@accent, 1);
   opacity: 1;
   border-radius: 2px;
   padding: 0 6px;
@@ -150,15 +150,26 @@ button:hover {
     padding: 0 12px;
 }
 
+
+#custom-clock,
+#custom-weather {
+  background-color: @muted;
+}
+
 #backlight,
 #pulseaudio {
   padding: 0 10px 0 5px;
 }
+
 #network,
 #network.disconnected,
 #network.wifi,
 #network.ethernet {
   padding: 0 13px 0 10px;
+}
+
+#network.wifi {
+background-color: @muted;
 }
 
 #custom-updatespacman,
@@ -243,6 +254,20 @@ tooltip label {
   color: @fg;
 }
 
+#custom-waybar-position {
+    background-color: @red;
+    color: @bg;
+    padding: 0 6px;
+    margin: 2px 1px;
+    border-radius: 2px;
+    min-width: 10px;
+}
+
+#custom-waybar-position:hover {
+    background-color: @red;
+}
+
+
 /* Specific animation Module */
 
 #custom-screenrecording-indicator {
@@ -253,6 +278,8 @@ tooltip label {
 }
 
 #custom-screenrecording-indicator.active {
+  background-color: transparent;
+  padding: 0 13px 0 10px;
   color: #eb7087;
   animation-name: blink-recording;
   animation-duration: 0.5s;

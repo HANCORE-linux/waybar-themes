@@ -5,7 +5,7 @@
   "mod": "dock",
   "passthrough": false,
   "gtk-layer-shell": true,
-  "width": 800,
+  "width": 600,
   "margin-top": 0,
   "margin-bottom": 0,
   "modules-left": [
@@ -13,6 +13,7 @@
     "custom/separator",
     "hyprland/workspaces",
     "custom/separator",
+    "custom/waybar-position",
     "idle_inhibitor",
     "tray",
     "custom/voxtype",
@@ -60,6 +61,11 @@
   "persistent-workspaces": {
     "*": 6
   }
+},
+"custom/waybar-position": {
+    "format": "󱕐",
+    "on-click": "sed -i 's/\"position\": \"top\"/\"tmp\"/;s/\"position\": \"bottom\"/\"position\": \"top\"/;s/\"tmp\"/\"position\": \"bottom\"/' ~/.config/waybar/config.jsonc && pkill -USR2 waybar",
+    "tooltip-format": "Change Position TOP / BOTTOM"
 },
 "custom/separator": {
     "format": "|", 
