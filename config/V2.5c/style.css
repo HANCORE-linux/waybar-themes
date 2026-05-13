@@ -312,7 +312,7 @@ tooltip label {
 
 #network.disconnected,
 #battery.warning {
-  color: @red;
+  color: @bg;
 }
 
 @keyframes blink2 {
