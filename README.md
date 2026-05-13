@@ -323,7 +323,7 @@ git clone https://github.com/HANCORE-linux/waybar-themes.git /tmp/repo && cp -rf
 - Added a toggle button to switch Waybar position between top and bottom
 ##### V2.5c Install-command (copy and paste in your terminal): <br>
 ```bash
-git clone https://github.com/HANCORE-linux/waybar-themes.git /tmp/repo && cp -rf /tmp/repo/config/V2.5b/. ~/.config/waybar && rm -rf /tmp/repo && omarchy-restart-waybar
+git clone https://github.com/HANCORE-linux/waybar-themes.git /tmp/repo && cp -rf /tmp/repo/config/V2.5c/. ~/.config/waybar && rm -rf /tmp/repo && omarchy-restart-waybar
 ```
 <img src="https://github.com/HANCORE-linux/waybar-themes/blob/main/config/V2.5c/screenshot-2026-05-13_12-19-52.png?raw=true" />
 
