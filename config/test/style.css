@@ -65,7 +65,7 @@ button:hover {
 }
 
 #workspaces button {
-    background-color: alpha(@accent, 0.2);
+    background-color: alpha(@accent, 0.4);
     color: @fg;
     margin: 0 2px;
     padding: 0 6px;
@@ -161,6 +161,7 @@ button:hover {
   padding: 0 13px 0 10px;
 }
 
+#custom-updatespacman,
 #tray {
   background-color: @accent;
 }
