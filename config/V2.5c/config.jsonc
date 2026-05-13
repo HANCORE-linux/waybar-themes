@@ -148,7 +148,7 @@
         "tooltip-format": "Brightness:  {percent}%",
         "format-alt": "{percent}% {icon}",
         "format-alt-click": "click-right",
-        "format-icons": [" 󰃜", "󰃝", "󰃞", "󰃟", "󰃠"],
+        "format-icons": ["󰃜", "󰃝", "󰃞", "󰃟", "󰃠"],
         "on-scroll-down": "brightnessctl s 5%-",
         "on-scroll-up": "brightnessctl s +5%"
     },
