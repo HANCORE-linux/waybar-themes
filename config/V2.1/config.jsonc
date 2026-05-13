@@ -263,7 +263,7 @@
         "format": "{}°",
         "tooltip": true,
         "interval": 1800,
-        "exec": "wttrbar --location yourlocation",
+        "exec": "wttrbar --location Berlin",
         "return-type": "json"
   },
   "pulseaudio#input": {
