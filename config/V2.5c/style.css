@@ -2,7 +2,6 @@
 @define-color bg @background;
 @define-color fg @foreground;
 @define-color red #df6124;
-@define-color grey #4f4f4f;
 @define-color accent #525e5a;
 @define-color gold #C2A46D;
 @define-color muted #8B9388;
