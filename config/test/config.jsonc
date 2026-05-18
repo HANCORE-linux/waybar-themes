@@ -3,13 +3,13 @@
   "layer": "top",
   "position": "top",
   "mod": "dock",
-  "margin-left": 350,
-  "margin-right": 350,
+  "margin-left": 250,
+  "margin-right": 250,
   "margin-top": 4,
   "modules-left": [
     "custom/omarchy",
     "custom/weather",
-    "custom/clock",
+    "clock",
     "custom/voxtype",
     "custom/idle-indicator",
     "custom/notification-silencing-indicator",
@@ -163,8 +163,8 @@
       "default": ["󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"]
     },
     "format-full": "󰂅",
-    "tooltip-format-discharging": "{power:>1.0f}W↓ {capacity}%\n {timeTo}",
-    "tooltip-format-charging": "{power:>1.0f}W↑ {capacity}%\n {timeTo}",
+    "tooltip-format-discharging": "{power:>1.0f}W↓ {capacity}%\n{timeTo}",
+    "tooltip-format-charging": "{power:>1.0f}W↑ {capacity}%\n{timeTo}",
     "interval": 5,
     "on-click": "omarchy-menu power",
     "on-click-right": "notify-send -u low \"$(omarchy-battery-status)\"",
@@ -188,8 +188,8 @@
     "format": "{class}",
     "max-length": 25
   },
-  "custom/clock": {
-    "exec": "date +'%A %H:%M\u2004%p' | tr '[:upper:]' '[:lower:]'",
+  "clock": {
+    "format": "{:%A %H:%M\u2004%p}",
     "interval": 60,
     "tooltip-format": "<span>{calendar}</span>",
     "on-click-right": "omarchy-launch-floating-terminal-with-presentation omarchy-tz-select",
