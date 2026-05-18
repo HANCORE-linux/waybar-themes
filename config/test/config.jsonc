@@ -154,15 +154,15 @@
     "return-type": "json"
   },
   "battery": {
-    "format": "BAT {capacity}% {icon}",
-    "format-discharging": "BAT {capacity}% {icon}",
-    "format-charging": "BAT {capacity}% {icon}",
+    "format": "BAT {capacity}%",
+    "format-discharging": "BAT {capacity}%",
+    "format-charging": "BAT {capacity}%",
     "format-plugged": "",
     "format-icons": {
       "charging": ["󰢜", "󰂆", "󰂇", "󰂈", "󰢝", "󰂉", "󰢞", "󰂊", "󰂋", "󰂅"],
       "default": ["󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"]
     },
-    "format-full": "󰂅",
+    "format-full": "BAT FULL",
     "tooltip-format-discharging": "{power:>1.0f}W↓ {capacity}%\n{timeTo}",
     "tooltip-format-charging": "{power:>1.0f}W↑ {capacity}%\n{timeTo}",
     "interval": 5,
