@@ -3,8 +3,8 @@
   "layer": "top",
   "position": "top",
   "mod": "dock",
-  "margin-left": 400,
-  "margin-right": 400,
+  "margin-left": 350,
+  "margin-right": 350,
   "margin-top": 4,
   "modules-left": [
     "custom/omarchy",
@@ -163,8 +163,8 @@
       "default": ["󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"]
     },
     "format-full": "󰂅",
-    "tooltip-format-discharging": "{power:>1.0f}W↓ {capacity}%",
-    "tooltip-format-charging": "{power:>1.0f}W↑ {capacity}%",
+    "tooltip-format-discharging": "{power:>1.0f}W↓ {timeTo}%",
+    "tooltip-format-charging": "{power:>1.0f}W↑ {timeTo}%",
     "interval": 5,
     "on-click": "omarchy-menu power",
     "on-click-right": "notify-send -u low \"$(omarchy-battery-status)\"",
