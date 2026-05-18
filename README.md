@@ -209,6 +209,22 @@ git clone https://github.com/HANCORE-linux/waybar-themes.git /tmp/repo && cp -rf
 ```
 <img src="https://github.com/HANCORE-linux/waybar-themes/blob/main/config/V2.1-1/screenshot-2026-05-09_01-04-22.png?raw=true" />
 
+## V2.1-2
+- New version with static Rose Pine Dark color scheme
+##### V2.1-2 Install-command (copy and paste in your terminal): <br>
+```bash
+git clone https://github.com/HANCORE-linux/waybar-themes.git /tmp/repo && cp -rf /tmp/repo/config/V2.1-2/. ~/.config/waybar && rm -rf /tmp/repo && omarchy-restart-waybar
+```
+<img src="https://github.com/HANCORE-linux/waybar-themes/blob/main/config/V2.1-2/screenshot-2026-05-18_16-24-46.png?raw=true" />
+
+## V2.1-3
+- New version with static Rose Pine Dark color scheme
+##### V2.1-3 Install-command (copy and paste in your terminal): <br>
+```bash
+git clone https://github.com/HANCORE-linux/waybar-themes.git /tmp/repo && cp -rf /tmp/repo/config/V2.1-3/. ~/.config/waybar && rm -rf /tmp/repo && omarchy-restart-waybar
+```
+<img src="https://github.com/HANCORE-linux/waybar-themes/blob/main/config/V2.1-3/screenshot-2026-05-18_10-13-28.png?raw=true" />
+
 ## V2.1a
 - [Oxocarbon-Theme](https://github.com/HANCORE-linux/omarchy-oxocarbon-theme) Waybar style with static colors (island-version) - Thanks to Astraeya for his window-script!
 ##### V2.1a Install-command (copy and paste in your terminal): <br>
