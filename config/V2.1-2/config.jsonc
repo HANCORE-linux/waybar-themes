@@ -18,6 +18,7 @@
     "tray",
     "power-profiles-daemon",
     "idle_inhibitor",
+    "bluetooth",
     "backlight",
     "battery",
     "hyprland/window",
@@ -32,7 +33,6 @@
     "cpu",
     "pulseaudio",
     "disk",
-    "bluetooth",
     "network"
   ],
   "hyprland/workspaces": {
