@@ -120,6 +120,7 @@ button:hover {
 
 #custom-omarchy {
 opacity: 1;
+margin-right: 2px;
 }
 
 #clock {
@@ -132,6 +133,7 @@ opacity: 1;
 
 #tray {
 opacity: 1;
+margin-left: 2px;
 }
 
 #idle_inhibitor.deactivated {
