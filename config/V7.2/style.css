@@ -1,10 +1,11 @@
 @import "../omarchy/current/theme/waybar.css";
 
-* {
-  /* background-color: @background; */
-  /* color: @foreground; */
+@define-color bg @background;
+@define-color fg @foreground;
+@define-color red #df6124;
 
-  border: none;
+* {
+   border: none;
   padding: 0px;
   min-height: 0;
   font-family: "JetBrains Mono Nerd Font";
@@ -20,7 +21,7 @@ window#waybar  {
   border-radius: 0px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   margin: 0px 0px 2px 0px;
-  background-color: alpha(@background, .95);
+  background-color: alpha(@background, .97);
   box-shadow: 0 1px 2px rgba(0, 0, 0, 1);
   min-height: 25px;
   transition-property: background-color;
@@ -28,11 +29,11 @@ window#waybar  {
 }
 
 .modules-left {
-margin-left: 2px;
+margin-left: 0px;
 }
 
 .modules-right {
-  margin-right: 2px;
+  margin-right: 4px;
 }
 
 
@@ -57,16 +58,15 @@ button:hover {
 #workspaces button {
   padding: 0px 0px;
   margin: 0px 8px;
-  color: alpha(@foreground, 0.65);
   border: none;
-  opacity: 0.65;
+  opacity: 1;
   font-size: 16px;
   border: none;
   border-radius: 0;
 }
 
 #workspaces button.active {
-  color: @foreground;
+  color: @red;
   transition: all 0.15s ease;
   opacity: 1.0;
 }
@@ -120,7 +120,6 @@ button:hover {
 
 #custom-omarchy {
 opacity: 1;
-margin-right: 2px;
 }
 
 #clock {
@@ -133,7 +132,7 @@ opacity: 1;
 
 #tray {
 opacity: 1;
-margin-left: 2px;
+margin-left: 0px;
 }
 
 #idle_inhibitor.deactivated {
