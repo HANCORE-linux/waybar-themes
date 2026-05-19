@@ -262,7 +262,7 @@
         "format": "{}°",
         "tooltip": true,
         "interval": 1800,
-        "exec": "wttrbar --location Changchun",
+        "exec": "wttrbar",
         "return-type": "json"
   },
   "pulseaudio#input": {
