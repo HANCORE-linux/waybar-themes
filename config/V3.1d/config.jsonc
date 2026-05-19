@@ -82,7 +82,7 @@
     "format": "{}°",
     "tooltip": true,
     "interval": 60,
-    "exec": "wttrbar --nerd --location Chongqing",
+    "exec": "wttrbar --nerd",
     "return-type": "json"
   },
     "custom/omarchy": {
