@@ -173,7 +173,7 @@
   "custom/weather": {
     "format": "{}°",
     "interval": 1800,
-    "exec": "wttrbar --location Changchun",
+    "exec": "wttrbar",
     "return-type": "json"
   },
   "battery": {
