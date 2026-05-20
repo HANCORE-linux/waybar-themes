@@ -22,10 +22,10 @@
     "custom/screenrecording-indicator",
     "idle_inhibitor",
     "bluetooth",
+    "power-profiles-daemon",
     "backlight",
     "network",
-    "power-profiles-daemon",
-    "battery"
+     "battery"
   ],
   "modules-center": [
  "mpris"
@@ -107,14 +107,14 @@
     "signal": 10,
     "return-type": "json"
   },
- "power-profiles-daemon": {
-    "format": "<span color='#df6124'>profile</span> {icon}",
+"power-profiles-daemon": {
+    "format": "{icon}",
     "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
     "tooltip": true,
     "format-icons": {
-      "performance": "perf",
-      "balanced": "bal",
-      "power-saver": "save"
+      "performance": "",
+      "balanced": "",
+      "power-saver": ""
     }
   },
 "cpu": {

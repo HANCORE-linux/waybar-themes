@@ -123,9 +123,6 @@ button:hover {
 #pulseaudio.input,
 #pulseaudio.output,
 #power-profiles-daemon,
-#power-profiles-daemon.performance,
-#power-profiles-daemon.balanced,
-#power-profiles-daemon.power-saver,
 #custom-weather,
 #custom-gpu-usage,
 #custom-updatespacman,
@@ -170,6 +167,25 @@ button:hover {
 margin-top: 1px;
 }
 
+#power-profiles-daemon {
+  min-width: 14px;
+  margin: 0px 0px;
+}
+
+#power-profiles-daemon.performance {
+  color: @red;
+  padding: 0px 0px 0px 2px; 
+}
+
+#power-profiles-daemon.balanced {
+  color: @fg;
+  padding: 0px 4px 0px 0px;
+}
+
+#power-profiles-daemon.power-saver {
+  color: #25e712;
+  padding: 0px 4px 0px 2px;
+}
 
 #custom-idle-indicator,
 #custom-notification-silencing-indicator {
