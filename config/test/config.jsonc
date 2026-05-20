@@ -11,36 +11,37 @@
   "margin-bottom": 0,
   "modules-left": [
     "custom/weather",
-    "custom/separator4",
+    "custom/separator3",
     "clock",
     "custom/separator",
     "hyprland/workspaces",
     "custom/separator",
-    "custom/voxtype",
+    "custom/update",
+    "custom/updatespacman",
     "custom/idle-indicator",
+    "custom/voxtype",
     "custom/notification-silencing-indicator",
     "custom/screenrecording-indicator",
     "idle_inhibitor",
     "bluetooth",
     "power-profiles-daemon",
     "backlight",
-    "network",
     "battery"
   ],
   "modules-center": [
  "mpris"
   ],
   "modules-right": [
+    "network",
     "cpu",
     "memory",
     "custom/gpu-usage",
     "pulseaudio#input",
     "pulseaudio#output",
     "custom/separator",
-    "custom/update",
-    "custom/updatespacman",
-    "tray",
-    "custom/omarchy"
+    "custom/omarchy",
+    "custom/separator2",
+    "tray"
   ],
 
   "hyprland/workspaces": {
@@ -69,7 +70,12 @@
     "format": "|", 
     "tooltip": false
 },
-"custom/separator4": {
+"custom/separator2": {
+"exec": "sh -c 'count=$(busctl --user get-property org.kde.StatusNotifierWatcher /StatusNotifierWatcher org.kde.StatusNotifierWatcher RegisteredStatusNotifierItems | sed -n \"s/^as \\([0-9]\\+\\).*/\\1/p\"); if [ \"${count:-0}\" -gt 0 ]; then echo \"{\\\"text\\\":\\\"|\\\",\\\"class\\\":\\\"show\\\"}\"; else echo \" {\\\"text\\\":\\\"\\\",\\\"class\\\":\\\"hide\\\"}\"; fi'",
+    "return-type": "json",
+    "interval": 2
+},
+"custom/separator3": {
     "format": "•", 
     "tooltip": false
 },

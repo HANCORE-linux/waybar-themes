@@ -8,7 +8,7 @@
 * {
     font-family: "JetBrainsMono Nerd Font";
     font-size: 12px;
-    font-weight: 900;
+    font-weight: 700;
     border: none;
     border-radius: 0px;
     margin: 0rem 0rem 0rem 0rem;
@@ -23,12 +23,12 @@ window#waybar  {
   margin: -2px 10px 5px 10px;
   padding: 0px 0px ;
   min-height: 32px;
-  border-radius: 5px;
+  border-radius: 0 0 5px 5px;
   background-color: @bg;
 box-shadow: 
     0px 2px 4px rgba(0, 0, 0, 0.2),
     0px 2px 4px rgba(0, 0, 0, 0.15);
-border: 1.5px ridge alpha(@fg, 0.2);
+border: 1px ridge alpha(@fg, 0.2);
 }
 
 window#waybar.empty .modules-center {
@@ -122,7 +122,6 @@ button:hover {
 #pulseaudio,
 #pulseaudio.input,
 #pulseaudio.output,
-#power-profiles-daemon,
 #custom-weather,
 #custom-gpu-usage,
 #custom-updatespacman,
@@ -146,6 +145,8 @@ button:hover {
 #custom-omarchy {
   color: @red;
   font-size: 14px;
+  padding: 0px 4px 0px 0px;
+  margin: 0 4px;
 }
 
 #idle_inhibitor.deactivated {
@@ -169,7 +170,7 @@ margin-top: 1px;
 
 #power-profiles-daemon {
   margin: 0px 0px;
-  padding: 0px 5px 0px 2.5px;
+  padding: 0px 7.5px 0px 2.5px;
 }
 
 #power-profiles-daemon.performance {
@@ -226,7 +227,7 @@ tooltip label {
   color: #a55555;
 }
 
-
+#custom-separator2,
 #custom-separator {
   opacity: 0.25;
   padding-bottom: 0px;
@@ -237,7 +238,7 @@ tooltip label {
   color: @fg;
 }
 
-#custom-separator4 {
+#custom-separator3 {
     color: alpha(@fg, 0.5);
     opacity: 1;
     font-size: 14px;
