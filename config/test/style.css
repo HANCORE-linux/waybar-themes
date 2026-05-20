@@ -109,10 +109,6 @@ button:hover {
 #cpu,
 #clock,
 #battery,
-#battery.discharging,
-#battery.full,
-#battery.plugged,
-#battery.charging,
 #backlight,
 #network,
 #network.disconnected,
@@ -135,9 +131,6 @@ button:hover {
   margin: 0px 2px 0px 2px;
 }
 
-#backlight {
-  padding-left: 2px;
-}
 #custom-omarchy {
   color: @red;
   font-size: 14px;
@@ -147,28 +140,24 @@ button:hover {
 
 #idle_inhibitor.deactivated {
   font-size: 14px;
-  margin: 0px 4px 0px 2px;
+  margin: 0px 2px;
   color: @grey;
 }
 
 #idle_inhibitor.activated {
   font-size: 14px;
-    margin: 0px 4px 0px 2px;
+    margin: 0px 2px;
     color: @red;
 }
 
-
-#custom-clock {
-  color: @red;
-}
 
 #tray {
 margin-top: 1px;
 }
 
 #power-profiles-daemon {
-  margin: 0px 0px;
-  padding: 0px 7.5px 0px 2.5px;
+  margin: 0px 2px;
+  padding: 0px 4px;
 }
 
 #power-profiles-daemon.performance {
