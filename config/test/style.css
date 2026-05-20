@@ -168,23 +168,20 @@ margin-top: 1px;
 }
 
 #power-profiles-daemon {
-  min-width: 14px;
   margin: 0px 0px;
+  padding: 0px 5px 0px 2.5px;
 }
 
 #power-profiles-daemon.performance {
   color: @red;
-  padding: 0px 0px 0px 2px; 
 }
 
 #power-profiles-daemon.balanced {
   color: @fg;
-  padding: 0px 4px 0px 0px;
 }
 
 #power-profiles-daemon.power-saver {
   color: #25e712;
-  padding: 0px 4px 0px 2px;
 }
 
 #custom-idle-indicator,
