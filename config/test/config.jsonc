@@ -32,10 +32,10 @@
  "mpris"
   ],
   "modules-right": [
+    "custom/gpu-usage",  
     "network",
     "cpu",
     "memory",
-    "custom/gpu-usage",
     "pulseaudio#input",
     "pulseaudio#output",
     "custom/separator",
@@ -200,20 +200,25 @@
     "on-click": "omarchy-launch-wifi"
   },
 "battery": {
-    "format": "<span color='#df6124'>bat</span> {capacity}%",
-    "format-charging": "<span color='#df6124'>bat</span> {capacity}% (charging)",
-    "format-plugged": "<span color='#df6124'>bat</span> {capacity}% (plugged)",
-    "format-full": "<span color='#df6124'>bat</span> {capacity}% (full)",
-    "tooltip-format-discharging": "{timeTo}",
-    "tooltip-format-charging": "{timeTo}",
+    "format": "{icon} {capacity}%",
+    "format-discharging": "{icon} {capacity}%",
+    "format-charging": "{icon} {capacity}%",
+    "format-plugged": "",
+    "format-icons": {
+      "charging": ["󰢜", "󰂆", "󰂇", "󰂈", "󰢝", "󰂉", "󰢞", "󰂊", "󰂋", "󰂅"],
+      "default": ["󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"]
+    },
+    "format-full": "󰂅",
+    "tooltip-format-discharging": "{power:>1.0f}W↓ {capacity}%",
+    "tooltip-format-charging": "{power:>1.0f}W↑ {capacity}%",
     "interval": 5,
     "on-click": "omarchy-menu power",
     "on-click-right": "notify-send -u low \"$(omarchy-battery-status)\"",
     "states": {
-      "warning": 30,
-      "critical": 15
+      "warning": 20,
+      "critical": 10
     }
-},
+  },
  "bluetooth": {
     "format": "{num_connections}",
     "format-disabled": "󰂲 {status}",
