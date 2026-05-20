@@ -107,6 +107,7 @@ color: @background;
 #bluetooth,
 #pulseaudio,
 #custom-screenrecording-indicator,
+#custom-screenrecording-indicator.active,
 #custom-idle-indicator,
 #custom-notification-silencing-indicator,
 #custom-voxtype,
@@ -162,6 +163,7 @@ color: @background;
 #custom-idle-indicator.active,
 #custom-notification-silencing-indicator.active {
   color: #a55555;
+  background: @background;
 }
 
 #custom-omarchy,
@@ -201,4 +203,25 @@ tooltip {
   border-radius: 5px;
   background: @background;
   border: 2px solid alpha(@foreground, .5);
+}
+
+#custom-screenrecording-indicator {
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  color: transparent;
+}
+
+#custom-screenrecording-indicator.active {
+  background-color: @background;
+  padding: 0 13px 0 10px;
+  color: #eb7087;
+  animation-name: blink-recording;
+  animation-duration: 0.5s;
+}
+
+@keyframes blink-recording {
+    to {
+        color: @foreground;
+    }
 }
