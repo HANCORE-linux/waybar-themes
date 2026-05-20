@@ -185,20 +185,21 @@ margin-top: 1px;
   color: #25e712;
 }
 
+#custom-voxtype,
+#custom-update,
+#custom-screenrecording-indicator,
 #custom-idle-indicator,
 #custom-notification-silencing-indicator {
-  min-width: 12px;
-  padding: 0 2px;
-  margin-left: 0px;
-  margin-right: 0px;
   font-size: 12px;
-  padding-bottom: 0px;
+  padding: 0 2.5px 0 2.5px;
+    margin: 0 0 0 2.5px;
 }
 
+#custom-voxtype.recording,
 #custom-idle-indicator.active,
 #custom-notification-silencing-indicator.active {
   color: #a55555;
-  opacity: 1;;
+  opacity: 1;
 }
 
 .hidden {
@@ -216,15 +217,6 @@ tooltip {
 tooltip label {
     color: alpha(@fg, 1);
     font-weight: normal;
-}
-
-#custom-voxtype {
-  min-width: 12px;
-  margin: 0 0 0 2.5px;
-}
-
-#custom-voxtype.recording {
-  color: #a55555;
 }
 
 #custom-separator2,
