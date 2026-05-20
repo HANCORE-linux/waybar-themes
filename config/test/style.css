@@ -159,25 +159,6 @@ button:hover {
 }
 
 
-#battery,
-#battery.discharging,
-#battery.charging {
-  padding-right: 12px;
-}
-
-#power-profiles-daemon.performance {
-  padding-right: 0px;
-  color: @red;
-}
-
-#power-profiles-daemon.power-saver {
-  color: #25e712;
-}
-
-#power-profiles-daemon.balanced {
-  padding-right: 4px;
-}
-
 #custom-clock {
   color: @red;
 }
