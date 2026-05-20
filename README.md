@@ -830,3 +830,11 @@ git clone https://github.com/HANCORE-linux/waybar-themes.git /tmp/repo && cp -rf
 ```
 <img src="https://github.com/HANCORE-linux/waybar-themes/blob/main/config/V7.2/screenshot-2026-05-19_00-44-58.png?raw=true" />
 
+## V7.2a
+- extend version of V7.2 - Features gpu-usage-waybar ```yay -S gpu-usage-waybar``` with strict two-digit formatting to fix GPU/VRAM bar flickering
+##### V7.2a Install-command (copy and paste in your terminal): <br>
+```bash
+git clone https://github.com/HANCORE-linux/waybar-themes.git /tmp/repo && cp -rf /tmp/repo/config/V7.2a/. ~/.config/waybar && rm -rf /tmp/repo && omarchy-restart-waybar
+```
+<img src="https://github.com/HANCORE-linux/waybar-themes/blob/main/config/V7.2a/screenshot-2026-05-20_22-57-51.png?raw=true" />
+<img src="https://github.com/HANCORE-linux/waybar-themes/blob/main/config/V7.2a/screenshot-2026-05-20_22-26-21.png?raw=true" />
