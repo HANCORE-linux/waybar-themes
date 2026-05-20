@@ -143,6 +143,9 @@ button:hover {
   padding-right: 0px;
 }
 
+#backlight {
+  padding-left: 0px;
+}
 #custom-omarchy {
   color: @red;
   font-size: 14px;
@@ -211,8 +214,6 @@ tooltip label {
 }
 
 
-#custom-separator3,
-#custom-separator2,
 #custom-separator {
   opacity: 0.25;
   padding-bottom: 0px;
