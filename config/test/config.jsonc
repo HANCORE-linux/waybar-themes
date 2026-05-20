@@ -16,13 +16,15 @@
     "custom/separator",
     "hyprland/workspaces",
     "custom/separator",
+    "idle_inhibitor",
+    "tray",
+    "custom/separator",
     "custom/update",
     "custom/updatespacman",
     "custom/idle-indicator",
     "custom/voxtype",
     "custom/notification-silencing-indicator",
     "custom/screenrecording-indicator",
-    "idle_inhibitor",
     "bluetooth",
     "power-profiles-daemon",
     "backlight",
@@ -39,9 +41,7 @@
     "pulseaudio#input",
     "pulseaudio#output",
     "custom/separator",
-    "custom/omarchy",
-    "custom/separator2",
-    "tray"
+    "custom/omarchy"
   ],
 
   "hyprland/workspaces": {

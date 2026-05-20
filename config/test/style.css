@@ -135,10 +135,6 @@ button:hover {
   margin: 0px 2px 0px 2px;
 }
 
-#pulseaudio.input {
-  padding-right: 0px;
-}
-
 #backlight {
   padding-left: 2px;
 }
@@ -151,11 +147,13 @@ button:hover {
 
 #idle_inhibitor.deactivated {
   font-size: 14px;
+  margin: 0px 4px 0px 2px;
   color: @grey;
 }
 
 #idle_inhibitor.activated {
   font-size: 14px;
+    margin: 0px 4px 0px 2px;
     color: @red;
 }
 
