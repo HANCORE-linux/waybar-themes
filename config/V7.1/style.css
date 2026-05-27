@@ -150,9 +150,11 @@ opacity: 0.75;
 #custom-notification-silencing-indicator {
   font-size: 14px;
   border-radius: 15px;
-  padding: 0 11px 0 10px;
+  padding: 0 7px 0 5px;
   margin-left: 2px;
   margin-right: 0px;
+  color: @foreground;
+  background: transparent;
 }
 
 #clock {
