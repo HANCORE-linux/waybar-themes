@@ -155,11 +155,11 @@
     }
 },
  "custom/gpu-usage": {
-    "exec": "gpu-usage-waybar --text-format '<span color=\"#df6124\">gpu</span> {gpu_utilization}% <span color=\"#df6124\">vram</span> {mem_utilization}%' | sed -E 's/ ([0-9])%/ 0\\1%/g'",
+    "exec": "gpu-usage-waybar --text-format '<span color=\"#df6124\">gpu</span> {gpu_utilization}% <span color=\"#df6124\">vram</span> {mem_utilization}%'",
     "return-type": "json",
     "format": "{}",
     "on-click": "ghostty -e nvtop"
-  },
+},
  "backlight": {
     "device": "intel_backlight",
     "format": "{icon}",
