@@ -290,10 +290,10 @@ tooltip label {
 
 #memory.warning,
 #cpu.warning {
-    color: #eb7087; 
+    color: #a53a4d; 
 }
 
 #memory.critical,
 #cpu.critical {
-    color: #df6124; 
+    color: #ff0000; 
 }
