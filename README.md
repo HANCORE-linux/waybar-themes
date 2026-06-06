@@ -8,6 +8,12 @@
 [![Issues](https://img.shields.io/github/issues/HANCORE-linux/waybar-themes?style=for-the-badge&labelColor=000000&color=df6124&logo=github&logoColor=df6124)](https://github.com/HANCORE-linux/waybar-themes/issues)
 [![Buy Me A Coffee](https://img.shields.io/badge/Buy%20Me%20A%20Coffee-SUPPORT-000000?style=for-the-badge&labelColor=000000&color=df6124&logo=buymeacoffee&logoColor=df6124)](https://buymeacoffee.com/hancore)
 
+</div>
+
+<h4 align="center"> See also my Quickshell-Bars </h4>
+<div align="center">
+
+[![Quickshell](https://img.shields.io/badge/Quickshell%20Dots-000000?style=for-the-badge&labelColor=000000&color=209edb&logo=qt&logoColor=209edb)](https://github.com/HANCORE-linux/quickshell-dots)
 
 </div>
 
