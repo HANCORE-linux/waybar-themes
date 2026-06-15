@@ -68,7 +68,7 @@
     "tooltip": false
 },
 "custom/music-stopped": {
-    "exec": "sh -c 'if playerctl -i firefox,brave,chromium,chrome status 2>/dev/null | grep -qE \"Playing|Paused\"; then echo \"{\\\"text\\\":\\\"\\\",\\\"class\\\":\\\"empty\\\"}\"; else echo \"{\\\"text\\\":\\\"music stopped\\\",\\\"class\\\":\\\"shown\\\"}\"; fi'",
+    "exec": "sh -c 'if playerctl -i firefox,brave,chromium,chrome status 2>/dev/null | grep -qE \"Playing|Paused\"; then echo \"{\\\"text\\\":\\\"\\\",\\\"class\\\":\\\"empty\\\"}\"; else echo \"{\\\"text\\\":\\\"no music\\\",\\\"class\\\":\\\"shown\\\"}\"; fi'",
     "return-type": "json",
     "interval": 1,
     "tooltip": false
@@ -167,7 +167,8 @@
 },
   "network": {
     "format": "󰤭",
-    "format-wifi": " {essid}",
+    "format-icons": ["󰤯", "󰤟", "󰤢", "󰤥", "󰤨"],
+    "format-wifi": "{icon} {essid}",
     "format-ethernet": "󰈀",
     "format-disconnected": "󰤭",
     "tooltip-format-wifi": "{essid} ({frequency} GHz)\n⇣{bandwidthDownBytes}  ⇡{bandwidthUpBytes}",
