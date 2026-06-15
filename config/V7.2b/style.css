@@ -244,42 +244,16 @@ tooltip label {
     }
 }
 
-#mpris {
+#custom-mpris {
 margin: 5px 4px;
 padding: 0 12px;
-background-color: transparent;
+background-color: alpha(@fg, 0.05);
 border-radius: 99px;
 opacity: 1;
 color: @fg;
 }
 
-#mpris.playing,
-#mpris.paused,
-#mpris.stopped {
-  background-color: alpha(@fg, 0.05);
-}
 
-#mpris.playing {
-  animation: text-glow 2s linear infinite alternate;
-}
-
-/* Fake mpris fallback: same pill as mpris, shown only when no real player runs.
-   Collapses to nothing (class "empty") as soon as mpris shows a track. */
-#custom-music-stopped {
-  margin: 5px 4px;
-  padding: 0 12px;
-  border-radius: 99px;
-  background-color: alpha(@fg, 0.05);
-  color: @red;
-  min-width: 0;
-}
-
-#custom-music-stopped.empty {
-  margin: 0;
-  padding: 0;
-  min-width: 0;
-  background-color: transparent;
-}
 
 @keyframes text-glow {
   from {

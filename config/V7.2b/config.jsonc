@@ -17,7 +17,7 @@
     "custom/notification-silencing-indicator",
     "custom/screenrecording-indicator",
     "custom/separator2",
-    "mpris",
+    "custom/mpris",
     "custom/music-stopped",
     "custom/separator2",
     "hyprland/workspaces"
@@ -65,12 +65,6 @@
 },
 "custom/separator2": {
     "format": "•",
-    "tooltip": false
-},
-"custom/music-stopped": {
-    "exec": "sh -c 'if playerctl -i firefox,brave,chromium,chrome status 2>/dev/null | grep -qE \"Playing|Paused\"; then echo \"{\\\"text\\\":\\\"\\\",\\\"class\\\":\\\"empty\\\"}\"; else echo \"{\\\"text\\\":\\\"no music\\\",\\\"class\\\":\\\"shown\\\"}\"; fi'",
-    "return-type": "json",
-    "interval": 1,
     "tooltip": false
 },
   "custom/weather": {
@@ -217,15 +211,13 @@
       "default": ["", "", ""]
     }
   },
- "mpris": {
-    "format": "{dynamic}",
-    "format-paused": "<span color='#df6124'>paused</span> {dynamic}",
-    "interval": 5, 
-    "dynamic-order": ["artist", "position", "length"], 
-    "dynamic-importance-order": ["position", "length", "artist"],
-    "tooltip-format": "{player} ({status}):\n{artist} - {title}",  
-    "ignored-players": ["firefox", "brave", "chromium", "chrome"]
-  },
+ "custom/mpris": {
+		"exec": "python3 -u ~/.config/waybar/scrolling-mpris.py",
+		"format": "{text}",
+    "return-type": "json",
+		"on-click": "playerctl play-pause",
+    "tooltip": false
+	},
   "idle_inhibitor": {
     "format": "{icon}",
     "tooltip-format-activated": "Stay Awake: ON",
