@@ -1,4 +1,4 @@
-@import "../omarchy/current/theme/waybar.css";
+@import "colors.css";
 
 * {
   border: none;

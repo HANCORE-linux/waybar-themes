@@ -823,8 +823,14 @@ git clone https://github.com/HANCORE-linux/waybar-themes.git /tmp/repo && cp -rf
 - Base Waybar config/style derived from Omarchy by DHH – custom design modifications by me - Island version.
 ##### V7.1a Install-command (copy and paste in your terminal): <br>
 ```bash
-git clone https://github.com/HANCORE-linux/waybar-themes.git /tmp/repo && cp -rf /tmp/repo/config/V7.1a/. ~/.config/waybar && rm -rf /tmp/repo && omarchy-restart-waybar
+git clone https://github.com/HANCORE-linux/waybar-themes.git /tmp/repo && cp -rf /tmp/repo/config/V7.1a/. ~/.config/waybar && rm -rf /tmp/repo && omarchy restart app waybar
 ```
+Apply the current Omarchy theme colors after installation:
+```bash
+bash ~/.config/waybar/scripts/update-colors.sh
+```
+For automatic Omarchy theme color updates and compatibility details, see the [V7.1a setup notes](config/V7.1a/README.md).
+
 <img src="https://github.com/HANCORE-linux/waybar-themes/blob/main/config/V7.1a/587964689-938bdc30-bf5c-44c2-97c5-6fda343685f3.png?raw=true" />
 <img src="https://github.com/HANCORE-linux/waybar-themes/blob/main/config/V7.1a/587977168-7dd9b01d-55b1-49d6-806a-7fa293ca93bb.png?raw=true" />
 

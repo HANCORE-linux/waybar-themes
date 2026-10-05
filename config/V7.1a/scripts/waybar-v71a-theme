@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+script="$HOME/.config/waybar/scripts/update-colors.sh"
+if [[ -f $script ]]; then
+  bash "$script"
+fi

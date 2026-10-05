@@ -54,13 +54,13 @@
     "interval": 5,
     "format": "󰍛",
     "on-click": "omarchy-launch-or-focus-tui btop",
-    "on-click-right": "alacritty"
+    "on-click-right": "xdg-terminal-exec"
   },
   "clock": {
     "format": "{:%I:%M %p}",
     "format-alt": "{:%A %d/%m/%Y}",
     "tooltip-format": "<span>{calendar}</span>",
-    "on-click-right": "omarchy-launch-floating-terminal-with-presentation omarchy-tz-select"
+    "on-click-right": "bash \"$HOME/.config/waybar/scripts/omarchy-compat.sh\" timezone"
   },
   "network": {
     "format-icons": [
@@ -79,7 +79,7 @@
     "tooltip-format-disconnected": "Disconnected",
     "interval": 3,
     "spacing": 1,
-    "on-click": "omarchy-launch-wifi"
+    "on-click": "bash \"$HOME/.config/waybar/scripts/omarchy-compat.sh\" network"
   },
   "battery": {
     "format": "{capacity}% {icon}",
@@ -116,7 +116,7 @@
     "tooltip-format-discharging": "{power:>1.0f}W↓ {capacity}%",
     "tooltip-format-charging": "{power:>1.0f}W↑ {capacity}%",
     "interval": 5,
-    "on-click": "omarchy-menu power",
+    "on-click": "bash \"$HOME/.config/waybar/scripts/omarchy-compat.sh\" power",
     "on-click-right": "notify-send -u low \"$(omarchy-battery-status)\"",
     "states": {
       "warning": 20,
@@ -130,11 +130,11 @@
     "format-connected": "",
     "format-no-controller": "",
     "tooltip-format": "Devices connected: {num_connections}",
-    "on-click": "omarchy-launch-bluetooth"
+    "on-click": "bash \"$HOME/.config/waybar/scripts/omarchy-compat.sh\" bluetooth"
   },
   "pulseaudio": {
     "format": "{icon}",
-    "on-click": "omarchy-launch-audio",
+    "on-click": "bash \"$HOME/.config/waybar/scripts/omarchy-compat.sh\" audio",
     "on-click-right": "pamixer -t",
     "tooltip-format": "Playing at {volume}%",
     "scroll-step": 5,
@@ -167,21 +167,24 @@
     "tooltip": false
   },
   "custom/screenrecording-indicator": {
-    "on-click": "omarchy-capture-screenrecording",
-    "exec": "$OMARCHY_PATH/default/waybar/indicators/screen-recording.sh",
+    "on-click": "omarchy-capture-screenrecording --stop-recording",
+    "exec": "bash \"$HOME/.config/waybar/scripts/omarchy-compat.sh\" screen-recording",
     "signal": 8,
+    "interval": 2,
     "return-type": "json"
   },
   "custom/idle-indicator": {
     "on-click": "omarchy-toggle-idle",
-    "exec": "$OMARCHY_PATH/default/waybar/indicators/idle.sh",
+    "exec": "bash \"$HOME/.config/waybar/scripts/omarchy-compat.sh\" idle",
     "signal": 9,
+    "interval": 2,
     "return-type": "json"
   },
   "custom/notification-silencing-indicator": {
     "on-click": "omarchy-toggle-notification-silencing",
-    "exec": "$OMARCHY_PATH/default/waybar/indicators/notification-silencing.sh",
+    "exec": "bash \"$HOME/.config/waybar/scripts/omarchy-compat.sh\" notification-silencing",
     "signal": 10,
+    "interval": 2,
     "return-type": "json"
   },
   "tray": {
@@ -190,6 +193,7 @@
   },
    "custom/voxtype": {
     "exec": "omarchy-voxtype-status",
+    "exec-if": "command -v voxtype",
     "return-type": "json",
     "format": "{icon}",
     "format-icons": {
@@ -221,6 +225,7 @@
     "tooltip": true,
     "interval": 600,
     "exec": "wttrbar --nerd --location Changchun",
+    "exec-if": "command -v wttrbar",
     "return-type": "json"
   },
   "mpris": {
