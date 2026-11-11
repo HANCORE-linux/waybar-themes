@@ -36,6 +36,21 @@ yay -S wttrbar
 ```
 </details>
 
+## Omarchy 4 colors
+<details>
+Omarchy 4 does not ship Waybar anymore, and its themes have no `waybar.css`. Without that file Waybar stops at startup with "Failed to import". The template in `omarchy/waybar.css.tpl` makes Omarchy write a `waybar.css` for every theme each time you switch themes. A theme that brings its own `waybar.css` keeps it.
+
+1. Install the template:
+```bash
+mkdir -p ~/.config/omarchy/themed && curl -fsSL https://raw.githubusercontent.com/HANCORE-linux/waybar-themes/main/omarchy/waybar.css.tpl -o ~/.config/omarchy/themed/waybar.css.tpl
+```
+2. Point `style.css` to where Omarchy 4 keeps the current theme:
+```bash
+sed -i "s|../omarchy/current/theme/waybar.css|../../.local/state/omarchy/current/theme/waybar.css|" ~/.config/waybar/style.css
+```
+3. Switch the theme once so the file gets written, then restart Waybar.
+</details>
+
 ## Reset Waybar to default Omarchy style
 <details>
 To restore the default Omarchy Waybar look and config:
